@@ -28,12 +28,13 @@ export default function Portfolio() {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
+                            onClick={() => window.open(project.link, "_blank")}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ scale: 1.03 }}
                             transition={{ duration: 0.4 }}
                             viewport={{ once: true }}
-                            className="rounded-2xl overflow-hidden bg-neutral-900 shadow-lg border border-neutral-700"
+                            className="rounded-2xl overflow-hidden bg-neutral-900 shadow-lg border border-neutral-700 cursor-pointer"
                         >
                             <img
                                 src={project.image}
@@ -49,7 +50,7 @@ export default function Portfolio() {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300"
+                                    className="inline-flex items-center gap-2 text-white px-4 py-2 bg-blue-600 rounded-xl hover:bg-blue-500 transition font-semibold"
                                 >
                                     Ver proyecto <FaArrowRight />
                                 </a>
