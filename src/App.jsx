@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Luces de fondo */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute w-96 h-96 bg-purple-600/30 blur-[150px] -top-20 -left-10"></div>
         <div className="absolute w-96 h-96 bg-blue-600/20 blur-[150px] bottom-0 right-0"></div>
       </div>
@@ -233,10 +233,8 @@ export default function App() {
           ))}
         </motion.div>
       </section>
-
       {/* PORTFOLIO */}
       <Portfolio />
-
       {/* CONTACTO */}
       <section
         id="contacto"
@@ -251,22 +249,32 @@ export default function App() {
         >
           Contacto
         </motion.h2>
-
         <p className="text-gray-300 max-w-xl text-center mb-8">
           Si tenés una idea o querés que trabajemos juntos, escribime y lo hacemos realidad.
         </p>
-
         <form
-          action="https://formsubmit.co/jpborello25@gmail.com"
-          method="POST"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const form = e.target;
+            fetch("https://formspree.io/f/xeovzyyw", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                nombre: form.nombre.value,
+                email: form.email.value,
+                mensaje: form.mensaje.value,
+              }),
+            }).then((res) => {
+              if (res.ok) {
+                alert("Mensaje enviado correctamente!");
+                form.reset();
+              } else {
+                alert("Hubo un error al enviar el mensaje.");
+              }
+            });
+          }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl w-full"
         >
-          {/* Hidden config */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_subject" value="Nueva consulta desde neo-core-sys.com" />
-          <input type="hidden" name="_next" value="https://neo-core-sys.com/#contacto" />
-
           <input
             className="p-4 rounded-xl bg-white/10 text-white outline-none"
             type="text"
@@ -274,7 +282,6 @@ export default function App() {
             placeholder="Tu nombre"
             required
           />
-
           <input
             className="p-4 rounded-xl bg-white/10 text-white outline-none"
             type="email"
@@ -282,7 +289,6 @@ export default function App() {
             placeholder="Tu email"
             required
           />
-
           <textarea
             className="p-4 rounded-xl bg-white/10 text-white outline-none md:col-span-2"
             name="mensaje"
@@ -290,7 +296,6 @@ export default function App() {
             rows="4"
             required
           />
-
           <button
             type="submit"
             className="md:col-span-2 bg-purple-600 hover:bg-purple-700 transition p-4 rounded-xl text-white font-semibold"
