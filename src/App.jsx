@@ -261,8 +261,27 @@ export default function App() {
           method="POST"
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl w-full"
         >
-          <input className="p-4 rounded-xl bg-white/10 text-white outline-none" type="text" name="nombre" placeholder="Tu nombre" required />
-          <input className="p-4 rounded-xl bg-white/10 text-white outline-none" type="email" name="email" placeholder="Tu email" required />
+          {/* Hidden config */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="Nueva consulta desde neo-core-sys.com" />
+          <input type="hidden" name="_next" value="https://neo-core-sys.com/#contacto" />
+
+          <input
+            className="p-4 rounded-xl bg-white/10 text-white outline-none"
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+          />
+
+          <input
+            className="p-4 rounded-xl bg-white/10 text-white outline-none"
+            type="email"
+            name="email"
+            placeholder="Tu email"
+            required
+          />
 
           <textarea
             className="p-4 rounded-xl bg-white/10 text-white outline-none md:col-span-2"
@@ -271,6 +290,7 @@ export default function App() {
             rows="4"
             required
           />
+
           <button
             type="submit"
             className="md:col-span-2 bg-purple-600 hover:bg-purple-700 transition p-4 rounded-xl text-white font-semibold"

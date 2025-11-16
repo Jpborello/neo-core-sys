@@ -50,7 +50,12 @@ export default function Portfolio() {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-white px-4 py-2 bg-blue-600 rounded-xl hover:bg-blue-500 transition font-semibold"
+                                    className="inline-flex items-center gap-2 
+                                                px-5 py-3 
+                                                bg-purple-600 hover:bg-purple-700 
+                                                text-white font-semibold 
+                                                rounded-full 
+                                                transition-all duration-200"
                                 >
                                     Ver proyecto <FaArrowRight />
                                 </a>
