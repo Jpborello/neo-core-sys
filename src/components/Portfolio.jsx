@@ -18,38 +18,33 @@ export default function Portfolio() {
             link: "https://docs.google.com/forms/d/e/1FAIpQLSe1ThadDmbO3fhglFWV2-hOqOTr2u90QDt3gjU0KANbT0qsQg/viewform",
         },
     ];
-
     return (
         <section className="w-full py-20 bg-black text-white" id="portfolio">
             <div className="max-w-6xl mx-auto px-6">
                 <h2 className="text-4xl font-bold mb-12">Portfolio</h2>
-
                 <div className="grid md:grid-cols-2 gap-10">
                     {projects.map((project, index) => (
-                        <motion.div
+                        <motion.a
                             key={index}
-                            onClick={() => window.open(project.link, "_blank")}
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ scale: 1.03 }}
                             transition={{ duration: 0.4 }}
                             viewport={{ once: true }}
-                            className="rounded-2xl overflow-hidden bg-neutral-900 shadow-lg border border-neutral-700 cursor-pointer"
+                            className="block rounded-2xl overflow-hidden bg-neutral-900 shadow-lg border border-neutral-700"
                         >
                             <img
                                 src={project.image}
                                 alt={project.name}
                                 className="w-full h-56 object-cover"
                             />
-
                             <div className="p-6">
                                 <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
                                 <p className="text-neutral-400 mb-4">{project.description}</p>
-
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <div
                                     className="inline-flex items-center gap-2 
                                                 px-5 py-3 
                                                 bg-purple-600 hover:bg-purple-700 
@@ -58,9 +53,9 @@ export default function Portfolio() {
                                                 transition-all duration-200"
                                 >
                                     Ver proyecto <FaArrowRight />
-                                </a>
+                                </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
