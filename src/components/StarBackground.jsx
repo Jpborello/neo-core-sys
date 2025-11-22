@@ -26,7 +26,7 @@ export default function StarBackground() {
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "bubble", // Changed to bubble for interaction
             },
             resize: true,
           },
@@ -34,21 +34,28 @@ export default function StarBackground() {
             push: {
               quantity: 4,
             },
-            repulse: {
+            bubble: {
               distance: 200,
-              duration: 0.4,
+              size: 6,
+              duration: 2,
+              opacity: 0.8,
             },
           },
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: ["#a855f7", "#3b82f6", "#f472b6", "#2dd4bf", "#fbbf24"], // Purple, Blue, Pink, Teal, Amber
+            animation: {
+              enable: true,
+              speed: 20,
+              sync: false
+            }
           },
           links: {
             color: "#ffffff",
             distance: 150,
             enable: true,
-            opacity: 0.2,
+            opacity: 0.1, // Reduced opacity for links to let particles shine
             width: 1,
           },
           move: {
@@ -57,8 +64,8 @@ export default function StarBackground() {
             outModes: {
               default: "bounce",
             },
-            random: false,
-            speed: 1,
+            random: true,
+            speed: 1.5, // Slightly faster
             straight: false,
           },
           number: {
@@ -66,16 +73,28 @@ export default function StarBackground() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100, // More particles
           },
           opacity: {
-            value: 0.5,
+            value: { min: 0.3, max: 0.8 },
+            animation: {
+              enable: true,
+              speed: 1,
+              minimumValue: 0.3,
+              sync: false
+            }
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 2, max: 5 }, // Larger particles
+            animation: {
+              enable: true,
+              speed: 2,
+              minimumValue: 2,
+              sync: false
+            }
           },
         },
         detectRetina: true,
