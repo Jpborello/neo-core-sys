@@ -169,6 +169,38 @@ export default function LandingPage() {
                     />
 
                     <PortfolioCard
+                        title="Sistema de Turnos Mobile-First"
+                        target="Estética, Salud"
+                        desc="Sistema de turnos mobile-first con interfaz tipo app."
+                        benefits={[
+                            "Diseño App Nativa",
+                            "Calendario Táctil",
+                            "Animaciones Suaves",
+                            "Panel para Profesionales"
+                        ]}
+                        stack="React + Framer Motion"
+                        time="10 a 15 días"
+                        link="/demo-turnos-mobile"
+                        color="from-fuchsia-500 to-purple-600"
+                    />
+
+                    <PortfolioCard
+                        title="TurnoPredict – IA"
+                        target="Clínicas, Alta Demanda"
+                        desc="Sistema inteligente que predice demanda y optimiza la agenda."
+                        benefits={[
+                            "Predicción de Demanda (IA)",
+                            "Dashboard de Analytics",
+                            "Sugiere Horarios Óptimos",
+                            "Interfaz Dual (Cliente/Admin)"
+                        ]}
+                        stack="React + Recharts + AI Logic"
+                        time="15 a 20 días"
+                        link="/demo-turnopredict"
+                        color="from-pink-500 to-rose-600"
+                    />
+
+                    <PortfolioCard
                         title="Landing Page Premium"
                         target="Startups, Lanzamientos"
                         desc="Diseño de alto impacto visual enfocado en la conversión."

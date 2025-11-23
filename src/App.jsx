@@ -17,6 +17,11 @@ import { DashboardProvider } from "./pages/demos/metrics/context/DashboardContex
 import MetricsLayout from "./pages/demos/metrics/layout/MetricsLayout";
 import Overview from "./pages/demos/metrics/pages/Overview";
 import Schedule from "./pages/demos/metrics/pages/Schedule";
+import MobileLayout from "./pages/demos/turnos-mobile/components/MobileLayout";
+import HomeMobile from "./pages/demos/turnos-mobile/pages/Home";
+import BookingMobile from "./pages/demos/turnos-mobile/pages/Booking";
+import MyAppointmentsMobile from "./pages/demos/turnos-mobile/pages/MyAppointments";
+import TurnoPredict from "./pages/demos/turnopredict";
 import { Navigate } from "react-router-dom";
 import "./index.css";
 
@@ -62,6 +67,20 @@ export default function App() {
             </Routes>
           </DashboardProvider>
         } />
+
+        {/* Mobile-First Appointment System Demo */}
+        <Route path="/demo-turnos-mobile/*" element={
+          <Routes>
+            <Route element={<MobileLayout />}>
+              <Route index element={<HomeMobile />} />
+              <Route path="booking" element={<BookingMobile />} />
+              <Route path="my-appointments" element={<MyAppointmentsMobile />} />
+            </Route>
+          </Routes>
+        } />
+
+        {/* TurnoPredict Demo (AI Powered) */}
+        <Route path="/demo-turnopredict/*" element={<TurnoPredict />} />
       </Routes>
     </Router>
   );
