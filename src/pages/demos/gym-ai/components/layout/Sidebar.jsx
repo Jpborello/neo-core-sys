@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { FaChartLine, FaUsers, FaClipboardList, FaMoneyBillWave, FaDumbbell } from "react-icons/fa";
+import { FaChartLine, FaUsers, FaClipboardList, FaMoneyBillWave, FaDumbbell, FaBars, FaChevronLeft } from "react-icons/fa";
 
-export default function Sidebar() {
+export default function Sidebar({ isCollapsed, onToggle }) {
     const menuItems = [
         { icon: FaChartLine, label: "Dashboard AI", path: "/gimnasio-ai-demo/dashboard" },
         { icon: FaUsers, label: "Usuarios & Riesgo", path: "/gimnasio-ai-demo/usuarios" },
@@ -10,38 +10,60 @@ export default function Sidebar() {
     ];
 
     return (
-        <aside className="w-64 bg-[#111827] border-r border-gray-800 flex flex-col h-screen sticky top-0">
-            <div className="p-6 flex items-center gap-3 border-b border-gray-800">
-                <div className="w-8 h-8 rounded bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-black">
-                    <FaDumbbell />
+        <aside className={`${isCollapsed ? 'w-20' : 'w-64'} bg-[#111827] border-r border-gray-800 flex flex-col h-screen sticky top-0 transition-all duration-300 ease-in-out`}>
+            <div className={`${isCollapsed ? 'p-4' : 'p-6'} flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} border-b border-gray-800 transition-all duration-300`}>
+                <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-black flex-shrink-0">
+                        <FaDumbbell />
+                    </div>
+                    {!isCollapsed && <span className="font-bold text-white text-lg whitespace-nowrap">NeoGym AI</span>}
                 </div>
-                <span className="font-bold text-white text-lg">NeoGym AI</span>
+                {!isCollapsed && (
+                    <button
+                        onClick={onToggle}
+                        className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded"
+                        aria-label="Collapse sidebar"
+                    >
+                        <FaChevronLeft />
+                    </button>
+                )}
             </div>
 
-            <nav className="flex-1 p-4 space-y-2">
+            {isCollapsed && (
+                <button
+                    onClick={onToggle}
+                    className="mx-auto mt-4 text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded"
+                    aria-label="Expand sidebar"
+                >
+                    <FaBars />
+                </button>
+            )}
+
+            <nav className={`flex-1 ${isCollapsed ? 'p-2' : 'p-4'} space-y-2 transition-all duration-300`}>
                 {menuItems.map((item) => (
                     <NavLink
                         key={item.path}
                         to={item.path}
                         className={({ isActive }) => `
-              flex items-center gap-3 px-4 py-3 rounded-xl transition-all
+              flex items-center ${isCollapsed ? 'justify-center' : 'gap-3'} ${isCollapsed ? 'px-3 py-3' : 'px-4 py-3'} rounded-xl transition-all
               ${isActive
                                 ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
                                 : "text-gray-400 hover:text-white hover:bg-white/5"}
             `}
+                        title={isCollapsed ? item.label : undefined}
                     >
-                        <item.icon />
-                        <span className="font-medium">{item.label}</span>
+                        <item.icon className={isCollapsed ? 'text-xl' : ''} />
+                        {!isCollapsed && <span className="font-medium whitespace-nowrap">{item.label}</span>}
                     </NavLink>
                 ))}
             </nav>
 
-            <div className="p-4 border-t border-gray-800">
-                <div className="bg-gray-800/50 p-3 rounded-lg">
-                    <p className="text-xs text-gray-400 mb-1">AI Engine Status</p>
-                    <div className="flex items-center gap-2">
+            <div className={`${isCollapsed ? 'p-2' : 'p-4'} border-t border-gray-800 transition-all duration-300`}>
+                <div className={`bg-gray-800/50 ${isCollapsed ? 'p-2' : 'p-3'} rounded-lg flex ${isCollapsed ? 'justify-center' : 'flex-col'}`}>
+                    {!isCollapsed && <p className="text-xs text-gray-400 mb-1">AI Engine Status</p>}
+                    <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'gap-2'}`}>
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span className="text-xs text-emerald-400 font-bold">ONLINE</span>
+                        {!isCollapsed && <span className="text-xs text-emerald-400 font-bold">ONLINE</span>}
                     </div>
                 </div>
             </div>

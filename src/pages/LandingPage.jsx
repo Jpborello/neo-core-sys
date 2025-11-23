@@ -1,9 +1,43 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { FaArrowRight, FaCheck, FaClock, FaCode, FaDollarSign, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { RiSmartphoneLine, RiLayoutGridLine, RiGlobalLine, RiLightbulbLine, RiShieldCheckLine, RiRocketLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 export default function LandingPage() {
+    const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setFormStatus('sending');
+
+        const formData = {
+            nombre: e.target.nombre.value,
+            email: e.target.email.value,
+            mensaje: e.target.mensaje.value,
+        };
+
+        try {
+            const response = await fetch("https://formspree.io/f/xeovzyyw", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setFormStatus('success');
+                e.target.reset();
+                setTimeout(() => setFormStatus('idle'), 5000);
+            } else {
+                setFormStatus('error');
+                setTimeout(() => setFormStatus('idle'), 5000);
+            }
+        } catch (error) {
+            setFormStatus('error');
+            setTimeout(() => setFormStatus('idle'), 5000);
+        }
+    };
+
     return (
         <div className="flex flex-col items-center overflow-hidden">
             {/* HERO */}
@@ -119,7 +153,7 @@ export default function LandingPage() {
                     Nuestros <span className="text-purple-500">Modelos Web</span>
                 </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                     <PortfolioCard
                         title="MiliNails (Glam)"
                         target="Estética, Belleza"
@@ -367,15 +401,53 @@ export default function LandingPage() {
                         </a>
                     </div>
 
-                    <form className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Nombre" className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors" />
-                            <input type="email" placeholder="Email" className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors" />
+                            <input
+                                type="text"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                                disabled={formStatus === 'sending'}
+                                className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors disabled:opacity-50"
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                                disabled={formStatus === 'sending'}
+                                className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors disabled:opacity-50"
+                            />
                         </div>
-                        <textarea rows="4" placeholder="Contanos sobre tu proyecto..." className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors"></textarea>
-                        <button className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">
-                            Enviar Mensaje
+                        <textarea
+                            rows="4"
+                            name="mensaje"
+                            placeholder="Contanos sobre tu proyecto..."
+                            required
+                            disabled={formStatus === 'sending'}
+                            className="w-full p-4 bg-black/30 border border-white/10 rounded-xl focus:border-purple-500 outline-none transition-colors disabled:opacity-50"
+                        ></textarea>
+
+                        <button
+                            type="submit"
+                            disabled={formStatus === 'sending'}
+                            className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {formStatus === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
                         </button>
+
+                        {formStatus === 'success' && (
+                            <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400 text-center">
+                                ¡Mensaje enviado! Te responderemos pronto 🎉
+                            </div>
+                        )}
+
+                        {formStatus === 'error' && (
+                            <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400 text-center">
+                                Error al enviar. Intenta nuevamente o contáctanos por WhatsApp
+                            </div>
+                        )}
                     </form>
                 </div>
             </section>
@@ -400,25 +472,25 @@ function PortfolioCard({ title, target, desc, benefits, stack, time, link, color
                 <div className={`h-2 w-full bg-gradient-to-r ${color}`} />
             )}
 
-            <div className="p-6 flex flex-col flex-grow relative z-20">
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
-                <p className="text-xs text-purple-400 font-semibold mb-3 uppercase tracking-wide">{target}</p>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">{desc}</p>
+            <div className="p-5 md:p-6 flex flex-col flex-grow relative z-20">
+                <h3 className="text-lg md:text-xl font-bold mb-2">{title}</h3>
+                <p className="text-xs md:text-xs text-purple-400 font-semibold mb-3 uppercase tracking-wide">{target}</p>
+                <p className="text-gray-400 mb-4 text-sm md:text-sm leading-relaxed">{desc}</p>
 
                 <div className="space-y-2 mb-6 flex-grow">
                     {benefits.map((benefit, i) => (
                         <div key={i} className="flex items-start gap-2">
-                            <FaCheck className="text-green-400 mt-1 flex-shrink-0 text-xs" />
-                            <span className="text-gray-300 text-xs">{benefit}</span>
+                            <FaCheck className="text-green-400 mt-1 flex-shrink-0 text-sm md:text-xs" />
+                            <span className="text-gray-300 text-sm md:text-xs">{benefit}</span>
                         </div>
                     ))}
                 </div>
 
                 <div className="border-t border-white/10 pt-4 space-y-2">
-                    <div className="flex items-center gap-2 text-gray-400 text-xs">
+                    <div className="flex items-center gap-2 text-gray-400 text-sm md:text-xs">
                         <FaCode className="text-blue-400" /> {stack}
                     </div>
-                    <div className="flex items-center gap-2 text-gray-400 text-xs">
+                    <div className="flex items-center gap-2 text-gray-400 text-sm md:text-xs">
                         <FaClock className="text-yellow-400" /> {time}
                     </div>
                 </div>
@@ -428,14 +500,14 @@ function PortfolioCard({ title, target, desc, benefits, stack, time, link, color
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`mt-6 w-full py-2 rounded-xl font-bold text-sm text-center bg-gradient-to-r ${color} hover:opacity-90 transition-opacity block`}
+                        className={`mt-6 w-full py-3 md:py-2 rounded-xl font-bold text-sm text-center bg-gradient-to-r ${color} hover:opacity-90 transition-opacity block`}
                     >
                         Ver en Store
                     </a>
                 ) : (
                     <Link
                         to={link}
-                        className={`mt-6 w-full py-2 rounded-xl font-bold text-sm text-center bg-gradient-to-r ${color} hover:opacity-90 transition-opacity block`}
+                        className={`mt-6 w-full py-3 md:py-2 rounded-xl font-bold text-sm text-center bg-gradient-to-r ${color} hover:opacity-90 transition-opacity block`}
                     >
                         Ver Demo
                     </Link>
