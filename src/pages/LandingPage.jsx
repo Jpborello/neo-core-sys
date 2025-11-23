@@ -137,6 +137,38 @@ export default function LandingPage() {
                     />
 
                     <PortfolioCard
+                        title="Sistema de Turnos Premium"
+                        target="Gestión, SaaS"
+                        desc="Plataforma completa para gestión de reservas y clientes."
+                        benefits={[
+                            "Dashboard Analítico",
+                            "Calendario Interactivo",
+                            "Gestión de Clientes",
+                            "Configuración Total"
+                        ]}
+                        stack="React + Context + Motion"
+                        time="10 a 15 días"
+                        link="/demo-turnos/login"
+                        color="from-violet-600 to-indigo-600"
+                    />
+
+                    <PortfolioCard
+                        title="Dashboard Profesional"
+                        target="Negocios, Analytics"
+                        desc="Panel de control con métricas avanzadas y reportes."
+                        benefits={[
+                            "Gráficos Interactivos",
+                            "Análisis de Ingresos",
+                            "Mapas de Calor",
+                            "Reportes en Tiempo Real"
+                        ]}
+                        stack="React + Recharts"
+                        time="12 a 18 días"
+                        link="/demo-metrics/overview"
+                        color="from-cyan-500 to-blue-600"
+                    />
+
+                    <PortfolioCard
                         title="Landing Page Premium"
                         target="Startups, Lanzamientos"
                         desc="Diseño de alto impacto visual enfocado en la conversión."
