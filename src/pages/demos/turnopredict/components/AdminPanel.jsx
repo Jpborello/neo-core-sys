@@ -12,7 +12,7 @@ export default function AdminPanel() {
     }));
 
     return (
-        <div className="p-8 bg-[#F9F9F9] min-h-screen">
+        <div className="p-4 md:p-8 bg-[#F9F9F9] min-h-screen">
             <div className="max-w-6xl mx-auto space-y-8">
                 <div className="flex justify-between items-center">
                     <div>

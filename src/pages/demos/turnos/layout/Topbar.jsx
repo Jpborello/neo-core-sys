@@ -1,19 +1,28 @@
-import { FaBell, FaSearch } from "react-icons/fa";
+import { FaBell, FaSearch, FaBars } from "react-icons/fa";
 import { useTurnos } from "../context/TurnosContext";
 
-export default function Topbar() {
+export default function Topbar({ onToggleSidebar }) {
     const { user } = useTurnos();
 
     return (
-        <header className="h-20 border-b border-white/5 flex items-center justify-between px-8 bg-[#0a0a0a]/50 backdrop-blur-md sticky top-0 z-30">
-            {/* Search */}
-            <div className="relative w-96 hidden md:block">
-                <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
-                <input
-                    type="text"
-                    placeholder="Buscar turnos, clientes..."
-                    className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-12 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-violet-500/50 transition-colors"
-                />
+        <header className="h-20 border-b border-white/5 flex items-center justify-between px-4 md:px-8 bg-[#0a0a0a]/50 backdrop-blur-md sticky top-0 z-30">
+            <div className="flex items-center gap-4">
+                <button
+                    onClick={onToggleSidebar}
+                    className="md:hidden text-gray-400 hover:text-white p-2"
+                >
+                    <FaBars className="text-xl" />
+                </button>
+
+                {/* Search */}
+                <div className="relative w-96 hidden md:block">
+                    <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" />
+                    <input
+                        type="text"
+                        placeholder="Buscar turnos, clientes..."
+                        className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-12 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-violet-500/50 transition-colors"
+                    />
+                </div>
             </div>
 
             {/* User Actions */}

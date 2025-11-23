@@ -8,10 +8,10 @@ export default function MobileLayout() {
     const isHome = location.pathname === "/demo-turnos-mobile" || location.pathname === "/demo-turnos-mobile/";
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 font-sans">
-            <div className="w-full max-w-md bg-white h-[800px] max-h-[90vh] rounded-[40px] shadow-2xl overflow-hidden relative border-8 border-gray-900 flex flex-col">
-                {/* Status Bar Mock */}
-                <div className="h-8 bg-gray-900 w-full flex items-center justify-between px-6">
+        <div className="min-h-screen bg-gray-100 md:flex md:items-center md:justify-center md:p-4 font-sans">
+            <div className="w-full md:max-w-md bg-white min-h-screen md:min-h-0 md:h-[800px] md:max-h-[90vh] md:rounded-[40px] shadow-none md:shadow-2xl overflow-hidden relative md:border-8 md:border-gray-900 flex flex-col">
+                {/* Status Bar Mock - Only visible on desktop simulation */}
+                <div className="hidden md:flex h-8 bg-gray-900 w-full items-center justify-between px-6">
                     <div className="text-white text-xs font-medium">9:41</div>
                     <div className="flex gap-1">
                         <div className="w-4 h-4 bg-white rounded-full opacity-20"></div>
@@ -22,7 +22,7 @@ export default function MobileLayout() {
 
                 {/* Header */}
                 {!isHome && (
-                    <div className="p-4 flex items-center gap-4 border-b border-gray-100">
+                    <div className="p-4 flex items-center gap-4 border-b border-gray-100 sticky top-0 bg-white z-10">
                         <button
                             onClick={() => navigate(-1)}
                             className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
@@ -51,8 +51,8 @@ export default function MobileLayout() {
                     </AnimatePresence>
                 </div>
 
-                {/* Home Indicator */}
-                <div className="h-6 w-full flex items-center justify-center pb-2 bg-white">
+                {/* Home Indicator - Only on desktop simulation */}
+                <div className="hidden md:flex h-6 w-full items-center justify-center pb-2 bg-white">
                     <div className="w-32 h-1 bg-gray-300 rounded-full"></div>
                 </div>
             </div>

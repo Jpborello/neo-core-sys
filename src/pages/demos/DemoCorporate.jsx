@@ -5,7 +5,7 @@ export default function DemoCorporate() {
     return (
         <div className="min-h-screen bg-white text-slate-800 font-sans">
             {/* NAVBAR SIMULATION */}
-            <nav className="flex justify-between items-center px-10 py-6 border-b border-slate-100">
+            <nav className="flex justify-between items-center px-6 md:px-10 py-6 border-b border-slate-100">
                 <div className="text-2xl font-bold text-slate-900 flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
                     CorpTech
@@ -34,7 +34,7 @@ export default function DemoCorporate() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-5xl md:text-6xl font-bold leading-tight text-slate-900 mb-6"
+                        className="text-4xl md:text-6xl font-bold leading-tight text-slate-900 mb-6"
                     >
                         Impulsamos el futuro de su empresa.
                     </motion.h1>
@@ -55,7 +55,7 @@ export default function DemoCorporate() {
                         </button>
                     </div>
                 </div>
-                <div className="md:w-1/2 relative">
+                <div className="mt-8 md:mt-0 md:w-1/2 relative">
                     <div className="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10"></div>
                     <img
                         src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"

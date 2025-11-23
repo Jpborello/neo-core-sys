@@ -48,7 +48,7 @@ export default function MiliNails() {
             </nav>
 
             {/* HERO SECTION */}
-            <header className="relative h-screen flex items-center justify-center text-center px-6">
+            <header className="relative min-h-screen flex items-center justify-center text-center px-6 py-20">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img src={heroImage} alt="Luxury Nails" className="w-full h-full object-cover opacity-60" />
@@ -60,7 +60,7 @@ export default function MiliNails() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-5xl md:text-7xl font-serif text-white mb-6 leading-tight"
+                        className="text-4xl md:text-7xl font-serif text-white mb-6 leading-tight"
                     >
                         Tus manos dicen más <br /> de lo que <span className="text-yellow-400 italic">imaginás</span>.
                     </motion.h1>

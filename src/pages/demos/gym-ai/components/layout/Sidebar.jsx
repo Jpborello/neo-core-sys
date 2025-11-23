@@ -10,7 +10,10 @@ export default function Sidebar({ isCollapsed, onToggle }) {
     ];
 
     return (
-        <aside className={`${isCollapsed ? 'w-20' : 'w-64'} bg-[#111827] border-r border-gray-800 flex flex-col h-screen sticky top-0 transition-all duration-300 ease-in-out`}>
+        <aside className={`
+            fixed md:sticky top-0 z-50 h-screen bg-[#111827] border-r border-gray-800 flex flex-col transition-all duration-300 ease-in-out
+            ${isCollapsed ? '-translate-x-full md:translate-x-0 md:w-20' : 'translate-x-0 w-64'}
+        `}>
             <div className={`${isCollapsed ? 'p-4' : 'p-6'} flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} border-b border-gray-800 transition-all duration-300`}>
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-black flex-shrink-0">
@@ -32,7 +35,7 @@ export default function Sidebar({ isCollapsed, onToggle }) {
             {isCollapsed && (
                 <button
                     onClick={onToggle}
-                    className="mx-auto mt-4 text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded"
+                    className="hidden md:block mx-auto mt-4 text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/5 rounded"
                     aria-label="Expand sidebar"
                 >
                     <FaBars />

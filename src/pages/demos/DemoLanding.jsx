@@ -5,7 +5,7 @@ export default function DemoLanding() {
     return (
         <div className="min-h-screen bg-gray-900 text-white font-sans selection:bg-pink-500 selection:text-white">
             {/* HERO */}
-            <header className="relative h-screen flex items-center justify-center overflow-hidden">
+            <header className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-gray-900 to-black z-0" />
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0" />
 
@@ -22,7 +22,7 @@ export default function DemoLanding() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-6xl md:text-8xl font-black mb-6 leading-tight"
+                        className="text-4xl md:text-8xl font-black mb-6 leading-tight"
                     >
                         Tu Producto <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">
@@ -74,7 +74,7 @@ export default function DemoLanding() {
             <section className="py-32 bg-gradient-to-t from-purple-900 to-black text-center relative overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-pink-600/20 blur-[120px] rounded-full pointer-events-none" />
                 <div className="container mx-auto px-6 relative z-10">
-                    <h2 className="text-5xl font-bold mb-8">¿Listo para despegar?</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Listo para despegar?</h2>
                     <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
                         No dejes que tu competencia te gane. Obtené tu landing page premium hoy mismo.
                     </p>
