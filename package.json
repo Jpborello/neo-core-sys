@@ -12,6 +12,8 @@
     "watch:css": "npx @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
     "framer-motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -19,6 +21,7 @@
     "react-router-dom": "^7.9.6",
     "react-tsparticles": "^2.12.2",
     "recharts": "^3.4.1",
+    "three": "^0.181.2",
     "tsparticles": "^3.9.1",
     "tsparticles-slim": "^2.12.0"
   },

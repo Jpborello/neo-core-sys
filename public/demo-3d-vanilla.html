@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo-Core-Sys 3D Demo (Vanilla)</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #0b0b0d; }
+        #canvas-container { width: 100vw; height: 100vh; }
+        #overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: sans-serif;
+            font-size: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="overlay">Drag to Rotate</div>
+
+    <!-- Import Three.js from CDN -->
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+        import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+        // Scene Setup
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x0b0b0d, 0.05);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0, 0, 8);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Controls
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+
+        // Lights
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const pointLight1 = new THREE.PointLight(0x7c3aed, 1, 20);
+        pointLight1.position.set(10, 10, 10);
+        scene.add(pointLight1);
+
+        const pointLight2 = new THREE.PointLight(0x00e5ff, 1, 20);
+        pointLight2.position.set(-10, -10, -10);
+        scene.add(pointLight2);
+
+        // Objects
+        // 1. Logo (Icosahedron)
+        const logoGeo = new THREE.IcosahedronGeometry(1, 0);
+        const logoMat = new THREE.MeshStandardMaterial({
+            color: 0x7c3aed,
+            emissive: 0x7c3aed,
+            emissiveIntensity: 0.5,
+            roughness: 0.1,
+            metalness: 0.8,
+            wireframe: true
+        });
+        const logo = new THREE.Mesh(logoGeo, logoMat);
+        logo.position.set(-2.5, 0, 0);
+        scene.add(logo);
+
+        // Inner Logo
+        const innerLogoGeo = new THREE.IcosahedronGeometry(0.8, 0);
+        const innerLogoMat = new THREE.MeshStandardMaterial({
+            color: 0x00e5ff,
+            emissive: 0x00e5ff,
+            emissiveIntensity: 0.2,
+            transparent: true,
+            opacity: 0.3
+        });
+        const innerLogo = new THREE.Mesh(innerLogoGeo, innerLogoMat);
+        logo.add(innerLogo);
+
+        // 2. Cube
+        const cubeGeo = new THREE.BoxGeometry(2, 2, 2);
+        const cubeMat = new THREE.MeshStandardMaterial({
+            color: 0x1a1a1a,
+            roughness: 0.2,
+            metalness: 0.9
+        });
+        const cube = new THREE.Mesh(cubeGeo, cubeMat);
+        cube.position.set(2.5, 0, 0);
+        scene.add(cube);
+
+        // Particles
+        const particlesGeo = new THREE.BufferGeometry();
+        const particlesCount = 200;
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for(let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 20;
+        }
+
+        particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMat = new THREE.PointsMaterial({
+            size: 0.05,
+            color: 0x00e5ff,
+            transparent: true,
+            opacity: 0.8
+        });
+        const particles = new THREE.Points(particlesGeo, particlesMat);
+        scene.add(particles);
+
+        // Animation Loop
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const time = clock.getElapsedTime();
+
+            // Animate Logo
+            logo.rotation.x = time * 0.2;
+            logo.rotation.y = time * 0.3;
+            logo.position.y = Math.sin(time) * 0.2; // Float
+
+            // Animate Cube
+            cube.rotation.x += 0.005;
+            cube.rotation.y += 0.005;
+            cube.position.y = Math.sin(time * 0.8) * 0.2; // Float
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Resize Handler
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
