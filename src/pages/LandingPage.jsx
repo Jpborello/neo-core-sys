@@ -201,6 +201,22 @@ export default function LandingPage() {
                     />
 
                     <PortfolioCard
+                        title="NeoGym AI Manager"
+                        target="Gimnasios, SaaS"
+                        desc="Dashboard de gestión con IA para predicción de abandono y revenue."
+                        benefits={[
+                            "Predicción de Churn (IA)",
+                            "Smart Insights Automáticos",
+                            "Proyección de Ingresos",
+                            "Gestión de Usuarios & Cuotas"
+                        ]}
+                        stack="React + AI Engine + Recharts"
+                        time="20 a 25 días"
+                        link="/gimnasio-ai-demo"
+                        color="from-emerald-500 to-cyan-600"
+                    />
+
+                    <PortfolioCard
                         title="Landing Page Premium"
                         target="Startups, Lanzamientos"
                         desc="Diseño de alto impacto visual enfocado en la conversión."

@@ -22,6 +22,11 @@ import HomeMobile from "./pages/demos/turnos-mobile/pages/Home";
 import BookingMobile from "./pages/demos/turnos-mobile/pages/Booking";
 import MyAppointmentsMobile from "./pages/demos/turnos-mobile/pages/MyAppointments";
 import TurnoPredict from "./pages/demos/turnopredict";
+import GymLayout from "./pages/demos/gym-ai/components/layout/GymLayout";
+import DashboardAI from "./pages/demos/gym-ai/pages/DashboardAI";
+import UsuariosAIList from "./pages/demos/gym-ai/pages/UsuariosAIList";
+import AsistenciasAI from "./pages/demos/gym-ai/pages/AsistenciasAI";
+import CuotasAI from "./pages/demos/gym-ai/pages/CuotasAI";
 import { Navigate } from "react-router-dom";
 import "./index.css";
 
@@ -81,6 +86,19 @@ export default function App() {
 
         {/* TurnoPredict Demo (AI Powered) */}
         <Route path="/demo-turnopredict/*" element={<TurnoPredict />} />
+
+        {/* NeoGym AI Manager Demo */}
+        <Route path="/gimnasio-ai-demo/*" element={
+          <Routes>
+            <Route element={<GymLayout />}>
+              <Route path="dashboard" element={<DashboardAI />} />
+              <Route path="usuarios" element={<UsuariosAIList />} />
+              <Route path="asistencias" element={<AsistenciasAI />} />
+              <Route path="cuotas" element={<CuotasAI />} />
+              <Route index element={<Navigate to="dashboard" replace />} />
+            </Route>
+          </Routes>
+        } />
       </Routes>
     </Router>
   );
