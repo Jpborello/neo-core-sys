@@ -452,6 +452,22 @@ export default function LandingPage() {
                         link="/demo-petshop"
                         color="from-amber-500 to-orange-500"
                     />
+
+                    <PortfolioCard
+                        title="SalonHub - Gestión de Peluquería"
+                        target="Salones, Estética"
+                        desc="Sistema completo de gestión con turnos online, login de clientes y dashboard administrativo."
+                        benefits={[
+                            "Turnos Online 24/7",
+                            "Login/Registro Clientes",
+                            "Dashboard Admin",
+                            "Gestión de Servicios"
+                        ]}
+                        stack="React + LocalStorage + Auth"
+                        time="10 a 15 días"
+                        link="/demo-peluqueria"
+                        color="from-yellow-500 to-yellow-600"
+                    />
                 </div>
             </section>
 
