@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import EcommercePage from "./pages/EcommercePage";
@@ -27,8 +27,11 @@ import DashboardAI from "./pages/demos/gym-ai/pages/DashboardAI";
 import UsuariosAIList from "./pages/demos/gym-ai/pages/UsuariosAIList";
 import AsistenciasAI from "./pages/demos/gym-ai/pages/AsistenciasAI";
 import CuotasAI from "./pages/demos/gym-ai/pages/CuotasAI";
-import { Navigate } from "react-router-dom";
 import "./index.css";
+import { ShopProvider } from './pages/demos/pet-shop/context/ShopContext';
+import PetShopLayout from './pages/demos/pet-shop/layout/PetShopLayout';
+import Home from './pages/demos/pet-shop/pages/Home';
+import ProductDetail from './pages/demos/pet-shop/pages/ProductDetail';
 
 export default function App() {
   return (
@@ -44,6 +47,22 @@ export default function App() {
 
         {/* MiliNails Subweb */}
         <Route path="/milinails" element={<MiliNailsPage />} />
+
+        {/* Pet Shop Demo Route */}
+        <Route path="/demo-petshop/*" element={
+          <ShopProvider>
+            <Routes>
+              <Route element={<PetShopLayout />}>
+                <Route index element={<Home />} />
+                <Route path="product/:id" element={<ProductDetail />} />
+                <Route path="catalog" element={<div className="p-10 text-center">Catalog Coming Soon</div>} />
+                <Route path="about" element={<div className="p-10 text-center">About Page Coming Soon</div>} />
+                <Route path="contact" element={<div className="p-10 text-center">Contact Page Coming Soon</div>} />
+                <Route path="checkout" element={<div className="p-10 text-center">Checkout Coming Soon</div>} />
+              </Route>
+            </Routes>
+          </ShopProvider>
+        } />
 
         {/* Premium Appointment System Demo */}
         <Route path="/demo-turnos/*" element={

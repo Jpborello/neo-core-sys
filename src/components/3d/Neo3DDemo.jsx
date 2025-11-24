@@ -1,19 +1,32 @@
+// Neo3DDemo.jsx
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Text, Float, Sparkles, PerspectiveCamera, Environment, ContactShadows } from '@react-three/drei';
+import { OrbitControls, Float, Sparkles, PerspectiveCamera, ContactShadows, Html } from '@react-three/drei';
 import * as THREE from 'three';
 
+//
+// ---------------- NeoLogo 3D (Corregido) ----------------
+//
 function NeoLogo(props) {
-    const mesh = useRef();
+    const outer = useRef();
+    const inner = useRef();
 
     useFrame((state) => {
-        mesh.current.rotation.x = state.clock.getElapsedTime() * 0.2;
-        mesh.current.rotation.y = state.clock.getElapsedTime() * 0.3;
+        const t = state.clock.getElapsedTime();
+        if (outer.current) {
+            outer.current.rotation.x = t * 0.2;
+            outer.current.rotation.y = t * 0.3;
+        }
+        if (inner.current) {
+            inner.current.rotation.x = t * 0.15;
+            inner.current.rotation.y = t * 0.2;
+        }
     });
 
     return (
-        <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-            <mesh ref={mesh} {...props}>
+        <Float speed={2} rotationIntensity={0} floatIntensity={0.5}>
+            {/* Wireframe exterior */}
+            <mesh ref={outer} {...props}>
                 <icosahedronGeometry args={[1, 0]} />
                 <meshStandardMaterial
                     color="#7c3aed"
@@ -24,7 +37,9 @@ function NeoLogo(props) {
                     wireframe
                 />
             </mesh>
-            <mesh ref={mesh} {...props} scale={0.9}>
+
+            {/* Glow interior */}
+            <mesh ref={inner} {...props} scale={0.9}>
                 <icosahedronGeometry args={[1, 0]} />
                 <meshStandardMaterial
                     color="#00e5ff"
@@ -40,13 +55,17 @@ function NeoLogo(props) {
     );
 }
 
+//
+// ---------------- ServiceCube (Simplificado) ----------------
+//
 function ServiceCube({ position, onServiceClick }) {
     const mesh = useRef();
-    const [hovered, setHover] = useState(null);
 
     useFrame((state, delta) => {
-        mesh.current.rotation.x += delta * 0.1;
-        mesh.current.rotation.y += delta * 0.15;
+        if (mesh.current) {
+            mesh.current.rotation.x += delta * 0.1;
+            mesh.current.rotation.y += delta * 0.15;
+        }
     });
 
     const services = [
@@ -63,8 +82,9 @@ function ServiceCube({ position, onServiceClick }) {
             <group position={position}>
                 <mesh
                     ref={mesh}
-                    onPointerOver={(e) => document.body.style.cursor = 'pointer'}
-                    onPointerOut={(e) => document.body.style.cursor = 'auto'}
+                    onClick={() => onServiceClick?.()}
+                    onPointerOver={() => (document.body.style.cursor = 'pointer')}
+                    onPointerOut={() => (document.body.style.cursor = 'auto')}
                 >
                     <boxGeometry args={[2, 2, 2]} />
                     <meshStandardMaterial
@@ -74,18 +94,18 @@ function ServiceCube({ position, onServiceClick }) {
                     />
                     {services.map((service, i) => (
                         <group key={i} position={service.pos} rotation={service.rot}>
-                            <Text
-                                fontSize={0.5}
-                                color={service.color}
-                                anchorX="center"
-                                anchorY="middle"
-                                onClick={() => onServiceClick && onServiceClick(service.name)}
-                                onPointerOver={() => setHover(i)}
-                                onPointerOut={() => setHover(null)}
-                            >
-                                {service.name}
-                                <meshBasicMaterial color={service.color} toneMapped={false} />
-                            </Text>
+                            <Html transform distanceFactor={3} style={{ pointerEvents: 'none' }}>
+                                <div
+                                    className="px-6 py-3 rounded-xl bg-black/90 backdrop-blur-md border-2 font-black text-4xl whitespace-nowrap select-none shadow-[0_0_30px_rgba(0,0,0,0.9)]"
+                                    style={{
+                                        color: service.color,
+                                        borderColor: service.color,
+                                        textShadow: `0 0 15px ${service.color}, 0 0 30px ${service.color}`
+                                    }}
+                                >
+                                    {service.name}
+                                </div>
+                            </Html>
                         </group>
                     ))}
                 </mesh>
@@ -94,27 +114,37 @@ function ServiceCube({ position, onServiceClick }) {
     );
 }
 
+//
+// ---------------- Neo3DDemo MAIN COMPONENT ----------------
+//
 export default function Neo3DDemo({ onServiceClick }) {
     return (
         <div className="w-full h-[500px] md:h-[600px] relative">
-            <Canvas dpr={[1, 2]}>
+            <Canvas dpr={[1, 2]} gl={{ alpha: true }} style={{ background: 'transparent' }}>
                 <PerspectiveCamera makeDefault position={[0, 0, 8]} fov={45} />
+
+                {/* Lights */}
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1} color="#7c3aed" />
                 <pointLight position={[-10, -10, -10]} intensity={1} color="#00e5ff" />
                 <spotLight position={[0, 10, 0]} intensity={0.8} angle={0.5} penumbra={1} />
 
+                {/* 3D Objects */}
                 <NeoLogo position={[-2.5, 0, 0]} scale={1.5} />
                 <ServiceCube position={[2.5, 0, 0]} onServiceClick={onServiceClick} />
 
-                <Sparkles count={100} scale={12} size={4} speed={0.4} opacity={0.5} color="#00e5ff" />
-                <Sparkles count={50} scale={10} size={6} speed={0.2} opacity={0.5} color="#7c3aed" />
+                {/* Effects */}
+                <Sparkles count={120} scale={12} size={4} speed={0.4} opacity={0.6} color="#00e5ff" />
+                <Sparkles count={60} scale={10} size={6} speed={0.2} opacity={0.4} color="#7c3aed" />
 
-                <ContactShadows resolution={1024} scale={20} blur={2} opacity={0.5} far={10} color="#000000" />
+                {/* Shadow */}
+                <ContactShadows resolution={1024} scale={40} blur={2} opacity={0.45} far={10} />
+
+                {/* Controls */}
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-                <Environment preset="city" />
             </Canvas>
 
+            {/* HUD */}
             <div className="absolute bottom-4 right-4 flex gap-2">
                 <div className="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-white/10 text-xs text-gray-400">
                     Drag to Rotate

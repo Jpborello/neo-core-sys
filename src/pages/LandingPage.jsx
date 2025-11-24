@@ -43,7 +43,7 @@ export default function LandingPage() {
     };
 
     return (
-        <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white">
+        <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white" style={{ backgroundColor: '#0b0b0d' }}>
             {/* HERO */}
             <main className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6 min-h-[80vh] w-full">
                 {/* Animated Background Blobs / 3D Demo */}
@@ -435,6 +435,22 @@ export default function LandingPage() {
                         time="7 a 10 días"
                         link="/ecommerce"
                         color="from-green-500 to-emerald-600"
+                    />
+
+                    <PortfolioCard
+                        title="PetShop Dropshipping"
+                        target="Mascotas, E-commerce"
+                        desc="Tienda online completa para productos de mascotas con sistema de carrito y checkout."
+                        benefits={[
+                            "Catálogo de Productos",
+                            "Carrito Funcional",
+                            "Checkout Multi-paso",
+                            "Diseño Pet-Friendly"
+                        ]}
+                        stack="React + Context API"
+                        time="8 a 12 días"
+                        link="/demo-petshop"
+                        color="from-amber-500 to-orange-500"
                     />
                 </div>
             </section>
