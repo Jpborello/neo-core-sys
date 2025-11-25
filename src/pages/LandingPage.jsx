@@ -468,6 +468,22 @@ export default function LandingPage() {
                         link="/demo-peluqueria"
                         color="from-yellow-500 to-yellow-600"
                     />
+
+                    <PortfolioCard
+                        title="All Inclusive Men"
+                        target="Indumentaria, E-commerce"
+                        desc="Tienda online premium de ropa masculina con estética dark, catálogo completo y compra directa vía WhatsApp."
+                        benefits={[
+                            "Diseño Dark Premium",
+                            "Catálogo con Filtros",
+                            "Compra Directa (WhatsApp)",
+                            "100% Responsive"
+                        ]}
+                        stack="React + Framer Motion"
+                        time="8 a 12 días"
+                        link="/demo-all-inclusive"
+                        color="from-gray-800 to-yellow-600"
+                    />
                 </div>
             </section>
 

@@ -32,7 +32,7 @@ export default function Layout() {
                     {/* Logo */}
                     <Link to="/demo-all-inclusive" className="relative z-50 group">
                         <div className="flex items-center gap-2">
-                            <img src={logoImg} alt="All Inclusive" className="h-16 w-auto object-contain" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block' }} />
+                            <img src={logoImg} alt="All Inclusive" className="h-24 w-auto object-contain" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block' }} />
                             <div className="hidden text-2xl font-black tracking-tighter uppercase border-2 border-white px-2 py-1">
                                 All<span className="text-yellow-500">Inclusive</span>
                             </div>

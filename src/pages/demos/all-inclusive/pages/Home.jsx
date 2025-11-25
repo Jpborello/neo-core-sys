@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaShippingFast, FaUndo, FaShieldAlt } from 'react-icons/fa';
+import heroImg from '../../../../assets/all_in_clusive/indumentaria1.jpg';
+import lifestyleImg from '../../../../assets/all_in_clusive/indumentaria2.jpg';
 import { products } from '../data/products';
 
 export default function Home() {
@@ -12,38 +14,24 @@ export default function Home() {
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&q=80&w=2000"
-                        alt="Hero Background"
-                        className="w-full h-full object-cover opacity-60"
-                    />
+                    <img src={heroImg} alt="Hero background – All Inclusive Men" className="w-full h-full object-cover opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
                 </div>
-
                 <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
+                    <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                         <h2 className="text-yellow-500 font-bold tracking-[0.5em] uppercase mb-4 text-sm md:text-base">Nueva Colección 2025</h2>
                         <h1 className="text-5xl md:text-8xl font-black text-white mb-8 uppercase tracking-tighter leading-none">
-                            Redefine tu <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Estilo</span>
+                            Redefine tu <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Estilo</span>
                         </h1>
                         <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
                             Indumentaria masculina diseñada para quienes no siguen tendencias, las crean. Calidad premium, corte perfecto.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                to="/demo-all-inclusive/catalogo"
-                                className="bg-white text-black px-10 py-4 font-bold uppercase tracking-widest hover:bg-yellow-500 transition-colors duration-300"
-                            >
+                            <Link to="/demo-all-inclusive/catalogo" className="bg-white text-black px-10 py-4 font-bold uppercase tracking-widest hover:bg-yellow-500 transition-colors duration-300">
                                 Ver Colección
                             </Link>
-                            <Link
-                                to="/demo-all-inclusive/contacto"
-                                className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300"
-                            >
+                            <Link to="/demo-all-inclusive/contacto" className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300">
                                 Contacto
                             </Link>
                         </div>
@@ -86,26 +74,16 @@ export default function Home() {
                             Ver todo <FaArrowRight />
                         </Link>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {featuredProducts.map((product) => (
+                        {featuredProducts.map(product => (
                             <div key={product.id} className="group cursor-pointer">
                                 <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900 mb-6">
-                                    <img
-                                        src={product.image}
-                                        alt={product.name}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
+                                    <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                     {product.isNew && (
-                                        <div className="absolute top-4 left-4 bg-yellow-500 text-black text-xs font-bold px-3 py-1 uppercase tracking-widest">
-                                            New
-                                        </div>
+                                        <div className="absolute top-4 left-4 bg-yellow-500 text-black text-xs font-bold px-3 py-1 uppercase tracking-widest">New</div>
                                     )}
                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <Link
-                                            to="/demo-all-inclusive/catalogo"
-                                            className="bg-white text-black px-8 py-3 font-bold uppercase tracking-widest hover:bg-yellow-500 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300"
-                                        >
+                                        <Link to="/demo-all-inclusive/catalogo" className="bg-white text-black px-8 py-3 font-bold uppercase tracking-widest hover:bg-yellow-500 transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">
                                             Ver Detalle
                                         </Link>
                                     </div>
@@ -115,7 +93,6 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-
                     <div className="mt-12 text-center md:hidden">
                         <Link to="/demo-all-inclusive/catalogo" className="inline-flex items-center gap-2 text-white border border-white px-8 py-3 uppercase tracking-widest text-sm font-bold">
                             Ver todo <FaArrowRight />
@@ -130,11 +107,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="relative">
                             <div className="absolute -top-10 -left-10 w-40 h-40 border-2 border-yellow-500/20 z-0"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1516257984-b1b4d8c9230c?auto=format&fit=crop&q=80&w=1000"
-                                alt="Men Style"
-                                className="relative z-10 w-full grayscale hover:grayscale-0 transition-all duration-700"
-                            />
+                            <img src={lifestyleImg} alt="Estilo de vida – All Inclusive Men" className="relative z-10 w-full grayscale hover:grayscale-0 transition-all duration-700" />
                             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-500/10 z-0"></div>
                         </div>
                         <div>
@@ -145,10 +118,7 @@ export default function Home() {
                             <p className="text-gray-400 text-lg mb-8 font-light leading-relaxed">
                                 En All Inclusive Men creemos que el estilo es personal. Nuestra colección está curada para el hombre que busca destacar sin estridencias. Elegancia atemporal con un toque moderno.
                             </p>
-                            <Link
-                                to="/demo-all-inclusive/nosotros"
-                                className="text-white border-b border-yellow-500 pb-1 hover:text-yellow-500 transition-colors uppercase tracking-widest text-sm font-bold"
-                            >
+                            <Link to="/demo-all-inclusive/nosotros" className="text-white border-b border-yellow-500 pb-1 hover:text-yellow-500 transition-colors uppercase tracking-widest text-sm font-bold">
                                 Nuestra Historia
                             </Link>
                         </div>
