@@ -41,6 +41,10 @@ import SalonServices from './pages/demos/salon-hub/pages/public/SalonServices';
 import MyAppointments from './pages/demos/salon-hub/pages/client/MyAppointments';
 import AdminDashboard from './pages/demos/salon-hub/pages/admin/AdminDashboard';
 import ErrorBoundary from "./components/ErrorBoundary";
+import AllInclusiveLayout from './pages/demos/all-inclusive/layout/Layout';
+import AllInclusiveHome from './pages/demos/all-inclusive/pages/Home';
+import AllInclusiveCatalog from './pages/demos/all-inclusive/pages/Catalog';
+import { About as AllInclusiveAbout, Contact as AllInclusiveContact } from './pages/demos/all-inclusive/pages/Pages';
 
 export default function App() {
   return (
@@ -143,6 +147,18 @@ export default function App() {
               <Route path="asistencias" element={<AsistenciasAI />} />
               <Route path="cuotas" element={<CuotasAI />} />
               <Route index element={<Navigate to="dashboard" replace />} />
+            </Route>
+          </Routes>
+        } />
+
+        {/* All Inclusive Men Demo */}
+        <Route path="/demo-all-inclusive/*" element={
+          <Routes>
+            <Route element={<AllInclusiveLayout />}>
+              <Route index element={<AllInclusiveHome />} />
+              <Route path="catalogo" element={<AllInclusiveCatalog />} />
+              <Route path="nosotros" element={<AllInclusiveAbout />} />
+              <Route path="contacto" element={<AllInclusiveContact />} />
             </Route>
           </Routes>
         } />
