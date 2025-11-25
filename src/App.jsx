@@ -46,6 +46,13 @@ import AllInclusiveHome from './pages/demos/all-inclusive/pages/Home';
 import AllInclusiveCatalog from './pages/demos/all-inclusive/pages/Catalog';
 import { About as AllInclusiveAbout, Contact as AllInclusiveContact } from './pages/demos/all-inclusive/pages/Pages';
 import WebFramerPage from "./pages/demos/web-framer/WebFramerPage";
+import GinexMotorsLayout from './pages/demos/ginex-motors/layout/GinexMotorsLayout';
+import GinexHome from './pages/demos/ginex-motors/pages/Home';
+import GinexCatalog from './pages/demos/ginex-motors/pages/Catalog';
+import AquilesLayout from './pages/demos/aquiles/layout/AquilesLayout';
+import AquilesHome from './pages/demos/aquiles/pages/Home';
+import AquilesCatalog from './pages/demos/aquiles/pages/Catalog';
+import DirectorPage from './pages/DirectorPage';
 
 export default function App() {
   return (
@@ -53,6 +60,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout><LandingPage /></Layout>} />
         <Route path="/ecommerce" element={<Layout><EcommercePage /></Layout>} />
+        <Route path="/TDirector" element={<DirectorPage />} />
 
         {/* Demos */}
         <Route path="/demo-landing" element={<DemoLanding />} />
@@ -161,6 +169,26 @@ export default function App() {
               <Route path="catalogo" element={<AllInclusiveCatalog />} />
               <Route path="nosotros" element={<AllInclusiveAbout />} />
               <Route path="contacto" element={<AllInclusiveContact />} />
+            </Route>
+          </Routes>
+        } />
+
+        {/* Ginex Motors Demo */}
+        <Route path="/ginex-motors/*" element={
+          <Routes>
+            <Route element={<GinexMotorsLayout />}>
+              <Route index element={<GinexHome />} />
+              <Route path="catalogo" element={<GinexCatalog />} />
+            </Route>
+          </Routes>
+        } />
+
+        {/* Electricidad Aquiles Demo */}
+        <Route path="/demo-aquiles/*" element={
+          <Routes>
+            <Route element={<AquilesLayout />}>
+              <Route index element={<AquilesHome />} />
+              <Route path="catalogo" element={<AquilesCatalog />} />
             </Route>
           </Routes>
         } />

@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaArrowRight, FaCheck, FaClock, FaCode, FaDollarSign, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
@@ -499,6 +500,38 @@ export default function LandingPage() {
                         link="/demo-all-inclusive"
                         color="from-gray-800 to-yellow-600"
                     />
+
+                    <PortfolioCard
+                        title="Ginex Motors"
+                        target="Concesionaria, Motos"
+                        desc="Concesionaria de motos premium con estética dark y acentos rojos. Catálogo de motos nuevas y usadas con filtros avanzados."
+                        benefits={[
+                            "Diseño Dark + Red Neon",
+                            "Catálogo 0KM y Usadas",
+                            "Filtros por Categoría",
+                            "WhatsApp Integrado"
+                        ]}
+                        stack="React + Framer Motion"
+                        time="8 a 12 días"
+                        link="/ginex-motors"
+                        color="from-black to-red-600"
+                    />
+
+                    <PortfolioCard
+                        title="Electricidad Aquiles"
+                        target="Materiales Eléctricos, Iluminación"
+                        desc="E-commerce B2B/B2C para venta de materiales eléctricos e iluminación LED. Diseño limpio y técnico."
+                        benefits={[
+                            "Catálogo Técnico",
+                            "Pedidos por WhatsApp",
+                            "Sección Proyectos",
+                            "Diseño Minimalista"
+                        ]}
+                        stack="React + Tailwind + Lucide"
+                        time="5 a 7 días"
+                        link="/demo-aquiles"
+                        color="from-blue-600 to-orange-500"
+                    />
                 </div>
             </section>
 
@@ -529,6 +562,21 @@ export default function LandingPage() {
                         title="E-commerce"
                         text="Tiendas online completas con pasarelas de pago y gestión de inventario."
                     />
+                    <div className="md:col-span-3 mt-8">
+                        <div className="glass-panel p-8 rounded-3xl border border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-slate-900/20 flex flex-col md:flex-row items-center gap-8 hover:border-blue-500/50 transition-colors group cursor-pointer relative overflow-hidden">
+                            <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-blue-600/10 transition-colors"></div>
+                            <div className="p-4 bg-blue-500/20 rounded-full text-blue-400 shrink-0 relative z-10">
+                                <RiShieldCheckLine className="text-5xl" />
+                            </div>
+                            <div className="flex-1 text-center md:text-left relative z-10">
+                                <h3 className="text-2xl font-bold mb-2 text-white">Director de Confianza</h3>
+                                <p className="text-gray-400 text-lg mb-4">Acompañamiento estratégico para tu negocio. Te ayudo a tomar mejores decisiones, evitar errores y avanzar con claridad.</p>
+                                <Link to="/TDirector" className="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors">
+                                    Saber más <FaArrowRight />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
