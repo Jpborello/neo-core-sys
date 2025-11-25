@@ -282,6 +282,21 @@ export default function LandingPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                     <PortfolioCard
+                        title="Portfolio Framer Style"
+                        target="Freelancers, Creativos"
+                        desc="Diseño minimalista y premium con animaciones suaves y estética high-end."
+                        benefits={[
+                            "Diseño Minimalista",
+                            "Animaciones Framer",
+                            "100% Editable",
+                            "Estética Premium"
+                        ]}
+                        stack="React + Framer Motion"
+                        time="3 a 5 días"
+                        link="/web-framer"
+                        color="from-gray-900 to-gray-600"
+                    />
+                    <PortfolioCard
                         title="MiliNails (Glam)"
                         target="Estética, Belleza"
                         desc="Diseño Premium con sistema de reservas y galería."

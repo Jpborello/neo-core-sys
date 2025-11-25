@@ -45,6 +45,7 @@ import AllInclusiveLayout from './pages/demos/all-inclusive/layout/Layout';
 import AllInclusiveHome from './pages/demos/all-inclusive/pages/Home';
 import AllInclusiveCatalog from './pages/demos/all-inclusive/pages/Catalog';
 import { About as AllInclusiveAbout, Contact as AllInclusiveContact } from './pages/demos/all-inclusive/pages/Pages';
+import WebFramerPage from "./pages/demos/web-framer/WebFramerPage";
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/demo-landing" element={<DemoLanding />} />
         <Route path="/demo-corporate" element={<DemoCorporate />} />
         <Route path="/demo-restaurant" element={<DemoRestaurant />} />
+        <Route path="/web-framer" element={<WebFramerPage />} />
 
         {/* MiliNails Subweb */}
         <Route path="/milinails" element={<MiliNailsPage />} />

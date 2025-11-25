@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaShippingFast, FaUndo, FaShieldAlt } from 'react-icons/fa';
-import heroImg from '../../../../assets/all_in_clusive/indumentaria1.jpg';
+import heroImg from '../../../../assets/all_in_clusive/indumentaria9.jpg';
 import lifestyleImg from '../../../../assets/all_in_clusive/indumentaria2.jpg';
 import { products } from '../data/products';
 
