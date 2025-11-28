@@ -1,0 +1,239 @@
+{
+    "name": "Neo Core Sys Chatbot v3 (CORS + Fix)",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "chat",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "webhook-post",
+            "name": "Webhook (POST)",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                460,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "httpMethod": "OPTIONS",
+                "path": "chat",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "webhook-options",
+            "name": "Webhook (OPTIONS)",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                460,
+                100
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "{}",
+                "options": {
+                    "responseHeaders": {
+                        "entries": [
+                            {
+                                "name": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "name": "Access-Control-Allow-Methods",
+                                "value": "POST, OPTIONS"
+                            },
+                            {
+                                "name": "Access-Control-Allow-Headers",
+                                "value": "Content-Type"
+                            }
+                        ]
+                    }
+                }
+            },
+            "id": "respond-options",
+            "name": "Respond CORS (OPTIONS)",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                700,
+                100
+            ]
+        },
+        {
+            "parameters": {
+                "model": "gemini-1.5-flash",
+                "options": {
+                    "systemPrompt": "Eres 'Neo', el asistente avanzado de IA para Neo Core Sys.\n\nTU OBJETIVO: Filtrar clientes y conseguir su Email si valen la pena.\n\nINSTRUCCIONES:\n1. Sé amable, profesional y breve.\n2. Haz preguntas para calificar: Nombre, Empresa, Proyecto, Presupuesto.\n\nCRITERIO DE ÉXITO (LEAD):\n- Si el cliente tiene presupuesto y un proyecto serio: Pide su Email para agendar reunión.\n- IMPORTANTE: Si pides el email o agendas reunión, INICIA tu respuesta con la etiqueta \"[LEAD]\" (sin comillas) para que mi sistema te detecte.\n  Ejemplo: \"[LEAD] ¡Excelente! Por favor dame tu email...\"\n\nCRITERIO DE RECHAZO:\n- Si no tiene presupuesto o quiere gratis: Despáchalo educadamente invitándolo a redes sociales. NO uses la etiqueta [LEAD]."
+                }
+            },
+            "id": "ai-agent",
+            "name": "Neo AI Agent",
+            "type": "@n8n/n8n-nodes-langchain.agent",
+            "typeVersion": 1,
+            "position": [
+                680,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "conditions": {
+                    "string": [
+                        {
+                            "value1": "={{ $json.output }}",
+                            "operation": "contains",
+                            "value2": "[LEAD]"
+                        }
+                    ]
+                }
+            },
+            "id": "check-lead",
+            "name": "Es Lead?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 1,
+            "position": [
+                900,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "chatId": "5920344956",
+                "text": "=🚀 ¡NUEVO LEAD DETECTADO!\n\nLa IA ha encontrado un cliente potencial.\n\nÚltimo mensaje del Bot:\n{{ $json.output }}",
+                "additionalFields": {}
+            },
+            "id": "telegram-node",
+            "name": "Avisar por Telegram",
+            "type": "n8n-nodes-base.telegram",
+            "typeVersion": 1,
+            "position": [
+                1150,
+                200
+            ],
+            "credentials": {
+                "telegramApi": {
+                    "id": "CREAR_CREDENCIAL_TELEGRAM",
+                    "name": "Telegram account"
+                }
+            }
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ $json.output.replace('[LEAD]', '').trim() }}",
+                "options": {
+                    "responseHeaders": {
+                        "entries": [
+                            {
+                                "name": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            }
+                        ]
+                    }
+                }
+            },
+            "id": "clean-response",
+            "name": "Limpiar Respuesta",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                1150,
+                450
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ $json.output }}",
+                "options": {
+                    "responseHeaders": {
+                        "entries": [
+                            {
+                                "name": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            }
+                        ]
+                    }
+                }
+            },
+            "id": "normal-response",
+            "name": "Respuesta Normal",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                1150,
+                600
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook (POST)": {
+            "main": [
+                [
+                    {
+                        "node": "Neo AI Agent",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Webhook (OPTIONS)": {
+            "main": [
+                [
+                    {
+                        "node": "Respond CORS (OPTIONS)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Neo AI Agent": {
+            "main": [
+                [
+                    {
+                        "node": "Es Lead?",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Es Lead?": {
+            "main": [
+                [
+                    {
+                        "node": "Avisar por Telegram",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "Respuesta Normal",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Avisar por Telegram": {
+            "main": [
+                [
+                    {
+                        "node": "Clean Response",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

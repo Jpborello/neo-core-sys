@@ -9,4 +9,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/webhook': {
+        target: 'https://neo-core-sys.app.n8n.cloud',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 })

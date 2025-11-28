@@ -12,7 +12,7 @@ const ChatWidget = () => {
   const messagesEndRef = useRef(null);
 
   // REEMPLAZA ESTO CON TU URL DE WEBHOOK DE N8N (PRODUCCIÓN)
-  const N8N_WEBHOOK_URL = "https://neo-core-sys.app.n8n.cloud/webhook/chat";
+  const N8N_WEBHOOK_URL = "/webhook/chat";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -32,23 +32,16 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      // Simulación de respuesta si no hay webhook configurado aún
-      // En producción, descomentar el fetch real
-      /*
+      // Enviar mensaje al webhook de n8n
       const response = await fetch(N8N_WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chatInput: userMessage }) // Ajustar según lo que espere n8n
+        body: JSON.stringify({ chatInput: userMessage })
       });
-      
-      const data = await response.json();
-      // Asumiendo que n8n devuelve { output: "Respuesta..." } o similar
-      const botReply = data.output || data.text || "Lo siento, tuve un problema de conexión.";
-      */
 
-      // SIMULACIÓN TEMPORAL (Borrar cuando conectes n8n)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      const botReply = "¡Interesante! Cuéntame más sobre tu proyecto. ¿Tienes un presupuesto estimado?";
+      const data = await response.json();
+      // Asumiendo que n8n devuelve { output: "Respuesta..." }
+      const botReply = data.output || data.text || "Lo siento, tuve un problema de conexión.";
 
       setMessages(prev => [...prev, { text: botReply, sender: 'bot' }]);
     } catch (error) {
@@ -100,8 +93,8 @@ const ChatWidget = () => {
                 >
                   <div
                     className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === 'user'
-                        ? 'bg-blue-600 text-white rounded-br-none shadow-md'
-                        : 'bg-white/10 text-gray-100 rounded-bl-none border border-white/5 shadow-sm'
+                      ? 'bg-blue-600 text-white rounded-br-none shadow-md'
+                      : 'bg-white/10 text-gray-100 rounded-bl-none border border-white/5 shadow-sm'
                       }`}
                   >
                     {msg.text}
@@ -149,8 +142,8 @@ const ChatWidget = () => {
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
         className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 ${isOpen
-            ? 'bg-red-500/80 hover:bg-red-600 rotate-90'
-            : 'bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 hover:shadow-cyan-500/50 bg-[length:200%_200%] animate-gradient-xy'
+          ? 'bg-red-500/80 hover:bg-red-600 rotate-90'
+          : 'bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 hover:shadow-cyan-500/50 bg-[length:200%_200%] animate-gradient-xy'
           }`}
       >
         {isOpen ? (
