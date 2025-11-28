@@ -1,0 +1,75 @@
+{
+    "name": "Neo Core Sys Chatbot",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "chat",
+                "options": {}
+            },
+            "id": "webhook-node",
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                460,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "model": "gemini-1.5-flash",
+                "options": {
+                    "systemPrompt": "Eres 'Neo', el asistente avanzado de IA para Neo Core Sys (una agencia de desarrollo de software premium).\n\nTu objetivo es filtrar clientes potenciales (leads) de manera educada y profesional.\n\nINSTRUCCIONES:\n1. Mantén un tono profesional, ligeramente futurista y amable.\n2. Haz preguntas de calificación UNA POR UNA (no todas juntas):\n   - ¿Cuál es tu nombre?\n   - ¿Cómo se llama tu empresa?\n   - ¿Qué tipo de proyecto tienes en mente? (Web, App, Automatización, etc.)\n   - ¿Cuál es tu presupuesto estimado?\n\n3. LÓGICA DE FILTRADO:\n   - Si el presupuesto es muy bajo (menos de $500) o buscan cosas gratis: Explica educadamente que somos una agencia premium y quizás no seamos el mejor ajuste en este momento, pero invítalos a seguirnos en redes sociales para contenido gratuito.\n   - Si es un lead serio (Empresa, presupuesto razonable): Di \"Suena como un proyecto excelente para nosotros.\" y pide su Email para agendar una reunión.\n\n4. Mantén las respuestas breves (máximo 2-3 oraciones)."
+                }
+            },
+            "id": "ai-agent",
+            "name": "Neo AI Agent",
+            "type": "@n8n/n8n-nodes-langchain.agent",
+            "typeVersion": 1,
+            "position": [
+                680,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ $json.output }}",
+                "options": {}
+            },
+            "id": "response-node",
+            "name": "Respond to Webhook",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                900,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Neo AI Agent",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Neo AI Agent": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

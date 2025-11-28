@@ -53,6 +53,7 @@ import AquilesLayout from './pages/demos/aquiles/layout/AquilesLayout';
 import AquilesHome from './pages/demos/aquiles/pages/Home';
 import AquilesCatalog from './pages/demos/aquiles/pages/Catalog';
 import DirectorPage from './pages/DirectorPage';
+import ChatWidget from './components/ChatWidget';
 
 export default function App() {
   return (
@@ -193,6 +194,7 @@ export default function App() {
           </Routes>
         } />
       </Routes>
+      <ChatWidget />
     </Router>
   );
 }
