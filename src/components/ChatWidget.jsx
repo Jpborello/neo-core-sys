@@ -12,7 +12,7 @@ const ChatWidget = () => {
   const messagesEndRef = useRef(null);
 
   // REEMPLAZA ESTO CON TU URL DE WEBHOOK DE N8N (PRODUCCIÓN)
-  const N8N_WEBHOOK_URL = "/webhook/chat";
+  const N8N_WEBHOOK_URL = "https://neo-core-sys.app.n8n.cloud/webhook/chat";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
