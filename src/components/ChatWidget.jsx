@@ -40,6 +40,7 @@ const ChatWidget = () => {
       });
 
       const data = await response.json();
+      console.log("N8N RESPONSE:", data); // DEBUG LOG
       // Asumiendo que n8n devuelve { output: "Respuesta..." }
       const botReply = data.output || data.text || "Lo siento, tuve un problema de conexión.";
 

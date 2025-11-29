@@ -52,6 +52,12 @@ import GinexCatalog from './pages/demos/ginex-motors/pages/Catalog';
 import AquilesLayout from './pages/demos/aquiles/layout/AquilesLayout';
 import AquilesHome from './pages/demos/aquiles/pages/Home';
 import AquilesCatalog from './pages/demos/aquiles/pages/Catalog';
+import SuriaLayout from './suria/components/SuriaLayout';
+import SuriaHome from './suria/pages/SuriaHome';
+import SuriaCatalog from './suria/pages/SuriaCatalog';
+import SuriaCheckout from './suria/pages/SuriaCheckout';
+import SuriaAdmin from './suria/pages/SuriaAdmin';
+import { CartProvider } from './suria/components/CartContext';
 import DirectorPage from './pages/DirectorPage';
 import ChatWidget from './components/ChatWidget';
 
@@ -192,6 +198,20 @@ export default function App() {
               <Route path="catalogo" element={<AquilesCatalog />} />
             </Route>
           </Routes>
+        } />
+
+        {/* Suria Lingerie Demo */}
+        <Route path="/suria/*" element={
+          <CartProvider>
+            <Routes>
+              <Route element={<SuriaLayout />}>
+                <Route index element={<SuriaHome />} />
+                <Route path="catalogo" element={<SuriaCatalog />} />
+                <Route path="checkout" element={<SuriaCheckout />} />
+                <Route path="admin" element={<SuriaAdmin />} />
+              </Route>
+            </Routes>
+          </CartProvider>
         } />
       </Routes>
       <ChatWidget />
