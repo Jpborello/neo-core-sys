@@ -61,6 +61,9 @@ import { CartProvider } from './suria/components/CartContext';
 import CuantoTeQuieroApp from './cuanto-te-quiero/App';
 import DirectorPage from './pages/DirectorPage';
 import ChatWidget from './components/ChatWidget';
+import MotosLayout from './pages/demos/motos/layout/MotosLayout';
+import MotosHome from './pages/demos/motos/pages/Home';
+import DebugGallery from './pages/demos/motos/pages/DebugGallery';
 
 export default function App() {
   return (
@@ -217,6 +220,16 @@ export default function App() {
 
         {/* Cuanto Te Quiero Subweb */}
         <Route path="/CuantoTeQuiero/*" element={<CuantoTeQuieroApp />} />
+
+        {/* Motos Subweb */}
+        <Route path="/motos/*" element={
+          <Routes>
+            <Route element={<MotosLayout />}>
+              <Route index element={<MotosHome />} />
+              <Route path="debug" element={<DebugGallery />} />
+            </Route>
+          </Routes>
+        } />
       </Routes>
       <ChatWidget />
     </Router>

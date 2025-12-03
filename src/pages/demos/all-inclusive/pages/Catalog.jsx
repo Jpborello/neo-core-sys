@@ -19,7 +19,7 @@ export default function Catalog() {
     };
 
     return (
-        <div className="bg-black min-h-screen pt-24 pb-24">
+        <div className="bg-[#0a192f] min-h-screen pt-24 pb-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -36,8 +36,8 @@ export default function Catalog() {
                             key={cat}
                             onClick={() => setFilter(cat)}
                             className={`px-6 py-2 uppercase tracking-widest text-sm font-bold border transition-all duration-300 ${filter === cat
-                                ? 'bg-white text-black border-white'
-                                : 'bg-transparent text-gray-400 border-gray-800 hover:border-white hover:text-white'
+                                ? 'bg-[#d4af37] text-[#0a192f] border-[#d4af37]'
+                                : 'bg-transparent text-gray-400 border-[#0a192f] hover:border-[#d4af37] hover:text-[#d4af37]'
                                 }`}
                         >
                             {cat}
@@ -59,14 +59,14 @@ export default function Catalog() {
                             key={product.id}
                             className="group"
                         >
-                            <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900 mb-4">
+                            <div className="relative aspect-[3/4] overflow-hidden bg-[#050d1a] mb-4">
                                 <img
                                     src={product.image}
                                     alt={product.name}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 {product.isNew && (
-                                    <div className="absolute top-3 left-3 bg-yellow-500 text-black text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
+                                    <div className="absolute top-3 left-3 bg-[#d4af37] text-[#0a192f] text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
                                         New
                                     </div>
                                 )}
@@ -80,7 +80,7 @@ export default function Catalog() {
                             </div>
                             <button
                                 onClick={() => handleBuy(product)}
-                                className="w-full bg-white text-black py-3 font-bold uppercase tracking-widest text-xs hover:bg-yellow-500 transition-colors mt-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300"
+                                className="w-full bg-white text-[#0a192f] py-3 font-bold uppercase tracking-widest text-xs hover:bg-[#d4af37] transition-colors mt-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300"
                             >
                                 Comprar Ahora
                             </button>
