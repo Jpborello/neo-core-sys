@@ -58,6 +58,7 @@ import SuriaCatalog from './suria/pages/SuriaCatalog';
 import SuriaCheckout from './suria/pages/SuriaCheckout';
 import SuriaAdmin from './suria/pages/SuriaAdmin';
 import { CartProvider } from './suria/components/CartContext';
+import CuantoTeQuieroApp from './cuanto-te-quiero/App';
 import DirectorPage from './pages/DirectorPage';
 import ChatWidget from './components/ChatWidget';
 
@@ -213,6 +214,9 @@ export default function App() {
             </Routes>
           </CartProvider>
         } />
+
+        {/* Cuanto Te Quiero Subweb */}
+        <Route path="/CuantoTeQuiero/*" element={<CuantoTeQuieroApp />} />
       </Routes>
       <ChatWidget />
     </Router>

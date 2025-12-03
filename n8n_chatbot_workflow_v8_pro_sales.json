@@ -185,7 +185,7 @@
         {
             "parameters": {
                 "respondWith": "json",
-                "responseBody": "={{ { \"output\": $json.text.replace('[LEAD]', '').trim() } }}",
+                "responseBody": "={{ { \"output\": \"¡Gracias! Pronto alguno del equipo (si se dignan a dejar el café ☕) se comunicará con vos.\" } }}",
                 "options": {
                     "responseHeaders": {
                         "entries": [
