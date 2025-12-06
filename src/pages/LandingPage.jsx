@@ -72,9 +72,12 @@ export default function LandingPage() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6"
+                    className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
                 >
                     <span className="text-gradient">Neo-Core-Sys</span>
+                    <span className="block text-2xl md:text-4xl text-gray-200 mt-4 font-bold tracking-normal">
+                        Desarrollo Web, Apps & IA en Rosario
+                    </span>
                 </motion.h1>
 
                 <motion.p
@@ -535,46 +538,69 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* SERVICES */}
-            <section id="services" className="py-24 px-6 w-full max-w-7xl">
-                <motion.h2
+            {/* SERVICES DETAILED SECTION */}
+            <section id="services" className="py-24 px-6 w-full max-w-7xl mx-auto">
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-bold mb-16 text-center"
+                    className="text-center mb-16"
                 >
-                    Otros <span className="text-blue-500">Servicios</span>
-                </motion.h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        Soluciones Integrales de <span className="text-blue-500">Software</span>
+                    </h2>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Cubrimos todo el ciclo de vida digital de tu negocio. Desde el diseño web hasta la automatización con Inteligencia Artificial.
+                    </p>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <ServiceCard
-                        icon={<RiSmartphoneLine className="text-5xl text-purple-400" />}
-                        title="Apps Mobile"
-                        text="Desarrollo nativo y multiplataforma para iOS y Android con las últimas tecnologías."
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <ServiceCard
                         icon={<RiLayoutGridLine className="text-5xl text-blue-400" />}
-                        title="Sistemas Web"
-                        text="Plataformas robustas, dashboards administrativos y sistemas de gestión complejos."
+                        title="Programación Web"
+                        text="Desarrollo de páginas web institucionales, landing pages de alta conversión y portafolios interactivos. Código limpio, optimizado para SEO y 100% responsive."
+                    />
+                    <ServiceCard
+                        icon={<RiSmartphoneLine className="text-5xl text-purple-400" />}
+                        title="Desarrollo de Apps"
+                        text="Aplicaciones móviles nativas e híbridas (iOS y Android) con Flutter y React Native. Llevá tu negocio al bolsillo de tus clientes con una experiencia de usuario impecable."
+                    />
+                    <ServiceCard
+                        icon={<RiLightbulbLine className="text-5xl text-yellow-400" />}
+                        title="Automatización con IA"
+                        text="Implementamos chatbots inteligentes, análisis de datos predictivos y automatización de procesos repetitivos para ahorrar tiempo y dinero en tu empresa."
                     />
                     <ServiceCard
                         icon={<RiGlobalLine className="text-5xl text-teal-400" />}
-                        title="E-commerce"
-                        text="Tiendas online completas con pasarelas de pago y gestión de inventario."
+                        title="Tiendas Ecommerce"
+                        text="Plataformas de venta online robustas, seguras y escalables. Integración con Mercado Pago, Stripe y gestión de stock en tiempo real."
                     />
-                    <div className="md:col-span-3 mt-8">
-                        <div className="glass-panel p-8 rounded-3xl border border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-slate-900/20 flex flex-col md:flex-row items-center gap-8 hover:border-blue-500/50 transition-colors group cursor-pointer relative overflow-hidden">
-                            <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-blue-600/10 transition-colors"></div>
-                            <div className="p-4 bg-blue-500/20 rounded-full text-blue-400 shrink-0 relative z-10">
-                                <RiShieldCheckLine className="text-5xl" />
-                            </div>
-                            <div className="flex-1 text-center md:text-left relative z-10">
-                                <h3 className="text-2xl font-bold mb-2 text-white">Director de Confianza</h3>
-                                <p className="text-gray-400 text-lg mb-4">Acompañamiento estratégico para tu negocio. Te ayudo a tomar mejores decisiones, evitar errores y avanzar con claridad.</p>
-                                <Link to="/TDirector" className="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors">
-                                    Saber más <FaArrowRight />
-                                </Link>
-                            </div>
+                    <ServiceCard
+                        icon={<FaCode className="text-5xl text-red-400" />}
+                        title="Integraciones API"
+                        text="Conectamos tus sistemas existentes (CRM, ERP, Facturación) con nuevas herramientas digitales para un flujo de datos unificado y eficiente."
+                    />
+                    <ServiceCard
+                        icon={<RiShieldCheckLine className="text-5xl text-green-400" />}
+                        title="Mantenimiento Web"
+                        text="Soporte técnico continuo, actualizaciones de seguridad y optimización de rendimiento para que tu sitio web funcione siempre como el primer día."
+                    />
+                </div>
+
+                <div className="mt-16">
+                    <div className="glass-panel p-8 rounded-3xl border border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-slate-900/20 flex flex-col md:flex-row items-center gap-8 hover:border-blue-500/50 transition-colors group cursor-pointer relative overflow-hidden">
+                        <div className="absolute inset-0 bg-blue-600/5 group-hover:bg-blue-600/10 transition-colors"></div>
+                        <div className="p-4 bg-blue-500/20 rounded-full text-blue-400 shrink-0 relative z-10">
+                            <RiShieldCheckLine className="text-5xl" />
+                        </div>
+                        <div className="flex-1 text-center md:text-left relative z-10">
+                            <h3 className="text-2xl font-bold mb-2 text-white">Director de Confianza (CTO as a Service)</h3>
+                            <p className="text-gray-400 text-lg mb-4">
+                                ¿Necesitás un socio tecnológico? Ofrecemos acompañamiento estratégico para tomar las mejores decisiones técnicas, evitar errores costosos y escalar tu negocio digitalmente.
+                            </p>
+                            <Link to="/TDirector" className="inline-flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors">
+                                Saber más sobre Consultoría <FaArrowRight />
+                            </Link>
                         </div>
                     </div>
                 </div>
