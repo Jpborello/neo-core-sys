@@ -13,6 +13,7 @@ import Dashboard from "./pages/demos/turnos/pages/Dashboard";
 import Calendar from "./pages/demos/turnos/pages/Calendar";
 import Clients from "./pages/demos/turnos/pages/Clients";
 import Settings from "./pages/demos/turnos/pages/Settings";
+import AiProjectSimulator from "./components/AiProjectSimulator";
 import { DashboardProvider } from "./pages/demos/metrics/context/DashboardContext";
 import MetricsLayout from "./pages/demos/metrics/layout/MetricsLayout";
 import Overview from "./pages/demos/metrics/pages/Overview";
@@ -64,6 +65,7 @@ import ChatWidget from './components/ChatWidget';
 import MotosLayout from './pages/demos/motos/layout/MotosLayout';
 import MotosHome from './pages/demos/motos/pages/Home';
 import DebugGallery from './pages/demos/motos/pages/DebugGallery';
+import DistributorOrdersDemo from './pages/demos/distributor/DemoLoaderWrapper';
 
 export default function App() {
   return (
@@ -73,10 +75,13 @@ export default function App() {
         <Route path="/ecommerce" element={<Layout><EcommercePage /></Layout>} />
         <Route path="/TDirector" element={<DirectorPage />} />
 
+
         {/* Demos */}
+        <Route path="/ai-simulator" element={<Layout><AiProjectSimulator /></Layout>} />
         <Route path="/demo-landing" element={<DemoLanding />} />
         <Route path="/demo-corporate" element={<DemoCorporate />} />
         <Route path="/demo-restaurant" element={<DemoRestaurant />} />
+        <Route path="/demo-distribuidora" element={<DistributorOrdersDemo />} />
         <Route path="/web-framer" element={<WebFramerPage />} />
 
         {/* MiliNails Subweb */}

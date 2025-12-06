@@ -8,6 +8,8 @@ import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiSupabase, SiNodedotjs, Si
 import { Suspense, lazy } from "react";
 
 const Neo3DDemo = lazy(() => import("../components/3d/Neo3DDemo"));
+import AiProjectSimulator from "../components/AiProjectSimulator";
+import StickySmartCTA from "../components/StickySmartCTA";
 
 export default function LandingPage() {
     const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
@@ -111,6 +113,26 @@ export default function LandingPage() {
                     </a>
                 </motion.div>
             </main>
+
+            {/* AI SIMULATOR SECTION */}
+            <section className="py-24 px-6 w-full bg-gradient-to-b from-[#0b0b0d] to-gray-900/50 relative z-20">
+                <div className="max-w-4xl mx-auto text-center mb-12">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-bold mb-6"
+                    >
+                        ¿Tenés una idea? <span className="text-blue-500">Simulala con IA</span>
+                    </motion.h2>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Obtené un estimado de tiempo y tecnología en segundos. La inteligencia artificial te ayuda a visualizar tu próximo paso.
+                    </p>
+                </div>
+                <div className="max-w-3xl mx-auto">
+                    <AiProjectSimulator />
+                </div>
+            </section>
 
             {/* RESULTS VS WEBSITE SECTION */}
             <section className="py-24 px-6 w-full max-w-7xl mx-auto">
@@ -285,6 +307,21 @@ export default function LandingPage() {
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                    <PortfolioCard
+                        title="Distribuidora B2B (System)"
+                        target="Mayoristas, Logística"
+                        desc="Sistema integral de pedidos con roles (Cliente/Vendedor/Admin), control de stock real, rutas con IA y métricas avanzadas."
+                        benefits={[
+                            "Roles Interactivos",
+                            "Stock Real Automático",
+                            "Optimización Rutas IA",
+                            "Sugerencia Precios"
+                        ]}
+                        stack="React + AI + LocalStorage"
+                        time="15 a 20 días"
+                        link="/demo-distribuidora"
+                        color="from-blue-600 to-indigo-600"
+                    />
                     <PortfolioCard
                         title="Portfolio Framer Style"
                         target="Freelancers, Creativos"
@@ -803,6 +840,8 @@ export default function LandingPage() {
                     </form>
                 </div>
             </section>
+
+            <StickySmartCTA />
         </div>
     );
 }
