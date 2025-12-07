@@ -1,20 +1,64 @@
-import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Play, ArrowRight } from 'lucide-react';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, ArrowRight, X, Maximize2, Volume2 } from 'lucide-react';
 
 // Import Videos
-import nailsVideo from '../assets/videos/Uñas.mp4';
-import shoesVideo from '../assets/videos/Shoes.mp4';
-import bagVideo from '../assets/videos/Bolso.mp4';
+import nailsVideo from '../assets/videos/nails.mp4';
+import shoesVideo from '../assets/videos/shoes.mp4';
+import bagVideo from '../assets/videos/bag.mp4';
 import perfumeVideo from '../assets/videos/perfume.mp4';
 
-const VideoCard = ({ videoSrc, label, category }) => {
+const VideoModal = ({ videoSrc, onClose }) => {
+    // Close on escape key
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose();
+        };
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    }, [onClose]);
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4"
+        >
+            <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative w-full max-w-5xl rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/10"
+            >
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-white/20 text-white rounded-full transition-colors"
+                >
+                    <X size={24} />
+                </button>
+
+                <video
+                    src={videoSrc}
+                    className="w-full h-auto max-h-[85vh] object-contain"
+                    controls
+                    autoPlay
+                    playsInline
+                />
+            </motion.div>
+        </motion.div>
+    );
+};
+
+const VideoCard = ({ videoSrc, label, category, onClick }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            videoRef.current.play();
+            videoRef.current.play().catch(() => { }); // Ignore autoplay errors
             setIsPlaying(true);
         }
     };
@@ -22,54 +66,66 @@ const VideoCard = ({ videoSrc, label, category }) => {
     const handleMouseLeave = () => {
         if (videoRef.current) {
             videoRef.current.pause();
-            videoRef.current.currentTime = 0; // Reset logic if desired, or just pause
+            videoRef.current.currentTime = 0;
             setIsPlaying(false);
         }
     };
 
     return (
         <motion.div
-            className="relative group rounded-2xl overflow-hidden cursor-pointer aspect-[9/16] md:aspect-[3/4] lg:aspect-[9/16]"
+            className="relative group rounded-2xl overflow-hidden cursor-pointer aspect-[9/16] md:aspect-[3/4] lg:aspect-[9/16] border border-white/5 hover:border-orange-500/50 transition-colors"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={onClick}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
         >
-            {/* Video Element */}
+            {/* Video Element (Preview) */}
             <video
                 ref={videoRef}
                 src={videoSrc}
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
             />
 
-            {/* Overlay / Play Button (Visible when NOT playing) */}
+            {/* Hover Overlay: Play Icon */}
             <div className={`absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
                     <Play fill="white" className="text-white ml-1" size={32} />
                 </div>
             </div>
 
-            {/* Content Overlay (Always visible or visible on hover? Design choice: Always visible at bottom for context) */}
+            {/* Hover Action Hint (Click to Expand) */}
+            <div className={`absolute top-4 right-4 bg-black/60 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0`}>
+                <Maximize2 className="text-white" size={20} />
+            </div>
+
+            {/* Content Overlay */}
             <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                <span className="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1 block">{category}</span>
-                <h3 className="text-xl font-bold text-white">{label}</h3>
+                <div className="flex justify-between items-end">
+                    <div>
+                        <span className="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1 block">{category}</span>
+                        <h3 className="text-xl font-bold text-white">{label}</h3>
+                    </div>
+                </div>
             </div>
         </motion.div>
     );
 };
 
 const AiMarketingSection = () => {
+    const [selectedVideo, setSelectedVideo] = useState(null);
+
     const demos = [
         { id: 1, label: "Las Manitos de Mili", category: "Belleza & Estética", video: nailsVideo },
         { id: 2, label: "Moda Urbana", category: "E-commerce", video: shoesVideo },
-        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: bagVideo }, // Placeholder mapping as agreed
-        { id: 4, label: "Gastronomía", category: "Restaurantes", video: perfumeVideo }, // Placeholder mapping as agreed
+        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: bagVideo },
+        { id: 4, label: "Gastronomía", category: "Restaurantes", video: perfumeVideo },
     ];
 
     return (
@@ -99,6 +155,7 @@ const AiMarketingSection = () => {
                             videoSrc={demo.video}
                             label={demo.label}
                             category={demo.category}
+                            onClick={() => setSelectedVideo(demo.video)}
                         />
                     ))}
                 </div>
@@ -114,6 +171,16 @@ const AiMarketingSection = () => {
                     </motion.button>
                 </div>
             </div>
+
+            {/* Lightbox / Modal */}
+            <AnimatePresence>
+                {selectedVideo && (
+                    <VideoModal
+                        videoSrc={selectedVideo}
+                        onClose={() => setSelectedVideo(null)}
+                    />
+                )}
+            </AnimatePresence>
         </section>
     );
 };
