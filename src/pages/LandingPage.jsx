@@ -10,6 +10,7 @@ import { Suspense, lazy } from "react";
 const Neo3DDemo = lazy(() => import("../components/3d/Neo3DDemo"));
 import AiProjectSimulator from "../components/AiProjectSimulator";
 import StickySmartCTA from "../components/StickySmartCTA";
+import InteractiveShowcase from "../components/InteractiveShowcase";
 
 export default function LandingPage() {
     const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
@@ -189,6 +190,9 @@ export default function LandingPage() {
                     </motion.div>
                 </div>
             </section>
+
+            {/* INTERACTIVE SHOWCASE SOLUTION */}
+            <InteractiveShowcase />
 
             {/* SEO SECTION */}
             <section className="py-24 px-6 w-full bg-black/40">

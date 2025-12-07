@@ -66,6 +66,8 @@ import MotosLayout from './pages/demos/motos/layout/MotosLayout';
 import MotosHome from './pages/demos/motos/pages/Home';
 import DebugGallery from './pages/demos/motos/pages/DebugGallery';
 import DistributorOrdersDemo from './pages/demos/distributor/DemoLoaderWrapper';
+import KioskDemo from './pages/demos/kiosk/KioskDemo';
+
 
 export default function App() {
   return (
@@ -82,6 +84,7 @@ export default function App() {
         <Route path="/demo-corporate" element={<DemoCorporate />} />
         <Route path="/demo-restaurant" element={<DemoRestaurant />} />
         <Route path="/demo-distribuidora" element={<DistributorOrdersDemo />} />
+        <Route path="/demo-kiosk" element={<KioskDemo />} />
         <Route path="/web-framer" element={<WebFramerPage />} />
 
         {/* MiliNails Subweb */}
