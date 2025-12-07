@@ -13,7 +13,8 @@ import {
     FiTrendingUp,
     FiAlertCircle,
     FiLayers,
-    FiEdit2
+    FiEdit2,
+    FiArrowLeft
 } from 'react-icons/fi';
 
 import sodaColaImg from '../../../assets/demo-distribuidora/soda_cola.png';
@@ -736,7 +737,7 @@ const AdminDashboard = ({ products, orders, onUpdateStock, onReset }) => {
 
 
 // --- MAIN APP COMPONENT ---
-export default function DistributorOrdersDemo() {
+export default function DistributorOrdersDemo({ onBack }) {
     const [currentUser, setCurrentUser] = useState(USERS[0]); // Default to Vendor
 
     // PERSISTENCE INIT
@@ -823,31 +824,35 @@ export default function DistributorOrdersDemo() {
         setProducts(prev => prev.map(p =>
             p.id === productId ? { ...p, stock: p.stock + amountToAdd } : p
         ));
-        alert(`Stock actualizado con éxito.`);
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 font-sans text-gray-900 pb-20">
-            {/* Header / Simulator Bar */}
-            <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
+        <div className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-blue-100">
+            {/* HEADER */}
+            <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="bg-blue-600 p-2 rounded-lg text-white">
-                            <FiTruck size={20} />
+                        {onBack && (
+                            <button onClick={onBack} className="p-2 mr-2 hover:bg-gray-100 rounded-lg text-gray-500 transition-colors">
+                                <FiArrowLeft size={20} />
+                            </button>
+                        )}
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200 shrink-0">
+                            <FiBox size={20} />
                         </div>
-                        <div>
+                        <div className="hidden md:block">
                             <h1 className="font-bold text-lg leading-none">DistribuidoraDemo</h1>
                             <span className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">System Simulator</span>
                         </div>
                     </div>
 
-                    <div className="flex bg-gray-100 p-1 rounded-full gap-1">
+                    <div className="flex bg-gray-100 p-1 rounded-full gap-1 overflow-x-auto max-w-[200px] md:max-w-none scrollbar-hide">
                         {USERS.map(user => (
                             <button
                                 key={user.id}
                                 onClick={() => setCurrentUser(user)}
                                 className={`
-                                    flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all
+                                    flex items-center gap-2 px-3 md:px-4 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap flex-shrink-0
                                     ${currentUser.id === user.id
                                         ? 'bg-white text-blue-600 shadow-sm ring-1 ring-black/5'
                                         : 'text-gray-500 hover:text-gray-700 hover:bg-gray-200/50'
@@ -861,39 +866,41 @@ export default function DistributorOrdersDemo() {
                             </button>
                         ))}
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
 
             {/* Main View Area */}
-            <main className="max-w-7xl mx-auto px-4 md:px-6 py-8">
-                {currentUser.role === 'client' ? (
-                    <ClientView
-                        products={products}
-                        currentUser={currentUser}
-                        onPlaceOrder={handlePlaceOrder}
-                    />
-                ) : currentUser.role === 'admin' ? (
-                    <AdminDashboard
-                        products={products}
-                        orders={orders}
-                        onUpdateStock={handleUpdateStock}
-                        onReset={handleReset}
-                    />
-                ) : (
-                    <VendorView
-                        products={products}
-                        orders={orders}
-                        onStatusChange={handleStatusChange}
-                        onVendorPlaceOrder={handlePlaceOrder}
-                        clients={[USERS[1]]} // Pass mock clients
-                    />
-                )}
-            </main>
+            < main className="max-w-7xl mx-auto px-4 md:px-6 py-8" >
+                {
+                    currentUser.role === 'client' ? (
+                        <ClientView
+                            products={products}
+                            currentUser={currentUser}
+                            onPlaceOrder={handlePlaceOrder}
+                        />
+                    ) : currentUser.role === 'admin' ? (
+                        <AdminDashboard
+                            products={products}
+                            orders={orders}
+                            onUpdateStock={handleUpdateStock}
+                            onReset={handleReset}
+                        />
+                    ) : (
+                        <VendorView
+                            products={products}
+                            orders={orders}
+                            onStatusChange={handleStatusChange}
+                            onVendorPlaceOrder={handlePlaceOrder}
+                            clients={[USERS[1]]} // Pass mock clients
+                        />
+                    )
+                }
+            </main >
 
             {/* Footer Info */}
-            <div className="fixed bottom-4 right-4 bg-gray-900 text-white px-4 py-2 rounded-full shadow-lg text-xs flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
+            < div className="fixed bottom-4 right-4 bg-gray-900 text-white px-4 py-2 rounded-full shadow-lg text-xs flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity" >
                 <FiBox /> Mockup v1.0
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

@@ -561,21 +561,7 @@ export default function LandingPage() {
                         color="from-black to-red-600"
                     />
 
-                    <PortfolioCard
-                        title="Electricidad Aquiles"
-                        target="Materiales Eléctricos, Iluminación"
-                        desc="E-commerce B2B/B2C para venta de materiales eléctricos e iluminación LED. Diseño limpio y técnico."
-                        benefits={[
-                            "Catálogo Técnico",
-                            "Pedidos por WhatsApp",
-                            "Sección Proyectos",
-                            "Diseño Minimalista"
-                        ]}
-                        stack="React + Tailwind + Lucide"
-                        time="5 a 7 días"
-                        link="/demo-aquiles"
-                        color="from-blue-600 to-orange-500"
-                    />
+
                 </div>
             </section>
 

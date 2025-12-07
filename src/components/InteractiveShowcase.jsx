@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GymDemo from './GymDemo';
+import DistributorOrdersDemo from '../pages/demos/distributor/DistributorOrdersDemo';
 
 // ==========================================
 // SHARED COMPONENTS
@@ -200,121 +201,13 @@ const KioskApp = ({ onBack }) => {
                     </div>
                 </div>
             )}
-            <AnimatePresence>{lastAction && <Toast msg={lastAction.msg} type={lastAction.type} />}</AnimatePresence>
         </div>
     );
 };
 
-// ==========================================
-// APP 2: WHOLESALE (B2B)
-// ==========================================
-const WholesaleApp = ({ onBack }) => {
-    // --- STATE ---
-    const [orders, setOrders] = useState([
-        { id: 'ORD-001', client: 'Kiosco "El Pepe"', items: 12, total: 45000, status: 'Pendiente' },
-        { id: 'ORD-002', client: 'Drugstore Central', items: 34, total: 120500, status: 'Enviado' },
-        { id: 'ORD-003', client: 'MaxiKiosco 24hs', items: 8, total: 28000, status: 'Pendiente' },
-    ]);
-    const [alertResolved, setAlertResolved] = useState(false);
-    const [lastAction, setLastAction] = useState(null);
-
-    const showToast = (msg, type = 'success') => { setLastAction({ msg, type }); setTimeout(() => setLastAction(null), 3000); };
-
-    const handleRestock = () => {
-        setAlertResolved(true);
-        showToast("Pedido al proveedor enviado automáticamente", "success");
-    };
-
-    return (
-        <div className="h-full flex flex-col bg-slate-900 text-slate-100 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
-            {/* APP HEADER */}
-            <div className="bg-slate-800 p-4 border-b border-slate-700 flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                    <button onClick={onBack} className="p-2 hover:bg-slate-700 rounded-lg text-slate-400 transition-colors"><ArrowLeft size={20} /></button>
-                    <div className="flex flex-col">
-                        <h2 className="font-bold text-white flex items-center gap-2"><Truck size={18} className="text-blue-500" /> DistriNet <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">B2B</span></h2>
-                    </div>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Sistema Online
-                </div>
-            </div>
-
-            <div className="p-6 overflow-auto">
-                {/* AI ALERT SECTION */}
-                <div className="mb-8">
-                    <h3 className="text-sm font-bold text-slate-400 uppercase mb-3 flex items-center gap-2"><BrainCircuit size={16} /> Alertas Inteligentes (IA)</h3>
-                    {!alertResolved ? (
-                        <div className="bg-red-500/10 border border-red-500/30 p-4 rounded-xl flex items-center justify-between">
-                            <div className="flex items-center gap-4">
-                                <div className="p-3 bg-red-500/20 text-red-400 rounded-lg"><AlertCircle size={24} /></div>
-                                <div>
-                                    <h4 className="font-bold text-white">Stock Crítico: Harina 000</h4>
-                                    <p className="text-sm text-red-300">La IA predice agotamiento en <strong>48hs</strong> basado en demanda actual.</p>
-                                </div>
-                            </div>
-                            <button onClick={handleRestock} className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors shadow-lg shadow-red-500/20">
-                                Auto-Reponer (500u)
-                            </button>
-                        </div>
-                    ) : (
-                        <div className="bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-xl flex items-center gap-4">
-                            <div className="p-2 bg-emerald-500/20 text-emerald-400 rounded-full"><CheckCircle2 size={20} /></div>
-                            <span className="text-emerald-300 font-medium">Alerta resuelta. Pedido de reposición en camino.</span>
-                        </div>
-                    )}
-                </div>
-
-                {/* DASHBOARD STATS */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                        <div className="text-slate-400 text-xs mb-1">Pedidos Pendientes</div>
-                        <div className="text-2xl font-bold flex items-center gap-2">{orders.filter(o => o.status === 'Pendiente').length} <span className="text-xs bg-slate-700 px-2 rounded text-slate-300">Prioridad Alta</span></div>
-                    </div>
-                    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                        <div className="text-slate-400 text-xs mb-1">Facturación del día</div>
-                        <div className="text-2xl font-bold text-blue-400">$850.320</div>
-                    </div>
-                    <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                        <div className="text-slate-400 text-xs mb-1">Clientes Activos</div>
-                        <div className="text-2xl font-bold flex items-center gap-2">124 <span className="text-emerald-500 text-xs flex items-center"><TrendingUp size={12} /> +5%</span></div>
-                    </div>
-                </div>
-
-                {/* ORDERS TABLE */}
-                <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden overflow-x-auto">
-                    <div className="min-w-[600px]">
-                        <div className="p-4 border-b border-slate-700 font-bold text-white">Últimos Pedidos</div>
-                        <table className="w-full text-left text-sm text-slate-300">
-                            <thead className="bg-slate-900/50 text-slate-500 uppercase text-xs"><tr><th className="p-4">ID</th><th className="p-4">Cliente</th><th className="p-4">Total</th><th className="p-4">Estado</th></tr></thead>
-                            <tbody>
-                                {orders.map(o => (
-                                    <tr key={o.id} className="border-b border-slate-700 hover:bg-slate-700/50">
-                                        <td className="p-4 font-mono text-purple-400">{o.id}</td>
-                                        <td className="p-4 font-bold text-white">{o.client} <div className="text-xs text-slate-500">{o.items} items</div></td>
-                                        <td className="p-4">${o.total.toLocaleString()}</td>
-                                        <td className="p-4">
-                                            <span className={`px-2 py-1 rounded text-xs font-bold ${o.status === 'Pendiente' ? 'bg-amber-500/20 text-amber-400' : 'bg-emerald-500/20 text-emerald-400'}`}>
-                                                {o.status}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <AnimatePresence>{lastAction && <Toast msg={lastAction.msg} type={lastAction.type} />}</AnimatePresence>
-        </div>
-    );
-};
-
-// ==========================================
-// MAIN CONTAINER
 // ==========================================
 const InteractiveShowcase = () => {
-    const [viewMode, setViewMode] = useState('menu'); // 'menu', 'kiosk', 'wholesale'
+    const [viewMode, setViewMode] = useState('menu'); // 'menu', 'kiosk', 'wholesale', 'gym'
 
     return (
         <section className="py-24 px-6 w-full max-w-7xl mx-auto">
@@ -354,9 +247,13 @@ const InteractiveShowcase = () => {
                             <div className="group relative bg-slate-800 hover:bg-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all cursor-pointer w-full max-w-sm" onClick={() => setViewMode('wholesale')}>
                                 <div className="absolute top-0 right-0 p-4 opacity-50"><Truck size={64} className="text-slate-600 group-hover:text-blue-500 transition-colors" /></div>
                                 <div className="p-3 bg-blue-500/20 text-blue-400 rounded-lg w-fit mb-6"><Truck size={32} /></div>
-                                <h3 className="text-2xl font-bold text-white mb-2">Mayorista / B2B</h3>
-                                <p className="text-slate-400 mb-6 min-h-[48px]">Dashboard administrativo, gestão de pedidos y alertas de stock predictivas con IA.</p>
-                                <button className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-colors">Probar Demo <ArrowRight size={18} /></button>
+                                <h3 className="text-2xl font-bold mb-3 text-white">Distribuidora B2B</h3>
+                                <p className="text-slate-400 mb-6 group-hover:text-slate-300 transition-colors">
+                                    Sistema integral B2B: App Preventista, Portal Clientes y Dashboard Admin con IA Logística.
+                                </p>
+                                <div className="w-full py-3 bg-blue-600 rounded-xl text-white font-bold flex items-center justify-center gap-2 group-hover:bg-blue-500 transition-colors">
+                                    Probar Demo <ArrowRight size={18} />
+                                </div>
                             </div>
 
                             {/* GYM CARD */}
@@ -378,7 +275,7 @@ const InteractiveShowcase = () => {
 
                     {viewMode === 'wholesale' && (
                         <motion.div key="wholesale" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} className="h-full w-full">
-                            <WholesaleApp onBack={() => setViewMode('menu')} />
+                            <DistributorOrdersDemo onBack={() => setViewMode('menu')} />
                         </motion.div>
                     )}
 
