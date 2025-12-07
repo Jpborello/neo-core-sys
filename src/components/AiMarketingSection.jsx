@@ -2,11 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ArrowRight, X, Maximize2, Volume2 } from 'lucide-react';
 
-// Import Videos
-import nailsVideo from '../assets/videos/nails.mp4';
-import shoesVideo from '../assets/videos/shoes.mp4';
-import bagVideo from '../assets/videos/bag.mp4';
-import perfumeVideo from '../assets/videos/perfume.mp4';
+// Import Videos (Removed - using public folder)
 
 const VideoModal = ({ videoSrc, onClose }) => {
     // Close on escape key
@@ -122,10 +118,10 @@ const AiMarketingSection = () => {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const demos = [
-        { id: 1, label: "Las Manitos de Mili", category: "Belleza & Estética", video: nailsVideo },
-        { id: 2, label: "Moda Urbana", category: "E-commerce", video: shoesVideo },
-        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: bagVideo },
-        { id: 4, label: "Gastronomía", category: "Restaurantes", video: perfumeVideo },
+        { id: 1, label: "Las Manitos de Mili", category: "Belleza & Estética", video: "/videos/nails.mp4" },
+        { id: 2, label: "Moda Urbana", category: "E-commerce", video: "/videos/shoes.mp4" },
+        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: "/videos/bag.mp4" },
+        { id: 4, label: "Gastronomía", category: "Restaurantes", video: "/videos/perfume.mp4" },
     ];
 
     return (
