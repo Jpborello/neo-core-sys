@@ -47,7 +47,7 @@ export default function LandingPage() {
     };
 
     return (
-        <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white" style={{ backgroundColor: '#0b0b0d' }}>
+        <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white pb-32" style={{ backgroundColor: '#0b0b0d' }}>
             {/* HERO */}
             <main className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6 min-h-[80vh] w-full">
                 {/* Animated Background Blobs / 3D Demo */}

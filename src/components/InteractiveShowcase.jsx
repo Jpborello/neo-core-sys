@@ -282,25 +282,27 @@ const WholesaleApp = ({ onBack }) => {
                 </div>
 
                 {/* ORDERS TABLE */}
-                <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden">
-                    <div className="p-4 border-b border-slate-700 font-bold text-white">Últimos Pedidos</div>
-                    <table className="w-full text-left text-sm text-slate-300">
-                        <thead className="bg-slate-900/50 text-slate-500 uppercase text-xs"><tr><th className="p-4">ID</th><th className="p-4">Cliente</th><th className="p-4">Total</th><th className="p-4">Estado</th></tr></thead>
-                        <tbody>
-                            {orders.map(o => (
-                                <tr key={o.id} className="border-b border-slate-700 hover:bg-slate-700/50">
-                                    <td className="p-4 font-mono text-purple-400">{o.id}</td>
-                                    <td className="p-4 font-bold text-white">{o.client} <div className="text-xs text-slate-500">{o.items} items</div></td>
-                                    <td className="p-4">${o.total.toLocaleString()}</td>
-                                    <td className="p-4">
-                                        <span className={`px-2 py-1 rounded text-xs font-bold ${o.status === 'Pendiente' ? 'bg-amber-500/20 text-amber-400' : 'bg-emerald-500/20 text-emerald-400'}`}>
-                                            {o.status}
-                                        </span>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden overflow-x-auto">
+                    <div className="min-w-[600px]">
+                        <div className="p-4 border-b border-slate-700 font-bold text-white">Últimos Pedidos</div>
+                        <table className="w-full text-left text-sm text-slate-300">
+                            <thead className="bg-slate-900/50 text-slate-500 uppercase text-xs"><tr><th className="p-4">ID</th><th className="p-4">Cliente</th><th className="p-4">Total</th><th className="p-4">Estado</th></tr></thead>
+                            <tbody>
+                                {orders.map(o => (
+                                    <tr key={o.id} className="border-b border-slate-700 hover:bg-slate-700/50">
+                                        <td className="p-4 font-mono text-purple-400">{o.id}</td>
+                                        <td className="p-4 font-bold text-white">{o.client} <div className="text-xs text-slate-500">{o.items} items</div></td>
+                                        <td className="p-4">${o.total.toLocaleString()}</td>
+                                        <td className="p-4">
+                                            <span className={`px-2 py-1 rounded text-xs font-bold ${o.status === 'Pendiente' ? 'bg-amber-500/20 text-amber-400' : 'bg-emerald-500/20 text-emerald-400'}`}>
+                                                {o.status}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <AnimatePresence>{lastAction && <Toast msg={lastAction.msg} type={lastAction.type} />}</AnimatePresence>
@@ -329,7 +331,7 @@ const InteractiveShowcase = () => {
                 </p>
             </motion.div>
 
-            <div className="w-full h-[700px] bg-slate-900/50 rounded-3xl border border-slate-700 p-4 md:p-8 backdrop-blur-sm relative overflow-hidden">
+            <div className="w-full min-h-[700px] h-auto bg-slate-900/50 rounded-3xl border border-slate-700 p-4 md:p-8 backdrop-blur-sm relative overflow-hidden flex flex-col">
                 <AnimatePresence mode='wait'>
                     {viewMode === 'menu' && (
                         <motion.div
@@ -337,7 +339,7 @@ const InteractiveShowcase = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="h-full flex flex-col md:flex-row items-center justify-center gap-8"
+                            className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 py-12 md:py-0"
                         >
                             {/* RETAIL CARD */}
                             <div className="group relative bg-slate-800 hover:bg-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-indigo-500 transition-all cursor-pointer w-full max-w-sm" onClick={() => setViewMode('kiosk')}>

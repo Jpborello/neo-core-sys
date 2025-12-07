@@ -165,15 +165,15 @@ const GymDemo = ({ onBack }) => {
                                         </div>
                                     ) : (
                                         atRiskUsers.map(u => (
-                                            <div key={u.id} className="bg-slate-900 p-3 rounded-xl border border-slate-800 flex items-center justify-between group hover:border-red-500/30 transition-colors">
-                                                <div className="flex items-center gap-3">
-                                                    <img src={u.photo} alt={u.name} className="w-10 h-10 rounded-full border border-slate-700" />
-                                                    <div>
-                                                        <div className="font-bold text-sm text-white">{u.name}</div>
+                                            <div key={u.id} className="bg-slate-900 p-3 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 group hover:border-red-500/30 transition-colors">
+                                                <div className="flex items-center gap-3 w-full sm:w-auto">
+                                                    <img src={u.photo} alt={u.name} className="w-10 h-10 rounded-full border border-slate-700 shrink-0" />
+                                                    <div className="min-w-0">
+                                                        <div className="font-bold text-sm text-white truncate">{u.name}</div>
                                                         <div className="text-xs text-red-400">Ausente 20+ días</div>
                                                     </div>
                                                 </div>
-                                                <button onClick={() => handleSendPromo(u.id)} className="bg-white text-slate-900 hover:bg-orange-500 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1 shadow-lg">
+                                                <button onClick={() => handleSendPromo(u.id)} className="w-full sm:w-auto bg-white text-slate-900 hover:bg-orange-500 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 shadow-lg">
                                                     <Send size={12} /> Rescatar
                                                 </button>
                                             </div>
