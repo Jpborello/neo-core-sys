@@ -29,7 +29,7 @@ export default function SeoAgency({ title, description, image, url }) {
         },
         "telephone": "+543417981212",
         "sameAs": [
-            "https://www.instagram.com/juamp11/"
+            "https://www.instagram.com/neocoresystem/"
         ],
         "areaServed": "Argentina",
         "knowsAbout": ["Desarrollo Web", "Apps Móviles", "Inteligencia Artificial", "Sistemas de Gestión", "Automatización"]
