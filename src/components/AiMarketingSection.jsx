@@ -2,7 +2,12 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ArrowRight, X, Maximize2, Volume2 } from 'lucide-react';
 
-// Import Videos (Removed - using public folder)
+// Import Videos
+// Import Videos replaced with Supabase Storage links
+const nailsVideo = 'https://olshzxnrrlmjzurqvarx.supabase.co/storage/v1/object/sign/Videos%20Marketing/Nails.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MjExNjVlNC1hNDMyLTQyMjctOTMwNS1jNDMxNWIzYjQ0NjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJWaWRlb3MgTWFya2V0aW5nL05haWxzLm1wNCIsImlhdCI6MTc2NTIyNDkwNywiZXhwIjoxOTg1OTc2OTA3fQ.pFiN_WHnNBVsDYkeAC-26ybhPdb3Z1MCyod6PZka8bs';
+const shoesVideo = 'https://olshzxnrrlmjzurqvarx.supabase.co/storage/v1/object/sign/Videos%20Marketing/Shoes.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MjExNjVlNC1hNDMyLTQyMjctOTMwNS1jNDMxNWIzYjQ0NjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJWaWRlb3MgTWFya2V0aW5nL1Nob2VzLm1wNCIsImlhdCI6MTc2NTIyNDk0NywiZXhwIjoxOTg1OTc2OTQ3fQ.dpXqaEZHtYkK3IcXl-npLUaid3fSTBWKvNZ9q3f-QyE';
+const bagVideo = 'https://olshzxnrrlmjzurqvarx.supabase.co/storage/v1/object/sign/Videos%20Marketing/Bolso.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MjExNjVlNC1hNDMyLTQyMjctOTMwNS1jNDMxNWIzYjQ0NjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJWaWRlb3MgTWFya2V0aW5nL0JvbHNvLm1wNCIsImlhdCI6MTc2NTIyNDgwNCwiZXhwIjoxOTg1OTc2ODA0fQ.ccQ-QoL8zH4Mu_3JBmogwqbVGdxelqTdUvmkw5WrkFA';
+const perfumeVideo = 'https://olshzxnrrlmjzurqvarx.supabase.co/storage/v1/object/sign/Videos%20Marketing/perfume.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80MjExNjVlNC1hNDMyLTQyMjctOTMwNS1jNDMxNWIzYjQ0NjUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJWaWRlb3MgTWFya2V0aW5nL3BlcmZ1bWUubXA0IiwiaWF0IjoxNzY1MjI0OTcwLCJleHAiOjE5ODU5NzY5NzB9.JkjloZzmK5-4xQwVEttFxuLf5gy8OfxNFPW_3XEEfgA';
 
 const VideoModal = ({ videoSrc, onClose }) => {
     // Close on escape key
@@ -118,10 +123,10 @@ const AiMarketingSection = () => {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const demos = [
-        { id: 1, label: "Las Manitos de Mili", category: "Belleza & Estética", video: "/videos/nails.mp4" },
-        { id: 2, label: "Moda Urbana", category: "E-commerce", video: "/videos/shoes.mp4" },
-        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: "/videos/bag.mp4" },
-        { id: 4, label: "Gastronomía", category: "Restaurantes", video: "/videos/perfume.mp4" },
+        { id: 1, label: "Las Manitos de Mili", category: "Belleza & Estética", video: nailsVideo },
+        { id: 2, label: "Moda Urbana", category: "E-commerce", video: shoesVideo },
+        { id: 3, label: "DistriNet Dashboard", category: "Software & SaaS", video: bagVideo },
+        { id: 4, label: "Gastronomía", category: "Restaurantes", video: perfumeVideo },
     ];
 
     return (

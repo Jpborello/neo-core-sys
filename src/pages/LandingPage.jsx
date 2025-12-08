@@ -6,6 +6,7 @@ import { RiSmartphoneLine, RiLayoutGridLine, RiGlobalLine, RiLightbulbLine, RiSh
 import { Link } from "react-router-dom";
 import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiSupabase, SiNodedotjs, SiTauri, SiFlutter, SiPython, SiCloudflare, SiGithub, SiOpenai } from "react-icons/si";
 import { Suspense, lazy } from "react";
+// import SEO removed (global in App)
 
 const Neo3DDemo = lazy(() => import("../components/3d/Neo3DDemo"));
 import AiProjectSimulator from "../components/AiProjectSimulator";
@@ -48,6 +49,7 @@ export default function LandingPage() {
         }
     };
 
+    // SEO managed globally in App.jsx
     return (
         <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white pb-32" style={{ backgroundColor: '#0b0b0d' }}>
             {/* HERO */}

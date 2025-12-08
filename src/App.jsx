@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import SeoAgency from "./components/SeoAgency";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import EcommercePage from "./pages/EcommercePage";
@@ -72,6 +73,7 @@ import KioskDemo from './pages/demos/kiosk/KioskDemo';
 export default function App() {
   return (
     <Router>
+      <SeoAgency />
       <Routes>
         <Route path="/" element={<Layout><LandingPage /></Layout>} />
         <Route path="/ecommerce" element={<Layout><EcommercePage /></Layout>} />
