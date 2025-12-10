@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import SeoAgency from "./components/SeoAgency";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
+import RestaurantRouter from "./pages/demos/restaurant/RestaurantRouter";
 import EcommercePage from "./pages/EcommercePage";
 import DemoLanding from "./pages/demos/DemoLanding";
 import DemoCorporate from "./pages/demos/DemoCorporate";
@@ -68,6 +69,9 @@ import MotosHome from './pages/demos/motos/pages/Home';
 import DebugGallery from './pages/demos/motos/pages/DebugGallery';
 import DistributorOrdersDemo from './pages/demos/distributor/DemoLoaderWrapper';
 import KioskDemo from './pages/demos/kiosk/KioskDemo';
+import ButcherDemo from "./pages/demos/ButcherDemo";
+// Butcher Admin Route verified
+import ButcherAdmin from "./pages/demos/ButcherAdmin";
 
 
 export default function App() {
@@ -84,10 +88,12 @@ export default function App() {
         <Route path="/ai-simulator" element={<Layout><AiProjectSimulator /></Layout>} />
         <Route path="/demo-landing" element={<DemoLanding />} />
         <Route path="/demo-corporate" element={<DemoCorporate />} />
-        <Route path="/demo-restaurant" element={<DemoRestaurant />} />
+        <Route path="/demo-restaurant/*" element={<RestaurantRouter />} />
         <Route path="/demo-distribuidora" element={<DistributorOrdersDemo />} />
         <Route path="/demo-kiosk" element={<KioskDemo />} />
         <Route path="/web-framer" element={<WebFramerPage />} />
+        <Route path="/demo-carniceria" element={<ButcherDemo />} />
+        <Route path="/demo-carniceria/admin" element={<ButcherAdmin />} />
 
         {/* MiliNails Subweb */}
         <Route path="/milinails" element={<MiliNailsPage />} />

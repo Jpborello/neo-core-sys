@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
     ShoppingCart, Package, Search, Plus, Minus, Trash2, Box, ArrowRight,
     CheckCircle2, AlertCircle, BarChart3, TrendingUp, Receipt, DollarSign,
-    RefreshCw, Store, Truck, BrainCircuit, ArrowLeft, History, Users, Dumbbell
+    RefreshCw, Store, Truck, BrainCircuit, ArrowLeft, History, Users, Dumbbell,
+    UtensilsCrossed
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GymDemo from './GymDemo';
@@ -207,6 +209,7 @@ const KioskApp = ({ onBack }) => {
 
 // ==========================================
 const InteractiveShowcase = () => {
+    const navigate = useNavigate();
     const [viewMode, setViewMode] = useState('menu'); // 'menu', 'kiosk', 'wholesale', 'gym'
 
     return (
@@ -263,6 +266,15 @@ const InteractiveShowcase = () => {
                                 <h3 className="text-2xl font-bold text-white mb-2">Gimnasio / Club</h3>
                                 <p className="text-slate-400 mb-6 min-h-[48px]">Control de acceso QR, retención de socios con IA y App de cliente final.</p>
                                 <button className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-colors">Probar Demo <ArrowRight size={18} /></button>
+                            </div>
+
+                            {/* RESTAURANT CARD (NEW) */}
+                            <div className="group relative bg-slate-800 hover:bg-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-amber-500 transition-all cursor-pointer w-full max-w-sm" onClick={() => navigate('/demo-restaurant')}>
+                                <div className="absolute top-0 right-0 p-4 opacity-50"><UtensilsCrossed size={64} className="text-slate-600 group-hover:text-amber-500 transition-colors" /></div>
+                                <div className="p-3 bg-amber-500/20 text-amber-500 rounded-lg w-fit mb-6"><UtensilsCrossed size={32} /></div>
+                                <h3 className="text-2xl font-bold text-white mb-2">Restaurante / Bar</h3>
+                                <p className="text-slate-400 mb-6 min-h-[48px]">Menú digital QR, Comanda Móvil y KDS para cocina en tiempo real.</p>
+                                <button className="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-colors">Probar Demo <ArrowRight size={18} /></button>
                             </div>
                         </motion.div>
                     )}
