@@ -30,6 +30,7 @@ const Admin = () => {
                 .from('orders')
                 .select('*')
                 .eq('payment_status', 'paid')
+                .is('restaurant_id', null) // Filter for Restaurant Demo
                 .order('created_at', { ascending: false })
                 .limit(50); // Limit for performance
             if (hData) setHistory(hData);
@@ -43,7 +44,7 @@ const Admin = () => {
             if (wData) setWaitlist(wData);
 
             // All Orders for Metrics
-            const { data: oData } = await supabase.from('orders').select('*');
+            const { data: oData } = await supabase.from('orders').select('*').is('restaurant_id', null);
             if (oData) setOrders(oData);
         };
 
@@ -144,8 +145,6 @@ const Admin = () => {
         if (!confirm('¿Realmente seguro? No hay vuelta atrás.')) return;
 
         // 1. Delete all orders
-        // Note: Delete without filter needs a trick or iterating. Since we want to clear everything for demo:
-        // We will fetch all IDs and delete them.
         const { data: allOrders } = await supabase.from('orders').select('id');
         if (allOrders?.length) {
             await supabase.from('orders').delete().in('id', allOrders.map(o => o.id));
@@ -172,6 +171,29 @@ const Admin = () => {
         window.location.reload();
     };
 
+    const handleInitializeTables = async () => {
+        if (!confirm('🛠️ ¿Inicializar Mesas (1-20)?\nSe crearán las filas en la base de datos si no existen.')) return;
+
+        const tablesToInsert = Array.from({ length: 20 }, (_, i) => ({
+            table_number: i + 1,
+            status: 'free',
+            needs_assistance: false,
+            request_bill: false
+        }));
+
+        try {
+            const { error } = await supabase
+                .from('table_states')
+                .upsert(tablesToInsert, { onConflict: 'table_number', ignoreDuplicates: true });
+
+            if (error) throw error;
+            alert('✅ Mesas 1-20 verificadas e inicializadas.');
+            window.location.reload();
+        } catch (e) {
+            alert('❌ Error al inicializar: ' + e.message);
+        }
+    };
+
 
     const metricsData = getMetrics();
 
@@ -187,6 +209,13 @@ const Admin = () => {
                         title="Doble Click para Reiniciar Sistema"
                     >
                         <LayoutGrid size={20} />
+                    </div>
+                    <div
+                        onClick={handleInitializeTables}
+                        className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/20 cursor-pointer hover:bg-blue-700 transition-colors group relative"
+                        title="Inicializar Mesas"
+                    >
+                        <RefreshCw size={20} className="group-hover:rotate-180 transition-transform" />
                     </div>
                     <div>
                         <h1 className="text-xl font-bold tracking-tight">Neo-Dashboard</h1>

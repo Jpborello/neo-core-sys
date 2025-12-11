@@ -262,6 +262,7 @@ export const RestaurantProvider = ({ children }) => {
                 .from('orders')
                 .select('*')
                 .eq('table_number', tableNumber)
+                .is('restaurant_id', null)
                 .neq('status', 'cancelled')
                 .neq('payment_status', 'paid'); // Only fetch unpaid items for the bill
             return data || [];

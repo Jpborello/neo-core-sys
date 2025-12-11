@@ -42,14 +42,14 @@ const Waiter = () => {
 
         // 2. Fetch Pending Orders
         const fetchPendingOrders = async () => {
-            const { data } = await supabase.from('orders').select('*').eq('status', 'waiting_waiter');
+            const { data } = await supabase.from('orders').select('*').eq('status', 'waiting_waiter').is('restaurant_id', null);
             if (data) setPendingRequests(data);
         };
         fetchPendingOrders();
 
         // 3. Fetch Ready Orders
         const fetchReadyOrders = async () => {
-            const { data } = await supabase.from('orders').select('*').eq('status', 'ready');
+            const { data } = await supabase.from('orders').select('*').eq('status', 'ready').is('restaurant_id', null);
             if (data) setReadyToServe(data);
         };
         fetchReadyOrders();
@@ -73,10 +73,12 @@ const Waiter = () => {
         const ordersChannel = supabase
             .channel('waiter-orders')
             .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'orders', filter: 'status=eq.waiting_waiter' }, (payload) => {
+                if (payload.new.restaurant_id) return;
                 setPendingRequests(prev => [...prev, payload.new]);
                 playNotificationSound();
             })
             .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'orders' }, (payload) => {
+                if (payload.new.restaurant_id) return;
                 if (payload.new.status !== 'waiting_waiter') {
                     setPendingRequests(prev => prev.filter(o => o.id !== payload.new.id));
                 }
@@ -87,10 +89,12 @@ const Waiter = () => {
         const readyChannel = supabase
             .channel('waiter-ready')
             .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'orders', filter: 'status=eq.ready' }, (payload) => {
+                if (payload.new.restaurant_id) return;
                 setReadyToServe(prev => [...prev, payload.new]);
                 playNotificationSound();
             })
             .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'orders', filter: 'status=eq.delivered' }, (payload) => {
+                if (payload.new.restaurant_id) return;
                 setReadyToServe(prev => prev.filter(o => o.id !== payload.new.id));
             })
             .subscribe();
@@ -112,6 +116,7 @@ const Waiter = () => {
                     .from('orders')
                     .select('*')
                     .eq('table_number', tableNumber)
+                    .is('restaurant_id', null)
                     .neq('status', 'cancelled')
                     .order('created_at', { ascending: false });
                 setTableHistory(data || []);
@@ -121,7 +126,7 @@ const Waiter = () => {
     }, [view, tableNumber]);
 
     const handleCloseTable = async (tNum) => {
-        const { data: orders } = await supabase.from('orders').select('total').eq('table_number', tNum).neq('status', 'cancelled').neq('payment_status', 'paid');
+        const { data: orders } = await supabase.from('orders').select('total').eq('table_number', tNum).is('restaurant_id', null).neq('status', 'cancelled').neq('payment_status', 'paid');
         const total = orders?.reduce((acc, o) => acc + o.total, 0) || 0;
         if (confirm(`¿Cerrar Mesa ${tNum}? Total: $${total}`)) {
             await supabase.from('table_states').update({ status: 'payment_pending', total_amount: total, request_bill: false, needs_assistance: false }).eq('table_number', tNum);

@@ -50,6 +50,7 @@ const Bar = () => {
                 .from('orders')
                 .select('*')
                 .in('status', ['pending', 'en_cocina'])
+                .is('restaurant_id', null)
                 .order('created_at', { ascending: true });
 
             if (data) setOrders(data);
@@ -63,6 +64,7 @@ const Bar = () => {
                 'postgres_changes',
                 { event: 'INSERT', schema: 'public', table: 'orders' },
                 (payload) => {
+                    if (payload.new.restaurant_id) return;
                     if (['pending', 'en_cocina'].includes(payload.new.status)) {
                         setOrders(prev => [...prev, payload.new]);
                         if (audioRef.current) audioRef.current.play().catch(e => console.log(e));

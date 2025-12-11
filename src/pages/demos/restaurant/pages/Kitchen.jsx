@@ -25,6 +25,7 @@ const Kitchen = () => {
                 .from('orders')
                 .select('*')
                 .in('status', ['pending', 'en_cocina'])
+                .is('restaurant_id', null) // Only show Restaurant Demo orders (not Butcher)
                 .order('created_at', { ascending: true });
 
             if (data) setOrders(data);
@@ -38,6 +39,7 @@ const Kitchen = () => {
                 'postgres_changes',
                 { event: 'INSERT', schema: 'public', table: 'orders' },
                 (payload) => {
+                    if (payload.new.restaurant_id) return; // Ignore Butcher/External orders
                     if (['pending', 'en_cocina'].includes(payload.new.status)) {
                         setOrders(prev => [...prev, payload.new]);
                         if (audioRef.current) {
