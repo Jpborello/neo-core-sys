@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Bot } from 'lucide-react';
+import { X, Send, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ChatWidget = () => {
@@ -54,32 +54,32 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-6 right-6 z-50 font-mono">
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="mb-4 w-[350px] h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-xl bg-slate-900/80 flex flex-col"
+            className="mb-4 w-[380px] h-[550px] rounded-xl overflow-hidden glass-panel-dark flex flex-col"
           >
             {/* Header */}
-            <div className="p-4 bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-b border-white/10 flex justify-between items-center">
+            <div className="p-4 border-b border-cyan-400/20 flex justify-between items-center bg-black/40">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                  <Bot className="w-6 h-6 text-white animate-bounce" />
+                <div className="w-10 h-10 rounded-full border border-cyan-400 flex items-center justify-center shadow-[0_0_10px_rgba(0,255,255,0.3)] bg-black/50">
+                  <Bot className="w-6 h-6 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-sm">Neo Bot</h3>
-                  <p className="text-blue-200 text-xs flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                    Online
+                  <h3 className="text-cyan-400 font-bold text-sm tracking-wider">NEO CORE SYS</h3>
+                  <p className="text-gray-400 text-xs flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_5px_#22c55e]"></span>
+                    SYSTEM ONLINE
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-cyan-400/70 hover:text-cyan-400 hover:rotate-90 transition-all duration-300"
               >
                 <X size={20} />
               </button>
@@ -93,9 +93,9 @@ const ChatWidget = () => {
                   className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === 'user'
-                      ? 'bg-blue-600 text-white rounded-br-none shadow-md'
-                      : 'bg-white/10 text-gray-100 rounded-bl-none border border-white/5 shadow-sm'
+                    className={`max-w-[80%] p-3 rounded-lg text-sm ${msg.sender === 'user'
+                        ? 'chat-bubble-user'
+                        : 'chat-bubble-bot'
                       }`}
                   >
                     {msg.text}
@@ -104,10 +104,10 @@ const ChatWidget = () => {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-white/10 p-3 rounded-2xl rounded-bl-none flex gap-1 items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></span>
-                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-75"></span>
-                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-150"></span>
+                  <div className="chat-bubble-bot p-3 rounded-lg flex gap-1 items-center">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce"></span>
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce delay-75"></span>
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce delay-150"></span>
                   </div>
                 </div>
               )}
@@ -115,21 +115,22 @@ const ChatWidget = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSubmit} className="p-4 border-t border-white/10 bg-black/20">
-              <div className="relative">
+            <form onSubmit={handleSubmit} className="terminal-input p-1">
+              <div className="relative flex items-center">
+                <span className="pl-3 text-cyan-400 select-none">{'>'}</span>
                 <input
                   type="text"
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
-                  placeholder="Escribe tu mensaje..."
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all"
+                  placeholder="Insert command..."
+                  className="w-full bg-transparent border-none py-4 px-2 text-white placeholder-gray-600 focus:outline-none focus:ring-0 font-mono text-sm"
                 />
                 <button
                   type="submit"
                   disabled={!inputText.trim() || isLoading}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="absolute right-2 px-3 py-1 btn-send-glass rounded uppercase text-xs font-bold tracking-wider disabled:opacity-30 disabled:cursor-not-allowed"
                 >
-                  <Send size={16} />
+                  SEND
                 </button>
               </div>
             </form>
@@ -139,18 +140,18 @@ const ChatWidget = () => {
 
       {/* Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.1, rotate: 5 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 ${isOpen
-          ? 'bg-red-500/80 hover:bg-red-600 rotate-90'
-          : 'bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 hover:shadow-cyan-500/50 bg-[length:200%_200%] animate-gradient-xy'
+        className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen
+            ? 'bg-black border-2 border-red-500 shadow-[0_0_15px_rgba(255,0,0,0.5)] rotate-45'
+            : 'bg-black border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:shadow-[0_0_30px_rgba(0,255,255,0.6)]'
           }`}
       >
         {isOpen ? (
-          <X className="text-white" size={28} />
+          <X className="text-red-500" size={30} />
         ) : (
-          <Bot className="text-white animate-pulse" size={32} />
+          <Bot className="text-cyan-400" size={32} />
         )}
       </motion.button>
     </div>

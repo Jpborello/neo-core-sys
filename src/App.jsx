@@ -63,7 +63,6 @@ import SuriaAdmin from './suria/pages/SuriaAdmin';
 import { CartProvider } from './suria/components/CartContext';
 import CuantoTeQuieroApp from './cuanto-te-quiero/App';
 import DirectorPage from './pages/DirectorPage';
-import ChatWidget from './components/ChatWidget';
 import MotosLayout from './pages/demos/motos/layout/MotosLayout';
 import MotosHome from './pages/demos/motos/pages/Home';
 import DebugGallery from './pages/demos/motos/pages/DebugGallery';
@@ -247,7 +246,6 @@ export default function App() {
           </Routes>
         } />
       </Routes>
-      <ChatWidget />
     </Router>
   );
 }

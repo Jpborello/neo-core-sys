@@ -2,19 +2,169 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO managed by react-helmet-async -->
+    <!-- SEO managed by react-helmet-async -->
 
-  <!-- tu CSS / Vite injection -->
-  <link rel="stylesheet" href="/src/index.css" />
+    <!-- tu CSS / Vite injection -->
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <div id="robot-walker-container"
+        style="position: fixed; bottom: 20px; left: -350px; z-index: 9998; transition: left 5s linear; pointer-events: none;">
+        <dotlottie-wc src="https://lottie.host/06676f4d-856e-4214-97b7-ff0dae55dc06/y5fuz7J39w.lottie" autoplay loop
+            style="width: 250px; height: 250px;"></dotlottie-wc>
+    </div>
+
+    <div id="neo-chat-bubble"
+        style="display: none; position: fixed; bottom: 90px; right: 20px; z-index: 9998; background: #000; border: 1px solid #00ffff; color: #00ffff; padding: 10px 15px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 14px; box-shadow: 0 0 15px rgba(0,255,255,0.3); max-width: 200px; text-align: center;">
+        ¿Vas a seguir mirando?...
+        <div
+            style="position: absolute; bottom: -6px; right: 20px; width: 10px; height: 10px; background: #000; border-right: 1px solid #00ffff; border-bottom: 1px solid #00ffff; transform: rotate(45deg);">
+        </div>
+    </div>
+
+    <div id="neo-chat-launcher" onclick="toggleChat()"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer; transition: transform 0.3s; background: #000; border: 2px solid #00ffff; color: #00ffff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 0 15px rgba(0,255,255,0.4);">
+        🤖
+    </div>
+
+    <!-- Native Chat Widget -->
+    <div id="neo-chat-widget" style="display: none;">
+        <div class="chat-header">
+            <span>NEO-CORE SYSTEM</span>
+            <button onclick="toggleChat()" class="minimize-btn">—</button>
+        </div>
+        <div id="chat-messages">
+            <div class="message-bubble msg-bot">
+                Sistema Neo-Core conectado.<br>Esperando comandos...
+            </div>
+        </div>
+        <div class="input-area">
+            <span style="color: #00ffff; font-weight: bold; margin-right: 5px;">&gt;_</span>
+            <input type="text" id="chat-input" placeholder="Escribe aquí..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()">ENVIAR</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var widget = document.getElementById("neo-chat-widget");
+            var btn = document.getElementById("neo-chat-launcher");
+
+            if (widget.style.display === "none" || widget.style.display === "") {
+                widget.style.display = "flex";
+                btn.style.display = "none"; // Hide launcher when open
+            } else {
+                widget.style.display = "none";
+                btn.style.display = "flex"; // Show launcher when closed
+            }
+        }
+
+        function handleEnter(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        }
+
+        async function sendMessage() {
+            var input = document.getElementById("chat-input");
+            var text = input.value.trim();
+            if (!text) return;
+
+            var messagesDiv = document.getElementById("chat-messages");
+
+            // 1. Add User Message
+            var userMsg = document.createElement("div");
+            userMsg.className = "message-bubble msg-user";
+            userMsg.textContent = text;
+            messagesDiv.appendChild(userMsg);
+
+            input.value = "";
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            // 2. Loading Indicator
+            var loadingMsg = document.createElement("div");
+            loadingMsg.className = "message-bubble msg-bot";
+            loadingMsg.id = "loading-indicator";
+            loadingMsg.textContent = "Neo-Core procesando...";
+            messagesDiv.appendChild(loadingMsg);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            try {
+                // 3. POST request
+                var response = await fetch("https://neo-bot-vz2j.onrender.com/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: text })
+                });
+
+                var data = await response.json();
+                var botResponse = data.response; // Adjust based on actual API response structure (e.g. data.reply, data.message)
+
+                // Remove loading
+                var loader = document.getElementById("loading-indicator");
+                if (loader) loader.remove();
+
+                // 4. Typewriter Effect
+                var botMsg = document.createElement("div");
+                botMsg.className = "message-bubble msg-bot";
+                messagesDiv.appendChild(botMsg);
+
+                typeWriter(botMsg, botResponse || "Error: Sin respuesta del sistema.");
+
+            } catch (error) {
+                console.error("Error:", error);
+                var loader = document.getElementById("loading-indicator");
+                if (loader) loader.remove();
+
+                var errorMsg = document.createElement("div");
+                errorMsg.className = "message-bubble msg-bot";
+                errorMsg.style.color = "red";
+                errorMsg.textContent = "Error de conexión: " + error.message;
+                messagesDiv.appendChild(errorMsg);
+            }
+        }
+
+        function typeWriter(element, text, i = 0) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                // Auto scroll during typing
+                var messagesDiv = document.getElementById("chat-messages");
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                setTimeout(() => typeWriter(element, text, i + 1), 20); // Speed
+            }
+        }
+
+        window.onload = function () {
+            // Existing robot logic preserved
+            setTimeout(function () {
+                var robot = document.getElementById("robot-walker-container");
+                if (robot) {
+                    robot.style.left = "calc(100% - 300px)";
+                    robot.addEventListener('transitionend', function () {
+                        robot.style.display = 'none';
+                        var bubble = document.getElementById("neo-chat-bubble");
+                        if (bubble) {
+                            bubble.style.display = 'block';
+                            setTimeout(function () {
+                                bubble.style.opacity = '0';
+                                bubble.style.transition = 'opacity 1s';
+                                setTimeout(function () { bubble.style.display = 'none'; }, 1000);
+                            }, 5000);
+                        }
+                    }, { once: true });
+                }
+            }, 3000);
+        };
+    </script>
 </body>
 
 </html>
