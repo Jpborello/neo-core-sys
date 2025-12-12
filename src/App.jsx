@@ -91,8 +91,8 @@ export default function App() {
         <Route path="/demo-distribuidora" element={<DistributorOrdersDemo />} />
         <Route path="/demo-kiosk" element={<KioskDemo />} />
         <Route path="/web-framer" element={<WebFramerPage />} />
-        <Route path="/demo-carniceria" element={<ButcherDemo />} />
-        <Route path="/demo-carniceria/admin" element={<ButcherAdmin />} />
+        <Route path="/demo-market" element={<ButcherDemo />} />
+        <Route path="/demo-market/admin" element={<ButcherAdmin />} />
 
         {/* MiliNails Subweb */}
         <Route path="/milinails" element={<MiliNailsPage />} />
