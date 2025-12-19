@@ -1,6 +1,5 @@
 'use client';
 
-export const runtime = 'edge';
 
 import { useEffect } from "react";
 import { FaCalendarCheck } from "react-icons/fa";
