@@ -18,7 +18,9 @@ import InteractiveShowcase from "../components/InteractiveShowcase";
 import AiMarketingSection from '../components/AiMarketingSection';
 import PortfolioSection from '../components/PortfolioSection';
 
-export default function Home() {
+export const runtime = 'edge';
+
+export default function Page() {
     const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
 
     const handleSubmit = async (e) => {
