@@ -2,6 +2,8 @@ import '../index.css';
 import ChatWidget from '../components/ChatWidget';
 import Footer from '../components/Footer';
 
+export const runtime = 'edge';
+
 export const metadata = {
     metadataBase: new URL('https://neo-core-sys.com'),
     title: {
