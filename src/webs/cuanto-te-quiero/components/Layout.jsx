@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingBag, Heart } from 'lucide-react';
-import logo from '../../assets/cuanto-te-quiero/logo.jpg';
+import logo from '../../../assets/cuanto-te-quiero/logo.jpg';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

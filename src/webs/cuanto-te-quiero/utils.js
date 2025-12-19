@@ -18,7 +18,7 @@ export const categorizeProduct = (filename) => {
 
 export const getProducts = () => {
     // Import all images from the assets folder
-    const images = import.meta.glob('../assets/cuanto-te-quiero/*.jpg', { eager: true });
+    const images = import.meta.glob('../../assets/cuanto-te-quiero/*.jpg', { eager: true });
 
     return Object.entries(images).map(([path, module]) => {
         const filename = path.split('/').pop();
