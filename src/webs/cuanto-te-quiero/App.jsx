@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import { ProductProvider } from './context/ProductContext';
 
-import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export default function CuantoTeQuieroApp() {
     return (
