@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useRestaurant } from '../context/RestaurantContext';
-import { supabase } from '../supabase/client';
+import { useRestaurant } from '@/context/RestaurantContext';
+import { supabase } from '@/lib/supabase';
 import {
     LayoutGrid, Search, Plus, Minus, Send, Trash2, Edit2,
     CheckCircle2, UtensilsCrossed, ChevronLeft, User, Bell, FileText, DollarSign, CreditCard

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { aiEngine } from "../ai/aiEngine";
+import { aiEngine } from "@/components/demos/gym-ai/ai/aiEngine";
 
 export function useAIEngine(users, attendance, quotas) {
     const analysis = useMemo(() => {

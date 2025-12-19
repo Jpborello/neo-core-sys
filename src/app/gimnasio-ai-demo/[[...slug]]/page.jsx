@@ -1,12 +1,13 @@
-"use client";
-
 import dynamic from 'next/dynamic';
 
-const GymApp = dynamic(() => import('../GymWrapper'), {
-    ssr: false,
-    loading: () => <div className="min-h-screen bg-black flex items-center justify-center text-white">Cargando Gym AI...</div>
+const App = dynamic(() => import('../GymWrapper'), {
+    loading: () => <div className="min-h-screen flex items-center justify-center">Cargando Gym AI...</div>
 });
 
+export function generateStaticParams() {
+    return [{ slug: [] }];
+}
+
 export default function Page() {
-    return <GymApp />;
+    return <App />;
 }

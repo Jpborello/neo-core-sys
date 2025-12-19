@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartProvider } from '@/suria/components/CartContext';
+import { CartProvider } from '@/context/CartContext';
 import SuriaLayout from '@/suria/components/SuriaLayout';
 import SuriaHome from '@/suria/pages/SuriaHome';
 import SuriaCatalog from '@/suria/pages/SuriaCatalog';
@@ -10,7 +10,13 @@ import SuriaCheckout from '@/suria/pages/SuriaCheckout';
 import SuriaAdmin from '@/suria/pages/SuriaAdmin';
 
 export default function SuriaWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/suria">

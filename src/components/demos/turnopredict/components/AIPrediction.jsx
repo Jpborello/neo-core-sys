@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaRobot, FaBolt, FaChartLine } from "react-icons/fa";
-import { useAIAnalysis } from "../hooks/useAIAnalysis";
+import { useAIAnalysis } from "@/hooks/useAIAnalysis";
 
 export default function AIPrediction() {
     const { prediction, topServices, peakHours } = useAIAnalysis();

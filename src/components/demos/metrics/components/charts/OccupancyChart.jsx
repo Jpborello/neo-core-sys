@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { useDashboard } from '../../context/DashboardContext';
+import { useDashboard } from '@/context/DashboardContext';
 
 export default function OccupancyChart() {
     const { occupancyData } = useDashboard();

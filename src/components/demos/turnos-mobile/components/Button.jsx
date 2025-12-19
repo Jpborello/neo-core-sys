@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Button({ children, onClick, variant = "primary", className = "", ...props }) {
+export default function Button({ children, onClick, variant = "primary", className = "", icon: Icon, ...props }) {
     const variants = {
         primary: "bg-[#7b3fe4] text-white shadow-lg shadow-violet-500/30",
         secondary: "bg-[#e470da] text-white shadow-lg shadow-pink-500/30",
@@ -12,9 +12,10 @@ export default function Button({ children, onClick, variant = "primary", classNa
         <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={onClick}
-            className={`w-full py-4 rounded-2xl font-bold text-lg transition-all ${variants[variant]} ${className}`}
+            className={`w-full py-4 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-2 ${variants[variant]} ${className}`}
             {...props}
         >
+            {Icon && <Icon className="text-xl" />}
             {children}
         </motion.button>
     );

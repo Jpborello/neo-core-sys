@@ -2,14 +2,20 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { DashboardProvider } from '@/components/demos/metrics/context/DashboardContext';
+import { DashboardProvider } from '@/context/DashboardContext';
 import MetricsLayout from '@/components/demos/metrics/layout/MetricsLayout';
 import Overview from '@/components/demos/metrics/pages/Overview';
 import Schedule from '@/components/demos/metrics/pages/Schedule';
 import Settings from '@/components/demos/metrics/pages/Settings';
 
 export default function MetricsWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-metrics">

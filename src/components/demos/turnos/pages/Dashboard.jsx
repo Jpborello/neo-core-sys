@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaCalendarCheck, FaMoneyBillWave, FaUserPlus, FaChartLine } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 import Card from "../components/ui/Card";
 
 export default function Dashboard() {

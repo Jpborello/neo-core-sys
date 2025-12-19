@@ -2,7 +2,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 
 export default function MainLayout() {
     const { user } = useTurnos();

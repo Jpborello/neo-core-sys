@@ -1,5 +1,5 @@
 import { FaBell, FaSearch, FaBars } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 
 export default function Topbar({ onToggleSidebar }) {
     const { user } = useTurnos();

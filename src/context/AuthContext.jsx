@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { demoUsers } from '../data/mockData';
+import { demoUsers } from '@/components/demos/salon-hub/data/mockData';
 
 const AuthContext = createContext();
 

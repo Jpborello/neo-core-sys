@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Adjust imports to valid relative paths from src/app/demo-turnos/
 // Demos are in src/pages/demos/turnos/
-import { TurnosProvider } from "@/components/demos/turnos/context/TurnosContext";
+import { TurnosProvider } from "@/context/TurnosContext";
 import MainLayout from "@/components/demos/turnos/layout/MainLayout";
 import Login from "@/components/demos/turnos/pages/Login";
 import Dashboard from "@/components/demos/turnos/pages/Dashboard";
@@ -14,7 +14,13 @@ import Clients from "@/components/demos/turnos/pages/Clients";
 import Settings from "@/components/demos/turnos/pages/Settings";
 
 export default function TurnosWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-turnos">

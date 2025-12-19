@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { mockAppointments, mockClients, servicesList, statsData } from "../data/mockData";
+import { mockAppointments, mockClients, servicesList, statsData } from "@/components/demos/turnos/data/mockData";
 
 const TurnosContext = createContext();
 

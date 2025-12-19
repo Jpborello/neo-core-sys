@@ -7,8 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 import RestaurantRouter from '@/apps/neo-resto/RestaurantRouter';
 
 export default function RestaurantWrapper() {
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
     // Ensure we are in the browser
-    if (typeof window === 'undefined') return null;
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-restaurant">

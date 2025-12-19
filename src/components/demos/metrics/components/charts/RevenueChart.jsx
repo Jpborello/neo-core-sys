@@ -1,5 +1,5 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { useDashboard } from '../../context/DashboardContext';
+import { useDashboard } from '@/context/DashboardContext';
 
 export default function RevenueChart() {
     const { revenueData } = useDashboard();

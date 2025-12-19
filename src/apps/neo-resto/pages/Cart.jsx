@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Trash2, Plus, Minus, CreditCard, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { useRestaurant } from '../context/RestaurantContext';
+import { useRestaurant } from '@/context/RestaurantContext';
 import { motion } from 'framer-motion';
 
 const Cart = () => {

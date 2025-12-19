@@ -1,6 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import AIPrediction from "./AIPrediction";
-import { useAIAnalysis } from "../hooks/useAIAnalysis";
+import { useAIAnalysis } from "@/hooks/useAIAnalysis";
 
 export default function AdminPanel() {
     const { topServices } = useAIAnalysis();

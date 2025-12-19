@@ -1,5 +1,5 @@
 import { FaDollarSign, FaCalendarCheck, FaUserFriends, FaChartLine } from "react-icons/fa";
-import { useDashboard } from "../context/DashboardContext";
+import { useDashboard } from "@/context/DashboardContext";
 import KPICard from "../components/ui/KPICard";
 import RevenueChart from "../components/charts/RevenueChart";
 import OccupancyChart from "../components/charts/OccupancyChart";

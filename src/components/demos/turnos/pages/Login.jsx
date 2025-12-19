@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLock, FaArrowRight } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
 

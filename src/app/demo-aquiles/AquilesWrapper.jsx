@@ -7,7 +7,13 @@ import AquilesHome from '@/components/demos/aquiles/pages/Home';
 import AquilesCatalog from '@/components/demos/aquiles/pages/Catalog';
 
 export default function AquilesWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-aquiles">

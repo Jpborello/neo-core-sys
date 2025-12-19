@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import { mockServices } from '../data/mockData';
+import { mockServices } from '@/components/demos/salon-hub/data/mockData';
 
 const BookingContext = createContext();
 

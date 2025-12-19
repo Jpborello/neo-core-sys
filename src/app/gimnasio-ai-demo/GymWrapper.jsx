@@ -11,7 +11,13 @@ import AsistenciasAI from "../../components/demos/gym-ai/pages/AsistenciasAI";
 import CuotasAI from "../../components/demos/gym-ai/pages/CuotasAI";
 
 export default function GymWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/gimnasio-ai-demo">

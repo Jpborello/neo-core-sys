@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { revenueData, serviceDistribution, occupancyData, heatmapData, kpiData } from "../data/analyticsData";
+import { revenueData, serviceDistribution, occupancyData, heatmapData, kpiData } from "@/components/demos/metrics/data/analyticsData";
 
 const DashboardContext = createContext();
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { supabase } from '../supabase/client';
+import { supabase } from '@/lib/supabase';
 import { CheckCircle, Wine, Bell } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 

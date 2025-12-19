@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaShoppingBag, FaBars, FaTimes, FaPaw, FaSearch, FaUser } from 'react-icons/fa';
-import { useShop } from '../context/ShopContext';
+import { useShop } from '@/context/ShopContext';
 
 export default function PetShopLayout() {
     const { isCartOpen, setIsCartOpen, cart, removeFromCart, updateQuantity, cartTotal, cartCount } = useShop();

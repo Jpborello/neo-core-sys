@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import turnosData from "../data/turnos.json";
+import turnosData from "@/components/demos/turnopredict/data/turnos.json";
 
 export function useAIAnalysis() {
     const analysis = useMemo(() => {

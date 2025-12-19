@@ -10,10 +10,10 @@ export default function DirectorPage() {
             {/* Navbar Minimalista */}
             <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-800">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <Link to="/" className="text-2xl font-bold text-white tracking-tight">
+                    <Link href="/" className="text-2xl font-bold text-white tracking-tight">
                         Neo-Core-Sys
                     </Link>
-                    <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                    <Link href="/" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                         Volver al Inicio
                     </Link>
                 </div>

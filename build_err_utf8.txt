@@ -1,0 +1,7634 @@
+﻿
+> neo-core-sys@0.0.0 build
+> next build
+
+Ôû▓ Next.js 16.1.0 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+npm : 
+En línea: 1 
+Carácter: 1
++ npm run build > 
+build.log 2>&1
++ ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo 
+             : No  
+  tSpecified: (:   
+ String) [], Re    
+moteException
+    + FullyQualifi 
+   edErrorId : Na  
+  tiveCommandErr   
+ or
+ 
+> Build error 
+occurred
+Error: Turbopack 
+build failed with 
+54 errors:
+./src/app/CuantoTeQ
+uiero/[[...slug]]/p
+age.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/CuantoTeQuieroWrap
+per'[39m)[33m,[3
+9m {
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m
+[31m[1m>[22m[39
+m[90m 4 |[39m    
+ ssr[33m:[39m [3
+6mfalse[39m[33m,
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m    
+ 
+loading[33m:[39m 
+() [33m=>[39m [3
+3m<[39m[33mdiv[3
+9m className[33m=
+[39m[32m"min-h-scr
+een flex 
+items-center justif
+y-center"[39m[33m
+>[39m[33mCargando
+[39m 
+[33mCuanto[39m 
+[33mTe[39m [33mQ
+uiero[39m[33m...
+[39m[33m<[39m[33
+m/[39m[33mdiv[39
+m[33m>[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+[31m[1m>[22m[39
+m[90m 6 |[39m 
+})[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 9 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-aqui
+les/[[...slug]]/pag
+e.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/AquilesWrapper'[3
+9m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-dist
+ribuidora/[[...slug
+]]/page.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/DistributorWrapper
+'[39m)[33m,[39m 
+{ ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-kios
+k/[[...slug]]/page.
+jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/KioskWrapper'[39m
+)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-metr
+ics/[[...slug]]/pag
+e.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/MetricsWrapper'[3
+9m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-pelu
+queria/[[...slug]]/
+page.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/HairdresserWrapper
+'[39m)[33m,[39m 
+{ ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-pets
+hop/[[...slug]]/pag
+e.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/PetShopWrapper'[3
+9m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-rest
+aurant/[[...slug]]/
+page.jsx:4:13
+Ecmascript file 
+had an error
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[90m// Disable 
+SSR for the SPA 
+wrapper to avoid 
+hydration errors 
+with React 
+Router[39m
+[31m[1m>[22m[39
+m[90m 4 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/RestaurantWrapper'
+[39m)[33m,[39m 
+{ ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 7 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-turn
+opredict/[[...slug]
+]/page.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/TurnoPredictWrappe
+r'[39m)[33m,[39m
+ { ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-turn
+os-mobile/[[...slug
+]]/page.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/TurnosMobileWrappe
+r'[39m)[33m,[39m
+ { ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/demo-turn
+os/[[...slug]]/page
+.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/TurnosWrapper'[39
+m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/gimnasio-
+ai-demo/[[...slug]]
+/page.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/GymAIWrapper'[39m
+)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/ginex-mot
+ors/[[...slug]]/pag
+e.jsx:3:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/GinexMotorsWrapper
+'[39m)[33m,[39m 
+{ ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/motos/[[.
+..slug]]/page.jsx:3
+:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/MotorsWrapper'[39
+m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/app/suria/[[.
+..slug]]/page.jsx:3
+:13
+Ecmascript file 
+had an error
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/SuriaWrapper'[39m
+)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+         [31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+`ssr: false` is 
+not allowed with 
+`next/dynamic` in 
+Server Components. 
+Please move it 
+into a Client 
+Component.
+
+
+./src/components/de
+mos/metrics/compone
+nts/charts/Heatmap.
+jsx:1:1
+Module not found: 
+Can't resolve '../.
+./context/Dashboard
+Context'
+[0m[31m[1m>[22m
+[39m[90m 1 
+|[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m'../../context/Das
+hboardContext'[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m
+ [90m 2 |[39m
+ [90m 3 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mHeatmap[39m()
+ {
+ [90m 4 |[39m    
+ [36mconst[39m { 
+heatmapData } 
+[33m=[39m useDash
+board()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Heat
+map.jsx [Client 
+Component Browser]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Heat
+map.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/compone
+nts/charts/Occupanc
+yChart.jsx:2:1
+Module not found: 
+Can't resolve '../.
+./context/Dashboard
+Context'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mBarChart[39m
+[33m,[39m [33mBar
+[39m[33m,[39m [
+33mXAxis[39m[33m,
+[39m [33mYAxis[3
+9m[33m,[39m [33m
+CartesianGrid[39m
+[33m,[39m [33mToo
+ltip[39m[33m,[39
+m [33mResponsiveCo
+ntainer[39m[33m,
+[39m 
+[33mCell[39m } 
+[36mfrom[39m [32
+m'recharts'[39m[3
+3m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m'../../context/Das
+hboardContext'[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mOccupancyChart
+[39m() {
+ [90m 5 |[39m    
+ [36mconst[39m { 
+occupancyData } 
+[33m=[39m useDash
+board()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Occu
+pancyChart.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Occu
+pancyChart.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/compone
+nts/charts/RevenueC
+hart.jsx:2:1
+Module not found: 
+Can't resolve '../.
+./context/Dashboard
+Context'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mAreaChart[39m
+[33m,[39m [33mAr
+ea[39m[33m,[39m 
+[33mXAxis[39m[33
+m,[39m [33mYAxis
+[39m[33m,[39m [3
+3mCartesianGrid[39
+m[33m,[39m [33mT
+ooltip[39m[33m,[
+39m [33mResponsive
+Container[39m } 
+[36mfrom[39m [32
+m'recharts'[39m[3
+3m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m'../../context/Das
+hboardContext'[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mRevenueChart[
+39m() {
+ [90m 5 |[39m    
+ [36mconst[39m { 
+revenueData } 
+[33m=[39m useDash
+board()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Reve
+nueChart.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Reve
+nueChart.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/compone
+nts/charts/ServiceD
+istribution.jsx:2:1
+Module not found: 
+Can't resolve '../.
+./context/Dashboard
+Context'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mPieChart[39m
+[33m,[39m [33mPie
+[39m[33m,[39m [
+33mCell[39m[33m,
+[39m [33mResponsiv
+eContainer[39m[33
+m,[39m [33mToolti
+p[39m[33m,[39m 
+[33mLegend[39m } 
+[36mfrom[39m [32
+m'recharts'[39m[3
+3m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m'../../context/Das
+hboardContext'[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mServiceDistrib
+ution[39m() {
+ [90m 5 |[39m    
+ [36mconst[39m { 
+serviceDistribution
+ } [33m=[39m useD
+ashboard()[33m;[3
+9m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Serv
+iceDistribution.jsx
+ [Client Component 
+Browser]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/com
+ponents/charts/Serv
+iceDistribution.jsx
+ [Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/gimnasio-
+ai-demo/[[...slug]]
+/page.jsx
+Module not found: 
+Can't resolve 
+'../GymAIWrapper'
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/gimnasio-
+ai-demo/[[...slug]]
+/page.jsx:3:27
+Module not found: 
+Can't resolve 
+'../GymAIWrapper'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/GymAIWrapper'[39m
+)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+                   
+    [31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/demo-pelu
+queria/[[...slug]]/
+page.jsx
+Module not found: 
+Can't resolve '../H
+airdresserWrapper'
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/demo-pelu
+queria/[[...slug]]/
+page.jsx:3:27
+Module not found: 
+Can't resolve '../H
+airdresserWrapper'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/HairdresserWrapper
+'[39m)[33m,[39m 
+{ ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+                   
+    [31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/motos/[[.
+..slug]]/page.jsx
+Module not found: 
+Can't resolve 
+'../MotorsWrapper'
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/motos/[[.
+..slug]]/page.jsx:3
+:27
+Module not found: 
+Can't resolve 
+'../MotorsWrapper'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+dynamic 
+[36mfrom[39m [32
+m'next/dynamic'[39
+m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mconst[39m 
+[33mApp[39m 
+[33m=[39m 
+dynamic(() 
+[33m=>[39m [36mi
+mport[39m([32m'..
+/MotorsWrapper'[39
+m)[33m,[39m { 
+ssr[33m:[39m 
+[36mfalse[39m 
+})[33m;[39m
+ [90m   |[39m    
+                   
+    [31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mfunction[39m 
+generateStaticParam
+s() {
+ [90m 6 |[39m    
+ [36mreturn[39m 
+[{ slug[33m:[39m 
+[] 
+}][33m;[39m[0m
+
+
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/suria/pages/S
+uriaCheckout.jsx:2:
+1
+Module not found: 
+Can't resolve '../c
+omponents/CartConte
+xt.jsx'
+[0m [90m 1 
+|[39m 
+[36mimport[39m [
+33mReact[39m[33m,
+[39m { useState } 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useCart } 
+[36mfrom[39m [32
+m'../components/Car
+tContext.jsx'[39m
+[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32
+m'react-router-dom'
+[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mconst[39m [3
+3mSuriaCheckout[39
+m [33m=[39m () 
+[33m=>[39m {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/suria/pag
+es/SuriaCheckout.js
+x [Client 
+Component Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/suria/pag
+es/SuriaCheckout.js
+x [Client 
+Component SSR - 
+Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/pages/O
+verview.jsx:2:1
+Module not found: 
+Can't resolve '../c
+ontext/DashboardCon
+text'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mFaDollarSign[
+39m[33m,[39m [33
+mFaCalendarCheck[3
+9m[33m,[39m [33m
+FaUserFriends[39m
+[33m,[39m [33mFaC
+hartLine[39m } 
+[36mfrom[39m [32
+m"react-icons/fa"[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m"../context/Dashbo
+ardContext"[39m[3
+3m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m 
+[33mKPICard[39m 
+[36mfrom[39m [32
+m"../components/ui/
+KPICard"[39m[33m;
+[39m
+ [90m 4 |[39m 
+[36mimport[39m [
+33mRevenueChart[39
+m [36mfrom[39m [
+32m"../components/c
+harts/RevenueChart"
+[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m [
+33mOccupancyChart[
+39m [36mfrom[39m 
+[32m"../components
+/charts/OccupancyCh
+art"[39m[33m;[39
+m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/pag
+es/Overview.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/pages/S
+chedule.jsx:2:1
+Module not found: 
+Can't resolve '../c
+ontext/DashboardCon
+text'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+useState } 
+[36mfrom[39m [32
+m"react"[39m[33m;
+[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m"../context/Dashbo
+ardContext"[39m[3
+3m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../../turnos/comp
+onents/ui/Card"[39
+m[33m;[39m 
+[90m// Reusing 
+Card[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../../turnos/comp
+onents/ui/Button"[
+39m[33m;[39m 
+[90m// Reusing 
+Button[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/pag
+es/Schedule.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/pag
+es/Schedule.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/metrics/pages/S
+ettings.jsx:1:1
+Module not found: 
+Can't resolve '../c
+ontext/DashboardCon
+text'
+[0m[31m[1m>[22m
+[39m[90m 1 
+|[39m 
+[36mimport[39m { 
+useDashboard } 
+[36mfrom[39m [32
+m"../context/Dashbo
+ardContext"[39m[3
+3m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 2 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../../turnos/comp
+onents/ui/Card"[39
+m[33m;[39m 
+[90m// Reusing 
+Card[39m
+ [90m 3 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../../turnos/comp
+onents/ui/Button"[
+39m[33m;[39m 
+[90m// Reusing 
+Button[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mInput[39m 
+[36mfrom[39m [32
+m"../../turnos/comp
+onents/ui/Input"[3
+9m[33m;[39m 
+[90m// Reusing 
+Input[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/metrics/pag
+es/Settings.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/metrics/pag
+es/Settings.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/webs/cuanto-t
+e-quiero/pages/Cata
+log.jsx:3:1
+Module not found: 
+Can't resolve '../c
+ontext/ProductConte
+xt'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+useParams } 
+[36mfrom[39m [32
+m'react-router-dom'
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useProducts } 
+[36mfrom[39m [32
+m'../context/Produc
+tContext'[39m[33m
+;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mHeart[39m } 
+[36mfrom[39m [32
+m'lucide-react'[39
+m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mconst[39m [3
+3mProductCard[39m 
+[33m=[39m ({ 
+product }) 
+[33m=>[39m ([0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/webs/cuan
+to-te-quiero/pages/
+Catalog.jsx 
+[Client Component 
+Browser]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/webs/cuan
+to-te-quiero/pages/
+Catalog.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component SSR - 
+Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/webs/cuanto-t
+e-quiero/pages/Home
+.jsx:3:1
+Module not found: 
+Can't resolve '../c
+ontext/ProductConte
+xt'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32
+m'react-router-dom'
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useProducts } 
+[36mfrom[39m [32
+m'../context/Produc
+tContext'[39m[33m
+;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mArrowRight[39
+m[33m,[39m [33mS
+tar[39m[33m,[39m
+ [33mShoppingBag[
+39m } 
+[36mfrom[39m [32
+m'lucide-react'[39
+m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m [
+33mTestimonialsSect
+ion[39m 
+[36mfrom[39m [32
+m'../components/Tes
+timonialsSection'[
+39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/webs/cuan
+to-te-quiero/pages/
+Home.jsx [Client 
+Component Browser]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/webs/cuan
+to-te-quiero/pages/
+Home.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component SSR - 
+Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/pet-shop/layout
+/PetShopLayout.jsx:
+5:1
+Module not found: 
+Can't resolve '../c
+ontext/ShopContext'
+[0m [90m 3 
+|[39m 
+[36mimport[39m { 
+motion[33m,[39m 
+[33mAnimatePresence
+[39m } 
+[36mfrom[39m [32
+m'framer-motion'[3
+9m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mFaShoppingBag
+[39m[33m,[39m [3
+3mFaBars[39m[33m,
+[39m [33mFaTimes
+[39m[33m,[39m [3
+3mFaPaw[39m[33m,
+[39m [33mFaSearch
+[39m[33m,[39m 
+[33mFaUser[39m } 
+[36mfrom[39m [32
+m'react-icons/fa'[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m 
+[36mimport[39m { 
+useShop } 
+[36mfrom[39m [32
+m'../context/ShopCo
+ntext'[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mPetShopLayout
+[39m() {
+ [90m 8 |[39m    
+ [36mconst[39m { 
+isCartOpen[33m,[3
+9m setIsCartOpen[3
+3m,[39m 
+cart[33m,[39m rem
+oveFromCart[33m,[
+39m updateQuantity
+[33m,[39m cartTota
+l[33m,[39m 
+cartCount } 
+[33m=[39m useShop
+()[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/pet-shop/la
+yout/PetShopLayout.
+jsx [Client 
+Component Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/pet-shop/la
+yout/PetShopLayout.
+jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/pet-shop/pages/
+Home.jsx:6:1
+Module not found: 
+Can't resolve '../c
+ontext/ShopContext'
+[0m [90m 4 
+|[39m 
+[36mimport[39m { 
+[33mFaPaw[39m[33
+m,[39m [33mFaShip
+pingFast[39m[33m,
+[39m [33mFaShield
+Alt[39m[33m,[39m
+ [33mFaUndo[39m 
+} [36mfrom[39m [
+32m'react-icons/fa'
+[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+products } 
+[36mfrom[39m [32
+m'../data/products'
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 6 |[39m 
+[36mimport[39m { 
+useShop } 
+[36mfrom[39m [32
+m'../context/ShopCo
+ntext'[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mHome[39m() {
+ [90m 9 |[39m    
+ [36mconst[39m { 
+addToCart } 
+[33m=[39m useShop
+()[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/pet-shop/pa
+ges/Home.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/pet-shop/pa
+ges/Home.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/pet-shop/pages/
+ProductDetail.jsx:6
+:1
+Module not found: 
+Can't resolve '../c
+ontext/ShopContext'
+[0m [90m 4 
+|[39m 
+[36mimport[39m { 
+[33mFaStar[39m[3
+3m,[39m [33mFaTru
+ck[39m[33m,[39m 
+[33mFaShieldAlt[3
+9m[33m,[39m [33m
+FaCheck[39m[33m,
+[39m [33mFaMinus[
+39m[33m,[39m [33
+mFaPlus[39m[33m,
+[39m [33mFaShoppin
+gCart[39m } 
+[36mfrom[39m [32
+m'react-icons/fa'[
+39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+products } 
+[36mfrom[39m [32
+m"../data/products"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 6 |[39m 
+[36mimport[39m { 
+useShop } 
+[36mfrom[39m [32
+m"../context/ShopCo
+ntext"[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mProductDetail
+[39m() {
+ [90m 9 |[39m    
+ [36mconst[39m { 
+id } [33m=[39m us
+eParams()[33m;[39
+m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/pet-shop/pa
+ges/ProductDetail.j
+sx [Client 
+Component Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/pet-shop/pa
+ges/ProductDetail.j
+sx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx [Edge 
+Server Component]
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/layout/M
+ainLayout.jsx:5:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 3 
+|[39m 
+[36mimport[39m 
+[33mSidebar[39m 
+[36mfrom[39m [32
+m"./Sidebar"[39m[
+33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mTopbar[39m 
+[36mfrom[39m [32
+m"./Topbar"[39m[3
+3m;[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mMainLayout[39
+m() {
+ [90m 8 |[39m    
+ [36mconst[39m { 
+user } [33m=[39m 
+useTurnos()[33m;[
+39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/layout/S
+idebar.jsx:4:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 2 
+|[39m 
+[36mimport[39m { 
+[33mNavLink[39m 
+} [36mfrom[39m [
+32m"react-router-do
+m"[39m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mFaHome[39m[3
+3m,[39m [33mFaCal
+endarAlt[39m[33m,
+[39m [33mFaUsers
+[39m[33m,[39m [3
+3mFaCog[39m[33m,
+[39m [33mFaSignOut
+Alt[39m[33m,[39m
+ [33mFaTimes[39m 
+} [36mfrom[39m [
+32m"react-icons/fa"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 4 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mSidebar[39m({
+ isOpen[33m,[39m 
+onClose }) {
+ [90m 7 |[39m    
+ [36mconst[39m { 
+logout } 
+[33m=[39m useTurn
+os()[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/layo
+ut/Sidebar.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/layo
+ut/Sidebar.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/layout/T
+opbar.jsx:2:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mFaBell[39m[3
+3m,[39m [33mFaSea
+rch[39m[33m,[39m
+ [33mFaBars[39m 
+} [36mfrom[39m [
+32m"react-icons/fa"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mTopbar[39m({ 
+onToggleSidebar }) 
+{
+ [90m 5 |[39m    
+ [36mconst[39m { 
+user } [33m=[39m 
+useTurnos()[33m;[
+39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/layo
+ut/Topbar.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/layo
+ut/Topbar.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/turnos/layo
+ut/MainLayout.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/pages/Ca
+lendar.jsx:4:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 2 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mFaChevronLeft
+[39m[33m,[39m [3
+3mFaChevronRight[3
+9m[33m,[39m 
+[33mFaPlus[39m } 
+[36mfrom[39m [32
+m"react-icons/fa"[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 4 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Card"[39m[33m;[3
+9m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Button"[39m[33m;
+[39m
+ [90m 7 |[39m 
+[36mimport[39m 
+[33mModal[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Modal"[39m[33m;[
+39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/page
+s/Calendar.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/page
+s/Calendar.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/pages/Cl
+ients.jsx:4:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 2 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mFaSearch[39m
+[33m,[39m [33mFaE
+llipsisV[39m[33m,
+[39m [33mFaWhatsa
+pp[39m[33m,[39m 
+[33mFaEnvelope[39
+m } [36mfrom[39m 
+[32m"react-icons/f
+a"[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 4 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Card"[39m[33m;[3
+9m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mInput[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Input"[39m[33m;[
+39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/page
+s/Clients.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/page
+s/Clients.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/pages/Da
+shboard.jsx:3:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mFaCalendarChec
+k[39m[33m,[39m 
+[33mFaMoneyBillWave
+[39m[33m,[39m [
+33mFaUserPlus[39m
+[33m,[39m [33mFaC
+hartLine[39m } 
+[36mfrom[39m [32
+m"react-icons/fa"[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Card"[39m[33m;[3
+9m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mDashboard[39m
+() {[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/page
+s/Dashboard.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/page
+s/Dashboard.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/pages/Lo
+gin.jsx:5:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 3 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mFaEnvelope[39
+m[33m,[39m [33mF
+aLock[39m[33m,[3
+9m [33mFaArrowRigh
+t[39m } 
+[36mfrom[39m [32
+m"react-icons/fa"[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Button"[39m[33m;
+[39m
+ [90m 7 |[39m 
+[36mimport[39m 
+[33mInput[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Input"[39m[33m;[
+39m
+ [90m 8 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/page
+s/Login.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/page
+s/Login.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos/pages/Se
+ttings.jsx:3:1
+Module not found: 
+Can't resolve '../c
+ontext/TurnosContex
+t'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+useState } 
+[36mfrom[39m [32
+m"react"[39m[33m;
+[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mFaPalette[39m
+[33m,[39m [33mFa
+Clock[39m[33m,[3
+9m [33mFaConcierge
+Bell[39m[33m,[39
+m [33mFaSave[39m 
+} [36mfrom[39m [
+32m"react-icons/fa"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useTurnos } 
+[36mfrom[39m [32
+m"../context/Turnos
+Context"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m 
+[33mCard[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Card"[39m[33m;[3
+9m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Button"[39m[33m;
+[39m
+ [90m 6 |[39m 
+[36mimport[39m 
+[33mInput[39m 
+[36mfrom[39m [32
+m"../components/ui/
+Input"[39m[33m;[
+39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos/page
+s/Settings.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos/page
+s/Settings.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx [Edge Server 
+Component]
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnopredict/co
+mponents/AIPredicti
+on.jsx:3:1
+Module not found: 
+Can't resolve '../h
+ooks/useAIAnalysis'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mFaRobot[39m[
+33m,[39m [33mFaBo
+lt[39m[33m,[39m 
+[33mFaChartLine[3
+9m } 
+[36mfrom[39m [32
+m"react-icons/fa"[
+39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useAIAnalysis } 
+[36mfrom[39m [32
+m"../hooks/useAIAna
+lysis"[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mAIPrediction[
+39m() {
+ [90m 6 |[39m    
+ [36mconst[39m { 
+prediction[33m,[3
+9m topServices[33m
+,[39m peakHours } 
+[33m=[39m useAIAn
+alysis()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnopredic
+t/components/AIPred
+iction.jsx [Client 
+Component Browser]
+    ./src/component
+s/demos/turnopredic
+t/components/AdminP
+anel.jsx [Client 
+Component Browser]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnopredic
+t/components/AIPred
+iction.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/component
+s/demos/turnopredic
+t/components/AdminP
+anel.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnopredict/co
+mponents/AdminPanel
+.jsx:3:1
+Module not found: 
+Can't resolve '../h
+ooks/useAIAnalysis'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+[33mBarChart[39m
+[33m,[39m [33mBar
+[39m[33m,[39m [
+33mXAxis[39m[33m,
+[39m [33mYAxis[3
+9m[33m,[39m [33m
+Tooltip[39m[33m,
+[39m [33mResponsiv
+eContainer[39m[33
+m,[39m [33mCartes
+ianGrid[39m } 
+[36mfrom[39m [32
+m'recharts'[39m[3
+3m;[39m
+ [90m 2 |[39m 
+[36mimport[39m [
+33mAIPrediction[39
+m [36mfrom[39m [
+32m"./AIPrediction"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useAIAnalysis } 
+[36mfrom[39m [32
+m"../hooks/useAIAna
+lysis"[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mAdminPanel[39
+m() {
+ [90m 6 |[39m    
+ [36mconst[39m { 
+topServices } 
+[33m=[39m useAIAn
+alysis()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnopredic
+t/components/AdminP
+anel.jsx [Client 
+Component Browser]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnopredic
+t/components/AdminP
+anel.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnopredict/co
+mponents/BookingScr
+een.jsx:4:1
+Module not found: 
+Can't resolve '../h
+ooks/useAIAnalysis'
+[0m [90m 2 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mFaCalendarAlt
+[39m[33m,[39m [3
+3mFaClock[39m[33m
+,[39m [33mFaCheck
+Circle[39m[33m,[
+39m 
+[33mFaMagic[39m 
+} [36mfrom[39m [
+32m"react-icons/fa"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 4 |[39m 
+[36mimport[39m { 
+useAIAnalysis } 
+[36mfrom[39m [32
+m"../hooks/useAIAna
+lysis"[39m[33m;[
+39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mexport[39m 
+[36mdefault[39m 
+[36mfunction[39m 
+[33mBookingScreen
+[39m() {
+ [90m 7 |[39m    
+ [36mconst[39m { 
+prediction } 
+[33m=[39m useAIAn
+alysis()[33m;[39m
+[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnopredic
+t/components/Bookin
+gScreen.jsx 
+[Client Component 
+Browser]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnopredic
+t/components/Bookin
+gScreen.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/component
+s/demos/turnopredic
+t/pages/index.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnopredict/TurnoP
+redictWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnopredict/[[...s
+lug]]/page.jsx 
+[Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/components/de
+mos/turnos-mobile/p
+ages/MyAppointments
+.jsx:2:1
+Module not found: 
+Can't resolve '../h
+ooks/useAppointment
+s'
+[0m [90m 1 
+|[39m 
+[36mimport[39m { 
+motion } 
+[36mfrom[39m [32
+m"framer-motion"[3
+9m[33m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useAppointments } 
+[36mfrom[39m [32
+m"../hooks/useAppoi
+ntments"[39m[33m;
+[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mFaCalendarChec
+k[39m[33m,[39m 
+[33mFaTimes[39m 
+} [36mfrom[39m [
+32m"react-icons/fa"
+[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+useNavigate } 
+[36mfrom[39m [32
+m"react-router-dom"
+[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mButton[39m 
+[36mfrom[39m [32
+m"../components/But
+ton"[39m[33m;[39
+m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/component
+s/demos/turnos-mobi
+le/pages/MyAppointm
+ents.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+turnos-mobile/Turno
+sMobileWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/demo-
+turnos-mobile/Turno
+sMobileWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnos-mobile/[[...
+slug]]/page.jsx 
+[Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/component
+s/demos/turnos-mobi
+le/pages/MyAppointm
+ents.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/app/demo-
+turnos-mobile/Turno
+sMobileWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/demo-
+turnos-mobile/Turno
+sMobileWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/demo-
+turnos-mobile/[[...
+slug]]/page.jsx 
+[Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/apps/neo-mark
+et/ButcherAdmin.jsx
+:2:1
+Module not found: 
+Can't resolve '../n
+eo-resto/supabase/c
+lient'
+[0m [90m 1 
+|[39m 
+[36mimport[39m [
+33mReact[39m[33m,
+[39m { useState[3
+3m,[39m useEffect 
+} [36mfrom[39m [
+32m'react'[39m[33
+m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+supabase } 
+[36mfrom[39m [32
+m'../neo-resto/supa
+base/client'[39m[
+33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m {
+ [90m 4 |[39m    
+ [33mLayoutGrid[3
+9m[33m,[39m [33m
+DollarSign[39m[33
+m,[39m [33mTrendi
+ngUp[39m[33m,[39
+m [33mTruck[39m[
+33m,[39m [33mMapP
+in[39m[33m,[39m 
+[33mSearch[39m[3
+3m,[39m
+ [90m 5 |[39m    
+ [33mPackage[39m
+[33m,[39m [33mArr
+owRight[39m[33m,
+[39m [33mMessageCi
+rcle[39m[33m,[39
+m [33mAlertCircle
+[39m[33m,[39m [3
+3mShoppingBag[39m
+[33m,[39m[0m
+
+
+
+Import trace:
+  Client Component 
+Browser:
+    ./src/apps/neo-
+market/ButcherAdmin
+.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+carniceria/admin/pa
+ge.jsx [Client 
+Component Browser]
+    ./src/app/demo-
+carniceria/admin/pa
+ge.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/apps/neo-mark
+et/ButcherDemo.jsx:
+2:1
+Module not found: 
+Can't resolve '../n
+eo-resto/supabase/c
+lient'
+[0m [90m 1 
+|[39m 
+[36mimport[39m [
+33mReact[39m[33m,
+[39m { useState[3
+3m,[39m useEffect 
+} [36mfrom[39m [
+32m'react'[39m[33
+m;[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+supabase } 
+[36mfrom[39m [32
+m'../neo-resto/supa
+base/client'[39m[
+33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m
+ [90m 3 |[39m 
+[36mimport[39m { 
+[33mShoppingBag[3
+9m[33m,[39m [33m
+Phone[39m[33m,[3
+9m [33mMapPin[39m
+[33m,[39m [33mTr
+uck[39m[33m,[39m
+ [33mAward[39m[3
+3m,[39m [33mSearc
+h[39m[33m,[39m 
+[33mMenu[39m[33m,
+[39m [33mX[39m[
+33m,[39m [33mChev
+ronRight[39m[33m,
+[39m [33mStar[39
+m[33m,[39m [33mA
+rrowRight[39m[33m
+,[39m [33mUser[3
+9m[33m,[39m [33m
+Lock[39m[33m,[39
+m [33mCheckCircle
+[39m } 
+[36mfrom[39m [32
+m'lucide-react'[39
+m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+motion[33m,[39m 
+[33mAnimatePresence
+[39m } 
+[36mfrom[39m [32
+m'framer-motion'[3
+9m[33m;[39m
+ [90m 5 |[39m[0m
+
+
+
+Import trace:
+  Client Component 
+Browser:
+    ./src/apps/neo-
+market/ButcherDemo.
+jsx [Client 
+Component Browser]
+    ./src/app/demo-
+carniceria/page.jsx
+ [Client Component 
+Browser]
+    ./src/app/demo-
+carniceria/page.jsx
+ [Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/context/Produ
+ctContext.jsx:2:1
+Module not found: 
+Can't resolve 
+'../utils'
+[0m [90m 1 
+|[39m 
+[36mimport[39m [
+33mReact[39m[33m,
+[39m { createConte
+xt[33m,[39m useCo
+ntext[33m,[39m 
+useMemo } 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+getProducts } 
+[36mfrom[39m [32
+m'../utils'[39m[3
+3m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mconst[39m [3
+3mProductContext[3
+9m [33m=[39m crea
+teContext()[33m;[
+39m
+ [90m 5 |[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/context/P
+roductContext.jsx 
+[Client Component 
+Browser]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/context/P
+roductContext.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/webs/cuan
+to-te-quiero/App.js
+x [Client 
+Component SSR - 
+Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/Cuant
+oTeQuiero/CuantoTeQ
+uieroWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/Cuant
+oTeQuiero/[[...slug
+]]/page.jsx [Edge 
+Server Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/suria/compone
+nts/CartSummary.jsx
+:3:1
+Module not found: 
+Can't resolve 
+'./CartContext.jsx'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+ [90m 2 |[39m 
+[36mimport[39m { 
+[33mLink[39m } 
+[36mfrom[39m [32
+m'react-router-dom'
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 3 |[39m 
+[36mimport[39m { 
+useCart } 
+[36mfrom[39m [32
+m'./CartContext.jsx
+'[39m[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mconst[39m [3
+3mCartSummary[39m 
+[33m=[39m () 
+[33m=>[39m {
+ [90m 6 |[39m    
+ [36mconst[39m { 
+cartItems[33m,[39
+m total } 
+[33m=[39m useCart
+()[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/suria/com
+ponents/CartSummary
+.jsx [Client 
+Component Browser]
+    ./src/suria/pag
+es/SuriaCatalog.jsx
+ [Client Component 
+Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/suria/com
+ponents/CartSummary
+.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/suria/pag
+es/SuriaCatalog.jsx
+ [Client Component 
+SSR - Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/suria/compone
+nts/ProductCard.jsx
+:2:1
+Module not found: 
+Can't resolve 
+'./CartContext.jsx'
+[0m [90m 1 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+[31m[1m>[22m[39
+m[90m 2 |[39m 
+[36mimport[39m { 
+useCart } 
+[36mfrom[39m [32
+m'./CartContext.jsx
+'[39m[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mconst[39m [3
+3mProductCard[39m 
+[33m=[39m ({ 
+product }) 
+[33m=>[39m {
+ [90m 5 |[39m    
+ [36mconst[39m { 
+addToCart[33m,[39
+m removeFromCart[3
+3m,[39m 
+getItemQuantity } 
+[33m=[39m useCart
+()[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component 
+Browser:
+    ./src/suria/com
+ponents/ProductCard
+.jsx [Client 
+Component Browser]
+    ./src/suria/pag
+es/SuriaCatalog.jsx
+ [Client Component 
+Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+Browser]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+  Client Component 
+SSR - Edge:
+    ./src/suria/com
+ponents/ProductCard
+.jsx [Client 
+Component SSR - 
+Edge]
+    ./src/suria/pag
+es/SuriaCatalog.jsx
+ [Client Component 
+SSR - Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Client Component 
+SSR - Edge]
+    ./src/app/suria
+/SuriaWrapper.jsx 
+[Edge Server 
+Component]
+    ./src/app/suria
+/[[...slug]]/page.j
+sx [Edge Server 
+Component]
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/demo-metr
+ics/MetricsWrapper.
+jsx:5:1
+Module not found: 
+Can't resolve '@/co
+mponents/demos/metr
+ics/context/Dashboa
+rdContext'
+[0m [90m 3 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mBrowserRouter
+[39m[33m,[39m [3
+3mRoutes[39m[33m,
+[39m [33mRoute[3
+9m[33m,[39m 
+[33mNavigate[39m 
+} [36mfrom[39m [
+32m"react-router-do
+m"[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m 
+[36mimport[39m { 
+[33mDashboardProvi
+der[39m } 
+[36mfrom[39m [32
+m'@/components/demo
+s/metrics/context/D
+ashboardContext'[3
+9m[33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m [
+33mMetricsLayout[3
+9m [36mfrom[39m 
+[32m'@/components/d
+emos/metrics/layout
+/MetricsLayout'[39
+m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m 
+[33mOverview[39m 
+[36mfrom[39m [32
+m'@/components/demo
+s/metrics/pages/Ove
+rview'[39m[33m;[
+39m
+ [90m 8 |[39m 
+[36mimport[39m 
+[33mSchedule[39m 
+[36mfrom[39m [32
+m'@/components/demo
+s/metrics/pages/Sch
+edule'[39m[33m;[
+39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/demos/metri
+cs/context/Dashboar
+dContext' inside 
+of [project]/
+
+
+Import trace:
+  Edge Server 
+Component:
+    ./src/app/demo-
+metrics/MetricsWrap
+per.jsx
+    ./src/app/demo-
+metrics/[[...slug]]
+/page.jsx
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/demo-pets
+hop/PetShopWrapper.
+jsx:5:1
+Module not found: 
+Can't resolve '@/co
+mponents/demos/pet-
+shop/context/ShopCo
+ntext'
+[0m [90m 3 
+|[39m 
+[36mimport[39m 
+[33mReact[39m 
+[36mfrom[39m [32
+m'react'[39m[33m;
+[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+[33mBrowserRouter
+[39m[33m,[39m [3
+3mRoutes[39m[33m,
+[39m 
+[33mRoute[39m } 
+[36mfrom[39m [32
+m"react-router-dom"
+[39m[33m;[39m
+[31m[1m>[22m[39
+m[90m 5 |[39m 
+[36mimport[39m { 
+[33mShopProvider[
+39m } 
+[36mfrom[39m [32
+m'@/components/demo
+s/pet-shop/context/
+ShopContext'[39m[
+33m;[39m
+ [90m   |[39m [3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+ [90m 6 |[39m 
+[36mimport[39m [
+33mPetShopLayout[3
+9m [36mfrom[39m 
+[32m'@/components/d
+emos/pet-shop/layou
+t/PetShopLayout'[3
+9m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m 
+[33mHome[39m 
+[36mfrom[39m [32
+m'@/components/demo
+s/pet-shop/pages/Ho
+me'[39m[33m;[39m
+ [90m 8 |[39m 
+[36mimport[39m [
+33mProductDetail[3
+9m [36mfrom[39m 
+[32m'@/components/d
+emos/pet-shop/pages
+/ProductDetail'[39
+m[33m;[39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/demos/pet-s
+hop/context/ShopCon
+text' inside of 
+[project]/
+
+
+Import trace:
+  Edge Server 
+Component:
+    ./src/app/demo-
+petshop/PetShopWrap
+per.jsx
+    ./src/app/demo-
+petshop/[[...slug]]
+/page.jsx
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+./src/app/demo-turn
+os/TurnosWrapper.js
+x:8:1
+Module not found: 
+Can't resolve '@/co
+mponents/demos/turn
+os/context/TurnosCo
+ntext'
+[0m [90m  6 
+|[39m [90m// 
+Adjust imports to 
+valid relative 
+paths from src/app/
+demo-turnos/[39m
+ [90m  7 |[39m 
+[90m// Demos are 
+in src/pages/demos/
+turnos/[39m
+[31m[1m>[22m[39
+m[90m  8 |[39m 
+[36mimport[39m { 
+[33mTurnosProvider
+[39m } 
+[36mfrom[39m [32
+m"@/components/demo
+s/turnos/context/Tu
+rnosContext"[39m[
+33m;[39m
+ [90m    |[39m [
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m[31m[1m^[22m
+[39m[31m[1m^[22m
+[39m[31m[1m^[22
+m[39m[31m[1m^[2
+2m[39m[31m[1m^[
+22m[39m[31m[1m^
+[22m[39m[31m[1m^
+[22m[39m[31m[1m
+^[22m[39m[31m[1
+m^[22m[39m[31m[
+1m^[22m[39m[31m
+[1m^[22m[39m[31m
+[1m^[22m[39m[31
+m[1m^[22m[39m[3
+1m[1m^[22m[39m[
+31m[1m^[22m[39m
+[31m[1m^[22m[39m
+[31m[1m^[22m[39
+m[31m[1m^[22m[3
+9m[31m[1m^[22m[
+39m
+ [90m  9 |[39m 
+[36mimport[39m [
+33mMainLayout[39m 
+[36mfrom[39m [32
+m"@/components/demo
+s/turnos/layout/Mai
+nLayout"[39m[33m;
+[39m
+ [90m 10 |[39m 
+[36mimport[39m 
+[33mLogin[39m 
+[36mfrom[39m [32
+m"@/components/demo
+s/turnos/pages/Logi
+n"[39m[33m;[39m
+ [90m 11 |[39m 
+[36mimport[39m [
+33mDashboard[39m 
+[36mfrom[39m [32
+m"@/components/demo
+s/turnos/pages/Dash
+board"[39m[33m;[
+39m[0m
+
+Import map: 
+aliased to 
+relative './src/com
+ponents/demos/turno
+s/context/TurnosCon
+text' inside of 
+[project]/
+
+
+Import trace:
+  Edge Server 
+Component:
+    ./src/app/demo-
+turnos/TurnosWrappe
+r.jsx
+    ./src/app/demo-
+turnos/[[...slug]]/
+page.jsx
+
+https://nextjs.org/
+docs/messages/modul
+e-not-found
+
+
+    at <unknown> (.
+/src/app/CuantoTeQu
+iero/[[...slug]]/pa
+ge.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-aquil
+es/[[...slug]]/page
+.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-distr
+ibuidora/[[...slug]
+]/page.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-kiosk
+/[[...slug]]/page.j
+sx:3:13)
+    at <unknown> (.
+/src/app/demo-metri
+cs/[[...slug]]/page
+.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-peluq
+ueria/[[...slug]]/p
+age.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-petsh
+op/[[...slug]]/page
+.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-resta
+urant/[[...slug]]/p
+age.jsx:4:13)
+    at <unknown> (.
+/src/app/demo-turno
+predict/[[...slug]]
+/page.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-turno
+s-mobile/[[...slug]
+]/page.jsx:3:13)
+    at <unknown> (.
+/src/app/demo-turno
+s/[[...slug]]/page.
+jsx:3:13)
+    at <unknown> (.
+/src/app/gimnasio-a
+i-demo/[[...slug]]/
+page.jsx:3:13)
+    at <unknown> (.
+/src/app/ginex-moto
+rs/[[...slug]]/page
+.jsx:3:13)
+    at <unknown> (.
+/src/app/motos/[[..
+.slug]]/page.jsx:3:
+13)
+    at <unknown> (.
+/src/app/suria/[[..
+.slug]]/page.jsx:3:
+13)
+    at <unknown> (.
+/src/components/dem
+os/metrics/componen
+ts/charts/Heatmap.j
+sx:1:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/componen
+ts/charts/Occupancy
+Chart.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/componen
+ts/charts/RevenueCh
+art.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/componen
+ts/charts/ServiceDi
+stribution.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/gimnasio-a
+i-demo/[[...slug]]/
+page.jsx:3:27)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/demo-peluq
+ueria/[[...slug]]/p
+age.jsx:3:27)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/motos/[[..
+.slug]]/page.jsx:3:
+27)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/suria/pages/Su
+riaCheckout.jsx:2:1
+)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/pages/Ov
+erview.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/pages/Sc
+hedule.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/metrics/pages/Se
+ttings.jsx:1:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/webs/cuanto-te
+-quiero/pages/Catal
+og.jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/webs/cuanto-te
+-quiero/pages/Home.
+jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/pet-shop/layout/
+PetShopLayout.jsx:5
+:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/pet-shop/pages/H
+ome.jsx:6:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/pet-shop/pages/P
+roductDetail.jsx:6:
+1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/layout/Ma
+inLayout.jsx:5:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/layout/Si
+debar.jsx:4:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/layout/To
+pbar.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/pages/Cal
+endar.jsx:4:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/pages/Cli
+ents.jsx:4:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/pages/Das
+hboard.jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/pages/Log
+in.jsx:5:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos/pages/Set
+tings.jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnopredict/com
+ponents/AIPredictio
+n.jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnopredict/com
+ponents/AdminPanel.
+jsx:3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnopredict/com
+ponents/BookingScre
+en.jsx:4:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/components/dem
+os/turnos-mobile/pa
+ges/MyAppointments.
+jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/apps/neo-marke
+t/ButcherAdmin.jsx:
+2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/apps/neo-marke
+t/ButcherDemo.jsx:2
+:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/context/Produc
+tContext.jsx:2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/suria/componen
+ts/CartSummary.jsx:
+3:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/suria/componen
+ts/ProductCard.jsx:
+2:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/demo-metri
+cs/MetricsWrapper.j
+sx:5:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/demo-petsh
+op/PetShopWrapper.j
+sx:5:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)
+    at <unknown> (.
+/src/app/demo-turno
+s/TurnosWrapper.jsx
+:8:1)
+    at <unknown> (h
+ttps://nextjs.org/d
+ocs/messages/module
+-not-found)

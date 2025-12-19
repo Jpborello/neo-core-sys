@@ -7,7 +7,13 @@ import MotosHome from '@/components/demos/motos/pages/Home';
 import DebugGallery from '@/components/demos/motos/pages/DebugGallery';
 
 export default function MotosWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/motos">

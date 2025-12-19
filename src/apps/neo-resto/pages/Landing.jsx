@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '../supabase/client';
+import { supabase } from '@/lib/supabase';
 import { UtensilsCrossed, ArrowRight, CalendarDays, Clock, Users, X, CheckCircle, Bell } from 'lucide-react';
-import { useRestaurant } from '../context/RestaurantContext';
+import { useRestaurant } from '@/context/RestaurantContext';
 
 const Landing = () => {
     const navigate = useNavigate();

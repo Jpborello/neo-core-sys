@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useProducts } from '../context/ProductContext';
+import { useProducts } from '@/context/ProductContext';
 import { Heart } from 'lucide-react';
 
 const ProductCard = ({ product }) => (

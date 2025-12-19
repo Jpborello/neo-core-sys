@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCart } from '../components/CartContext.jsx';
+import { useCart } from '@/context/CartContext';
 import { Link } from 'react-router-dom';
 
 const SuriaCheckout = () => {

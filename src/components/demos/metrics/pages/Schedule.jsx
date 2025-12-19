@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDashboard } from "../context/DashboardContext";
+import { useDashboard } from "@/context/DashboardContext";
 import { motion } from "framer-motion";
 import Card from "../../turnos/components/ui/Card"; // Reusing Card
 import Button from "../../turnos/components/ui/Button"; // Reusing Button

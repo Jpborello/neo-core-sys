@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider as SalonAuthProvider } from '@/components/demos/salon-hub/context/AuthContext';
-import { BookingProvider as SalonBookingProvider } from '@/components/demos/salon-hub/context/BookingContext';
+import { AuthProvider as SalonAuthProvider } from '@/context/AuthContext';
+import { BookingProvider as SalonBookingProvider } from '@/context/BookingContext';
 import SalonLayout from '@/components/demos/salon-hub/SalonLayout';
 import SalonHome from '@/components/demos/salon-hub/pages/public/SalonHome';
 import SalonAuth from '@/components/demos/salon-hub/pages/public/SalonAuth';
@@ -13,7 +13,13 @@ import AdminDashboard from '@/components/demos/salon-hub/pages/admin/AdminDashbo
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function SalonHubWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-peluqueria">

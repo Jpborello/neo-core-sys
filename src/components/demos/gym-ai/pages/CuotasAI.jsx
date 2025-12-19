@@ -1,5 +1,5 @@
 import { FaMoneyBillWave, FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
-import { useGymData } from "../hooks/useGymData";
+import { useGymData } from "@/hooks/useGymData";
 
 export default function CuotasAI() {
     const { quotas, users } = useGymData();

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { supabase } from '../supabase/client';
+import { supabase } from '@/lib/supabase';
 import {
     LayoutGrid, DollarSign, TrendingUp, Users, Clock, CalendarDays, Bell, CheckCircle,
     Smartphone, History, Archive, LogOut, RefreshCw, UtensilsCrossed, Building2, ChevronDown, Lock, KeyRound

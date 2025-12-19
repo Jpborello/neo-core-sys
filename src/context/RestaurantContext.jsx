@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { supabase } from '../supabase/client';
+import { supabase } from '@/lib/supabase';
 
 const RestaurantContext = createContext();
 

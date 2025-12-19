@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { useGymData } from "../hooks/useGymData";
+import { useGymData } from "@/hooks/useGymData";
 import { FaCalendarCheck, FaClock } from "react-icons/fa";
 
 export default function AsistenciasAI() {

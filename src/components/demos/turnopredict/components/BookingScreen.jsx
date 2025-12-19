@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaClock, FaCheckCircle, FaMagic } from "react-icons/fa";
-import { useAIAnalysis } from "../hooks/useAIAnalysis";
+import { useAIAnalysis } from "@/hooks/useAIAnalysis";
 
 export default function BookingScreen() {
     const { prediction } = useAIAnalysis();
@@ -34,8 +34,8 @@ export default function BookingScreen() {
                                 key={i}
                                 onClick={() => setSelectedDate(i)}
                                 className={`flex-shrink-0 w-14 h-20 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all ${selectedDate === i
-                                        ? "bg-[#0A0A0A] text-white shadow-lg scale-105"
-                                        : "bg-gray-50 text-gray-400 hover:bg-gray-100"
+                                    ? "bg-[#0A0A0A] text-white shadow-lg scale-105"
+                                    : "bg-gray-50 text-gray-400 hover:bg-gray-100"
                                     }`}
                             >
                                 <span className="text-xs font-medium">NOV</span>
@@ -59,8 +59,8 @@ export default function BookingScreen() {
                                     key={time}
                                     onClick={() => setSelectedTime(time)}
                                     className={`relative py-3 rounded-xl border transition-all ${selectedTime === time
-                                            ? "border-[#FF007A] bg-[#FF007A]/5 text-[#FF007A]"
-                                            : "border-gray-100 text-gray-600 hover:border-gray-300"
+                                        ? "border-[#FF007A] bg-[#FF007A]/5 text-[#FF007A]"
+                                        : "border-gray-100 text-gray-600 hover:border-gray-300"
                                         }`}
                                 >
                                     <span className="font-medium">{time}:00</span>
@@ -84,8 +84,8 @@ export default function BookingScreen() {
                     whileTap={{ scale: 0.95 }}
                     disabled={!selectedDate || !selectedTime}
                     className={`w-full py-4 rounded-2xl font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2 ${selectedDate !== null && selectedTime !== null
-                            ? "bg-[#0A0A0A] shadow-black/20"
-                            : "bg-gray-300 cursor-not-allowed"
+                        ? "bg-[#0A0A0A] shadow-black/20"
+                        : "bg-gray-300 cursor-not-allowed"
                         }`}
                 >
                     <FaCheckCircle />

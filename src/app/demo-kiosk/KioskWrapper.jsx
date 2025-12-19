@@ -5,7 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import KioskDemo from '@/components/demos/kiosk/pages/KioskDemo';
 
 export default function KioskWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-kiosk">

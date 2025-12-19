@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaPalette, FaClock, FaConciergeBell, FaSave } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";

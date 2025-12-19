@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useMemo } from 'react';
-import { getProducts } from '../utils';
+import { getProducts } from '@/lib/utils';
 
 const ProductContext = createContext();
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaCut, FaUser, FaSignOutAlt, FaHome, FaCalendar, FaTachometerAlt } from 'react-icons/fa';
-import { useAuth } from './context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 
 export default function SalonLayout() {
     const { currentUser, logout, isAdmin } = useAuth();

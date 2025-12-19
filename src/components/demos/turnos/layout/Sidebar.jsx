@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { FaHome, FaCalendarAlt, FaUsers, FaCog, FaSignOutAlt, FaTimes } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 
 export default function Sidebar({ isOpen, onClose }) {
     const { logout } = useTurnos();

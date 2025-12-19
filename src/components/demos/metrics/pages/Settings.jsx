@@ -1,4 +1,4 @@
-import { useDashboard } from "../context/DashboardContext";
+import { useDashboard } from "@/context/DashboardContext";
 import Card from "../../turnos/components/ui/Card"; // Reusing Card
 import Button from "../../turnos/components/ui/Button"; // Reusing Button
 import Input from "../../turnos/components/ui/Input"; // Reusing Input

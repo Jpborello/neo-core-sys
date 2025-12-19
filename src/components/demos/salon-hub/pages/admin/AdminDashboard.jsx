@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCalendar, FaUsers, FaDollarSign, FaStar, FaClock } from 'react-icons/fa';
-import { useBooking } from '../../context/BookingContext';
+import { useBooking } from '@/context/BookingContext';
 
 export default function AdminDashboard() {
     const { getTodayAppointments, getUpcomingAppointments, getMetrics, appointments } = useBooking();

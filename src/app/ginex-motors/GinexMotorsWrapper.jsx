@@ -7,7 +7,13 @@ import GinexHome from '@/components/demos/ginex-motors/pages/Home';
 import GinexCatalog from '@/components/demos/ginex-motors/pages/Catalog';
 
 export default function GinexMotorsWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/ginex-motors">

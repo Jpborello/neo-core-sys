@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { initialUsers, initialAttendance, initialQuotas } from "../data/initialData";
+import { initialUsers, initialAttendance, initialQuotas } from "@/components/demos/gym-ai/data/initialData";
 
 export function useGymData() {
     // Users State

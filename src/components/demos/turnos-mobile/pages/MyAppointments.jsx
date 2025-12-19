@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useAppointments } from "../hooks/useAppointments";
+import { useAppointments } from "@/hooks/useAppointments";
 import { FaCalendarCheck, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";

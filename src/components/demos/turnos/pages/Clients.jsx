@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaSearch, FaEllipsisV, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { useTurnos } from "../context/TurnosContext";
+import { useTurnos } from "@/context/TurnosContext";
 import Card from "../components/ui/Card";
 import Input from "../components/ui/Input";
 

@@ -1,12 +1,13 @@
-"use client";
-
 import dynamic from 'next/dynamic';
 
-const TurnosApp = dynamic(() => import('../TurnosWrapper'), {
-    ssr: false,
-    loading: () => <div className="min-h-screen bg-slate-50 flex items-center justify-center text-slate-800">Cargando Turnos...</div>
+const App = dynamic(() => import('../TurnosWrapper'), {
+    loading: () => <div className="min-h-screen flex items-center justify-center">Cargando Turnos...</div>
 });
 
+export function generateStaticParams() {
+    return [{ slug: [] }];
+}
+
 export default function Page() {
-    return <TurnosApp />;
+    return <App />;
 }

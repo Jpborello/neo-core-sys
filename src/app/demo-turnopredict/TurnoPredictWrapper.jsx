@@ -5,7 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TurnoPredict from '@/components/demos/turnopredict/pages';
 
 export default function TurnoPredictWrapper() {
-    if (typeof window === 'undefined') return null;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <BrowserRouter basename="/demo-turnopredict">

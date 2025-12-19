@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import { useDashboard } from '../../context/DashboardContext';
+import { useDashboard } from '@/context/DashboardContext';
 
 export default function ServiceDistribution() {
     const { serviceDistribution } = useDashboard();

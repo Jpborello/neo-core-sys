@@ -1,13 +1,14 @@
-"use client";
-
 import dynamic from 'next/dynamic';
 
 // Disable SSR for the SPA wrapper to avoid hydration errors with React Router
-const RestaurantApp = dynamic(() => import('../RestaurantWrapper'), {
-    ssr: false,
-    loading: () => <div className="min-h-screen bg-black flex items-center justify-center text-white">Cargando Restaurante...</div>
+const App = dynamic(() => import('../RestaurantWrapper'), {
+    loading: () => <div className="min-h-screen flex items-center justify-center">Cargando Restaurante...</div>
 });
 
+export function generateStaticParams() {
+    return [{ slug: [] }];
+}
+
 export default function Page() {
-    return <RestaurantApp />;
+    return <App />;
 }

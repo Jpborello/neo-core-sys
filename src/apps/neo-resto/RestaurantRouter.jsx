@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate, useParams } from 'react-router-dom';
-import { RestaurantProvider, useRestaurant } from './context/RestaurantContext';
+import { RestaurantProvider, useRestaurant } from '@/context/RestaurantContext';
 
 import Landing from './pages/Landing';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
+import { supabase } from '@/lib/supabase';
 import Kitchen from './pages/Kitchen';
 import Admin from './pages/Admin';
 import Waiter from './pages/Waiter';

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaPaw, FaShippingFast, FaShieldAlt, FaUndo } from 'react-icons/fa';
 import { products } from '../data/products';
-import { useShop } from '../context/ShopContext';
+import { useShop } from '@/context/ShopContext';
 
 export default function Home() {
     const { addToCart } = useShop();

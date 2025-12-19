@@ -125,6 +125,7 @@ export default function PortfolioSection() {
                         time="15 a 20 días"
                         link="/demo-distribuidora"
                         color="from-blue-600 to-indigo-600"
+                        image="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
                     />
                     <PortfolioCard
                         title="Portfolio Framer Style"
@@ -140,6 +141,7 @@ export default function PortfolioSection() {
                         time="3 a 5 días"
                         link="/web-framer"
                         color="from-gray-900 to-gray-600"
+                        image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80"
                     />
                     <PortfolioCard
                         title="MiliNails (Glam)"
@@ -155,6 +157,7 @@ export default function PortfolioSection() {
                         time="5 a 7 días"
                         link="/milinails"
                         color="from-fuchsia-600 to-pink-500"
+                        image="https://images.unsplash.com/photo-1604654894610-df49ff550cca?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -171,6 +174,7 @@ export default function PortfolioSection() {
                         time="10 a 15 días"
                         link="/demo-turnos/login"
                         color="from-violet-600 to-indigo-600"
+                        image="https://images.unsplash.com/photo-1506784919141-935049915272?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -187,6 +191,7 @@ export default function PortfolioSection() {
                         time="12 a 18 días"
                         link="/demo-metrics/overview"
                         color="from-cyan-500 to-blue-600"
+                        image="https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -203,6 +208,7 @@ export default function PortfolioSection() {
                         time="10 a 15 días"
                         link="/demo-turnos-mobile"
                         color="from-fuchsia-500 to-purple-600"
+                        image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -219,6 +225,7 @@ export default function PortfolioSection() {
                         time="15 a 20 días"
                         link="/demo-turnopredict"
                         color="from-pink-500 to-rose-600"
+                        image="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -235,6 +242,7 @@ export default function PortfolioSection() {
                         time="20 a 25 días"
                         link="/gimnasio-ai-demo"
                         color="from-emerald-500 to-cyan-600"
+                        image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -250,6 +258,7 @@ export default function PortfolioSection() {
                         time="3 a 5 días"
                         link="/demo-landing"
                         color="from-pink-500 to-purple-600"
+                        image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -265,6 +274,7 @@ export default function PortfolioSection() {
                         time="5 a 7 días"
                         link="/demo-corporate"
                         color="from-blue-500 to-cyan-600"
+                        image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -280,6 +290,7 @@ export default function PortfolioSection() {
                         time="4 a 6 días"
                         link="/demo-restaurant"
                         color="from-amber-500 to-orange-600"
+                        image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -295,6 +306,7 @@ export default function PortfolioSection() {
                         time="7 a 10 días"
                         link="/ecommerce"
                         color="from-green-500 to-emerald-600"
+                        image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -311,6 +323,7 @@ export default function PortfolioSection() {
                         time="8 a 12 días"
                         link="/demo-petshop"
                         color="from-amber-500 to-orange-500"
+                        image="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -327,22 +340,41 @@ export default function PortfolioSection() {
                         time="10 a 15 días"
                         link="/demo-peluqueria"
                         color="from-yellow-500 to-yellow-600"
+                        image="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
-                        title="All Inclusive Men"
+                        title="Suria Lencería"
                         target="Indumentaria, E-commerce"
-                        desc="Tienda online premium de ropa masculina con estética dark, catálogo completo y compra directa vía WhatsApp."
+                        desc="Tienda mayorista de lencería con catálogo dinámico, sistema de carrito y pedido directo por WhatsApp."
                         benefits={[
-                            "Diseño Dark Premium",
-                            "Catálogo con Filtros",
-                            "Compra Directa (WhatsApp)",
-                            "100% Responsive"
+                            "Catálogo Mayorista",
+                            "Filtros por Categoría",
+                            "Carrito de Pedidos",
+                            "Diseño Minimalista"
+                        ]}
+                        stack="React + Context API"
+                        time="8 a 12 días"
+                        link="/suria"
+                        color="from-rose-500 to-red-600"
+                        image="https://images.unsplash.com/photo-1582232093198-d4481c0add12?auto=format&fit=crop&w=800&q=80"
+                    />
+
+                    <PortfolioCard
+                        title="HG Motos"
+                        target="Concesionaria, Motos"
+                        desc="Showroom digital de motos con galería interactiva, financiación online y contacto directo."
+                        benefits={[
+                            "Galería de Alta Calidad",
+                            "Información de Financiación",
+                            "Contacto WhatsApp",
+                            "Optimizado para Móvil"
                         ]}
                         stack="React + Framer Motion"
                         time="8 a 12 días"
-                        link="/demo-all-inclusive"
-                        color="from-gray-800 to-yellow-600"
+                        link="/motos"
+                        color="from-blue-600 to-blue-800"
+                        image="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80"
                     />
 
                     <PortfolioCard
@@ -359,6 +391,7 @@ export default function PortfolioSection() {
                         time="8 a 12 días"
                         link="/ginex-motors"
                         color="from-black to-red-600"
+                        image="https://images.unsplash.com/photo-1614165933833-97a9860b715e?auto=format&fit=crop&w=800&q=80"
                     />
                 </div>
             </section>

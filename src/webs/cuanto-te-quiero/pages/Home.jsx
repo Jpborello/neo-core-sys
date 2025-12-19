@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useProducts } from '../context/ProductContext';
+import { useProducts } from '@/context/ProductContext';
 import { ArrowRight, Star, ShoppingBag } from 'lucide-react';
 import TestimonialsSection from '../components/TestimonialsSection';
 
