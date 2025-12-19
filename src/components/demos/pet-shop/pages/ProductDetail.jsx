@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar, FaTruck, FaShieldAlt, FaCheck, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
-import { products } from "../../../components/demos/pet-shop/data/products";
-import { useShop } from "../../../components/demos/pet-shop/context/ShopContext";
+import { products } from "../data/products";
+import { useShop } from "../context/ShopContext";
 
 export default function ProductDetail() {
     const { id } = useParams();
