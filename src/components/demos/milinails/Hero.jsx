@@ -5,7 +5,7 @@ import Image from "next/image";
 // Placeholder for hero image if not passed as prop, but we should try to use one from the gallery if possible or a specific hero asset
 // For now, I'll assume the parent passes it or we import one. 
 // Let's import one of the gallery images to use as a fallback hero if needed, or just use a placeholder color/gradient until verified.
-import heroImg from "../../assets/milinails_gallery/584396432_18409557901141258_4382440215725663460_n.jpg";
+import heroImg from "../../../assets/milinails_gallery/584396432_18409557901141258_4382440215725663460_n.jpg";
 
 export default function Hero() {
     const bookingLink = "https://docs.google.com/forms/d/e/1FAIpQLSe1ThadDmbO3fhglFWV2-hOqOTr2u90QDt3gjU0KANbT0qsQg/viewform";

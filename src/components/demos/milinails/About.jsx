@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // Placeholder image for About section. Ideally this should be a photo of Mili.
 // Using one of the gallery images as a placeholder for now.
-import aboutImg from "../../assets/milinails_gallery/573784776_18406262713141258_3763569287313892057_n.jpg";
+import aboutImg from "../../../assets/milinails_gallery/573784776_18406262713141258_3763569287313892057_n.jpg";
 
 export default function About() {
     return (

@@ -4,13 +4,13 @@ import { FaInstagram, FaTimes, FaExpand } from "react-icons/fa";
 import Image from "next/image";
 
 // Import images
-import img1 from "../../assets/milinails_gallery/571755296_18405628063141258_6293387730718516622_n.jpg";
-import img2 from "../../assets/milinails_gallery/573784776_18406262713141258_3763569287313892057_n.jpg";
-import img3 from "../../assets/milinails_gallery/573810205_18406731754141258_429043636705921679_n.jpg";
-import img4 from "../../assets/milinails_gallery/574648984_18406731652141258_6371759511643176455_n.jpg";
-import img5 from "../../assets/milinails_gallery/584160237_18409556755141258_7272328860586625606_n.jpg";
-import img6 from "../../assets/milinails_gallery/584180623_18409557043141258_4079004623399829127_n.jpg";
-import img7 from "../../assets/milinails_gallery/584396432_18409557901141258_4382440215725663460_n.jpg";
+import img1 from "../../../assets/milinails_gallery/571755296_18405628063141258_6293387730718516622_n.jpg";
+import img2 from "../../../assets/milinails_gallery/573784776_18406262713141258_3763569287313892057_n.jpg";
+import img3 from "../../../assets/milinails_gallery/573810205_18406731754141258_429043636705921679_n.jpg";
+import img4 from "../../../assets/milinails_gallery/574648984_18406731652141258_6371759511643176455_n.jpg";
+import img5 from "../../../assets/milinails_gallery/584160237_18409556755141258_7272328860586625606_n.jpg";
+import img6 from "../../../assets/milinails_gallery/584180623_18409557043141258_4079004623399829127_n.jpg";
+import img7 from "../../../assets/milinails_gallery/584396432_18409557901141258_4382440215725663460_n.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7];
 

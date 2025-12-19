@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { FaCalendarCheck } from "react-icons/fa";
 import Link from "next/link";
-import logo from "../../assets/milinails_logo.png";
+import logo from "../../../assets/milinails_logo.png";
 
 // Components
 import Hero from "./Hero";

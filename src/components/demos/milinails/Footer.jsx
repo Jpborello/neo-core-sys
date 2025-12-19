@@ -1,4 +1,4 @@
-import logo from "../../assets/milinails_logo.png";
+import logo from "../../../assets/milinails_logo.png";
 
 export default function Footer() {
     return (
