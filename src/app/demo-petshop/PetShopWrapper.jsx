@@ -4,8 +4,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ShopProvider } from '@/components/demos/pet-shop/context/ShopContext';
 import PetShopLayout from '@/components/demos/pet-shop/layout/PetShopLayout';
-import Home from '@/pages/demos/pet-shop/Home';
-import ProductDetail from '@/pages/demos/pet-shop/ProductDetail';
+import Home from '@/components/demos/pet-shop/pages/Home';
+import ProductDetail from '@/components/demos/pet-shop/pages/ProductDetail';
 
 export default function PetShopWrapper() {
     if (typeof window === 'undefined') return null;
