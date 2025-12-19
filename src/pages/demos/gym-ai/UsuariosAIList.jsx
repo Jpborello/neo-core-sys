@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSearch, FaUserPlus, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-import { useGymData } from "../hooks/useGymData";
-import { useAIEngine } from "../hooks/useAIEngine";
+import { useGymData } from "../../../components/demos/gym-ai/hooks/useGymData";
+import { useAIEngine } from "../../../components/demos/gym-ai/hooks/useAIEngine";
 
 export default function UsuariosAIList() {
     const { users, attendance, quotas } = useGymData();
