@@ -55,7 +55,7 @@ export default function LandingPage() {
             {/* HERO */}
             <main className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6 min-h-[80vh] w-full">
                 {/* Animated Background Blobs / 3D Demo */}
-                <div className="absolute inset-0 z-[-1] overflow-hidden">
+                <div className="hero-3d-container absolute inset-0 z-[-1] overflow-hidden">
                     <Suspense fallback={
                         <>
                             <div className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] -top-20 -left-20 rounded-full" />
@@ -79,7 +79,7 @@ export default function LandingPage() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
+                    className="hero-text-section text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
                 >
                     <span className="text-gradient">Neo-Core-Sys</span>
                     <span className="block text-2xl md:text-4xl text-gray-200 mt-4 font-bold tracking-normal">

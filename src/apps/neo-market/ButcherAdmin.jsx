@@ -3,7 +3,7 @@ import { supabase } from '../neo-resto/supabase/client';
 import {
     LayoutGrid, DollarSign, TrendingUp, Truck, MapPin, Search,
     Package, ArrowRight, MessageCircle, AlertCircle, ShoppingBag,
-    CheckCircle, X, Clock
+    CheckCircle, X, Clock, Lock
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,6 +13,17 @@ const ButcherAdmin = () => {
     const [products, setProducts] = useState([]);
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [passwordInput, setPasswordInput] = useState('');
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        if (passwordInput === '45692278') {
+            setIsAuthenticated(true);
+        } else {
+            alert('Acceso Denegado');
+        }
+    };
 
     // --- Data Fetching ---
     useEffect(() => {
@@ -104,6 +115,35 @@ const ButcherAdmin = () => {
     };
 
     // --- RENDER ---
+    if (!isAuthenticated) {
+        return (
+            <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+                <form onSubmit={handleLogin} className="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl max-w-sm w-full">
+                    <div className="flex justify-center mb-6">
+                        <div className="w-16 h-16 bg-[#C99A3A] rounded-full flex items-center justify-center text-slate-900 shadow-lg">
+                            <Lock size={32} />
+                        </div>
+                    </div>
+                    <h2 className="text-2xl font-bold text-center text-[#F3E6D0] mb-6">Acceso Restringido</h2>
+                    <input
+                        type="password"
+                        placeholder="Contraseña"
+                        value={passwordInput}
+                        onChange={(e) => setPasswordInput(e.target.value)}
+                        className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white mb-4 focus:border-[#C99A3A] focus:outline-none"
+                        autoFocus
+                    />
+                    <button
+                        type="submit"
+                        className="w-full bg-[#C99A3A] hover:bg-[#b08530] text-slate-900 font-bold py-3 rounded-lg transition-colors uppercase tracking-wider"
+                    >
+                        Ingresar
+                    </button>
+                </form>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-slate-900 text-slate-100 font-sans flex flex-col">
 
@@ -114,7 +154,7 @@ const ButcherAdmin = () => {
                         <Truck size={20} />
                     </div>
                     <div>
-                        <h1 className="text-xl font-bold tracking-tight text-[#F3E6D0]">Logística Ferreyra</h1>
+                        <h1 className="text-xl font-bold tracking-tight text-[#F3E6D0]">Logística Mercado</h1>
                         <p className="text-xs text-slate-500">Panel de Control B2B</p>
                     </div>
                 </div>

@@ -1,0 +1,113 @@
+/* Glassmorphism Chat Styles - Cyberpunk Update */
+
+/* 1. FONDO TRANSPARENTE Y EFECTO VIDRIO */
+body,
+html {
+    background-color: transparent !important;
+    /* Crucial para el iframe */
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.chat-container {
+    background: rgba(10, 10, 15, 0.65);
+    /* Negro azulado semi-transparente */
+    backdrop-filter: blur(12px);
+    /* Efecto borroso de fondo */
+    -webkit-backdrop-filter: blur(12px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+    /* Fuente Hacker */
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    /* Borde sutil */
+}
+
+/* 2. AREA DE MENSAJES */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* MENSAJES DEL BOT (Alineado izq, oscuro) */
+.message.bot {
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 3px solid #00ffff;
+    /* Borde Neón Cyan */
+    color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 0px 12px 12px 12px;
+    max-width: 85%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+/* MENSAJES DEL USUARIO (Alineado der, magenta) */
+.message.user {
+    align-self: flex-end;
+    background: rgba(50, 0, 50, 0.4);
+    border-right: 3px solid #ff00ff;
+    /* Borde Neón Magenta */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 12px 0px 12px 12px;
+    max-width: 85%;
+    text-align: right;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.1);
+}
+
+/* 3. INPUT DE COMANDOS (Abajo) */
+.input-area {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-top: 1px solid #00ffff;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* 4. SCROLLBAR INVISIBLE/FINA */
+.chat-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: transparent;
+}
