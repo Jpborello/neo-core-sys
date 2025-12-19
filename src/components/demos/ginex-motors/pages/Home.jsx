@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaMotorcycle, FaCheckCircle, FaStar, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaInstagram } from 'react-icons/fa';
-import { motorcycles, categories, services, testimonials, parts } from '../../../components/demos/ginex-motors/data/motorcycles';
+import { motorcycles, categories, services, testimonials, parts } from '../data/motorcycles';
 
 export default function Home() {
     const [selectedCategory, setSelectedCategory] = useState('all');
