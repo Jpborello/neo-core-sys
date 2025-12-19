@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../components/demos/turnos-mobile/components/Button";
+import Button from "../components/Button";
 import { FaCalendarPlus, FaListUl } from "react-icons/fa";
 
 export default function Home() {

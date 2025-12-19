@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaCheckCircle, FaCreditCard, FaMoneyBillWave, FaIdCard, FaInstagram, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
-import { motos } from '../../../components/demos/motos/data/motos';
+import { motos } from '../data/motos';
 
 export default function Home() {
     const [selectedMoto, setSelectedMoto] = useState(null);

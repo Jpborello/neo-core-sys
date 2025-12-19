@@ -1,11 +1,11 @@
 import { FaDollarSign, FaCalendarCheck, FaUserFriends, FaChartLine } from "react-icons/fa";
-import { useDashboard } from "../../../components/demos/metrics/context/DashboardContext";
-import KPICard from "../../../components/demos/metrics/components/ui/KPICard";
-import RevenueChart from "../../../components/demos/metrics/components/charts/RevenueChart";
-import OccupancyChart from "../../../components/demos/metrics/components/charts/OccupancyChart";
-import ServiceDistribution from "../../../components/demos/metrics/components/charts/ServiceDistribution";
-import Heatmap from "../../../components/demos/metrics/components/charts/Heatmap";
-import Card from "../../../components/demos/turnos/components/ui/Card"; // Reusing Card from previous demo
+import { useDashboard } from "../context/DashboardContext";
+import KPICard from "../components/ui/KPICard";
+import RevenueChart from "../components/charts/RevenueChart";
+import OccupancyChart from "../components/charts/OccupancyChart";
+import ServiceDistribution from "../components/charts/ServiceDistribution";
+import Heatmap from "../components/charts/Heatmap";
+import Card from "../../turnos/components/ui/Card"; // Reusing Card from previous demo
 
 export default function Overview() {
     const { kpiData } = useDashboard();

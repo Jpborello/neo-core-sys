@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCut, FaStar, FaClock, FaCheckCircle, FaCalendarAlt } from 'react-icons/fa';
-import { mockServices } from '../../../../components/demos/salon-hub/data/mockData';
-import { useAuth } from '../../../../components/demos/salon-hub/context/AuthContext';
+import { mockServices } from '../../data/mockData';
+import { useAuth } from '../../context/AuthContext';
 
 export default function SalonHome() {
     const { isAuthenticated } = useAuth();

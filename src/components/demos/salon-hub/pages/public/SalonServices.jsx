@@ -1,6 +1,6 @@
 import React from 'react';
-import { mockServices } from '../../../../components/demos/salon-hub/data/mockData';
-import { useAuth } from '../../../../components/demos/salon-hub/context/AuthContext';
+import { mockServices } from '../../data/mockData';
+import { useAuth } from '../../context/AuthContext';
 export default function SalonServices() {
     return (
         <div className="min-h-screen bg-white py-12">

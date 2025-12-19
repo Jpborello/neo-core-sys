@@ -1,6 +1,6 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
-import BookingScreen from "../../../components/demos/turnopredict/components/BookingScreen";
-import AdminPanel from "../../../components/demos/turnopredict/components/AdminPanel";
+import BookingScreen from "../components/BookingScreen";
+import AdminPanel from "../components/AdminPanel";
 import { FaMobileAlt, FaChartBar } from "react-icons/fa";
 
 export default function TurnoPredict() {

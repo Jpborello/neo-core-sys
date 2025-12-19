@@ -4,9 +4,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { DashboardProvider } from '@/components/demos/metrics/context/DashboardContext';
 import MetricsLayout from '@/components/demos/metrics/layout/MetricsLayout';
-import Overview from '@/pages/demos/metrics/Overview';
-import Schedule from '@/pages/demos/metrics/Schedule';
-import Settings from '@/pages/demos/metrics/Settings';
+import Overview from '@/components/demos/metrics/pages/Overview';
+import Schedule from '@/components/demos/metrics/pages/Schedule';
+import Settings from '@/components/demos/metrics/pages/Settings';
 
 export default function MetricsWrapper() {
     if (typeof window === 'undefined') return null;

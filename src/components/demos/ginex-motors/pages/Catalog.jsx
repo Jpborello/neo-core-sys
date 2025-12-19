@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFilter, FaSearch } from 'react-icons/fa';
-import { motorcycles } from '../../../components/demos/ginex-motors/data/motorcycles';
+import { motorcycles } from '../data/motorcycles';
 
 export default function Catalog() {
     const [selectedCategory, setSelectedCategory] = useState('all');

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TurnoPredict from '@/pages/demos/turnopredict';
+import TurnoPredict from '@/components/demos/turnopredict/pages';
 
 export default function TurnoPredictWrapper() {
     if (typeof window === 'undefined') return null;

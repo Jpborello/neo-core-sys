@@ -1,7 +1,7 @@
-import { useDashboard } from "../../../components/demos/metrics/context/DashboardContext";
-import Card from "../../../components/demos/turnos/components/ui/Card"; // Reusing Card
-import Button from "../../../components/demos/turnos/components/ui/Button"; // Reusing Button
-import Input from "../../../components/demos/turnos/components/ui/Input"; // Reusing Input
+import { useDashboard } from "../context/DashboardContext";
+import Card from "../../turnos/components/ui/Card"; // Reusing Card
+import Button from "../../turnos/components/ui/Button"; // Reusing Button
+import Input from "../../turnos/components/ui/Input"; // Reusing Input
 
 export default function Settings() {
     return (

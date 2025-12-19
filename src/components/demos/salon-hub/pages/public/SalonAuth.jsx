@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGoogle, FaEnvelope, FaLock, FaUser, FaPhone } from 'react-icons/fa';
-import { useAuth } from '../../../../components/demos/salon-hub/context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 export default function SalonAuth() {
     const navigate = useNavigate();

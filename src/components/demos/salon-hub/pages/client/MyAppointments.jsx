@@ -1,6 +1,6 @@
 import React from 'react';
-import { useBooking } from "../../../../components/demos/salon-hub/context/BookingContext";
-import { useAuth } from "../../../../components/demos/salon-hub/context/AuthContext";
+import { useBooking } from "../../context/BookingContext";
+import { useAuth } from "../../context/AuthContext";
 
 export default function MyAppointments() {
     const { currentUser } = useAuth();

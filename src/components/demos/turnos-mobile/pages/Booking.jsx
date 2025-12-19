@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../components/demos/turnos-mobile/components/Button";
-import Input from "../../../components/demos/turnos-mobile/components/Input";
-import { useLocalStorage } from "../../../components/demos/turnos-mobile/hooks/useLocalStorage";
-import { useAppointments } from "../../../components/demos/turnos-mobile/hooks/useAppointments";
+import Button from "../components/Button";
+import Input from "../components/Input";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useAppointments } from "../hooks/useAppointments";
 import { FaCheckCircle, FaClock, FaCalendarAlt } from "react-icons/fa";
 
 const services = [

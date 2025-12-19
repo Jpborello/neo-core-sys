@@ -3,8 +3,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MotosLayout from '@/components/demos/motos/layout/MotosLayout';
-import MotosHome from '@/pages/demos/motos/Home';
-import DebugGallery from '@/pages/demos/motos/DebugGallery';
+import MotosHome from '@/components/demos/motos/pages/Home';
+import DebugGallery from '@/components/demos/motos/pages/DebugGallery';
 
 export default function MotosWrapper() {
     if (typeof window === 'undefined') return null;

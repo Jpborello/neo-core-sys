@@ -3,9 +3,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MobileLayout from '@/components/demos/turnos-mobile/components/MobileLayout';
-import HomeMobile from '@/pages/demos/turnos-mobile/Home';
-import BookingMobile from '@/pages/demos/turnos-mobile/Booking';
-import MyAppointmentsMobile from '@/pages/demos/turnos-mobile/MyAppointments';
+import HomeMobile from '@/components/demos/turnos-mobile/pages/Home';
+import BookingMobile from '@/components/demos/turnos-mobile/pages/Booking';
+import MyAppointmentsMobile from '@/components/demos/turnos-mobile/pages/MyAppointments';
 
 export default function TurnosMobileWrapper() {
     if (typeof window === 'undefined') return null;

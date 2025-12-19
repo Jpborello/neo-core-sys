@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
-import { useTurnos } from "../../../components/demos/turnos/context/TurnosContext";
-import Card from "../../../components/demos/turnos/components/ui/Card";
-import Button from "../../../components/demos/turnos/components/ui/Button";
-import Modal from "../../../components/demos/turnos/components/ui/Modal";
-import Input from "../../../components/demos/turnos/components/ui/Input";
+import { useTurnos } from "../context/TurnosContext";
+import Card from "../components/ui/Card";
+import Button from "../components/ui/Button";
+import Modal from "../components/ui/Modal";
+import Input from "../components/ui/Input";
 
 export default function Calendar() {
     const { appointments, addAppointment, services } = useTurnos();

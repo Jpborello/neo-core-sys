@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { FaPalette, FaClock, FaConciergeBell, FaSave } from "react-icons/fa";
-import { useTurnos } from "../../../components/demos/turnos/context/TurnosContext";
-import Card from "../../../components/demos/turnos/components/ui/Card";
-import Button from "../../../components/demos/turnos/components/ui/Button";
-import Input from "../../../components/demos/turnos/components/ui/Input";
+import { useTurnos } from "../context/TurnosContext";
+import Card from "../components/ui/Card";
+import Button from "../components/ui/Button";
+import Input from "../components/ui/Input";
 
 export default function Settings() {
     const { services } = useTurnos();

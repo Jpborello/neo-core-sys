@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLock, FaArrowRight } from "react-icons/fa";
-import { useTurnos } from "../../../components/demos/turnos/context/TurnosContext";
-import Button from "../../../components/demos/turnos/components/ui/Button";
-import Input from "../../../components/demos/turnos/components/ui/Input";
+import { useTurnos } from "../context/TurnosContext";
+import Button from "../components/ui/Button";
+import Input from "../components/ui/Input";
 
 export default function Login() {
     const [email, setEmail] = useState("");

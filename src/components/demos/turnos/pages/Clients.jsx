@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaSearch, FaEllipsisV, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { useTurnos } from "../../../components/demos/turnos/context/TurnosContext";
-import Card from "../../../components/demos/turnos/components/ui/Card";
-import Input from "../../../components/demos/turnos/components/ui/Input";
+import { useTurnos } from "../context/TurnosContext";
+import Card from "../components/ui/Card";
+import Input from "../components/ui/Input";
 
 export default function Clients() {
     const { clients } = useTurnos();

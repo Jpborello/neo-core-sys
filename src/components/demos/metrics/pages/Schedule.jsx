@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useDashboard } from "../../../components/demos/metrics/context/DashboardContext";
+import { useDashboard } from "../context/DashboardContext";
 import { motion } from "framer-motion";
-import Card from "../../../components/demos/turnos/components/ui/Card"; // Reusing Card
-import Button from "../../../components/demos/turnos/components/ui/Button"; // Reusing Button
+import Card from "../../turnos/components/ui/Card"; // Reusing Card
+import Button from "../../turnos/components/ui/Button"; // Reusing Button
 import { FaPlus, FaCalendarAlt } from "react-icons/fa";
 
 export default function Schedule() {

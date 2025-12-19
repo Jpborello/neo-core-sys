@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useAppointments } from "../../../components/demos/turnos-mobile/hooks/useAppointments";
+import { useAppointments } from "../hooks/useAppointments";
 import { FaCalendarCheck, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../components/demos/turnos-mobile/components/Button";
+import Button from "../components/Button";
 
 export default function MyAppointments() {
     const { appointments, cancelAppointment } = useAppointments();

@@ -5,11 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider as SalonAuthProvider } from '@/components/demos/salon-hub/context/AuthContext';
 import { BookingProvider as SalonBookingProvider } from '@/components/demos/salon-hub/context/BookingContext';
 import SalonLayout from '@/components/demos/salon-hub/SalonLayout';
-import SalonHome from '@/pages/demos/salon-hub/public/SalonHome';
-import SalonAuth from '@/pages/demos/salon-hub/public/SalonAuth';
-import SalonServices from '@/pages/demos/salon-hub/public/SalonServices';
-import MyAppointments from '@/pages/demos/salon-hub/client/MyAppointments';
-import AdminDashboard from '@/pages/demos/salon-hub/admin/AdminDashboard';
+import SalonHome from '@/components/demos/salon-hub/pages/public/SalonHome';
+import SalonAuth from '@/components/demos/salon-hub/pages/public/SalonAuth';
+import SalonServices from '@/components/demos/salon-hub/pages/public/SalonServices';
+import MyAppointments from '@/components/demos/salon-hub/pages/client/MyAppointments';
+import AdminDashboard from '@/components/demos/salon-hub/pages/admin/AdminDashboard';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function SalonHubWrapper() {
