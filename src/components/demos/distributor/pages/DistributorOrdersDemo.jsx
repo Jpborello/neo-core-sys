@@ -21,13 +21,13 @@ import {
 } from 'react-icons/fi';
 
 // Mantenemos tus importaciones de imágenes (asegúrate de que las rutas sigan existiendo)
-import sodaColaImg from '../../../assets/demo-distribuidora/soda_cola.png';
-import waterBottleImg from '../../../assets/demo-distribuidora/water_bottle.png';
-import beerCanImg from '../../../assets/demo-distribuidora/beer_can.png';
-import chipsBagImg from '../../../assets/demo-distribuidora/chips_bag.png';
-import cookiesImg from '../../../assets/demo-distribuidora/chocolate_cookies.png';
-import yerbaImg from '../../../assets/demo-distribuidora/yerba_mate.png';
-import sugarImg from '../../../assets/demo-distribuidora/sugar_pack.png';
+import sodaColaImg from '../../../../assets/demo-distribuidora/soda_cola.png';
+import waterBottleImg from '../../../../assets/demo-distribuidora/water_bottle.png';
+import beerCanImg from '../../../../assets/demo-distribuidora/beer_can.png';
+import chipsBagImg from '../../../../assets/demo-distribuidora/chips_bag.png';
+import cookiesImg from '../../../../assets/demo-distribuidora/chocolate_cookies.png';
+import yerbaImg from '../../../../assets/demo-distribuidora/yerba_mate.png';
+import sugarImg from '../../../../assets/demo-distribuidora/sugar_pack.png';
 
 // --- UTILS ---
 const formatCurrency = (value) => new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0 }).format(value);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight, Shield, Target, TrendingUp, Users, Brain, Lock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function DirectorPage() {
     return (

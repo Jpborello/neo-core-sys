@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GymDemo from './GymDemo';
-import DistributorOrdersDemo from '../pages/demos/distributor/DistributorOrdersDemo';
+import DistributorOrdersDemo from './demos/distributor/pages/DistributorOrdersDemo';
 
 // ==========================================
 // SHARED COMPONENTS

@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const EcommercePage = dynamic(() => import('../../pages/EcommercePage'), { ssr: false });
+const EcommercePage = dynamic(() => import('../../components/pages/EcommercePage'), { ssr: false });
 
 export default function Page() {
     return <EcommercePage />;

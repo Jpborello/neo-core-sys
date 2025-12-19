@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const DemoLanding = dynamic(() => import('../../pages/demos/DemoLanding'), { ssr: false });
+const DemoLanding = dynamic(() => import('../../components/demos/landing/pages/DemoLanding'), { ssr: false });
 
 export default function Page() {
     return <DemoLanding />;

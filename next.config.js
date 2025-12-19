@@ -10,9 +10,7 @@ const nextConfig = {
         ],
         // unoptimized: true removed to enable optimization
     },
-    eslint: {
-        ignoreDuringBuilds: true, // Don't block builds on lint errors during migration
-    },
+
 };
 
 export default nextConfig;

@@ -1,9 +1,9 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, AreaChart, Area } from 'recharts';
 import { FaUsers, FaChartLine, FaBrain, FaExclamationTriangle } from "react-icons/fa";
-import { useGymData } from "../../../components/demos/gym-ai/hooks/useGymData";
-import { useAIEngine } from "../../../components/demos/gym-ai/hooks/useAIEngine";
-import KPICard from "../../../components/demos/gym-ai/components/KPICard";
-import InsightCard from "../../../components/demos/gym-ai/components/InsightCard";
+import { useGymData } from "../hooks/useGymData";
+import { useAIEngine } from "../hooks/useAIEngine";
+import KPICard from "../components/KPICard";
+import InsightCard from "../components/InsightCard";
 
 export default function DashboardAI() {
     const { users, attendance, quotas } = useGymData();

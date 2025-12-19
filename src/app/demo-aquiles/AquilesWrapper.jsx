@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AquilesLayout from '@/pages/demos/aquiles/layout/AquilesLayout';
-import AquilesHome from '@/pages/demos/aquiles/pages/Home';
-import AquilesCatalog from '@/pages/demos/aquiles/pages/Catalog';
+import AquilesLayout from '@/components/demos/aquiles/layout/AquilesLayout';
+import AquilesHome from '@/components/demos/aquiles/pages/Home';
+import AquilesCatalog from '@/components/demos/aquiles/pages/Catalog';
 
 export default function AquilesWrapper() {
     if (typeof window === 'undefined') return null;
