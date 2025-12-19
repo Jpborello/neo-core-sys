@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ShopProvider } from '@/pages/demos/pet-shop/context/ShopContext';
-import PetShopLayout from '@/pages/demos/pet-shop/layout/PetShopLayout';
-import Home from '@/pages/demos/pet-shop/pages/Home';
-import ProductDetail from '@/pages/demos/pet-shop/pages/ProductDetail';
+import { ShopProvider } from '@/components/demos/pet-shop/context/ShopContext';
+import PetShopLayout from '@/components/demos/pet-shop/layout/PetShopLayout';
+import Home from '@/pages/demos/pet-shop/Home';
+import ProductDetail from '@/pages/demos/pet-shop/ProductDetail';
 
 export default function PetShopWrapper() {
     if (typeof window === 'undefined') return null;

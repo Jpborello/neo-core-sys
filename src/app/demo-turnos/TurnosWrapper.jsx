@@ -5,13 +5,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Adjust imports to valid relative paths from src/app/demo-turnos/
 // Demos are in src/pages/demos/turnos/
-import { TurnosProvider } from "@/pages/demos/turnos/context/TurnosContext";
-import MainLayout from "@/pages/demos/turnos/layout/MainLayout";
-import Login from "@/pages/demos/turnos/pages/Login";
-import Dashboard from "@/pages/demos/turnos/pages/Dashboard";
-import Calendar from "@/pages/demos/turnos/pages/Calendar";
-import Clients from "@/pages/demos/turnos/pages/Clients";
-import Settings from "@/pages/demos/turnos/pages/Settings";
+import { TurnosProvider } from "@/components/demos/turnos/context/TurnosContext";
+import MainLayout from "@/components/demos/turnos/layout/MainLayout";
+import Login from "@/pages/demos/turnos/Login";
+import Dashboard from "@/pages/demos/turnos/Dashboard";
+import Calendar from "@/pages/demos/turnos/Calendar";
+import Clients from "@/pages/demos/turnos/Clients";
+import Settings from "@/pages/demos/turnos/Settings";
 
 export default function TurnosWrapper() {
     if (typeof window === 'undefined') return null;

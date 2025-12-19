@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GinexMotorsLayout from '@/pages/demos/ginex-motors/layout/GinexMotorsLayout';
-import GinexHome from '@/pages/demos/ginex-motors/pages/Home';
-import GinexCatalog from '@/pages/demos/ginex-motors/pages/Catalog';
+import GinexMotorsLayout from '@/components/demos/ginex-motors/layout/GinexMotorsLayout';
+import GinexHome from '@/pages/demos/ginex-motors/Home';
+import GinexCatalog from '@/pages/demos/ginex-motors/Catalog';
 
 export default function GinexMotorsWrapper() {
     if (typeof window === 'undefined') return null;
