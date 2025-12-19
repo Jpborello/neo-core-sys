@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaCalendarCheck } from "react-icons/fa";
+import Image from "next/image";
 
 // Placeholder for hero image if not passed as prop, but we should try to use one from the gallery if possible or a specific hero asset
 // For now, I'll assume the parent passes it or we import one. 
@@ -13,10 +14,12 @@ export default function Hero() {
         <section className="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden bg-black">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src={heroImg}
                     alt="MiliNails Hero"
-                    className="w-full h-full object-cover opacity-50"
+                    fill
+                    priority
+                    className="object-cover opacity-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black"></div>
 

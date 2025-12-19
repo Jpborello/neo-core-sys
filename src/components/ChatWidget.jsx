@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,8 +12,8 @@ const ChatWidget = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // REEMPLAZA ESTO CON TU URL DE WEBHOOK DE N8N (PRODUCCIÓN)
-  const N8N_WEBHOOK_URL = "https://neo-core-sys.app.n8n.cloud/webhook/chat";
+  // API DEL BOT EN RENDER
+  const API_URL = "https://neo-bot-vz2j.onrender.com/chat";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -32,17 +33,21 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      // Enviar mensaje al webhook de n8n
-      const response = await fetch(N8N_WEBHOOK_URL, {
+      // Enviar mensaje a la API (Render)
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chatInput: userMessage })
+        body: JSON.stringify({ text: userMessage })
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
-      console.log("N8N RESPONSE:", data); // DEBUG LOG
-      // Asumiendo que n8n devuelve { output: "Respuesta..." }
-      const botReply = data.output || data.text || "Lo siento, tuve un problema de conexión.";
+      console.log("API RESPONSE:", data); // DEBUG LOG
+
+      const botReply = data.response || "Lo siento, tuve un problema de conexión.";
 
       setMessages(prev => [...prev, { text: botReply, sender: 'bot' }]);
     } catch (error) {

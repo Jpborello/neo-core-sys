@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import {
     ShoppingCart, Package, Search, Plus, Minus, Trash2, Box, ArrowRight,
     CheckCircle2, AlertCircle, BarChart3, TrendingUp, Receipt, DollarSign,
@@ -209,7 +209,7 @@ const KioskApp = ({ onBack }) => {
 
 // ==========================================
 const InteractiveShowcase = () => {
-    const navigate = useNavigate();
+    const router = useRouter();
     const [viewMode, setViewMode] = useState('menu'); // 'menu', 'kiosk', 'wholesale', 'gym'
 
     return (
@@ -269,7 +269,7 @@ const InteractiveShowcase = () => {
                             </div>
 
                             {/* RESTAURANT CARD (NEW) */}
-                            <div className="group relative bg-slate-800 hover:bg-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-amber-500 transition-all cursor-pointer w-full max-w-sm" onClick={() => navigate('/demo-restaurant')}>
+                            <div className="group relative bg-slate-800 hover:bg-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-amber-500 transition-all cursor-pointer w-full max-w-sm" onClick={() => router.push('/demo-restaurant')}>
                                 <div className="absolute top-0 right-0 p-4 opacity-50"><UtensilsCrossed size={64} className="text-slate-600 group-hover:text-amber-500 transition-colors" /></div>
                                 <div className="p-3 bg-amber-500/20 text-amber-500 rounded-lg w-fit mb-6"><UtensilsCrossed size={32} /></div>
                                 <h3 className="text-2xl font-bold text-white mb-2">Restaurante / Bar</h3>

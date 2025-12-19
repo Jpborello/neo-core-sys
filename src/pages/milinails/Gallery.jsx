@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaInstagram, FaTimes, FaExpand } from "react-icons/fa";
+import Image from "next/image";
 
 // Import images
 import img1 from "../../assets/milinails_gallery/571755296_18405628063141258_6293387730718516622_n.jpg";
@@ -45,11 +46,12 @@ export default function Gallery() {
                             onClick={() => setSelectedImage(src)}
                             className={`relative group cursor-pointer overflow-hidden rounded-xl bg-zinc-900 ${index % 3 === 0 ? 'md:row-span-2' : ''}`}
                         >
-                            <img
+                            <Image
                                 src={src}
                                 alt={`Nail Art ${index + 1}`}
-                                loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <FaExpand className="text-white text-3xl drop-shadow-lg" />
@@ -86,13 +88,15 @@ export default function Gallery() {
                         >
                             <FaTimes className="text-4xl" />
                         </button>
-                        <motion.img
-                            layoutId={`image-${images.indexOf(selectedImage)}`}
-                            src={selectedImage}
-                            alt="Full screen"
-                            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                        <div className="relative w-full max-w-4xl h-[80vh]">
+                            <Image
+                                src={selectedImage} // Next.js Image works with import object here too
+                                alt="Full screen"
+                                fill
+                                className="object-contain"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

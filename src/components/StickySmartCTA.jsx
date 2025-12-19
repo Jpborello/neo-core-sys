@@ -32,7 +32,7 @@ export default function StickySmartCTA() {
                     href="#contact"
                     className="group flex items-center justify-center gap-3 w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold text-lg rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] transition-all transform hover:-translate-y-1"
                 >
-                    <span>¡Quiero mi web profesional!</span>
+                    <span>⚡ Cotizar mi Proyecto Ahora</span>
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
             </div>

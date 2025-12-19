@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaCode, FaClock, FaArrowRight, FaCheck } from 'react-icons/fa';
 
 function PortfolioCard({ title, target, desc, benefits, stack, time, link, color, image }) {
@@ -54,7 +54,7 @@ function PortfolioCard({ title, target, desc, benefits, stack, time, link, color
                     </a>
                 ) : (
                     <Link
-                        to={link}
+                        href={link}
                         className={`mt-6 w-full py-3 md:py-2 rounded-xl font-bold text-sm text-center bg-gradient-to-r ${color} hover:opacity-90 transition-opacity block`}
                     >
                         Ver Demo

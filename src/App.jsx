@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import SeoAgency from "./components/SeoAgency";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
-import RestaurantRouter from "./pages/demos/restaurant/RestaurantRouter";
+import RestaurantRouter from "./apps/neo-resto/RestaurantRouter";
 import EcommercePage from "./pages/EcommercePage";
 import DemoLanding from "./pages/demos/DemoLanding";
 import DemoCorporate from "./pages/demos/DemoCorporate";
-import DemoRestaurant from "./pages/demos/DemoRestaurant";
+
 import MiliNailsPage from "./pages/milinails/MiliNailsPage";
 import { TurnosProvider } from "./pages/demos/turnos/context/TurnosContext";
 import MainLayout from "./pages/demos/turnos/layout/MainLayout";
@@ -61,7 +61,7 @@ import SuriaCatalog from './suria/pages/SuriaCatalog';
 import SuriaCheckout from './suria/pages/SuriaCheckout';
 import SuriaAdmin from './suria/pages/SuriaAdmin';
 import { CartProvider } from './suria/components/CartContext';
-import CuantoTeQuieroApp from './cuanto-te-quiero/App';
+import CuantoTeQuieroApp from './webs/cuanto-te-quiero/App';
 import DirectorPage from './pages/DirectorPage';
 import ChatWidget from './components/ChatWidget';
 import MotosLayout from './pages/demos/motos/layout/MotosLayout';
@@ -69,9 +69,9 @@ import MotosHome from './pages/demos/motos/pages/Home';
 import DebugGallery from './pages/demos/motos/pages/DebugGallery';
 import DistributorOrdersDemo from './pages/demos/distributor/DemoLoaderWrapper';
 import KioskDemo from './pages/demos/kiosk/KioskDemo';
-import ButcherDemo from "./pages/demos/ButcherDemo";
+import ButcherDemo from "./apps/neo-market/ButcherDemo";
 // Butcher Admin Route verified
-import ButcherAdmin from "./pages/demos/ButcherAdmin";
+import ButcherAdmin from "./apps/neo-market/ButcherAdmin";
 
 
 export default function App() {

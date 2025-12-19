@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Placeholder image for About section. Ideally this should be a photo of Mili.
 // Using one of the gallery images as a placeholder for now.
@@ -20,14 +21,17 @@ export default function About() {
                     transition={{ duration: 0.8 }}
                     className="w-full md:w-1/2"
                 >
-                    <div className="relative group">
+                    <div className="relative group w-full max-w-md mx-auto aspect-square">
                         <div className="absolute -inset-4 border border-yellow-500/30 rounded-full scale-95 group-hover:scale-100 transition-transform duration-700"></div>
                         <div className="absolute -inset-1 bg-gradient-to-tr from-yellow-400 to-fuchsia-600 rounded-full opacity-20 blur-md group-hover:opacity-40 transition-opacity duration-700"></div>
-                        <img
-                            src={aboutImg}
-                            alt="Samanta - MiliNails"
-                            className="w-full max-w-md mx-auto rounded-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 object-cover aspect-square"
-                        />
+                        <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
+                            <Image
+                                src={aboutImg}
+                                alt="Samanta - MiliNails"
+                                fill
+                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            />
+                        </div>
                     </div>
                 </motion.div>
 

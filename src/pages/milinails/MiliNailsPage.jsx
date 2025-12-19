@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { FaCalendarCheck } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import logo from "../../assets/milinails_logo.png";
 
 // Components
@@ -39,7 +39,7 @@ export default function MiliNailsPage() {
 
             {/* NAVBAR */}
             <nav className="absolute top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-6 max-w-7xl mx-auto">
-                <Link to="/" className="group">
+                <Link href="/" className="group">
                     <img
                         src={logo}
                         alt="MiliNails Logo"

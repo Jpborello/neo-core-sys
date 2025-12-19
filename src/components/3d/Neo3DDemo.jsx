@@ -88,22 +88,23 @@ function ServiceCube({ position, onServiceClick }) {
                 >
                     <boxGeometry args={[2, 2, 2]} />
                     <meshStandardMaterial
-                        color="#1a1a1a"
-                        roughness={0.2}
-                        metalness={0.9}
+                        color="#991b1b"
+                        roughness={0.15}
+                        metalness={0.95}
+                        emissive="#7f1d1d"
+                        emissiveIntensity={0.2}
                     />
                     {services.map((service, i) => (
                         <group key={i} position={service.pos} rotation={service.rot}>
                             <Html transform distanceFactor={3} style={{ pointerEvents: 'none' }}>
                                 <div
-                                    className="px-6 py-3 rounded-xl bg-black/90 backdrop-blur-md border-2 font-black text-4xl whitespace-nowrap select-none shadow-[0_0_30px_rgba(0,0,0,0.9)]"
+                                    className="px-6 py-3 rounded-xl bg-black/80 backdrop-blur-md border border-yellow-500 font-serif font-bold text-4xl whitespace-nowrap select-none shadow-[0_0_30px_rgba(234,179,8,0.5)] flex items-center gap-2"
                                     style={{
-                                        color: service.color,
-                                        borderColor: service.color,
-                                        textShadow: `0 0 15px ${service.color}, 0 0 30px ${service.color}`
+                                        color: '#fbbf24', // Gold text
+                                        textShadow: '0 2px 4px rgba(0,0,0,0.8)'
                                     }}
                                 >
-                                    {service.name}
+                                    <span>{service.name === 'AI' ? '🎄 AI' : service.name}</span>
                                 </div>
                             </Html>
                         </group>
@@ -123,19 +124,20 @@ export default function Neo3DDemo({ onServiceClick }) {
             <Canvas dpr={[1, 2]} gl={{ alpha: true }} style={{ background: 'transparent' }}>
                 <PerspectiveCamera makeDefault position={[0, 0, 8]} fov={45} />
 
-                {/* Lights */}
+                {/* Lights - FESTIVE EDITION */}
                 <ambientLight intensity={0.5} />
-                <pointLight position={[10, 10, 10]} intensity={1} color="#7c3aed" />
-                <pointLight position={[-10, -10, -10]} intensity={1} color="#00e5ff" />
-                <spotLight position={[0, 10, 0]} intensity={0.8} angle={0.5} penumbra={1} />
+                <pointLight position={[10, 10, 10]} intensity={1} color="#ef4444" /> {/* Red Light */}
+                <pointLight position={[-10, -10, -10]} intensity={1} color="#22c55e" /> {/* Green Light */}
+                <spotLight position={[0, 10, 0]} intensity={0.8} angle={0.5} penumbra={1} color="#fbbf24" /> {/* Gold Spot */}
 
                 {/* 3D Objects */}
                 <NeoLogo position={[-2.5, 0, 0]} scale={1.5} />
                 <ServiceCube position={[2.5, 0, 0]} onServiceClick={onServiceClick} />
 
-                {/* Effects */}
-                <Sparkles count={120} scale={12} size={4} speed={0.4} opacity={0.6} color="#00e5ff" />
-                <Sparkles count={60} scale={10} size={6} speed={0.2} opacity={0.4} color="#7c3aed" />
+                {/* Effects - CYBER SNOW */}
+                <Sparkles count={200} scale={15} size={6} speed={0.3} opacity={0.8} color="#ffffff" /> {/* White Snow */}
+                <Sparkles count={50} scale={10} size={8} speed={0.5} opacity={0.6} color="#ef4444" /> {/* Red Dust */}
+                <Sparkles count={30} scale={10} size={5} speed={0.2} opacity={0.6} color="#22c55e" /> {/* Green Dust */}
 
                 {/* Shadow */}
                 <ContactShadows resolution={1024} scale={40} blur={2} opacity={0.45} far={10} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaInstagram, FaWhatsapp, FaBars, FaTimes, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import logoMoto from '/src/assets/logo_moto.jpg';
+import logoMoto from '@/assets/logo_moto.jpg';
 
 export default function GinexMotorsLayout() {
     const [isScrolled, setIsScrolled] = useState(false);
