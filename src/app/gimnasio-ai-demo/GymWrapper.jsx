@@ -4,11 +4,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Adjust imports for Gym Demo
-import GymLayout from "@/pages/demos/gym-ai/components/layout/GymLayout";
-import DashboardAI from "@/pages/demos/gym-ai/pages/DashboardAI";
-import UsuariosAIList from "@/pages/demos/gym-ai/pages/UsuariosAIList";
-import AsistenciasAI from "@/pages/demos/gym-ai/pages/AsistenciasAI";
-import CuotasAI from "@/pages/demos/gym-ai/pages/CuotasAI";
+import GymLayout from "../../components/demos/gym-ai/components/layout/GymLayout";
+import DashboardAI from "../../pages/demos/gym-ai/DashboardAI";
+import UsuariosAIList from "../../pages/demos/gym-ai/UsuariosAIList";
+import AsistenciasAI from "../../pages/demos/gym-ai/AsistenciasAI";
+import CuotasAI from "../../pages/demos/gym-ai/CuotasAI";
 
 export default function GymWrapper() {
     if (typeof window === 'undefined') return null;
