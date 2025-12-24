@@ -45,8 +45,7 @@ export default function Footer() {
                     <ul className="space-y-2 text-sm text-gray-400">
                         <li><FooterLink href="#portfolio">Portfolio</FooterLink></li>
                         <li><FooterLink href="#contact">Contacto</FooterLink></li>
-                        <li><FooterLink href="/demo-landing">Demos</FooterLink></li>
-                        <li><FooterLink href="/suria">Shop (Demo)</FooterLink></li>
+
                     </ul>
                 </div>
 

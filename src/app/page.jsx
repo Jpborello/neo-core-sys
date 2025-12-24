@@ -14,7 +14,7 @@ import { Suspense, lazy } from "react";
 const Neo3DDemo = lazy(() => import("../components/3d/Neo3DDemo"));
 import AiProjectSimulator from "../components/AiProjectSimulator";
 import StickySmartCTA from "../components/StickySmartCTA";
-import InteractiveShowcase from "../components/InteractiveShowcase";
+
 import AiMarketingSection from '../components/AiMarketingSection';
 import PortfolioSection from '../components/PortfolioSection';
 
@@ -199,9 +199,7 @@ export default function Page() {
             </section>
 
             {/* INTERACTIVE SHOWCASE (DEMOS) */}
-            <div id="demos">
-                <InteractiveShowcase />
-            </div>
+
 
             {/* AI MARKETING SECTION (NEW) */}
             <AiMarketingSection />
