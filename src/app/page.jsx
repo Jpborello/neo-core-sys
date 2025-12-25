@@ -18,6 +18,7 @@ import StickySmartCTA from "../components/StickySmartCTA";
 import AiMarketingSection from '../components/AiMarketingSection';
 import PortfolioSection from '../components/PortfolioSection';
 import SystemsShowcase from '../components/SystemsShowcase';
+import SuccessStories from '../components/SuccessStories';
 
 
 export default function Page() {
@@ -115,7 +116,7 @@ export default function Page() {
                         Cotizar mi Proyecto <FaArrowRight />
                     </Link>
                     <Link
-                        href="#demos"
+                        href="#success-stories"
                         className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors backdrop-blur-sm"
                     >
                         Ver Casos de Éxito
@@ -125,6 +126,9 @@ export default function Page() {
 
             {/* SYSTEMS SHOWCASE (NEW) */}
             <SystemsShowcase />
+
+            {/* SUCCESS STORIES (NEW) */}
+            <SuccessStories />
 
             {/* AI SIMULATOR SECTION */}
             <section className="py-24 px-6 w-full bg-gradient-to-b from-[#0b0b0d] to-gray-900/50 relative z-20">
