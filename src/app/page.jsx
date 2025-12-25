@@ -17,6 +17,7 @@ import StickySmartCTA from "../components/StickySmartCTA";
 
 import AiMarketingSection from '../components/AiMarketingSection';
 import PortfolioSection from '../components/PortfolioSection';
+import SystemsShowcase from '../components/SystemsShowcase';
 
 
 export default function Page() {
@@ -122,6 +123,9 @@ export default function Page() {
                 </motion.div>
             </main>
 
+            {/* SYSTEMS SHOWCASE (NEW) */}
+            <SystemsShowcase />
+
             {/* AI SIMULATOR SECTION */}
             <section className="py-24 px-6 w-full bg-gradient-to-b from-[#0b0b0d] to-gray-900/50 relative z-20">
                 <div className="max-w-4xl mx-auto text-center mb-12">
@@ -197,9 +201,6 @@ export default function Page() {
                     </motion.div>
                 </div>
             </section>
-
-            {/* INTERACTIVE SHOWCASE (DEMOS) */}
-
 
             {/* AI MARKETING SECTION (NEW) */}
             <AiMarketingSection />
