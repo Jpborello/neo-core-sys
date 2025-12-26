@@ -35,9 +35,12 @@ export default function Page() {
         };
 
         try {
-            const response = await fetch("https://formspree.io/f/xeovzyyw", {
+            const response = await fetch(process.env.NEXT_PUBLIC_CONTACT_FORM_URL || "https://formspree.io/f/xeovzyyw", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
                 body: JSON.stringify(formData),
             });
 

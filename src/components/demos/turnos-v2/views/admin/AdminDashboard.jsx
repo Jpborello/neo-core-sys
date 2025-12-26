@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTurnos } from '../../context/TurnosContext';
+import AdminSettings from './AdminSettings';
+import { Settings } from 'lucide-react';
 
 const KPICard = ({ title, value, subtext, trend }) => (
     <div className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm">
@@ -18,6 +20,11 @@ const KPICard = ({ title, value, subtext, trend }) => (
 
 const AdminDashboard = () => {
     const { state } = useTurnos();
+    const [showSettings, setShowSettings] = useState(false);
+
+    if (showSettings) {
+        return <AdminSettings onBack={() => setShowSettings(false)} />;
+    }
 
     // Calculate Metrics
     const totalAppts = state.appointments.length;
@@ -33,9 +40,18 @@ const AdminDashboard = () => {
 
     return (
         <div className="space-y-8">
-            <header>
-                <h1 className="text-2xl font-bold text-neutral-900">Panel de Control</h1>
-                <p className="text-neutral-500">Resumen de operaciones del día</p>
+            <header className="flex justify-between items-center">
+                <div>
+                    <h1 className="text-2xl font-bold text-neutral-900">Panel de Control</h1>
+                    <p className="text-neutral-500">Resumen de operaciones del día</p>
+                </div>
+                <button
+                    onClick={() => setShowSettings(true)}
+                    className="p-3 bg-white border border-neutral-200 rounded-xl hover:border-indigo-500 hover:text-indigo-600 transition-all shadow-sm group"
+                    title="Configuración"
+                >
+                    <Settings className="text-neutral-500 group-hover:text-indigo-600 transition-colors" size={24} />
+                </button>
             </header>
 
             {/* Metrics Grid */}
@@ -63,7 +79,19 @@ const AdminDashboard = () => {
                                         <div className="flex items-center gap-3">
                                             <div className={`w-2 h-2 rounded-full ${appt.status === 'confirmed' ? 'bg-green-500' : 'bg-red-500'}`} />
                                             <div>
-                                                <p className="font-medium text-neutral-800">{srv?.name || 'Servicio'}</p>
+                                                <p className="font-medium text-neutral-800 flex items-center gap-2">
+                                                    {srv?.name || 'Servicio'}
+                                                    {appt.paymentStatus === 'deposit_paid' && (
+                                                        <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-bold border border-green-200">
+                                                            SEÑA OK
+                                                        </span>
+                                                    )}
+                                                    {appt.paymentStatus === 'pending' && (
+                                                        <span className="text-[10px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded font-bold border border-yellow-200">
+                                                            PAGO PEND
+                                                        </span>
+                                                    )}
+                                                </p>
                                                 <p className="text-xs text-neutral-400">
                                                     {appt.clientData ? appt.clientData.name : 'Cliente #1'}
                                                     <span className="mx-1">•</span>
@@ -95,16 +123,28 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                {/* Risk Alerts */}
-                <div className="bg-white rounded-2xl border border-neutral-100 shadow-sm p-6">
-                    <h3 className="text-lg font-bold text-neutral-900 mb-4">Alertas de Negocio</h3>
-                    <div className="space-y-3">
-                        <div className="p-3 bg-yellow-50 text-yellow-800 rounded-lg text-sm border border-yellow-100">
-                            <strong>Ana Garcia</strong> ha cancelado 2 turnos consecutivos.
+                {/* Risk Alerts & Tools */}
+                <div className="bg-white rounded-2xl border border-neutral-100 shadow-sm p-6 flex flex-col gap-6">
+                    <div>
+                        <h3 className="text-lg font-bold text-neutral-900 mb-4">Alertas de Negocio</h3>
+                        <div className="space-y-3">
+                            <div className="p-3 bg-yellow-50 text-yellow-800 rounded-lg text-sm border border-yellow-100">
+                                <strong>Ana Garcia</strong> ha cancelado 2 turnos consecutivos.
+                            </div>
+                            <div className="p-3 bg-neutral-50 text-neutral-600 rounded-lg text-sm">
+                                El servicio <strong>Limpieza Facial</strong> tiene horarios saturados los viernes.
+                            </div>
                         </div>
-                        <div className="p-3 bg-neutral-50 text-neutral-600 rounded-lg text-sm">
-                            El servicio <strong>Limpieza Facial</strong> tiene horarios saturados los viernes.
-                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-bold text-neutral-900 mb-4">Herramientas Rápidas</h3>
+                        <button
+                            onClick={() => alert("Simulación: Mensajes de recordatorio (24hs antes) enviados a 5 clientes por WhatsApp.")}
+                            className="w-full py-3 px-4 bg-neutral-900 text-white rounded-xl text-sm font-medium hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2"
+                        >
+                            <span>📢</span> Disparar Recordatorios
+                        </button>
                     </div>
                 </div>
             </div>
