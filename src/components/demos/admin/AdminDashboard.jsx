@@ -10,8 +10,11 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+
 import { useDemo } from '../../../context/DemoContext';
 import confetti from 'canvas-confetti';
+import MarketAnalysis from './MarketAnalysis';
+
 
 
 const AdminDashboard = () => {
@@ -21,7 +24,7 @@ const AdminDashboard = () => {
         carouselSlides, updateCarousel, raffleWinners, addRaffleWinner,
         isRaffleActive, toggleRaffle
     } = useDemo();
-    const [activeTab, setActiveTab] = useState('orders'); // orders, sent, metrics, products
+    const [activeTab, setActiveTab] = useState('orders'); // orders, sent, metrics, products, marketing, raffle, market
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -282,6 +285,9 @@ const AdminDashboard = () => {
                     </button>
                     <button onClick={() => setActiveTab('raffle')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'raffle' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
                         <Gift size={16} /> Sorteos
+                    </button>
+                    <button onClick={() => setActiveTab('market')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'market' ? 'bg-purple-600/20 text-purple-300 shadow-sm border border-purple-500/30' : 'text-purple-400/70 hover:text-purple-300'}`}>
+                        <Sparkles size={16} /> Inteligencia
                     </button>
                 </div>
             </header>
@@ -621,6 +627,10 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </div>
+                )}
+
+                {activeTab === 'market' && (
+                    <MarketAnalysis />
                 )}
             </div>
 
