@@ -134,13 +134,12 @@ export default function Neo3DDemo({ onServiceClick }) {
                 <NeoLogo position={[-2.5, 0, 0]} scale={1.5} />
                 <ServiceCube position={[2.5, 0, 0]} onServiceClick={onServiceClick} />
 
-                {/* Effects - CYBER SNOW */}
-                <Sparkles count={200} scale={15} size={6} speed={0.3} opacity={0.8} color="#ffffff" /> {/* White Snow */}
-                <Sparkles count={50} scale={10} size={8} speed={0.5} opacity={0.6} color="#ef4444" /> {/* Red Dust */}
-                <Sparkles count={30} scale={10} size={5} speed={0.2} opacity={0.6} color="#22c55e" /> {/* Green Dust */}
+                {/* Effects - CYBER SNOW (Reduced for Performance) */}
+                <Sparkles count={50} scale={15} size={6} speed={0.3} opacity={0.8} color="#ffffff" />
+                <Sparkles count={20} scale={10} size={8} speed={0.5} opacity={0.6} color="#ef4444" />
 
-                {/* Shadow */}
-                <ContactShadows resolution={1024} scale={40} blur={2} opacity={0.45} far={10} />
+                {/* Shadow (Optimized) */}
+                <ContactShadows resolution={512} scale={40} blur={2} opacity={0.45} far={10} frames={1} />
 
                 {/* Controls */}
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />

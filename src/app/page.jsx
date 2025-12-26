@@ -26,9 +26,12 @@ export default function Page() {
     const [show3D, setShow3D] = useState(false);
 
     useEffect(() => {
-        // Defer 3D loading to prioritizing main thread for LCP/TTI
-        const timer = setTimeout(() => setShow3D(true), 2000);
-        return () => clearTimeout(timer);
+        // Defer 3D loading AND check for Desktop (Mobile can't handle WebGL + DOM heavy work well)
+        // Only load 3D if screen width > 1024px
+        if (window.innerWidth > 1024) {
+            const timer = setTimeout(() => setShow3D(true), 2500); // 2.5s delay
+            return () => clearTimeout(timer);
+        }
     }, []);
 
     const handleSubmit = async (e) => {
