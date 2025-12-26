@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowRight, FaCheck, FaCode, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { RiSmartphoneLine, RiLayoutGridLine, RiGlobalLine, RiLightbulbLine, RiShieldCheckLine, RiRocketLine } from "react-icons/ri";
 import Link from "next/link";
@@ -23,6 +23,13 @@ import SuccessStories from '../components/SuccessStories';
 
 export default function Page() {
     const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
+    const [show3D, setShow3D] = useState(false);
+
+    useEffect(() => {
+        // Defer 3D loading to prioritizing main thread for LCP/TTI
+        const timer = setTimeout(() => setShow3D(true), 2000);
+        return () => clearTimeout(timer);
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -77,7 +84,14 @@ export default function Page() {
                             </>
                         }>
                             <div className="w-full h-full absolute top-0 left-0 opacity-60 md:opacity-100">
-                                <Neo3DDemo />
+                                {show3D ? (
+                                    <Neo3DDemo />
+                                ) : (
+                                    <>
+                                        <div className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] -top-20 -left-20 rounded-full" />
+                                        <div className="absolute w-[600px] h-[600px] bg-blue-600/20 blur-[120px] bottom-0 right-0 rounded-full" />
+                                    </>
+                                )}
                             </div>
                         </ErrorBoundary>
                     </Suspense>
