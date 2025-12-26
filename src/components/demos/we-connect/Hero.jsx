@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
 
             {/* Grid Pattern Overlay (Subtle) */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 z-10 pointer-events-none"></div>
 
             <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
                 <motion.h1
