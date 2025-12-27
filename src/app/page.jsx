@@ -11,7 +11,7 @@ import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiSupabase, SiNodedotjs, Si
 import { Suspense, lazy } from "react";
 
 // Components
-const Neo3DDemo = lazy(() => import("../components/3d/Neo3DDemo"));
+import GeometricHeroBackground from "../components/GeometricHeroBackground";
 import AiProjectSimulator from "../components/AiProjectSimulator";
 import StickySmartCTA from "../components/StickySmartCTA";
 
@@ -72,76 +72,58 @@ export default function Page() {
         <div className="flex flex-col items-center overflow-hidden bg-[#0b0b0d] min-h-screen text-white pb-32" style={{ backgroundColor: '#0b0b0d' }}>
             {/* HERO */}
             <main className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6 min-h-[80vh] w-full">
-                {/* Animated Background Blobs / 3D Demo */}
-                <div className="absolute inset-0 z-[-1] overflow-hidden">
-                    <Suspense fallback={
-                        <>
-                            <div className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] -top-20 -left-20 rounded-full" />
-                            <div className="absolute w-[600px] h-[600px] bg-blue-600/20 blur-[120px] bottom-0 right-0 rounded-full" />
-                        </>
-                    }>
-                        <ErrorBoundary fallback={
-                            <>
-                                <div className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] -top-20 -left-20 rounded-full" />
-                                <div className="absolute w-[600px] h-[600px] bg-blue-600/20 blur-[120px] bottom-0 right-0 rounded-full" />
-                            </>
-                        }>
-                            <div className="w-full h-full absolute top-0 left-0 opacity-60 md:opacity-100">
-                                {show3D ? (
-                                    <Neo3DDemo />
-                                ) : (
-                                    <>
-                                        <div className="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] -top-20 -left-20 rounded-full" />
-                                        <div className="absolute w-[600px] h-[600px] bg-blue-600/20 blur-[120px] bottom-0 right-0 rounded-full" />
-                                    </>
-                                )}
-                            </div>
-                        </ErrorBoundary>
-                    </Suspense>
-                </div>
+                {/* 3D BACKGROUND (New) */}
+                <GeometricHeroBackground />
 
                 <motion.h1
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
+                    className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 relative z-10"
                 >
-                    <span className="text-gradient">Neo-Core-Sys</span>
-                    <span className="block text-2xl md:text-4xl text-gray-200 mt-4 font-bold tracking-normal">
-                        Desarrollo Web, Apps & IA en Rosario
-                    </span>
+                    Neo-Core-Sys
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 1 }}
-                    className="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed"
+                    className="text-xl md:text-3xl text-gray-200 font-light max-w-3xl mb-8 relative z-10"
                 >
                     Transformamos ideas en experiencias digitales de alto impacto.
-                    <br />
-                    <span className="text-gray-400 text-lg">Apps Mobile • Sistemas Web • Soluciones a Medida</span>
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6, duration: 1 }}
-                    className="mt-12 flex flex-col sm:flex-row gap-4"
+                    transition={{ delay: 0.5, duration: 1 }}
+                    className="text-gray-400 text-sm md:text-lg tracking-widest uppercase mb-12 relative z-10"
                 >
-                    <Link
+                    Apps Mobile • Sistemas Web • Automatización Inteligente
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7, duration: 1 }}
+                    className="flex flex-col md:flex-row gap-6 relative z-10"
+                >
+                    <a
                         href="#contact"
-                        className="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        className="px-8 py-4 bg-white text-black text-lg rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)]"
                     >
-                        Cotizar mi Proyecto <FaArrowRight />
-                    </Link>
-                    <Link
+                        Cotizar mi Proyecto
+                    </a>
+                    <a
                         href="#success-stories"
-                        className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors backdrop-blur-sm"
+                        className="px-8 py-4 bg-white/10 text-white text-lg rounded-full font-bold border border-white/20 hover:bg-white/20 backdrop-blur-md transition-all hover:scale-105"
                     >
                         Ver Casos de Éxito
-                    </Link>
+                    </a>
                 </motion.div>
+
+                {/* Fade to Bottom */}
+                <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-[#0b0b0d] z-0 pointer-events-none" />
             </main>
 
             {/* SYSTEMS SHOWCASE (NEW) */}

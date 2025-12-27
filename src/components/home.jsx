@@ -1,4 +1,4 @@
-import ParticlesBackground from "./ParticlesBackground";
+import GeometricHeroBackground from "./GeometricHeroBackground";
 import { RiSmartphoneLine, RiLayoutGridLine, RiGlobalLine } from "react-icons/ri";
 import { RiLightbulbLine, RiShieldCheckLine, RiRocketLine } from "react-icons/ri";
 import { motion } from "framer-motion";
@@ -8,21 +8,16 @@ import Portfolio from "./Portfolio";
 export default function Home() {
     return (
         <div className="relative min-h-screen text-white bg-black overflow-x-hidden">
-            {/* PARTICULAS DE FONDO */}
-            <ParticlesBackground />
-            {/* Luces de fondo */}
-            <div className="absolute inset-0 pointer-events-none z-0">
-                <div className="absolute w-96 h-96 bg-purple-600/30 blur-[150px] -top-20 -left-10"></div>
-                <div className="absolute w-96 h-96 bg-blue-600/20 blur-[150px] bottom-0 right-0"></div>
-            </div>
+            {/* 3D BACKGROUND */}
+            <GeometricHeroBackground />
 
             {/* HERO */}
-            <main className="relative z-10 flex flex-col items-center justify-center text-center py-10 px-6">
+            <main className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6 min-h-screen">
                 <motion.h1
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-5xl md:text-7xl font-extrabold tracking-tight"
+                    className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
                 >
                     Neo-Core-Sys
                 </motion.h1>
@@ -31,24 +26,39 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 1 }}
-                    className="mt-4 text-lg md:text-2xl text-gray-300 max-w-2xl"
+                    className="text-xl md:text-3xl text-gray-200 font-light max-w-3xl mb-8"
                 >
-                    Desarrollo profesional de Apps Mobile, Sistemas Web y Soluciones a medida.
+                    Transformamos ideas en experiencias digitales de alto impacto.
                 </motion.p>
 
-                <motion.a
-                    href="#services"
+                <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.6, duration: 1 }}
-                    whileHover={{
-                        scale: 1.08,
-                        boxShadow: "0 0 18px rgba(255,255,255,0.4)"
-                    }}
-                    className="mt-10 px-8 py-4 bg-white text-black rounded-full font-semibold flex items-center gap-2 transition-all"
+                    transition={{ delay: 0.5, duration: 1 }}
+                    className="text-gray-400 text-sm md:text-lg tracking-widest uppercase mb-12"
                 >
-                    Ver servicios <FaArrowRight />
-                </motion.a>
+                    Apps Mobile • Sistemas Web • Automatización Inteligente
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7, duration: 1 }}
+                    className="flex flex-col md:flex-row gap-6"
+                >
+                    <a
+                        href="#contacto"
+                        className="px-8 py-4 bg-white text-black text-lg rounded-full font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    >
+                        Cotizar mi Proyecto
+                    </a>
+                    <a
+                        href="#portfolio"
+                        className="px-8 py-4 bg-white/10 text-white text-lg rounded-full font-bold border border-white/20 hover:bg-white/20 backdrop-blur-md transition-all hover:scale-105"
+                    >
+                        Ver Casos de Éxito
+                    </a>
+                </motion.div>
             </main>
 
             {/* SERVICIOS */}
@@ -213,7 +223,7 @@ function ContactForm() {
             <div className="mt-10 flex gap-6">
                 <a href="https://wa.me/+5493417981212" className="text-purple-400 hover:text-purple-200 text-xl">WhatsApp</a>
                 <a href="https://instagram.com/juamp11" className="text-purple-400 hover:text-purple-200 text-xl">Instagram</a>
-                <a href="mailto:jpborello25@gmail.com" className="text-purple-400 hover:text-purple-200 text-xl">Email</a>
+                <a href="mailto:contacto@neo-core-sys.com" className="text-purple-400 hover:text-purple-200 text-xl">Email</a>
             </div>
         </section>
     );
