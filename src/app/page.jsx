@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -8,31 +9,48 @@ import { FaArrowRight, FaCheck, FaCode, FaInstagram, FaWhatsapp, FaEnvelope } fr
 import { RiSmartphoneLine, RiLayoutGridLine, RiGlobalLine, RiLightbulbLine, RiShieldCheckLine, RiRocketLine } from "react-icons/ri";
 import Link from "next/link";
 import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiSupabase, SiNodedotjs, SiTauri, SiFlutter, SiPython, SiCloudflare, SiGithub, SiOpenai } from "react-icons/si";
-import { Suspense, lazy } from "react";
 
-// Components
-import GeometricHeroBackground from "../components/GeometricHeroBackground";
-import AiProjectSimulator from "../components/AiProjectSimulator";
-import StickySmartCTA from "../components/StickySmartCTA";
+// Loading Skeletons
+import { HeroSkeleton, SectionSkeleton } from "../components/LoadingSkeletons";
 
-import AiMarketingSection from '../components/AiMarketingSection';
-import PortfolioSection from '../components/PortfolioSection';
-import SystemsShowcase from '../components/SystemsShowcase';
-import SuccessStories from '../components/SuccessStories';
+// Lazy load heavy components
+const GeometricHeroBackground = dynamic(() => import("../components/GeometricHeroBackground"), {
+    loading: () => <HeroSkeleton />,
+    ssr: false
+});
+
+const AiProjectSimulator = dynamic(() => import("../components/AiProjectSimulator"), {
+    loading: () => <SectionSkeleton />,
+    ssr: false
+});
+
+const SystemsShowcase = dynamic(() => import('../components/SystemsShowcase'), {
+    loading: () => <SectionSkeleton />,
+    ssr: false
+});
+
+const SuccessStories = dynamic(() => import('../components/SuccessStories'), {
+    loading: () => <SectionSkeleton />,
+    ssr: false
+});
+
+const AiMarketingSection = dynamic(() => import('../components/AiMarketingSection'), {
+    loading: () => <SectionSkeleton />,
+    ssr: false
+});
+
+const PortfolioSection = dynamic(() => import('../components/PortfolioSection'), {
+    loading: () => <SectionSkeleton />,
+    ssr: false
+});
+
+const StickySmartCTA = dynamic(() => import("../components/StickySmartCTA"), {
+    ssr: false
+});
 
 
 export default function Page() {
     const [formStatus, setFormStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
-    const [show3D, setShow3D] = useState(false);
-
-    useEffect(() => {
-        // Defer 3D loading AND check for Desktop (Mobile can't handle WebGL + DOM heavy work well)
-        // Only load 3D if screen width > 1024px
-        if (window.innerWidth > 1024) {
-            const timer = setTimeout(() => setShow3D(true), 2500); // 2.5s delay
-            return () => clearTimeout(timer);
-        }
-    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -76,18 +94,19 @@ export default function Page() {
                 <GeometricHeroBackground />
 
                 <motion.h1
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                     className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 relative z-10"
+                    style={{ willChange: 'opacity, transform' }}
                 >
                     Neo-Core-Sys
                 </motion.h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
                     className="text-xl md:text-3xl text-gray-200 font-light max-w-3xl mb-8 relative z-10"
                 >
                     Transformamos ideas en experiencias digitales de alto impacto.
@@ -96,16 +115,16 @@ export default function Page() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 1 }}
+                    transition={{ delay: 0.3, duration: 0.6 }}
                     className="text-gray-400 text-sm md:text-lg tracking-widest uppercase mb-12 relative z-10"
                 >
                     Apps Mobile • Sistemas Web • Automatización Inteligente
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.7, duration: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
                     className="flex flex-col md:flex-row gap-6 relative z-10"
                 >
                     <a
