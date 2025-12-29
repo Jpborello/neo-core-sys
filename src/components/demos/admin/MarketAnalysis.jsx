@@ -13,16 +13,86 @@ const MarketAnalysis = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [analysisResult, setAnalysisResult] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
+    const [useRealAPI, setUseRealAPI] = useState(true); // Toggle para usar API real o mock
 
-    // Mock Analysis Logic (Simulating Python/Gemini Backend)
-    const analyzeProduct = (product) => {
+    // Función de análisis con Groq AI
+    const analyzeProduct = async (product) => {
         setIsAnalyzing(true);
         setAnalysisResult(null);
 
-        // Simulation Delay (2.5s)
+        if (!useRealAPI) {
+            // Fallback a lógica simulada
+            return analyzeProductMock(product);
+        }
+
+        try {
+            // Generar datos de scraping simulados (en producción vendrían de un scraper real)
+            const mockScrapingResults = [
+                {
+                    source: 'MercadoLibre',
+                    items: [
+                        { title: `${product.name} - Envío Gratis`, price: product.price * 0.95, link: 'https://mercadolibre.com.ar/...' },
+                        { title: `${product.name} Original`, price: product.price * 1.05, link: 'https://mercadolibre.com.ar/...' },
+                        { title: `Pack x2 ${product.name}`, price: product.price * 1.8, link: 'https://mercadolibre.com.ar/...' }
+                    ]
+                },
+                {
+                    source: 'Carrefour',
+                    items: [
+                        { title: `${product.name}`, price: product.price * 1.02, link: 'https://carrefour.com.ar/...' },
+                        { title: `${product.name} - Oferta`, price: product.price * 0.98, link: 'https://carrefour.com.ar/...' }
+                    ]
+                },
+                {
+                    source: 'Coto',
+                    items: [
+                        { title: `${product.name}`, price: product.price * 1.08, link: 'https://coto.com.ar/...' },
+                        { title: `${product.name} Promo`, price: product.price * 0.92, link: 'https://coto.com.ar/...' }
+                    ]
+                }
+            ];
+
+            // Llamada a la API de análisis
+            const response = await fetch('/api/analyze-price', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    productName: product.name,
+                    currentPrice: product.price,
+                    scrapingResults: mockScrapingResults
+                })
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                if (errorData.useFallback) {
+                    console.warn('API falló, usando datos simulados');
+                    return analyzeProductMock(product);
+                }
+                throw new Error('Error en la API de análisis');
+            }
+
+            const result = await response.json();
+
+            // Pequeño delay para que la animación se vea completa
+            setTimeout(() => {
+                setAnalysisResult(result);
+                setIsAnalyzing(false);
+            }, 500);
+
+        } catch (error) {
+            console.error('Error al analizar producto:', error);
+            // Fallback a datos simulados
+            analyzeProductMock(product);
+        }
+    };
+
+    // Función de análisis simulado (fallback)
+    const analyzeProductMock = (product) => {
         setTimeout(() => {
-            // Randomize results for demo variety
-            const variance = Math.random(); // 0 to 1
+            const variance = Math.random();
             let resultType = 'optimal';
             if (variance < 0.3) resultType = 'underpriced';
             else if (variance > 0.7) resultType = 'overpriced';
@@ -59,7 +129,8 @@ const MarketAnalysis = () => {
                 competitors: mockCompetitors,
                 recommendation,
                 color,
-                confidence: 94
+                confidence: 94,
+                isMock: true
             });
             setIsAnalyzing(false);
         }, 2500);
@@ -80,8 +151,20 @@ const MarketAnalysis = () => {
                     </h2>
                     <p className="text-slate-400 text-sm mt-1">Comparativa de mercado y estrategia en tiempo real.</p>
                 </div>
-                <div className="bg-purple-500/10 border border-purple-500/50 text-purple-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
-                    <Sparkles size={12} /> PREMIUM FEATURE
+                <div className="flex items-center gap-3">
+                    {/* AI Mode Indicator */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2 ${useRealAPI ? 'bg-emerald-500/10 border border-emerald-500/50 text-emerald-300' : 'bg-amber-500/10 border border-amber-500/50 text-amber-300'}`}>
+                        <Sparkles size={12} className={useRealAPI ? 'animate-pulse' : ''} />
+                        {useRealAPI ? 'GROQ AI ACTIVO' : 'MODO DEMO'}
+                    </div>
+                    {/* Toggle Button */}
+                    <button
+                        onClick={() => setUseRealAPI(!useRealAPI)}
+                        className="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-1 rounded-lg text-xs font-bold transition-colors"
+                        title={useRealAPI ? 'Cambiar a modo demo' : 'Cambiar a Groq AI'}
+                    >
+                        {useRealAPI ? '🤖 AI' : '🎭 Demo'}
+                    </button>
                 </div>
             </div>
 
@@ -188,6 +271,19 @@ const MarketAnalysis = () => {
                                             {/* Gauge */}
                                             <div className="col-span-1 bg-slate-800 rounded-2xl border border-slate-700 p-6 flex flex-col items-center justify-center text-center shadow-lg relative overflow-hidden">
                                                 <div className={`absolute top-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-red-500 opacity-50`}></div>
+
+                                                {/* AI/Mock Badge */}
+                                                {analysisResult.isMock && (
+                                                    <div className="absolute top-3 right-3 bg-amber-500/20 border border-amber-500/50 text-amber-300 px-2 py-0.5 rounded text-[10px] font-bold">
+                                                        DEMO
+                                                    </div>
+                                                )}
+                                                {!analysisResult.isMock && (
+                                                    <div className="absolute top-3 right-3 bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1">
+                                                        <Sparkles size={10} /> AI
+                                                    </div>
+                                                )}
+
                                                 <div className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Posición de Mercado</div>
 
                                                 <div className={`text-5xl mb-4 ${analysisResult.type === 'optimal' ? 'text-blue-400' : (analysisResult.type === 'underpriced' ? 'text-emerald-400' : 'text-red-400')}`}>
