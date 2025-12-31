@@ -115,7 +115,7 @@ const ShopDashboard = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <Link href="/demo-admin" className="hidden md:flex bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-2 px-4 rounded-lg text-sm transition-colors items-center gap-2">
+                    <Link href="/en/demo-admin" className="hidden md:flex bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold py-2 px-4 rounded-lg text-sm transition-colors items-center gap-2">
                         <User size={16} /> Admin Panel
                     </Link>
                     <button
@@ -374,7 +374,7 @@ const ShopDashboard = () => {
                                             Volver a la Tienda
                                         </button>
                                         <div className="mt-8 p-4 bg-amber-50 rounded-xl border border-amber-100 text-xs text-amber-800">
-                                            <strong>Tip:</strong> Abre otra pestaña con <code>/demo-admin</code> para ver tu pedido en tiempo real.
+                                            <strong>Tip:</strong> Abre otra pestaña con <code>/en/demo-admin</code> para ver tu pedido en tiempo real.
                                         </div>
                                     </div>
                                 )}

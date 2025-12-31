@@ -1,0 +1,109 @@
+{
+    "admin": {
+        "title": "Admin Demo",
+        "version": "Versión de Prueba",
+        "logout": "Salir",
+        "reset": "Reset",
+        "login": {
+            "title": "Panel Administrativo",
+            "subtitle": "Demo Interactiva",
+            "button": "Ingresar al Sistema",
+            "loading": "Cargando...",
+            "instruction": "Haz clic para simular acceso"
+        },
+        "tabs": {
+            "orders": "Pedidos",
+            "sent": "Enviados",
+            "metrics": "Métricas",
+            "stock": "Stock",
+            "marketing": "Marketing",
+            "raffles": "Sorteos",
+            "intelligence": "Inteligencia"
+        },
+        "kpis": {
+            "monthlySales": "Ventas Mensuales",
+            "pendingOrders": "Pedidos Pendientes",
+            "averageTicket": "Ticket Promedio"
+        },
+        "orders": {
+            "pending": "Pendientes de Envío",
+            "history": "Historial Enviados",
+            "noOrders": "No hay pedidos",
+            "selectOrder": "Selecciona un pedido",
+            "orderNumber": "Pedido #",
+            "customer": "Cliente",
+            "phone": "Teléfono",
+            "address": "Dirección",
+            "notes": "Notas",
+            "products": "Productos",
+            "total": "Total",
+            "status": {
+                "pending": "pendiente",
+                "sent": "enviado",
+                "delivered": "entregado"
+            },
+            "actions": {
+                "print": "Imprimir",
+                "whatsapp": "Contactar por WhatsApp",
+                "markAsSent": "Marcar como Enviado",
+                "orderSent": "Pedido Enviado",
+                "expand": "Ampliar"
+            }
+        },
+        "products": {
+            "search": "Buscar producto...",
+            "newProduct": "Nuevo Producto",
+            "editProduct": "Editar Producto",
+            "name": "Nombre",
+            "price": "Precio",
+            "stock": "Stock",
+            "category": "Categoría",
+            "active": "Activo",
+            "inactive": "Inactivo",
+            "suspended": "Suspendido",
+            "save": "Guardar",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "deleteConfirm": "¿Seguro que deseas eliminar este producto? (Demo)",
+            "saved": "Producto guardado (Simulación)",
+            "categories": {
+                "meats": "Carnes",
+                "beverages": "Bebidas",
+                "grocery": "Almacén",
+                "produce": "Verdulería"
+            }
+        },
+        "metrics": {
+            "topProducts": "Productos Más Vendidos",
+            "lowRotation": "Alerta Stock Bajo / Sin Rotación",
+            "review": "Revisar",
+            "goodInventory": "Todo el inventario tiene buen movimiento.",
+            "units": "u."
+        },
+        "marketing": {
+            "title": "Gestión de Carrusel (Shop)",
+            "addSlide": "Agregar Slide",
+            "titlePlaceholder": "Título (Opcional)",
+            "imagePlaceholder": "URL de Imagen (https://...)",
+            "addButton": "Agregar",
+            "imageRequired": "Ingresa una URL de imagen"
+        },
+        "raffles": {
+            "title": "Sorteo de Clientes",
+            "description": "Participan automáticamente todos los pedidos realizados mientras el sorteo está activo. ({count} tickets generados).",
+            "active": "Sorteo Activo ●",
+            "paused": "Sorteo Pausado ○",
+            "prize": "¿Qué sorteamos hoy?",
+            "draw": "¡Sortear!",
+            "drawing": "Sorteando...",
+            "congratulations": "¡Felicitaciones!",
+            "prize_label": "Premio",
+            "newDraw": "Nuevo Sorteo",
+            "history": "Historial de Ganadores",
+            "noDraws": "Aún no hay sorteos realizados.",
+            "noTickets": "No hay pedidos con tickets para sortear.",
+            "enterPrize": "Ingresa un premio para sortear.",
+            "ticket": "Ticket"
+        }
+    }
+}

@@ -14,6 +14,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useDemo } from '../../../context/DemoContext';
 import confetti from 'canvas-confetti';
 import MarketAnalysis from './MarketAnalysis';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 
 
@@ -24,6 +26,7 @@ const AdminDashboard = () => {
         carouselSlides, updateCarousel, raffleWinners, addRaffleWinner,
         isRaffleActive, toggleRaffle
     } = useDemo();
+    const t = useTranslations('admin');
     const [activeTab, setActiveTab] = useState('orders'); // orders, sent, metrics, products, marketing, raffle, market
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -180,6 +183,10 @@ const AdminDashboard = () => {
         }, 3000);
     };
 
+    const handlePrint = () => {
+        window.print();
+    };
+
 
     // --- Metrics Logic ---
     const getMetrics = () => {
@@ -205,7 +212,9 @@ const AdminDashboard = () => {
     const filterList = (list) => {
         if (!searchTerm) return list;
         return list.filter(o =>
-            o.customer_name?.toLowerCase().includes(searchTerm.toLowerCase())
+            o.customer_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            o.customer_phone?.includes(searchTerm) ||
+            o.delivery_address?.toLowerCase().includes(searchTerm.toLowerCase())
         );
     };
 
@@ -227,17 +236,17 @@ const AdminDashboard = () => {
                             <Lock size={32} />
                         </div>
                     </div>
-                    <h2 className="text-2xl font-bold text-center text-[#F3E6D0] mb-2">Panel Administrativo</h2>
-                    <p className="text-center text-slate-400 mb-6 text-sm">Demo Interactiva</p>
+                    <h2 className="text-2xl font-bold text-center text-[#F3E6D0] mb-2">{t('login.title')}</h2>
+                    <p className="text-center text-slate-400 mb-6 text-sm">{t('login.subtitle')}</p>
 
                     <button
                         disabled={loadingAuth}
                         type="submit"
                         className="w-full bg-[#C99A3A] hover:bg-[#b08530] text-slate-900 font-bold py-3 rounded-lg transition-colors uppercase tracking-wider flex justify-center items-center gap-2"
                     >
-                        {loadingAuth ? <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-slate-900"></div> : 'Ingresar al Sistema'}
+                        {loadingAuth ? <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-slate-900"></div> : t('login.button')}
                     </button>
-                    <p className="mt-4 text-xs text-center text-slate-500">Haz clic para simular acceso</p>
+                    <p className="mt-4 text-xs text-center text-slate-500">{t('login.instruction')}</p>
                 </form>
             </div>
         );
@@ -246,22 +255,51 @@ const AdminDashboard = () => {
     return (
         <div className="min-h-screen bg-slate-900 text-slate-100 font-sans flex flex-col">
 
+            {/* Estilos de Impresión */}
+            <style>{`
+                @media print {
+                    @page { margin: 0.5cm; }
+                    body { background: white; color: black; }
+                    .no-print, header, .kpi-cards, .list-panel, .actions-panel, .print-hide { 
+                        display: none !important; 
+                    }
+                    .print-only { display: block !important; }
+                    .detail-panel { 
+                        position: relative !important; 
+                        width: 100% !important; 
+                        background: white !important; 
+                        box-shadow: none !important;
+                        border: none !important;
+                    }
+                    .detail-content { color: black !important; padding: 0 !important; }
+                    .detail-content * { color: black !important; border-color: #ddd !important; }
+                    .bg-slate-800, .bg-slate-900, .bg-slate-950 { 
+                        background: transparent !important; 
+                        border: 1px solid #ddd !important; 
+                    }
+                    .text-slate-200, .text-slate-300, .text-slate-400, .text-slate-500 { 
+                        color: black !important; 
+                    }
+                }
+            `}</style>
+
             {/* Header */}
-            <header className="bg-slate-950 border-b border-slate-800 px-6 py-4 flex flex-col md:flex-row justify-between items-center shadow-md z-10 gap-4">
+            <header className="no-print bg-slate-950 border-b border-slate-800 px-6 py-4 flex flex-col md:flex-row justify-between items-center shadow-md z-10 gap-4">
                 <div className="flex items-center gap-3 w-full md:w-auto">
                     <div className="w-10 h-10 bg-[#C99A3A] rounded-lg flex items-center justify-center text-slate-900 font-bold shadow-lg">
                         <UserIcon />
                     </div>
                     <div>
-                        <h1 className="text-xl font-bold tracking-tight text-[#F3E6D0]">Admin Demo</h1>
+                        <h1 className="text-xl font-bold tracking-tight text-[#F3E6D0]">{t('title')}</h1>
                         <div className="text-xs text-slate-500 flex items-center gap-1">
-                            Versión de Prueba
+                            {t('version')}
                             <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="text-amber-400 hover:text-amber-300 ml-2 underline flex items-center gap-1" title="Borrar datos y recargar">
-                                <AlertCircle size={10} /> Reset
+                                <AlertCircle size={10} /> {t('reset')}
                             </button>
                             <button onClick={handleLogout} className="text-red-400 hover:text-red-300 ml-2 underline flex items-center gap-1">
-                                <LogOut size={10} /> Salir
+                                <LogOut size={10} /> {t('logout')}
                             </button>
+                            <LanguageSwitcher />
                         </div>
                     </div>
                 </div>
@@ -269,25 +307,25 @@ const AdminDashboard = () => {
                 {/* Navbar */}
                 <div className="flex bg-slate-900 p-1 rounded-lg border border-slate-800 w-full md:w-auto overflow-x-auto">
                     <button onClick={() => setActiveTab('orders')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'orders' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <ShoppingBag size={16} /> Pedidos
+                        <ShoppingBag size={16} /> {t('tabs.orders')}
                     </button>
                     <button onClick={() => setActiveTab('sent')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'sent' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <Send size={16} /> Enviados
+                        <Send size={16} /> {t('tabs.sent')}
                     </button>
                     <button onClick={() => setActiveTab('metrics')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'metrics' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <TrendingUp size={16} /> Métricas
+                        <TrendingUp size={16} /> {t('tabs.metrics')}
                     </button>
                     <button onClick={() => setActiveTab('products')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'products' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <Package size={16} /> Stock
+                        <Package size={16} /> {t('tabs.stock')}
                     </button>
                     <button onClick={() => setActiveTab('marketing')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'marketing' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <Megaphone size={16} /> Marketing
+                        <Megaphone size={16} /> {t('tabs.marketing')}
                     </button>
                     <button onClick={() => setActiveTab('raffle')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'raffle' ? 'bg-slate-800 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
-                        <Gift size={16} /> Sorteos
+                        <Gift size={16} /> {t('tabs.raffles')}
                     </button>
                     <button onClick={() => setActiveTab('market')} className={`whitespace-nowrap px-4 py-2 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${activeTab === 'market' ? 'bg-purple-600/20 text-purple-300 shadow-sm border border-purple-500/30' : 'text-purple-400/70 hover:text-purple-300'}`}>
-                        <Sparkles size={16} /> Inteligencia
+                        <Sparkles size={16} /> {t('tabs.intelligence')}
                     </button>
                 </div>
             </header>
@@ -296,11 +334,12 @@ const AdminDashboard = () => {
             <div className="flex-1 p-4 md:p-6 overflow-hidden flex flex-col gap-6">
 
                 {/* KPI Cards (Always visible except when deeply focused on list) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 shrink-0">
-                    <KPICard icon={<DollarSign size={32} />} label="Ventas Mensuales" value={formatCurrency(metrics.salesMonth)} />
-                    <KPICard icon={<Package size={32} />} label="Pedidos Pendientes" value={metrics.pending} color={metrics.pending > 0 ? "text-amber-500" : "text-emerald-500"} />
-                    <KPICard icon={<TrendingUp size={32} />} label="Ticket Promedio" value={formatCurrency(metrics.avgTicket)} />
+                <div className="no-print grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 shrink-0">
+                    <KPICard icon={<DollarSign size={32} />} label={t('kpis.monthlySales')} value={formatCurrency(metrics.salesMonth)} />
+                    <KPICard icon={<Package size={32} />} label={t('kpis.pendingOrders')} value={metrics.pending} color={metrics.pending > 0 ? "text-amber-500" : "text-emerald-500"} />
+                    <KPICard icon={<TrendingUp size={32} />} label={t('kpis.averageTicket')} value={formatCurrency(metrics.avgTicket)} />
                 </div>
+
 
                 {/* VIEWS */}
                 {(activeTab === 'orders' || activeTab === 'sent') && (
@@ -341,26 +380,65 @@ const AdminDashboard = () => {
                                 <>
                                     <div className="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950">
                                         <h3 className="font-bold text-white">Pedido #{selectedOrder.id}</h3>
-                                        <button onClick={() => setSelectedOrder(null)} className="md:hidden text-slate-400"><X /></button>
+                                        <div className="flex items-center gap-2">
+                                            <button
+                                                onClick={handlePrint}
+                                                className="no-print p-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                                                title="Imprimir Comprobante"
+                                            >
+                                                <span className="text-lg">🖨️</span>
+                                                <span className="hidden md:inline text-sm">Imprimir</span>
+                                            </button>
+                                            <button onClick={() => setSelectedOrder(null)} className="md:hidden text-slate-400"><X /></button>
+                                        </div>
                                     </div>
-                                    <div className="p-6 flex-1 overflow-y-auto space-y-6">
-                                        <div className="space-y-2 text-sm">
+                                    <div className="detail-content p-6 flex-1 overflow-y-auto space-y-6">
+                                        <div className="space-y-3 text-sm">
                                             <p className="text-slate-400">Cliente: <span className="text-slate-200">{selectedOrder.customer_name}</span></p>
-                                            <div className="flex items-center gap-2">
+                                            <div className="space-y-2">
                                                 <p className="text-slate-400">Teléfono: <span className="text-slate-200">{selectedOrder.customer_phone}</span></p>
                                                 {selectedOrder.customer_phone && (
                                                     <a
                                                         href={`https://wa.me/${selectedOrder.customer_phone.replace(/\D/g, '')}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="bg-green-600 hover:bg-green-500 text-white p-1.5 rounded-full transition-colors"
-                                                        title="Contactar por WhatsApp"
+                                                        className="w-full bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-colors no-print"
                                                     >
-                                                        <MessageCircle size={14} />
+                                                        <MessageCircle size={18} />
+                                                        Contactar por WhatsApp
                                                     </a>
                                                 )}
                                             </div>
                                             <p className="text-slate-400">Dirección: <span className="text-slate-200">{selectedOrder.delivery_address}</span></p>
+
+                                            {/* Mapa de Google Maps */}
+                                            {selectedOrder.delivery_address && (
+                                                <div className="mt-4 rounded-lg overflow-hidden border border-slate-700 shadow-inner h-40 bg-slate-900 relative group no-print">
+                                                    <iframe
+                                                        width="100%"
+                                                        height="100%"
+                                                        frameBorder="0"
+                                                        scrolling="no"
+                                                        marginHeight="0"
+                                                        marginWidth="0"
+                                                        src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                                                            selectedOrder.delivery_address + ', Argentina'
+                                                        )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                                                        className="opacity-80 group-hover:opacity-100 transition-opacity"
+                                                    ></iframe>
+                                                    <a
+                                                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                                                            selectedOrder.delivery_address + ', Argentina'
+                                                        )}`}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="absolute bottom-2 right-2 bg-slate-900/80 text-xs text-white px-2 py-1 rounded hover:bg-[#C99A3A] hover:text-slate-900 transition-colors flex items-center gap-1"
+                                                    >
+                                                        <MapPin size={10} /> Ampliar
+                                                    </a>
+                                                </div>
+                                            )}
+
                                             {selectedOrder.notes && <p className="text-slate-400 bg-slate-800 p-2 rounded italic">"{selectedOrder.notes}"</p>}
                                         </div>
 
@@ -381,7 +459,7 @@ const AdminDashboard = () => {
                                             <span>{formatCurrency(selectedOrder.total)}</span>
                                         </div>
                                     </div>
-                                    <div className="p-4 bg-slate-950 border-t border-slate-800">
+                                    <div className="actions-panel p-4 bg-slate-950 border-t border-slate-800 no-print">
                                         {selectedOrder.status === 'pending' ? (
                                             <button onClick={() => handleUpdateStatus(selectedOrder.id, 'sent')} className="w-full bg-[#C99A3A] hover:bg-[#b08530] text-slate-900 font-bold py-3 rounded-lg flex items-center justify-center gap-2">
                                                 <CheckCircle size={18} /> Marcar como Enviado

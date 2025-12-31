@@ -1,0 +1,109 @@
+{
+    "admin": {
+        "title": "Admin Demo",
+        "version": "Demo Version",
+        "logout": "Logout",
+        "reset": "Reset",
+        "login": {
+            "title": "Admin Panel",
+            "subtitle": "Interactive Demo",
+            "button": "Access System",
+            "loading": "Loading...",
+            "instruction": "Click to simulate access"
+        },
+        "tabs": {
+            "orders": "Orders",
+            "sent": "Sent",
+            "metrics": "Metrics",
+            "stock": "Stock",
+            "marketing": "Marketing",
+            "raffles": "Raffles",
+            "intelligence": "Intelligence"
+        },
+        "kpis": {
+            "monthlySales": "Monthly Sales",
+            "pendingOrders": "Pending Orders",
+            "averageTicket": "Average Ticket"
+        },
+        "orders": {
+            "pending": "Pending Shipment",
+            "history": "Sent History",
+            "noOrders": "No orders",
+            "selectOrder": "Select an order",
+            "orderNumber": "Order #",
+            "customer": "Customer",
+            "phone": "Phone",
+            "address": "Address",
+            "notes": "Notes",
+            "products": "Products",
+            "total": "Total",
+            "status": {
+                "pending": "pending",
+                "sent": "sent",
+                "delivered": "delivered"
+            },
+            "actions": {
+                "print": "Print",
+                "whatsapp": "Contact via WhatsApp",
+                "markAsSent": "Mark as Sent",
+                "orderSent": "Order Sent",
+                "expand": "Expand"
+            }
+        },
+        "products": {
+            "search": "Search product...",
+            "newProduct": "New Product",
+            "editProduct": "Edit Product",
+            "name": "Name",
+            "price": "Price",
+            "stock": "Stock",
+            "category": "Category",
+            "active": "Active",
+            "inactive": "Inactive",
+            "suspended": "Suspended",
+            "save": "Save",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "deleteConfirm": "Are you sure you want to delete this product? (Demo)",
+            "saved": "Product saved (Simulation)",
+            "categories": {
+                "meats": "Meats",
+                "beverages": "Beverages",
+                "grocery": "Grocery",
+                "produce": "Produce"
+            }
+        },
+        "metrics": {
+            "topProducts": "Top Selling Products",
+            "lowRotation": "Low Stock / No Rotation Alert",
+            "review": "Review",
+            "goodInventory": "All inventory has good movement.",
+            "units": "u."
+        },
+        "marketing": {
+            "title": "Carousel Management (Shop)",
+            "addSlide": "Add Slide",
+            "titlePlaceholder": "Title (Optional)",
+            "imagePlaceholder": "Image URL (https://...)",
+            "addButton": "Add",
+            "imageRequired": "Enter an image URL"
+        },
+        "raffles": {
+            "title": "Customer Raffle",
+            "description": "All orders placed while the raffle is active automatically participate. ({count} tickets generated).",
+            "active": "Raffle Active ●",
+            "paused": "Raffle Paused ○",
+            "prize": "What are we raffling today?",
+            "draw": "Draw!",
+            "drawing": "Drawing...",
+            "congratulations": "Congratulations!",
+            "prize_label": "Prize",
+            "newDraw": "New Draw",
+            "history": "Winners History",
+            "noDraws": "No draws yet.",
+            "noTickets": "No orders with tickets to draw.",
+            "enterPrize": "Enter a prize to draw.",
+            "ticket": "Ticket"
+        }
+    }
+}

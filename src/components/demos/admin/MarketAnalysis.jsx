@@ -14,6 +14,7 @@ const MarketAnalysis = () => {
     const [analysisResult, setAnalysisResult] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [useRealAPI, setUseRealAPI] = useState(true); // Toggle para usar API real o mock
+    const [useRealScraping, setUseRealScraping] = useState(false); // Toggle para scraping real
 
     // Función de análisis con Groq AI
     const analyzeProduct = async (product) => {
@@ -26,31 +27,38 @@ const MarketAnalysis = () => {
         }
 
         try {
-            // Generar datos de scraping simulados (en producción vendrían de un scraper real)
-            const mockScrapingResults = [
-                {
-                    source: 'MercadoLibre',
-                    items: [
-                        { title: `${product.name} - Envío Gratis`, price: product.price * 0.95, link: 'https://mercadolibre.com.ar/...' },
-                        { title: `${product.name} Original`, price: product.price * 1.05, link: 'https://mercadolibre.com.ar/...' },
-                        { title: `Pack x2 ${product.name}`, price: product.price * 1.8, link: 'https://mercadolibre.com.ar/...' }
-                    ]
-                },
-                {
-                    source: 'Carrefour',
-                    items: [
-                        { title: `${product.name}`, price: product.price * 1.02, link: 'https://carrefour.com.ar/...' },
-                        { title: `${product.name} - Oferta`, price: product.price * 0.98, link: 'https://carrefour.com.ar/...' }
-                    ]
-                },
-                {
-                    source: 'Coto',
-                    items: [
-                        { title: `${product.name}`, price: product.price * 1.08, link: 'https://coto.com.ar/...' },
-                        { title: `${product.name} Promo`, price: product.price * 0.92, link: 'https://coto.com.ar/...' }
-                    ]
+            let scrapingResults = [];
+
+            if (useRealScraping) {
+                // Scraping REAL de supermercados
+                console.log('🔍 Iniciando scraping real de supermercados...');
+
+                try {
+                    const scrapeResponse = await fetch(`/api/scrape-prices?product=${encodeURIComponent(product.name)}&real=true`);
+                    const scrapeData = await scrapeResponse.json();
+
+                    if (scrapeData.sources && scrapeData.sources.length > 0) {
+                        // Formato nuevo con múltiples fuentes
+                        scrapingResults = scrapeData.sources;
+                        console.log(`✅ Scraping exitoso: ${scrapeData.totalItems} productos de ${scrapeData.sources.length} fuente(s)`);
+                    } else if (scrapeData.items && scrapeData.items.length > 0) {
+                        // Formato antiguo (fallback)
+                        scrapingResults = [scrapeData];
+                        console.log(`✅ Scraping exitoso (fallback): ${scrapeData.items.length} productos`);
+                    } else {
+                        console.warn('⚠️ No se encontraron productos, usando datos simulados');
+                        scrapingResults = getMockScrapingResults(product);
+                    }
+                } catch (scrapeError) {
+                    console.error('❌ Error en scraping, usando datos simulados:', scrapeError);
+                    scrapingResults = getMockScrapingResults(product);
                 }
-            ];
+            } else {
+                // Datos simulados
+                scrapingResults = getMockScrapingResults(product);
+            }
+
+            const mockScrapingResults = scrapingResults;
 
             // Llamada a la API de análisis
             const response = await fetch('/api/analyze-price', {
@@ -136,6 +144,32 @@ const MarketAnalysis = () => {
         }, 2500);
     };
 
+    // Función helper para generar datos simulados
+    const getMockScrapingResults = (product) => [
+        {
+            source: 'MercadoLibre',
+            items: [
+                { title: `${product.name} - Envío Gratis`, price: product.price * 0.95, link: 'https://mercadolibre.com.ar/...' },
+                { title: `${product.name} Original`, price: product.price * 1.05, link: 'https://mercadolibre.com.ar/...' },
+                { title: `Pack x2 ${product.name}`, price: product.price * 1.8, link: 'https://mercadolibre.com.ar/...' }
+            ]
+        },
+        {
+            source: 'Carrefour',
+            items: [
+                { title: `${product.name}`, price: product.price * 1.02, link: 'https://carrefour.com.ar/...' },
+                { title: `${product.name} - Oferta`, price: product.price * 0.98, link: 'https://carrefour.com.ar/...' }
+            ]
+        },
+        {
+            source: 'Coto',
+            items: [
+                { title: `${product.name}`, price: product.price * 1.08, link: 'https://coto.com.ar/...' },
+                { title: `${product.name} Promo`, price: product.price * 0.92, link: 'https://coto.com.ar/...' }
+            ]
+        }
+    ];
+
     const formatCurrency = (val) => new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0 }).format(val);
 
     const filteredProducts = products.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -157,13 +191,25 @@ const MarketAnalysis = () => {
                         <Sparkles size={12} className={useRealAPI ? 'animate-pulse' : ''} />
                         {useRealAPI ? 'GROQ AI ACTIVO' : 'MODO DEMO'}
                     </div>
-                    {/* Toggle Button */}
+                    {/* Scraping Mode Indicator */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2 ${useRealScraping ? 'bg-blue-500/10 border border-blue-500/50 text-blue-300' : 'bg-slate-500/10 border border-slate-500/50 text-slate-400'}`}>
+                        <Globe size={12} className={useRealScraping ? 'animate-pulse' : ''} />
+                        {useRealScraping ? 'SCRAPING REAL' : 'DATOS SIMULADOS'}
+                    </div>
+                    {/* Toggle Buttons */}
                     <button
                         onClick={() => setUseRealAPI(!useRealAPI)}
                         className="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-1 rounded-lg text-xs font-bold transition-colors"
                         title={useRealAPI ? 'Cambiar a modo demo' : 'Cambiar a Groq AI'}
                     >
                         {useRealAPI ? '🤖 AI' : '🎭 Demo'}
+                    </button>
+                    <button
+                        onClick={() => setUseRealScraping(!useRealScraping)}
+                        className="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-1 rounded-lg text-xs font-bold transition-colors"
+                        title={useRealScraping ? 'Cambiar a datos simulados' : 'Activar scraping real'}
+                    >
+                        {useRealScraping ? '🌐 Real' : '📊 Mock'}
                     </button>
                 </div>
             </div>
@@ -252,11 +298,22 @@ const MarketAnalysis = () => {
                                             <div className="absolute inset-0 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
                                             <BrainCircuit className="absolute inset-0 m-auto text-purple-400 animate-pulse" />
                                         </div>
-                                        <h4 className="text-xl font-bold text-white mb-2">Escaneando competidores locales...</h4>
+                                        <h4 className="text-xl font-bold text-white mb-2">{useRealScraping ? 'Buscando precios en supermercados...' : 'Escaneando competidores locales...'}</h4>
                                         <div className="flex flex-col gap-1 items-center text-slate-400 text-sm font-mono">
-                                            <span className="animate-pulse delay-75">Calculando promedios de zona...</span>
-                                            <span className="animate-pulse delay-150">Verificando marketplaces...</span>
-                                            <span className="animate-pulse delay-300">Generando estrategia de precios...</span>
+                                            {useRealScraping ? (
+                                                <>
+                                                    <span className="animate-pulse delay-75">🌐 Navegando a Coto Digital...</span>
+                                                    <span className="animate-pulse delay-150">🔍 Buscando en Carrefour...</span>
+                                                    <span className="animate-pulse delay-300">🛒 Consultando La Gallega...</span>
+                                                    <span className="animate-pulse delay-450">🤖 Analizando con IA...</span>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <span className="animate-pulse delay-75">Calculando promedios de zona...</span>
+                                                    <span className="animate-pulse delay-150">Verificando marketplaces...</span>
+                                                    <span className="animate-pulse delay-300">Generando estrategia de precios...</span>
+                                                </>
+                                            )}
                                         </div>
                                     </motion.div>
                                 ) : analysisResult ? (
@@ -356,14 +413,24 @@ const MarketAnalysis = () => {
                                                 <h4 className="font-bold text-slate-300 mb-4 text-sm uppercase">Fuentes Detectadas</h4>
                                                 <div className="space-y-3">
                                                     {analysisResult.competitors.map((comp, i) => (
-                                                        <div key={i} className="flex justify-between items-center p-3 bg-slate-900/50 rounded-lg border border-slate-700/50">
-                                                            <div className="flex items-center gap-3">
+                                                        <div key={i} className="flex justify-between items-center p-3 bg-slate-900/50 rounded-lg border border-slate-700/50 hover:border-slate-600 transition-colors group">
+                                                            <div className="flex items-center gap-3 flex-1">
                                                                 <div className="bg-slate-700 p-2 rounded-full text-slate-400">
                                                                     {comp.source === 'Marketplace' ? <Globe size={14} /> : <Smartphone size={14} />}
                                                                 </div>
-                                                                <div>
+                                                                <div className="flex-1">
                                                                     <div className="font-bold text-sm text-slate-200">{comp.name}</div>
                                                                     <div className="text-xs text-slate-500">{comp.source}</div>
+                                                                    {comp.link && (
+                                                                        <a
+                                                                            href={comp.link}
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer"
+                                                                            className="text-xs text-blue-400 hover:text-blue-300 underline opacity-0 group-hover:opacity-100 transition-opacity"
+                                                                        >
+                                                                            Ver fuente →
+                                                                        </a>
+                                                                    )}
                                                                 </div>
                                                             </div>
                                                             <div className="font-mono font-bold text-slate-300">{formatCurrency(comp.price)}</div>

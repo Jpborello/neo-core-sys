@@ -60,7 +60,7 @@ RESPONDE ÚNICAMENTE CON ESTE JSON (sin markdown, sin bloques de código):
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: "llama-3.1-70b-versatile",
+                model: "llama-3.3-70b-versatile",
                 messages: [
                     {
                         role: "system",
@@ -102,6 +102,7 @@ RESPONDE ÚNICAMENTE CON ESTE JSON (sin markdown, sin bloques de código):
         const competidores = scrapingResults.slice(0, 3).map(source => ({
             name: source.source,
             price: source.items[0]?.price || 0,
+            link: source.items[0]?.link || null,
             source: source.source.includes('Libre') ? 'Marketplace' :
                 source.source.includes('Carrefour') || source.source.includes('Coto') ? 'Web' : 'Local'
         }));

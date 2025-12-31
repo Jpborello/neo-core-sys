@@ -87,7 +87,7 @@ const SystemsShowcase = () => {
                             <Link href="/demo-shop" className="flex-1 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-blue-500/25">
                                 Ver Tienda
                             </Link>
-                            <Link href="/demo-admin" className="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <Link href="/en/demo-admin" className="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-lg font-bold text-sm flex items-center justify-center gap-2 transition-all">
                                 Ver Admin
                             </Link>
                         </div>
