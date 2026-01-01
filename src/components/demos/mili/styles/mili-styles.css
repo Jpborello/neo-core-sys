@@ -1,0 +1,2451 @@
+/* ============================================
+   LAS MANITOS DE MILI - PREMIUM STYLES
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&display=swap');
+
+/* ============================================
+   CSS VARIABLES - COLOR PALETTE
+   ============================================ */
+
+:root {
+    /* Sophisticated Deeper Palette - Editorial Premium */
+    --mili-nude-50: #f9f5f3;
+    --mili-nude-100: #f5ede9;
+    --mili-nude-200: #ede0d8;
+    --mili-nude-300: #e5d4ca;
+    --mili-nude-400: #d9c4b8;
+
+    --mili-blush-50: #f7ebe8;
+    --mili-blush-100: #f0dcd6;
+    --mili-blush-200: #e8c4c4;
+    --mili-blush-300: #d4a5a5;
+    --mili-blush-400: #c08f8f;
+    --mili-blush-500: #a87676;
+
+    /* Deep Rose - Anchor Color */
+    --mili-rose-deep: #9d6b6b;
+    --mili-rose-powder: #b89090;
+    --mili-mauve: #a88585;
+    --mili-taupe: #8b7373;
+
+    /* Rose Gold Accents (for CTAs) */
+    --mili-rose-gold: #a86f7a;
+    --mili-rose-gold-light: #c99199;
+    --mili-rose-gold-dark: #7d5159;
+
+    /* Neutrals - Warmer, Less White */
+    --mili-cream: #faf7f5;
+    --mili-ivory: #f5f0ed;
+    --mili-white: #ffffff;
+    --mili-gray-50: #f5f3f0;
+    --mili-gray-100: #ebe7e3;
+    --mili-gray-200: #ddd7d2;
+    --mili-gray-300: #c7bfb9;
+    --mili-gray-600: #5a524d;
+    --mili-gray-700: #3d3732;
+    --mili-gray-800: #2a2521;
+    --mili-gray-900: #1a1816;
+
+    /* Typography - Warmer, More Artistic */
+    --mili-font-heading: 'Playfair Display', serif;
+    --mili-font-body: 'Cormorant Garamond', serif;
+    --mili-font-accent: 'Italiana', cursive;
+
+    /* Softer Shadows */
+    --mili-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+    --mili-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+    --mili-shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.06);
+    --mili-shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.08);
+    --mili-shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+.mili-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--mili-blush-100) 0%, var(--mili-nude-100) 50%, var(--mili-blush-50) 100%);
+    font-family: var(--mili-font-body);
+    color: var(--mili-gray-800);
+}
+
+.mili-container-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.mili-section {
+    padding: 7rem 0;
+    position: relative;
+}
+
+.mili-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mili-section-title {
+    font-family: var(--mili-font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--mili-rose-powder);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.mili-section-subtitle {
+    font-size: 1.25rem;
+    color: var(--mili-gray-700);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+
+.mili-loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--mili-nude-100) 0%, var(--mili-blush-50) 100%);
+    gap: 1.5rem;
+}
+
+.mili-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--mili-blush-200);
+    border-top-color: var(--mili-rose-gold);
+    border-radius: 50%;
+    animation: mili-spin 1s linear infinite;
+}
+
+@keyframes mili-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mili-loading p {
+    font-size: 1.125rem;
+    color: var(--mili-rose-gold-dark);
+    font-weight: 500;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.mili-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg,
+            var(--mili-nude-200) 0%,
+            var(--mili-blush-200) 40%,
+            var(--mili-rose-powder) 100%);
+    overflow: hidden;
+}
+
+.mili-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: mili-pulse 8s ease-in-out infinite;
+}
+
+@keyframes mili-pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.mili-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.mili-hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mili-hero-title {
+    font-family: var(--mili-font-heading);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: mili-fade-in-up 1s ease-out;
+}
+
+.mili-hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    animation: mili-fade-in-up 1s ease-out 0.2s backwards;
+}
+
+.mili-hero-description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: mili-fade-in-up 1s ease-out 0.4s backwards;
+}
+
+@keyframes mili-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mili-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: mili-fade-in-up 1s ease-out 0.6s backwards;
+}
+
+.mili-btn-primary,
+.mili-btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.mili-btn-primary {
+    background: white;
+    color: var(--mili-pink-700);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+}
+
+.mili-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.mili-hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mili-scroll-indicator {
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    position: relative;
+}
+
+.mili-scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+    animation: mili-scroll 2s ease-in-out infinite;
+}
+
+@keyframes mili-scroll {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(12px);
+    }
+}
+
+/* ============================================
+   ARTISTIC HERO SECTION (NEW)
+   ============================================ */
+
+.mili-hero-artistic {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg,
+            var(--mili-nude-200) 0%,
+            var(--mili-blush-200) 40%,
+            var(--mili-rose-powder) 100%);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.mili-hero-content-artistic {
+    position: relative;
+    z-index: 10;
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mili-hero-left {
+    color: white;
+    animation: mili-fade-in-up 1s ease-out;
+}
+
+.mili-hero-badge-artistic {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+}
+
+.mili-hero-title-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mili-hero-subtext-artistic {
+    font-family: var(--mili-font-body);
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.mili-hero-ctas-artistic {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.mili-cta-primary-artistic {
+    padding: 1.125rem 2.5rem;
+    background: white;
+    color: var(--mili-rose-gold-dark);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-cta-primary-artistic:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--mili-shadow-xl);
+    background: var(--mili-nude-50);
+}
+
+.mili-cta-secondary-artistic {
+    padding: 1.125rem 2.5rem;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.mili-cta-secondary-artistic:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.mili-hero-instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mili-hero-instagram-link:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.mili-hero-right {
+    position: relative;
+}
+
+.mili-hero-image-container {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Professional Image */
+.mili-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Elegant overlay gradient on image */
+.mili-hero-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(157, 107, 107, 0.3) 0%,
+            transparent 40%);
+    pointer-events: none;
+}
+
+.mili-hero-floating-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--mili-rose-gold-dark);
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: var(--mili-shadow-lg);
+    animation: mili-float 3s ease-in-out infinite;
+}
+
+@keyframes mili-float {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.mili-scroll-indicator {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.mili-scroll-indicator::before {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.mili-about {
+    background: var(--mili-white);
+}
+
+.mili-about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mili-about-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mili-about-intro h3 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.75rem;
+    color: var(--mili-rose-gold-dark);
+    margin-bottom: 1rem;
+}
+
+.mili-experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--mili-pink-100), var(--mili-pink-200));
+    color: var(--mili-pink-700);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.mili-about-description {
+    line-height: 1.8;
+    font-size: 1.0625rem;
+    color: var(--mili-gray-700);
+    margin-bottom: 3rem;
+}
+
+.mili-about-description p {
+    margin-bottom: 1.5rem;
+}
+
+.mili-about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.mili-highlight-card {
+    background: linear-gradient(135deg, var(--mili-pink-50), var(--mili-cream));
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--mili-pink-100);
+}
+
+.mili-highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-highlight-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    color: var(--mili-pink-600);
+}
+
+.mili-highlight-card h4 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.25rem;
+    color: var(--mili-pink-700);
+    margin-bottom: 0.5rem;
+}
+
+.mili-highlight-card p {
+    color: var(--mili-gray-700);
+    font-size: 0.9375rem;
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+
+.mili-services {
+    background: var(--mili-cream);
+}
+
+.mili-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.mili-service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--mili-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.mili-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.mili-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mili-service-card:hover .mili-service-image img {
+    transform: scale(1.1);
+}
+
+.mili-service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.mili-service-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mili-service-name {
+    font-family: var(--mili-font-heading);
+    font-size: 1.5rem;
+    color: var(--mili-pink-700);
+    margin-bottom: 0.75rem;
+}
+
+.mili-service-description {
+    color: var(--mili-gray-700);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.mili-service-details {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--mili-gray-200);
+}
+
+.mili-service-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mili-gray-700);
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.mili-service-detail svg {
+    color: var(--mili-pink-500);
+}
+
+.mili-service-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, var(--mili-pink-600), var(--mili-pink-500));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mili-service-btn:hover {
+    background: linear-gradient(135deg, var(--mili-pink-700), var(--mili-pink-600));
+    transform: translateY(-2px);
+    box-shadow: var(--mili-shadow-md);
+}
+
+/* ============================================
+   GALLERY SECTION
+   ============================================ */
+
+.mili-gallery {
+    background: white;
+}
+
+.mili-gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.mili-filter-btn {
+    padding: 0.625rem 1.5rem;
+    border: 2px solid var(--mili-pink-200);
+    background: white;
+    color: var(--mili-gray-700);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mili-filter-btn:hover {
+    border-color: var(--mili-pink-400);
+    color: var(--mili-pink-700);
+}
+
+.mili-filter-btn.active {
+    background: linear-gradient(135deg, var(--mili-pink-600), var(--mili-pink-500));
+    color: white;
+    border-color: var(--mili-pink-600);
+}
+
+.mili-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.mili-gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+    animation: mili-fade-in 0.5s ease-out backwards;
+}
+
+@keyframes mili-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mili-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mili-gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.mili-gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.mili-gallery-item:hover .mili-gallery-overlay {
+    opacity: 1;
+}
+
+.mili-gallery-overlay h4 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.mili-gallery-overlay p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* Lightbox */
+.mili-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: mili-fade-in 0.3s ease-out;
+}
+
+.mili-lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.mili-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.mili-lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mili-lightbox-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.mili-lightbox-info {
+    text-align: center;
+    color: white;
+}
+
+.mili-lightbox-info h3 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mili-lightbox-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   BOOKING SECTION
+   ============================================ */
+
+.mili-booking {
+    background: linear-gradient(135deg, var(--mili-pink-50) 0%, var(--mili-cream) 100%);
+}
+
+.mili-booking-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mili-booking-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: var(--mili-shadow-lg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.mili-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mili-form-group-full {
+    grid-column: 1 / -1;
+}
+
+.mili-form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--mili-gray-800);
+    font-size: 0.9375rem;
+}
+
+.mili-form-group label svg {
+    color: var(--mili-pink-500);
+}
+
+.mili-form-group input,
+.mili-form-group select,
+.mili-form-group textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--mili-gray-200);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: var(--mili-font-body);
+    transition: all 0.3s ease;
+    background: var(--mili-gray-50);
+}
+
+.mili-form-group input:focus,
+.mili-form-group select:focus,
+.mili-form-group textarea:focus {
+    outline: none;
+    border-color: var(--mili-pink-500);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.mili-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.mili-status-message {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.mili-status-message.success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.mili-status-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.mili-submit-btn {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--mili-pink-600), var(--mili-pink-500));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.mili-submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--mili-pink-700), var(--mili-pink-600));
+    transform: translateY(-2px);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+
+.mili-whatsapp-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--mili-shadow-xl);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: mili-pulse-button 2s ease-in-out infinite;
+}
+
+@keyframes mili-pulse-button {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.mili-whatsapp-button:hover {
+    box-shadow: 0 30px 60px -15px rgba(37, 211, 102, 0.5);
+}
+
+/* ============================================
+   WELCOME SECTION
+   ============================================ */
+
+.mili-welcome {
+    background: linear-gradient(135deg, var(--mili-pink-50) 0%, var(--mili-white) 100%);
+    padding: 5rem 0;
+}
+
+.mili-welcome-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mili-welcome-text {
+    animation: mili-fade-in-up 1s ease-out;
+}
+
+.mili-welcome-title {
+    font-family: var(--mili-font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--mili-pink-700);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.mili-welcome-subtitle {
+    font-size: 1.5rem;
+    color: var(--mili-rose-gold-dark);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+.mili-welcome-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mili-welcome-message {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--mili-gray-700);
+    padding-left: 1.5rem;
+    position: relative;
+    animation: mili-fade-in-up 1s ease-out backwards;
+}
+
+.mili-welcome-message:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.mili-welcome-message:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.mili-welcome-message:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.mili-welcome-images {
+    position: relative;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-welcome-image {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.mili-welcome-image.active {
+    opacity: 1;
+}
+
+.mili-welcome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mili-welcome-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 2rem;
+    font-family: var(--mili-font-heading);
+    font-size: 1.5rem;
+}
+
+.mili-welcome-indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.mili-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.mili-indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* ============================================
+   NEW 3D FLIP CARD GALLERY
+   ============================================ */
+
+.mili-gallery-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.mili-gallery-card {
+    height: 400px;
+    position: relative;
+    animation: mili-float-in 0.6s ease-out backwards;
+}
+
+@keyframes mili-float-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px) rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+.mili-gallery-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.mili-gallery-card:hover .mili-gallery-card-inner {
+    transform: rotateY(180deg);
+}
+
+.mili-gallery-card-front,
+.mili-gallery-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-gallery-card-front {
+    background: white;
+}
+
+.mili-gallery-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Shine effect on front */
+.mili-gallery-card-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.5s;
+}
+
+.mili-gallery-card:hover .mili-gallery-card-shine {
+    left: 100%;
+}
+
+.mili-gallery-card-back {
+    background: linear-gradient(135deg, var(--mili-pink-600), var(--mili-rose-gold));
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.mili-gallery-card-content {
+    text-align: center;
+    color: white;
+}
+
+.mili-gallery-card-content h4 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.mili-gallery-card-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.mili-gallery-view-btn {
+    background: white;
+    color: var(--mili-pink-700);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--mili-shadow);
+}
+
+.mili-gallery-view-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--mili-shadow-md);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .mili-section {
+        padding: 3rem 0;
+    }
+
+    .mili-section-title {
+        font-size: 2.25rem;
+    }
+
+    .mili-section-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .mili-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mili-btn-primary,
+    .mili-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mili-welcome-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .mili-welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .mili-welcome-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .mili-welcome-images {
+        height: 350px;
+    }
+
+    .mili-about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-gallery-grid,
+    .mili-gallery-grid-new {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .mili-gallery-card {
+        height: 300px;
+    }
+
+    .mili-booking-form {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .mili-whatsapp-button {
+        width: 56px;
+        height: 56px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mili-hero-content {
+        padding: 1rem;
+    }
+
+    .mili-section-title {
+        font-size: 1.875rem;
+    }
+
+    .mili-welcome-title {
+        font-size: 2rem;
+    }
+
+    .mili-welcome-images {
+        height: 280px;
+    }
+
+    .mili-gallery-grid,
+    .mili-gallery-grid-new {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-gallery-card {
+        height: 350px;
+    }
+
+    .mili-hero-content-artistic {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mili-hero-title-artistic {
+        font-size: 2.5rem;
+    }
+}
+
+/* ============================================
+   ARTISTIC SECTIONS CSS
+   ============================================ */
+
+/* Welcome Section - Artistic */
+.mili-welcome-artistic {
+    padding: 7rem 0;
+    background: var(--mili-nude-50);
+}
+
+.mili-welcome-content-artistic {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.mili-welcome-title-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--mili-rose-powder);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.mili-welcome-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.mili-pillar {
+    text-align: center;
+}
+
+.mili-pillar-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mili-pillar h3 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.25rem;
+    color: var(--mili-rose-gold-dark);
+    margin-bottom: 0.5rem;
+}
+
+.mili-pillar p {
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    color: var(--mili-gray-600);
+    line-height: 1.5;
+}
+
+.mili-welcome-images-artistic {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-welcome-image-artistic {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.mili-welcome-image-artistic.active {
+    opacity: 1;
+}
+
+.mili-welcome-image-artistic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mili-welcome-image-caption-artistic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    font-family: var(--mili-font-body);
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+.mili-welcome-indicators-artistic {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.mili-indicator-artistic {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.mili-indicator-artistic.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+/* About Section - Artistic */
+.mili-about-artistic {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, var(--mili-blush-50), var(--mili-nude-100));
+}
+
+.mili-about-content-artistic {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.mili-about-title-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: 3rem;
+    color: var(--mili-rose-powder);
+    margin-bottom: 2rem;
+}
+
+.mili-about-story p {
+    font-family: var(--mili-font-body);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--mili-gray-700);
+    margin-bottom: 1.5rem;
+}
+
+.mili-about-greeting {
+    font-size: 1.5rem !important;
+    color: var(--mili-rose-gold-dark) !important;
+    font-weight: 600;
+}
+
+.mili-about-closing {
+    font-style: italic;
+    color: var(--mili-rose-gold) !important;
+}
+
+.mili-about-instagram {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--mili-rose-gold-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mili-about-instagram:hover {
+    color: var(--mili-rose-gold);
+    transform: translateX(5px);
+}
+
+.mili-about-photo-container {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-about-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mili-about-signature {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-family: var(--mili-font-accent);
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section - Artistic */
+.mili-services-artistic {
+    padding: 7rem 0;
+    background: var(--mili-nude-50);
+}
+
+.mili-services-header-artistic {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.mili-services-title-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: 3rem;
+    color: var(--mili-rose-powder);
+    margin-bottom: 1rem;
+}
+
+.mili-services-subtitle-artistic {
+    font-family: var(--mili-font-body);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--mili-gray-600);
+}
+
+.mili-services-grid-artistic {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.mili-service-card-artistic {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--mili-shadow);
+    transition: all 0.3s ease;
+}
+
+.mili-service-card-artistic:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-service-icon-artistic {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--mili-blush-200), var(--mili-rose-powder));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.mili-service-name-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: 1.5rem;
+    color: var(--mili-rose-gold-dark);
+    margin-bottom: 1rem;
+}
+
+.mili-service-description-artistic {
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    color: var(--mili-gray-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.mili-service-details-artistic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--mili-blush-200);
+}
+
+.mili-service-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mili-gray-600);
+    font-size: 0.9375rem;
+}
+
+.mili-service-price {
+    font-family: var(--mili-font-heading);
+    font-size: 1.125rem;
+    color: var(--mili-rose-gold);
+    font-weight: 600;
+}
+
+.mili-services-cta-artistic {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.mili-services-btn-artistic {
+    padding: 1.125rem 2.5rem;
+    background: linear-gradient(135deg, var(--mili-rose-gold), var(--mili-rose-powder));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--mili-shadow-md);
+}
+
+.mili-services-btn-artistic:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+/* Gallery Section - Artistic */
+.mili-gallery-artistic {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, var(--mili-nude-100), var(--mili-blush-50));
+}
+
+.mili-section-subtitle-poetic {
+    font-family: var(--mili-font-body);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--mili-gray-600);
+}
+
+.mili-gallery-filters-artistic {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.mili-filter-btn-artistic {
+    padding: 0.875rem 1.75rem;
+    background: white;
+    border: 2px solid var(--mili-blush-300);
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    color: var(--mili-gray-700);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mili-filter-btn-artistic:hover {
+    background: var(--mili-blush-100);
+    border-color: var(--mili-rose-powder);
+}
+
+.mili-filter-btn-artistic.active {
+    background: linear-gradient(135deg, var(--mili-rose-gold), var(--mili-rose-powder));
+    color: white;
+    border-color: transparent;
+}
+
+.mili-filter-description {
+    font-size: 0.8125rem;
+    opacity: 0.9;
+}
+
+.mili-gallery-grid-artistic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    perspective: 1000px;
+}
+
+.mili-gallery-card-artistic {
+    height: 420px;
+    position: relative;
+    animation: mili-float-in 0.6s ease-out backwards;
+}
+
+.mili-gallery-card-inner-artistic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.mili-gallery-card-artistic:hover .mili-gallery-card-inner-artistic {
+    transform: rotateY(180deg);
+}
+
+.mili-gallery-card-front-artistic,
+.mili-gallery-card-back-artistic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.mili-gallery-card-front-artistic {
+    background: white;
+    box-shadow: var(--mili-shadow-md);
+}
+
+.mili-gallery-card-front-artistic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mili-gallery-card-poetic-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    font-family: var(--mili-font-body);
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mili-gallery-card-artistic:hover .mili-gallery-card-poetic-overlay {
+    opacity: 1;
+}
+
+.mili-gallery-card-back-artistic {
+    background: linear-gradient(135deg, var(--mili-blush-300), var(--mili-rose-powder));
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.mili-gallery-card-content-artistic {
+    text-align: center;
+    color: white;
+}
+
+.mili-gallery-card-content-artistic h4 {
+    font-family: var(--mili-font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mili-gallery-card-content-artistic p {
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.mili-gallery-view-btn-artistic {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--mili-rose-gold-dark);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mili-gallery-view-btn-artistic:hover {
+    transform: scale(1.05);
+    box-shadow: var(--mili-shadow-md);
+}
+
+/* Booking Section - Artistic */
+.mili-booking-artistic {
+    padding: 7rem 0;
+    background: var(--mili-nude-50);
+}
+
+.mili-booking-container-artistic {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mili-booking-header-artistic {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mili-booking-title-artistic {
+    font-family: var(--mili-font-heading);
+    font-size: 3rem;
+    color: var(--mili-rose-powder);
+    margin-bottom: 1rem;
+}
+
+.mili-booking-subtitle-artistic {
+    font-family: var(--mili-font-body);
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--mili-gray-600);
+    line-height: 1.6;
+}
+
+.mili-booking-form-artistic {
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.mili-form-group-artistic {
+    margin-bottom: 1.5rem;
+}
+
+.mili-form-group-artistic label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    color: var(--mili-gray-700);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.mili-form-group-artistic input,
+.mili-form-group-artistic select,
+.mili-form-group-artistic textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid var(--mili-blush-200);
+    border-radius: 12px;
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    color: var(--mili-gray-800);
+    transition: all 0.3s ease;
+}
+
+.mili-form-group-artistic input:focus,
+.mili-form-group-artistic select:focus,
+.mili-form-group-artistic textarea:focus {
+    outline: none;
+    border-color: var(--mili-rose-gold);
+    box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.1);
+}
+
+.mili-booking-submit-artistic {
+    width: 100%;
+    padding: 1.125rem;
+    background: linear-gradient(135deg, var(--mili-rose-gold), var(--mili-rose-powder));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.mili-booking-submit-artistic:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--mili-shadow-lg);
+}
+
+.mili-booking-submit-artistic:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mili-booking-message-artistic {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    font-family: var(--mili-font-body);
+}
+
+.mili-booking-message-artistic.success {
+    background: var(--mili-blush-100);
+    color: var(--mili-rose-gold-dark);
+}
+
+.mili-booking-message-artistic.error {
+    background: #fee;
+    color: #c33;
+}
+
+/* Responsive - Artistic Sections */
+@media (max-width: 768px) {
+    .mili-hero-content-artistic {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .mili-hero-right {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .mili-welcome-content-artistic,
+    .mili-about-content-artistic {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .mili-welcome-pillars {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mili-services-grid-artistic {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-gallery-grid-artistic {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-booking-form-artistic {
+        padding: 2rem;
+    }
+}
+
+/* ============================================
+   LIENZOS VIVOS - ART GALLERY REFINEMENTS
+   ============================================ */
+
+/* Hero with Deep Editorial Gradient + Texture */
+.mili-hero-artistic {
+    background:
+        /* Subtle grain texture */
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="300" height="300" filter="url(%23noise)" opacity="0.03"/></svg>'),
+        /* Deep editorial gradient */
+        linear-gradient(180deg,
+            #9d6b6b 0%,
+            /* Rosa profundo - top */
+            #b89090 25%,
+            /* Rosa medio */
+            #d4a5a5 50%,
+            /* Blush suave */
+            #e8c4c4 75%,
+            /* Rosa polvo */
+            #f0dcd6 100%
+            /* Marfil cálido - bottom */
+        );
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* High Contrast Title */
+.mili-hero-title-lienzos {
+    font-family: var(--mili-font-heading);
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 400;
+    color: var(--mili-white);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtitle with Better Contrast */
+.mili-hero-subtitle-lienzos {
+    font-family: var(--mili-font-body);
+    font-size: 1.375rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium CTA - High Contrast */
+.mili-hero-cta-lienzos {
+    padding: 1.125rem 2.75rem;
+    background: var(--mili-white);
+    color: var(--mili-rose-deep);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mili-hero-cta-lienzos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    background: var(--mili-ivory);
+}
+
+/* Gallery - Lienzos Vivos (Art Exhibition Style) */
+.mili-gallery-lienzos {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--mili-nude-50), var(--mili-blush-50));
+}
+
+.mili-gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mili-gallery-header-lienzos {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.mili-gallery-title-lienzos {
+    font-family: var(--mili-font-heading);
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--mili-rose-powder);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.mili-gallery-subtitle-lienzos {
+    font-family: var(--mili-font-body);
+    font-size: 1.375rem;
+    font-style: italic;
+    color: var(--mili-gray-600);
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mili-gallery-filters-lienzos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.mili-filter-btn-lienzos {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--mili-blush-300);
+    border-radius: 50px;
+    font-family: var(--mili-font-body);
+    font-size: 1rem;
+    color: var(--mili-gray-700);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mili-filter-btn-lienzos:hover {
+    background: var(--mili-blush-100);
+    border-color: var(--mili-rose-powder);
+}
+
+.mili-filter-btn-lienzos.active {
+    background: linear-gradient(135deg, var(--mili-rose-gold), var(--mili-rose-powder));
+    color: white;
+    border-color: transparent;
+}
+
+/* Asymmetric Gallery Grid - Art Exhibition */
+.mili-gallery-grid-lienzos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+.mili-gallery-canvas {
+    position: relative;
+    cursor: pointer;
+    animation: mili-fade-in-up 0.8s ease-out backwards;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mili-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Asymmetric sizing for art gallery feel */
+.mili-gallery-canvas.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.mili-gallery-canvas.medium {
+    grid-row: span 2;
+}
+
+.mili-gallery-canvas.regular {
+    /* Default single cell */
+}
+
+.mili-canvas-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--mili-shadow);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mili-gallery-canvas.large .mili-canvas-frame {
+    min-height: 500px;
+}
+
+.mili-gallery-canvas.medium .mili-canvas-frame {
+    min-height: 450px;
+}
+
+.mili-canvas-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle hover effects - Art gallery style */
+.mili-gallery-canvas:hover .mili-canvas-frame {
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-gallery-canvas:hover .mili-canvas-frame img {
+    transform: scale(1.05);
+}
+
+/* Poetic overlay on hover */
+.mili-canvas-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.3) 40%,
+            transparent 70%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.mili-gallery-canvas:hover .mili-canvas-overlay {
+    opacity: 1;
+}
+
+.mili-canvas-phrase {
+    font-family: var(--mili-font-heading);
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-style: italic;
+}
+
+/* Lightbox - Lienzos */
+.mili-lightbox-lienzos {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    animation: mili-lightbox-fade-in 0.3s ease;
+}
+
+@keyframes mili-lightbox-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mili-lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.mili-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
+}
+
+.mili-lightbox-content-lienzos {
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mili-lightbox-content-lienzos img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: var(--mili-shadow-xl);
+}
+
+.mili-lightbox-info-lienzos {
+    text-align: center;
+    color: white;
+}
+
+.mili-lightbox-info-lienzos h3 {
+    font-family: var(--mili-font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.mili-lightbox-info-lienzos p {
+    font-family: var(--mili-font-body);
+    font-size: 1.125rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive - Lienzos */
+@media (max-width: 768px) {
+    .mili-gallery-grid-lienzos {
+        grid-template-columns: 1fr;
+    }
+
+    .mili-gallery-canvas.large,
+    .mili-gallery-canvas.medium {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .mili-canvas-frame,
+    .mili-gallery-canvas.large .mili-canvas-frame,
+    .mili-gallery-canvas.medium .mili-canvas-frame {
+        min-height: 400px;
+    }
+
+    .mili-canvas-phrase {
+        font-size: 1.5rem;
+    }
+
+    .mili-gallery-title-lienzos {
+        font-size: 2.5rem;
+    }
+
+    .mili-gallery-subtitle-lienzos {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mili-hero-title-lienzos {
+        font-size: 2.5rem;
+    }
+
+    .mili-canvas-frame,
+    .mili-gallery-canvas.large .mili-canvas-frame,
+    .mili-gallery-canvas.medium .mili-canvas-frame {
+        min-height: 350px;
+    }
+}
