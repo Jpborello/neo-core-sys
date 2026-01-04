@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOISES - Panel del Transportista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-styles.css">
+    <style>
+        /* Additional styles for driver panel */
+        .driver-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .driver-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .driver-vehicle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .active-shipment-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success), var(--secondary-blue));
+            transition: width 0.3s ease;
+        }
+
+        .checkpoint-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .checkpoint-item {
+            background-color: var(--gray-50);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--gray-300);
+            transition: all 0.3s ease;
+        }
+
+        .checkpoint-item.completed {
+            border-left-color: var(--success);
+            background-color: #F0FDF4;
+        }
+
+        .checkpoint-item.active {
+            border-left-color: var(--secondary-blue);
+            background-color: #EFF6FF;
+        }
+
+        .checkpoint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .checkpoint-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .checkpoint-status {
+            font-size: 1.5rem;
+        }
+
+        .checkpoint-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .photo-upload {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .photo-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid var(--gray-200);
+        }
+
+        .panic-button {
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 2rem;
+            border-radius: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .panic-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+
+        .panic-button:active {
+            transform: scale(0.98);
+        }
+
+        .incident-form {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+        }
+
+        .eta-card {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .eta-label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .eta-time {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .no-shipment {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .no-shipment-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="driver-header">
+        <div class="driver-name" id="driverName">Transportista</div>
+        <div class="driver-vehicle" id="driverVehicle">Vehículo</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="container" style="max-width: 900px;">
+
+            <!-- Active Shipment -->
+            <div id="activeShipmentSection" style="display: none;">
+
+                <!-- Shipment Info -->
+                <div class="active-shipment-card">
+                    <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Envío Activo</h2>
+                    <div id="shipmentInfo"></div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                    </div>
+
+                    <div style="text-align: center; color: var(--gray-600); font-size: 0.875rem;">
+                        <span id="progressText">0/5 checkpoints completados</span>
+                    </div>
+                </div>
+
+                <!-- ETA -->
+                <div class="eta-card" id="etaCard" style="display: none;">
+                    <div class="eta-label">Tiempo Estimado de Llegada</div>
+                    <div class="eta-time" id="etaTime">--:--</div>
+                </div>
+
+                <!-- Checkpoints -->
+                <div class="active-shipment-card">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Checkpoints</h3>
+                    <div class="checkpoint-list" id="checkpointsList"></div>
+                </div>
+
+                <!-- Report Incident -->
+                <div class="incident-form">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Reportar Incidencia</h3>
+                    <form id="incidentForm">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="incidentType">Tipo de Incidencia</label>
+                                <select id="incidentType" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="delay">Demora General</option>
+                                    <option value="weather">Clima Adverso</option>
+                                    <option value="traffic">Tráfico Intenso</option>
+                                    <option value="mechanical">Problema Mecánico</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="incidentDelay">Demora Estimada (minutos)</label>
+                                <input type="number" id="incidentDelay" min="0" placeholder="30">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="incidentDescription">Descripción</label>
+                                <textarea id="incidentDescription" rows="3" required
+                                    placeholder="Describe la situación..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning" style="width: 100%; margin-top: 1rem;">
+                            ⚠️ Reportar Incidencia
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Panic Button -->
+                <button class="panic-button" onclick="triggerPanic()">
+                    🚨 BOTÓN DE PÁNICO 🚨
+                </button>
+
+            </div>
+
+            <!-- No Active Shipment -->
+            <div id="noShipmentSection" class="no-shipment" style="display: none;">
+                <div class="no-shipment-icon">📦</div>
+                <h2>No hay envíos activos</h2>
+                <p style="color: var(--gray-600); margin-bottom: 2rem;">
+                    Esperando asignación de envío...
+                </p>
+                <button class="btn btn-secondary" onclick="window.location.href='admin.html'">
+                    Ir al Panel de Admin
+                </button>
+            </div>
+
+            <!-- Back Button -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                    ← Volver a Landing
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Checkpoint Modal -->
+    <div id="checkpointModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="checkpointModalTitle">Completar Checkpoint</h2>
+                <button class="modal-close" onclick="closeCheckpointModal()">&times;</button>
+            </div>
+
+            <form id="checkpointForm" class="modal-body">
+                <input type="hidden" id="checkpointId">
+
+                <div class="form-group">
+                    <label for="checkpointNotes">Notas (opcional)</label>
+                    <textarea id="checkpointNotes" rows="3" placeholder="Ej: Carga verificada y asegurada"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Fotos (opcional, máx 3)</label>
+                    <input type="file" id="checkpointPhotos" accept="image/*" multiple>
+                    <div id="photoPreview" class="photo-upload"></div>
+                </div>
+
+                <div id="signatureSection" style="display: none;">
+                    <div class="form-group">
+                        <label for="recipientName">Nombre de quien recibe</label>
+                        <input type="text" id="recipientName" placeholder="Nombre completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Firma Digital</label>
+                        <canvas id="signatureCanvas" width="400" height="200"
+                            style="border: 2px solid var(--gray-200); border-radius: 8px; cursor: crosshair;"></canvas>
+                        <button type="button" class="btn btn-secondary" onclick="clearSignature()"
+                            style="margin-top: 0.5rem;">
+                            Limpiar Firma
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeCheckpointModal()">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                        ✓ Completar Checkpoint
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="shared.js"></script>
+    <script src="transportista.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOISES - Panel de Administración</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="assets/logo.jpg" alt="MOISES" class="header-logo">
+                <h1>Panel de Administración</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                    ← Volver a Landing
+                </button>
+                <button class="btn btn-danger" onclick="handleReset()">
+                    🗑️ Reset Data
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="container">
+
+            <!-- Dashboard Stats -->
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="statTotal">0</div>
+                        <div class="stat-label">Total Envíos</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="statPending">0</div>
+                        <div class="stat-label">Pendientes</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🚚</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="statInTransit">0</div>
+                        <div class="stat-label">En Tránsito</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="statDelivered">0</div>
+                        <div class="stat-label">Entregados</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <div class="stat-value" id="statRevenue">$0</div>
+                        <div class="stat-label">Facturado</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Actions Bar -->
+            <section class="actions-bar">
+                <button class="btn btn-primary" onclick="showNewShipmentModal()">
+                    + Nuevo Envío
+                </button>
+
+                <button class="btn btn-secondary" onclick="MoisesTracking.generateMockData(); loadShipments()">
+                    🎲 Generar Datos de Prueba
+                </button>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por código, cliente..."
+                        onkeyup="filterShipments()">
+                </div>
+
+                <select id="filterStatus" onchange="filterShipments()">
+                    <option value="">Todos los estados</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="assigned">Asignados</option>
+                    <option value="in_transit">En Tránsito</option>
+                    <option value="delivered">Entregados</option>
+                    <option value="cancelled">Cancelados</option>
+                </select>
+            </section>
+
+            <!-- Shipments List -->
+            <section class="shipments-section">
+                <h2>Envíos</h2>
+                <div id="shipmentsList" class="shipments-list">
+                    <!-- Shipments will be loaded here -->
+                </div>
+
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <div class="empty-icon">📦</div>
+                    <h3>No hay envíos registrados</h3>
+                    <p>Creá tu primer envío o generá datos de prueba</p>
+                    <button class="btn btn-primary" onclick="showNewShipmentModal()">
+                        + Crear Primer Envío
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- New/Edit Shipment Modal -->
+    <div id="shipmentModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="modalTitle">Nuevo Envío</h2>
+                <button class="modal-close" onclick="closeShipmentModal()">&times;</button>
+            </div>
+
+            <form id="shipmentForm" class="modal-body">
+                <input type="hidden" id="shipmentId">
+
+                <!-- Client Info -->
+                <div class="form-section">
+                    <h3>Datos del Cliente</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="clientName">Nombre y Apellido *</label>
+                            <input type="text" id="clientName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPhone">Teléfono *</label>
+                            <input type="tel" id="clientPhone" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="clientEmail">Email *</label>
+                            <input type="email" id="clientEmail" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipment Details -->
+                <div class="form-section">
+                    <h3>Detalles del Envío</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="origin">Origen *</label>
+                            <input type="text" id="origin" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Destino *</label>
+                            <input type="text" id="destination" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="distance">Distancia (km) *</label>
+                            <input type="number" id="distance" min="1" required oninput="calculatePrice()">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Peso *</label>
+                            <input type="text" id="weight" placeholder="Ej: 500 kg" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="cargoType">Tipo de Carga *</label>
+                            <select id="cargoType" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="Mercadería general">Mercadería general</option>
+                                <option value="Cajas y paquetes">Cajas y paquetes</option>
+                                <option value="Equipamiento">Equipamiento</option>
+                                <option value="Muebles">Muebles</option>
+                                <option value="Electrodomésticos">Electrodomésticos</option>
+                                <option value="Materiales de construcción">Materiales de construcción</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="description">Descripción</label>
+                            <input type="text" id="description" placeholder="Descripción detallada de la mercadería">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="observations">Observaciones</label>
+                            <textarea id="observations" rows="3" placeholder="Observaciones adicionales"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance & Payment -->
+                <div class="form-section">
+                    <h3>Seguro y Pago</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="hasInsurance" onchange="toggleInsurance()">
+                                <span>Contratar seguro</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group" id="insuranceValueGroup" style="display: none;">
+                            <label for="insuranceValue">Valor Asegurado (ARS)</label>
+                            <input type="number" id="insuranceValue" min="0" placeholder="50000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Precio Total (ARS) *</label>
+                            <input type="number" id="price" min="0" required readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentStatus">Estado de Pago</label>
+                            <select id="paymentStatus">
+                                <option value="pending">Pendiente</option>
+                                <option value="paid">Pagado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driver Assignment -->
+                <div class="form-section">
+                    <h3>Asignación de Transportista</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="driverId">Transportista</label>
+                            <select id="driverId">
+                                <option value="">Sin asignar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeShipmentModal()">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Guardar Envío
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Shipment Detail Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="detailTitle">Detalle del Envío</h2>
+                <button class="modal-close" onclick="closeDetailModal()">&times;</button>
+            </div>
+
+            <div class="modal-body" id="detailContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="shared.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
