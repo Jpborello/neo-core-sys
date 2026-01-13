@@ -1,6 +1,14 @@
 import '../index.css';
-import ChatWidget from '../components/ChatWidget';
 import Footer from '../components/Footer';
+import { Inter } from 'next/font/google';
+import LazyChatWidget from '../components/LazyChatWidget';
+
+const inter = Inter({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-inter',
+});
+
 
 export const runtime = 'edge';
 
@@ -94,7 +102,7 @@ export default function RootLayout({ children }) {
 
     return (
         <html lang="es">
-            <body className="antialiased bg-[#0a0a0a] text-white flex flex-col min-h-screen">
+            <body className={`${inter.className} antialiased bg-[#0a0a0a] text-white flex flex-col min-h-screen`}>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -103,7 +111,7 @@ export default function RootLayout({ children }) {
                     {children}
                 </div>
                 <Footer />
-                <ChatWidget />
+                <LazyChatWidget />
             </body>
         </html>
     );
