@@ -1,19 +1,20 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Intelligence Supabase (separate from main Neo Core Sys)
-const supabaseUrl = process.env.NEXT_PUBLIC_INTELLIGENCE_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_INTELLIGENCE_SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-    throw new Error('Missing Intelligence Supabase environment variables');
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-// Admin client with service role (for server-side operations)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-export const supabaseAdmin = supabaseServiceKey
+// Only throw if we are trying to use the client and keys are missing,
+// OR simpler: just return null if missing and handle nulls at use sites.
+// For now, let's just log a warning instead of throwing error during module load
+// which breaks build time static analysis.
+
+export const supabase = supabaseUrl && supabaseAnonKey
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    : null;
+
+export const supabaseAdmin = supabaseUrl && supabaseServiceKey
     ? createClient(supabaseUrl, supabaseServiceKey, {
         auth: {
             autoRefreshToken: false,
@@ -21,6 +22,10 @@ export const supabaseAdmin = supabaseServiceKey
         }
     })
     : null;
+
+if (!supabaseUrl && process.env.NODE_ENV !== 'production') {
+    console.warn('⚠️ Missing Supabase Environment Variables');
+}
 
 // Helper functions for client authentication
 export const clientAuth = {
