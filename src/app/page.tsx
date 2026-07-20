@@ -292,8 +292,33 @@ export default function Home() {
     }
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Neo Core Sys",
+    "image": "https://neo-core-sys.com.ar/og-image.png",
+    "url": "https://neo-core-sys.com.ar",
+    "telephone": "+5493417981212",
+    "email": "neocoresystem@gmail.com",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rosario",
+      "addressRegion": "Santa Fe",
+      "addressCountry": "AR"
+    },
+    "description": "Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce e inteligencia artificial para empresas.",
+    "sameAs": [
+      "https://wa.me/5493417981212"
+    ]
+  };
+
   return (
     <div className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       {/* 1. HERO SECTION WITH INTERACTIVE MOUSE PARALLAX BINDING */}

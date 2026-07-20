@@ -2,17 +2,45 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neo Core Sys | Desarrollo de Software Premium & Consultoría IT",
-  description: "Creamos plataformas e-commerce, sistemas a medida, SaaS y soluciones de alta performance con diseño de vanguardia. Impulsando la transformación digital de tu negocio.",
-  keywords: "desarrollo de software, consultoría it, e-commerce, saas, inteligencia artificial, neo core sys, argentina",
+  title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
+  description: "Somos una Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce y soluciones de inteligencia artificial para empresas.",
+  keywords: "desarrollo de software a medida, fabricacion de software, software house argentina, plataformas web, desarrollo Next.js, integracion de inteligencia artificial, e-commerce b2b b2c, saas premium, consultoria it, neo core sys, rosario",
   authors: [{ name: "Neo Core Sys" }],
+  alternates: {
+    canonical: "https://neo-core-sys.com.ar",
+  },
   openGraph: {
-    title: "Neo Core Sys | Desarrollo de Software Premium & Consultoría IT",
-    description: "Creamos plataformas e-commerce, sistemas a medida, SaaS y soluciones de alta performance con diseño de vanguardia.",
+    title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
+    description: "Software House premium especializada en desarrollo de software a medida, plataformas web, SaaS e inteligencia artificial.",
     url: "https://neo-core-sys.com.ar",
     siteName: "Neo Core Sys",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: "https://neo-core-sys.com.ar/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Neo Core Sys - Premium Software Engineering",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
+    description: "Desarrollo de software premium, SaaS, plataformas e-commerce y soluciones empresariales con inteligencia artificial.",
+    images: ["https://neo-core-sys.com.ar/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
