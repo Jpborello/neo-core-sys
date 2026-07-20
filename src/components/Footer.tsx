@@ -25,10 +25,10 @@ export default function Footer() {
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Navegación</h4>
             <nav className={styles.linksList}>
-              <a href="#inicio" className={styles.link}>Inicio</a>
               <a href="#servicios" className={styles.link}>Servicios</a>
-              <a href="#portafolio" className={styles.link}>Portafolio</a>
-              <a href="#sobre-nosotros" className={styles.link}>Quiénes Somos</a>
+              <a href="#casos-de-exito" className={styles.link}>Casos de éxito</a>
+              <a href="#tecnologias" className={styles.link}>Tecnologías</a>
+              <a href="#nosotros" className={styles.link}>Nosotros</a>
             </nav>
           </div>
 
