@@ -58,7 +58,7 @@ export default function RootLayout({
     description: "Software House premium especializada en desarrollo de software a medida, plataformas web, SaaS e inteligencia artificial.",
     contactPoint: {
       "@type": "ContactPoint",
-      contactType": "customer service",
+      contactType: "customer service",
       email: "contacto@neo-core-sys.com.ar"
     }
   };
