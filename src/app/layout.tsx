@@ -49,8 +49,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Neo Core Sys",
+    url: "https://neo-core-sys.com.ar",
+    logo: "https://neo-core-sys.com.ar/og-image.png",
+    description: "Software House premium especializada en desarrollo de software a medida, plataformas web, SaaS e inteligencia artificial.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType": "customer service",
+      email: "contacto@neo-core-sys.com.ar"
+    }
+  };
+
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         {children}
       </body>

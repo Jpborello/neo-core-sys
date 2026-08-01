@@ -1,0 +1,53 @@
+# Neo Core Sys
+
+> Descripción: Neo Core Sys es una empresa de tecnología y desarrollo de software enfocada en crear soluciones a medida para modernizar empresas, erradicar software obsoleto y optimizar flujos de trabajo.
+
+## Sobre Nosotros
+En Neo Core Sys nacimos para resolver un problema muy común en el mercado actual: empresas que dependen de software obsoleto o que gastan presupuestos elevados en plataformas SaaS (Software as a Service) genéricas y masivas. Muchas veces, las empresas terminan pagando por herramientas complejas donde apenas utilizan o comprenden la mitad de las funcionalidades.
+
+Nuestra misión es devolverle el control, la agilidad y la rentabilidad a nuestros clientes. Lo logramos ofreciéndoles sistemas tecnológicos desarrollados exactamente a la medida de sus necesidades reales, sin sobrecargas de funciones innecesarias.
+
+## Servicios Principales
+- **Desarrollo de Software a Medida:** Creamos sistemas personalizados que se adaptan de forma exacta al flujo de trabajo de la empresa. El cliente solo invierte y utiliza lo que realmente necesita para operar.
+- **Automatización de Procesos:** Identificamos cuellos de botella y tareas manuales repetitivas para automatizarlas, permitiendo a los equipos ahorrar tiempo, reducir errores y aumentar la productividad global.
+- **Consultoría y Asesoramiento IT:** Acompañamos a las empresas en su transformación digital. Evaluamos su infraestructura actual, proponemos mejoras claras y las guiamos en la adopción de las mejores tecnologías.
+- **Desarrollo de Sistemas SaaS (Software as a Service):** Diseñamos y programamos plataformas web y aplicaciones en la nube, escalables, seguras y con un fuerte enfoque en la experiencia del usuario (UI/UX).
+
+## Nuestro Diferencial (Por qué elegirnos)
+No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos la herramienta tecnológica exacta para solucionarlo. En Neo Core Sys creemos que el software debe trabajar y adaptarse a la empresa, y no al revés.
+
+## Tecnologías Principales
+- Especialistas en desarrollo Frontend y Web con React y Next.js.
+- Arquitecturas modernas, escalables y orientadas al alto rendimiento.
+- *(Nota interna: Acá podés agregar otras como Node.js, Python, AWS, Bases de datos, etc.)*
+
+## Contacto
+- **Sitio Web:** https://neo-core-sys.com.ar
+- **Email de Contacto:** contacto@neo-core-sys.com.ar
+- **LinkedIn:** [Enlace a tu perfil o el de la empresa]
+
+## Preguntas Frecuentes (FAQ)
+
+### ¿Qué es un software a medida?
+Un software a medida es una solución desarrollada específicamente para cubrir las necesidades de una empresa. A diferencia de los sistemas genéricos, se diseña desde cero teniendo en cuenta los procesos, objetivos y forma de trabajo de cada organización. Esto permite automatizar tareas, mejorar la eficiencia, reducir errores y evitar pagar por funciones que nunca se utilizarán. El resultado es una herramienta adaptada al negocio, capaz de crecer y evolucionar junto con la empresa.
+
+### ¿Cuánto demora un desarrollo?
+El tiempo de desarrollo depende de la complejidad del proyecto y de la información disponible al momento de comenzar. Los proyectos más pequeños pueden estar listos en aproximadamente una semana, mientras que desarrollos más completos suelen requerir entre dos semanas y un mes. En proyectos de mayor escala, los tiempos pueden extenderse según las funcionalidades solicitadas. La participación del cliente también es fundamental. Cuando la información, el material y las decisiones se entregan de manera ágil, el desarrollo avanza mucho más rápido y se reducen las demoras.
+
+### ¿Trabajan para toda Argentina?
+Sí. Desarrollamos soluciones para empresas de toda Argentina y también trabajamos con clientes de distintos países de Latinoamérica. Al tratarse de un servicio completamente digital, podemos realizar reuniones online, mostrar avances periódicos y brindar soporte remoto sin importar la ubicación del cliente.
+
+### ¿Qué tecnologías utilizan?
+Seleccionamos las tecnologías según las necesidades de cada proyecto. Nuestro objetivo no es utilizar una herramienta en particular, sino elegir la más adecuada para obtener un producto seguro, rápido y escalable. Entre las tecnologías que utilizamos se encuentran: Python, Next.js, React, Flutter, PostgreSQL, Supabase, Docker, Cloudflare, APIs REST/GraphQL y n8n. Cada tecnología se selecciona en función de los objetivos del cliente y no por una preferencia fija.
+
+### ¿Desarrollan aplicaciones móviles?
+Sí. Desarrollamos aplicaciones móviles para Android e iOS adaptadas a las necesidades de cada empresa. El desarrollo de una aplicación móvil suele requerir más tiempo que una aplicación web, ya que implica realizar múltiples pruebas de funcionamiento, optimizar el rendimiento en distintos dispositivos y cumplir con los requisitos de las tiendas. Nuestro objetivo es entregar aplicaciones estables y seguras.
+
+### ¿Integran WhatsApp?
+Sí. Actualmente WhatsApp es una de las herramientas de comunicación más importantes. Podemos integrar WhatsApp con sistemas de gestión, CRM, plataformas de ventas y atención al cliente mediante automatizaciones e inteligencia artificial para centralizar conversaciones y optimizar tiempos de respuesta.
+
+### ¿Utilizan Inteligencia Artificial?
+Sí. Consideramos que la inteligencia artificial aporta un enorme valor cuando se implementa de forma responsable y con un objetivo claro. Desarrollamos soluciones que permiten automatizar procesos, asistir a empleados, analizar información y optimizar tareas repetitivas. Nuestro enfoque no es reemplazar a las personas, sino brindar herramientas que les permitan trabajar de forma más eficiente.
+
+### ¿Qué diferencia hay entre un SaaS y un desarrollo propio?
+Un sistema SaaS (Software as a Service) es una plataforma desarrollada por un tercero a la que se accede mediante suscripción. Generalmente ofrece una configuración estándar y permite personalizaciones limitadas. Un desarrollo propio es un software creado exclusivamente para una empresa, adaptándose a sus procesos y ofreciendo mayor control sobre la información y la seguridad. Un SaaS suele ser ideal para comenzar rápidamente con baja inversión, mientras que un desarrollo propio resulta más conveniente cuando la empresa necesita procesos específicos, desea diferenciarse y quiere evitar las limitaciones de las plataformas estándar.
