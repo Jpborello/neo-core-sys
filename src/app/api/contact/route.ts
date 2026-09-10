@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { sendTelegramNotification } from "@/lib/telegram";
 
 export async function POST(request: Request) {
   try {
@@ -89,6 +90,29 @@ export async function POST(request: Request) {
         subject: `Nuevo Lead: ${name} (${readableProjectType})`,
         html: emailHtml,
       });
+    }
+
+    // Send instant alert to Telegram (Speed-to-Lead)
+    try {
+      const cleanPhone = (phone || "").replace(/[^0-9+]/g, "");
+      const waLink = cleanPhone ? `https://wa.me/${cleanPhone.replace("+", "")}` : null;
+
+      const telegramMsg = `
+🚀 <b>¡NUEVO LEAD EN LA WEB!</b>
+
+👤 <b>Nombre:</b> ${name}
+📧 <b>Email:</b> ${email}
+📱 <b>Teléfono:</b> ${phone || "No especificado"}
+💼 <b>Proyecto:</b> ${readableProjectType}
+
+💬 <b>Mensaje:</b>
+<i>${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</i>
+${waLink ? `\n📲 <a href="${waLink}">Abrir WhatsApp del cliente</a>` : ""}
+      `.trim();
+
+      await sendTelegramNotification(telegramMsg);
+    } catch (tgErr) {
+      console.error("Error enviando notificación a Telegram:", tgErr);
     }
 
     return NextResponse.json(

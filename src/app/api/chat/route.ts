@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendTelegramNotification } from "@/lib/telegram";
 
 const SYSTEM_PROMPT = `Sos el asistente virtual inteligente de Neo Core Sys, Software House boutique basada en Rosario, Santa Fe, Argentina.
 
@@ -42,6 +43,34 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: "Se requiere un array de mensajes válido." },
         { status: 400 }
+      );
+    }
+
+    // Detección automática de datos de contacto (Speed-to-Lead en Chatbot)
+    const lastUserMessage = messages[messages.length - 1]?.content || "";
+    const phoneMatch = lastUserMessage.match(/(?:\+?\d{1,4}[ -]?)?(?:\(?\d{2,4}\)?[ -]?)?\d{3,4}[ -]?\d{3,4}/);
+    const emailMatch = lastUserMessage.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+
+    // Solo notificar si hay un número telefónico de al menos 7 dígitos o un email
+    const cleanDigits = phoneMatch ? phoneMatch[0].replace(/\D/g, "") : "";
+    if (cleanDigits.length >= 7 || emailMatch) {
+      const extractedPhone = cleanDigits.length >= 7 ? phoneMatch![0].trim() : null;
+      const cleanPhone = extractedPhone ? extractedPhone.replace(/[^0-9+]/g, "") : null;
+      const waLink = cleanPhone && cleanPhone.length >= 8 ? `https://wa.me/${cleanPhone.replace("+", "")}` : null;
+
+      const tgChatLead = `
+🤖 <b>¡NUEVO LEAD EN EL CHATBOT IA!</b>
+
+💬 <b>Mensaje del visitante:</b>
+<i>"${lastUserMessage.replace(/</g, "&lt;").replace(/>/g, "&gt;")}"</i>
+
+${extractedPhone ? `📱 <b>Teléfono detectado:</b> ${extractedPhone}` : ""}
+${emailMatch ? `📧 <b>Email detectado:</b> ${emailMatch[0]}` : ""}
+${waLink ? `\n📲 <a href="${waLink}">Contactar por WhatsApp directamente</a>` : ""}
+      `.trim();
+
+      sendTelegramNotification(tgChatLead).catch((err) =>
+        console.error("Error enviando alerta de chat a Telegram:", err)
       );
     }
 
