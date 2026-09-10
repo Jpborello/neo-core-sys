@@ -53,19 +53,60 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Neo Core Sys",
+    legalName: "Neo Core Sys",
     url: "https://neo-core-sys.com.ar",
     logo: "https://neo-core-sys.com.ar/og-image.png",
-    description: "Software House premium especializada en desarrollo de software a medida, plataformas web, SaaS e inteligencia artificial.",
+    description: "Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce mayorista y soluciones de inteligencia artificial aplicada.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Rosario",
+      addressRegion: "Santa Fe",
+      addressCountry: "AR",
+    },
     contactPoint: {
       "@type": "ContactPoint",
-      contactType: "customer service",
-      email: "contacto@neo-core-sys.com.ar"
-    }
+      contactType: "sales",
+      telephone: "+54-9-341-798-1212",
+      email: "contacto@neo-core-sys.com.ar",
+      availableLanguage: ["Spanish", "English"],
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/neo-core-sys",
+      "https://github.com/Jpborello",
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Juan Pablo Borello",
+      jobTitle: "Lead Software Architect & Founder",
+      sameAs: "https://github.com/Jpborello",
+    },
+    knowsAbout: [
+      "Custom Software Development",
+      "Next.js Architecture",
+      "Artificial Intelligence Agents",
+      "Wholesale E-Commerce Systems",
+      "Speed-to-Lead CRM Integration",
+      "Generative Engine Optimization (GEO)",
+      "Answer Engine Optimization (AEO)",
+      "Autonomous Sales Bots",
+    ],
   };
 
   return (
     <html lang="es">
       <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="https://neo-core-sys.com.ar/llms.txt"
+          title="LLMs.txt"
+        />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="https://neo-core-sys.com.ar/llms-full.txt"
+          title="LLMs-full.txt"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -16,10 +16,21 @@ Nuestra misión es devolverle el control, la agilidad y la rentabilidad a nuestr
 ## Nuestro Diferencial (Por qué elegirnos)
 No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos la herramienta tecnológica exacta para solucionarlo. En Neo Core Sys creemos que el software debe trabajar y adaptarse a la empresa, y no al revés.
 
+## Casos de Éxito y Logros Comprobables
+- **El Paquetero (https://www.elpaquetero.com.ar/):** Plataforma integral de e-commerce mayorista con mini ERP y CRM a medida. Cuenta con un agente de IA autónomo conectado directamente a la base de datos PostgreSQL que responde consultas de stock y precios, reteniendo clientes y habiendo cerrado ventas completas de forma 100% autónoma. Gracias a nuestra optimización GEO (Generative Engine Optimization), en solo 30 días de estar en producción fue indexado y citado directamente en las respuestas y recomendaciones de ChatGPT para compras mayoristas en Rosario.
+- **Las Manitos de Mili (https://lasmanitosdemili.com.ar/):** Sistema de turnos online y gestión de citas para estética en Rosario. Implementa optimización SEO y datos estructurados locales con una tasa récord del 68.6% de CTR en Google Search Console y posición media 2.1 en búsquedas locales.
+- **ATFAR - Asociación de Titulares de Farmacia (https://www.atfar.com.ar/):** Sistema institucional y portal administrativo que nuclea y gestiona a todas las farmacias del norte de la provincia de Santa Fe. Integra sistema de declaraciones juradas mensuales (DDJJ) para empleadores, padrón masivo de afiliados y bolsa de trabajo digital.
+- **Cuánto Te Quiero (https://cuanto-te-quiero.vercel.app/):** E-commerce de alto rendimiento y tráfico concurrente para blanquería e indumentaria infantil con checkout y panel de administración optimizados.
+
+## Páginas y Soluciones de Especialidad
+- **E-Commerce Mayorista B2B & Mini ERP con Bot de IA:** https://neo-core-sys.com.ar/ecommerce-mayorista (Solución específica para fábricas y distribuidoras mayoristas con listas de precios por CUIT, control de stock en tiempo real y bot de IA autónomo para ventas 24/7 sin comisiones).
+- **Desarrollo de Software a Medida en Rosario & Santa Fe:** https://neo-core-sys.com.ar/desarrollo-software-rosario (Solución para empresas de la región de Rosario que necesitan modernizar sistemas legados obsoletos, implementar CRM con atención inmediata en < 1 segundo y soporte local de cercanía).
+
 ## Tecnologías Principales
 - Especialistas en desarrollo Frontend y Web con React y Next.js.
-- Arquitecturas modernas, escalables y orientadas al alto rendimiento.
-- *(Nota interna: Acá podés agregar otras como Node.js, Python, AWS, Bases de datos, etc.)*
+- TypeScript, Node.js y PostgreSQL para arquitecturas robustas y tipadas.
+- Integración de Agentes de Inteligencia Artificial (LLMs) autónomos conectados a bases de datos en tiempo real.
+- Optimización SEO tradicional y GEO (Generative Engine Optimization) para visibilidad en Google, ChatGPT y Perplexity.
 
 ## Contacto
 - **Sitio Web:** https://neo-core-sys.com.ar

@@ -82,6 +82,7 @@ export default function Header() {
             <a href="#casos-de-exito" className={styles.navLink}>Casos de éxito</a>
             <a href="#tecnologias" className={styles.navLink}>Tecnologías</a>
             <a href="#nosotros" className={styles.navLink}>Nosotros</a>
+            <a href="#faq" className={styles.navLink}>FAQ</a>
             
             {/* Theme Selector Widget */}
             <div className={styles.themeSelectorContainer}>
@@ -150,6 +151,7 @@ export default function Header() {
         <a href="#casos-de-exito" className={styles.mobileNavLink} onClick={closeMenu}>Casos de éxito</a>
         <a href="#tecnologias" className={styles.mobileNavLink} onClick={closeMenu}>Tecnologías</a>
         <a href="#nosotros" className={styles.mobileNavLink} onClick={closeMenu}>Nosotros</a>
+        <a href="#faq" className={styles.mobileNavLink} onClick={closeMenu}>FAQ</a>
         
         {/* Mobile Theme Selector (Simple list) */}
         <div className={styles.mobileThemeSelector}>

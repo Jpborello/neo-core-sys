@@ -25,10 +25,22 @@ export default function Footer() {
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Navegación</h4>
             <nav className={styles.linksList}>
-              <a href="#servicios" className={styles.link}>Servicios</a>
-              <a href="#casos-de-exito" className={styles.link}>Casos de éxito</a>
-              <a href="#tecnologias" className={styles.link}>Tecnologías</a>
-              <a href="#nosotros" className={styles.link}>Nosotros</a>
+              <a href="/#servicios" className={styles.link}>Servicios</a>
+              <a href="/#casos-de-exito" className={styles.link}>Casos de éxito</a>
+              <a href="/#tecnologias" className={styles.link}>Tecnologías</a>
+              <a href="/#nosotros" className={styles.link}>Nosotros</a>
+              <a href="/#faq" className={styles.link}>FAQ</a>
+            </nav>
+          </div>
+
+          {/* Solutions Column */}
+          <div className={styles.linksCol}>
+            <h4 className={styles.colTitle}>Soluciones</h4>
+            <nav className={styles.linksList}>
+              <a href="/ecommerce-mayorista" className={styles.link}>E-Commerce Mayorista B2B</a>
+              <a href="/desarrollo-software-rosario" className={styles.link}>Software en Rosario & SF</a>
+              <a href="/#servicios" className={styles.link}>CRM & Bot con IA</a>
+              <a href="/llms.txt" target="_blank" className={styles.link}>Índice IA (llms.txt)</a>
             </nav>
           </div>
 

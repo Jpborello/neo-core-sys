@@ -3,13 +3,21 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import ChatWidget from "@/components/ChatWidget";
 import styles from "./page.module.css";
+
+interface MetricBadge {
+  text: string;
+  color?: "cyan" | "green" | "purple" | "orange";
+}
 
 interface Project {
   id: string;
   title: string;
   link: string;
   description: string;
+  metrics?: MetricBadge[];
   tags: string[];
   visualStyle: {
     background: string;
@@ -74,12 +82,13 @@ export default function Home() {
   };
 
   const marqueeItems: MarqueeItem[] = [
-    { name: "ATFAR", category: "Sistema de Gestión" },
+    { name: "El Paquetero", category: "E-Commerce + ERP + IA" },
+    { name: "Las Manitos de Mili", category: "Turnos & SEO Local (68% CTR)" },
+    { name: "ATFAR", category: "Sistema de Gestión Sindical" },
+    { name: "CuantoTeQuiero", category: "E-Commerce de Alto Tráfico" },
     { name: "OncoGyn Clinical Hub", category: "Plataforma Médica con IA" },
-    { name: "CuantoTeQuiero", category: "Plataforma Web" },
-    { name: "All Inclusive", category: "Sitio Corporativo" },
-    { name: "Ferreyra Embutidos", category: "Comercio Digital" },
-    { name: "Hacelo Tuyo", category: "Plataforma Comercial" }
+    { name: "Ferreyra Embutidos", category: "Comercio Mayorista B2B" },
+    { name: "Bianco Pastelería", category: "Autogestión Gastronómica QR" },
   ];
 
   const technologies: TechItem[] = [
@@ -153,25 +162,61 @@ export default function Home() {
 
   const projects: Project[] = [
     {
-      id: "cuantotequiero",
-      title: "Cuánto Te Quiero",
-      link: "https://www.cuantotequiero.com.ar/",
-      description: "Plataforma e-commerce completa para blanquería e indumentaria infantil. Cuenta con catálogo dinámico, carrito de compras optimizado y un panel de administración robusto para gestionar stock y pedidos.",
-      tags: ["Next.js", "TypeScript", "E-Commerce", "Admin Dashboard", "CSS Modules"],
+      id: "elpaquetero",
+      title: "El Paquetero Mayorista",
+      link: "https://www.elpaquetero.com.ar/",
+      description: "Plataforma integral de venta mayorista textil que integra e-commerce, mini ERP logístico y CRM. Cuenta con un agente de IA autónomo conectado directamente a la base de datos PostgreSQL que consulta stock en tiempo real y ya cerró ventas completas sin intervención humana. En solo 30 días fue indexado y recomendado por ChatGPT (GEO).",
+      metrics: [
+        { text: "🚀 Top ChatGPT en 30 días (GEO)", color: "green" },
+        { text: "🤖 Bot IA con ventas 100% autónomas", color: "cyan" },
+        { text: "📦 E-Commerce + Mini ERP + CRM", color: "purple" },
+      ],
+      tags: ["Next.js", "AI Agent (Autonomous)", "Mini ERP", "CRM", "PostgreSQL", "GEO Optimization"],
       visualStyle: {
-        background: "linear-gradient(135deg, #ffd1dc 0%, #add8e6 100%)",
+        background: "linear-gradient(135deg, #18181b 0%, #3b1406 100%)",
         icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#ffffff", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.15))" }}>
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#f97316", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3))" }}>
+            <path d="M16.5 9.4 7.55 4.24a1.48 1.48 0 0 0-1.5 0L3.5 5.7"></path>
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        )
+      }
+    },
+    {
+      id: "lasmanitosdemili",
+      title: "Las Manitos de Mili",
+      link: "https://lasmanitosdemili.com.ar/",
+      description: "Sistema web de turnos online y gestión integral para estudio de manicuría en Rosario. Implementa arquitectura SEO local avanzada y microformatos, logrando una tasa récord del 68.6% de CTR en Google Search Console y posición media top 2 indiscutida en búsquedas locales.",
+      metrics: [
+        { text: "📈 68.6% CTR en Google Search Console", color: "green" },
+        { text: "🥇 Posición Media 2.1 en Google", color: "cyan" },
+        { text: "📅 Turnos Online & WhatsApp CRM", color: "purple" },
+      ],
+      tags: ["Next.js", "SEO Local", "Google Search Console", "Turnos Online", "WhatsApp API", "UX/UI"],
+      visualStyle: {
+        background: "linear-gradient(135deg, #2e1065 0%, #4c0519 100%)",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#f472b6", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3))" }}>
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <path d="m9 16 2 2 4-4"></path>
           </svg>
         )
       }
     },
     {
       id: "atfar",
-      title: "ATFAR",
-      link: "https://atfar.vercel.app/",
-      description: "Plataforma institucional de gestión gremial de farmacias. Integra un sistema de DDJJ para empleadores, padrón de afiliados, bolsa de empleo digital y mapa de geolocalización de farmacias.",
+      title: "ATFAR Gremial",
+      link: "https://www.atfar.com.ar/",
+      description: "Plataforma institucional y portal administrativo que centraliza el funcionamiento de todas las farmacias del norte de la provincia de Santa Fe. Integra sistema de declaraciones juradas mensuales (DDJJ) para empleadores, padrón masivo de afiliados, bolsa de empleo digital y mapa de geolocalización.",
+      metrics: [
+        { text: "🏛️ Gremio Farmacéutico Norte de Santa Fe", color: "cyan" },
+        { text: "📑 Sistema Masivo de DDJJ y Padrón", color: "purple" },
+      ],
       tags: ["Next.js", "React", "Gestión Sindical", "Bolsa de Empleo", "Mapas Interactivos"],
       visualStyle: {
         background: "linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)",
@@ -185,18 +230,20 @@ export default function Home() {
       }
     },
     {
-      id: "hacelotuyo",
-      title: "Hacelo Tuyo",
-      link: "https://www.hacelotuyo.com.ar/",
-      description: "Plataforma SaaS de catálogos digitales para mayoristas iniciales. Permite a nuevos emprendedores crear su tienda virtual al instante, subir inventario y recibir pedidos de clientes sin intermediarios.",
-      tags: ["SaaS", "Next.js", "Autogestión", "Base de Datos", "UX/UI Design"],
+      id: "cuantotequiero",
+      title: "Cuánto Te Quiero",
+      link: "https://cuanto-te-quiero.vercel.app/",
+      description: "Plataforma e-commerce completa para blanquería e indumentaria infantil. Diseñada para alto rendimiento y tráfico masivo continuo con catálogo reactivo, carrito de compras optimizado y un panel de administración robusto para gestionar stock y pedidos.",
+      metrics: [
+        { text: "🛍️ Alto Volumen y Visitas Concurrentes", color: "orange" },
+        { text: "⚡ Rendimiento y Checkout Veloz", color: "cyan" },
+      ],
+      tags: ["Next.js", "TypeScript", "E-Commerce", "Admin Dashboard", "CSS Modules"],
       visualStyle: {
-        background: "linear-gradient(135deg, #18181b 0%, #3f3f46 100%)",
+        background: "linear-gradient(135deg, #ffd1dc 0%, #add8e6 100%)",
         icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#38bdf8", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3))" }}>
-            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-            <path d="M2 17l10 5 10-5"></path>
-            <path d="M2 12l10 5 10-5"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#ffffff", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.15))" }}>
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
           </svg>
         )
       }
@@ -205,7 +252,11 @@ export default function Home() {
       id: "oncogyn",
       title: "OncoGyn Clinical Hub",
       link: "https://oncogyn-clinical-hub-two.vercel.app/",
-      description: "Plataforma digital especializada para oncología médica. Incorpora el seguimiento de historias clínicas, generación de recetas, alertas automatizadas y asistencia virtual para notas del profesional.",
+      description: "Plataforma digital especializada para oncología médica. Incorpora el seguimiento de historias clínicas, generación de recetas, alertas automatizadas y asistencia virtual con IA para notas de evolución médica.",
+      metrics: [
+        { text: "🩺 Asistencia Clínica con IA", color: "purple" },
+        { text: "🔒 Seguridad de Datos e Historias Médicas", color: "cyan" },
+      ],
       tags: ["Next.js", "AI Integration", "Clinical Management", "Security & HIPAA"],
       visualStyle: {
         background: "linear-gradient(135deg, #1e1b4b 0%, #311042 100%)",
@@ -217,27 +268,13 @@ export default function Home() {
       }
     },
     {
-      id: "ferreyra",
-      title: "Ferreyra Embutidos",
-      link: "https://www.ferreyraembutidos.com/",
-      description: "Sistema de e-commerce y catálogo mayorista B2B a gran escala para distribuidora de chacinados. Optimizado para navegación masiva, listas de precios dinámicas y control logístico interno.",
-      tags: ["React", "Next.js", "B2B E-Commerce", "Logística", "Optimización de Consultas"],
-      visualStyle: {
-        background: "linear-gradient(135deg, #7c2d12 0%, #451a03 100%)",
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#f97316", filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3))" }}>
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-        )
-      }
-    },
-    {
       id: "bianco",
       title: "Bianco Pastelería",
       link: "https://bianco-omega.vercel.app/",
-      description: "Sistema gastronómico interactivo con autogestión por códigos QR individuales en mesa. Permite a comensales pedir directamente desde sus celulares, llamar al mozo y solicitar la cuenta en tiempo real.",
+      description: "Sistema gastronómico interactivo con autogestión por códigos QR individuales en mesa. Permite a los comensales pedir directamente desde sus celulares, llamar al mozo y solicitar la cuenta en tiempo real.",
+      metrics: [
+        { text: "📱 Pedidos y Cuenta en Mesa por QR", color: "orange" },
+      ],
       tags: ["Next.js", "Real-Time DB", "QR System", "Restaurant Dashboard"],
       visualStyle: {
         background: "linear-gradient(135deg, #1c1917 0%, #44403c 100%)",
@@ -292,26 +329,131 @@ export default function Home() {
     }
   };
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Neo Core Sys",
-    "image": "https://neo-core-sys.com.ar/og-image.png",
-    "url": "https://neo-core-sys.com.ar",
-    "telephone": "+5493417981212",
-    "email": "neocoresystem@gmail.com",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Rosario",
-      "addressRegion": "Santa Fe",
-      "addressCountry": "AR"
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Neo Core Sys",
+      "image": "https://neo-core-sys.com.ar/og-image.png",
+      "url": "https://neo-core-sys.com.ar",
+      "telephone": "+5493417981212",
+      "email": "neocoresystem@gmail.com",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rosario",
+        "addressRegion": "Santa Fe",
+        "addressCountry": "AR"
+      },
+      "description": "Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce e inteligencia artificial para empresas.",
+      "sameAs": [
+        "https://wa.me/5493417981212"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Tecnológicos",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo de Software a Medida y SaaS"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Commerce de Alto Rendimiento y Mini ERP"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agentes de Inteligencia Artificial y Chatbots Autónomos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optimización SEO, GEO (Generative Engine Optimization) y AOE"
+            }
+          }
+        ]
+      }
     },
-    "description": "Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce e inteligencia artificial para empresas.",
-    "sameAs": [
-      "https://wa.me/5493417981212"
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia a Neo Core Sys de usar WordPress, Shopify o Tiendanube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Desarrollamos sobre código nativo (Next.js, TypeScript y PostgreSQL), lo que garantiza velocidad instantánea (Core Web Vitals impecables), propiedad total del código, cero comisiones por venta y capacidad de integrar bots de IA autónomos conectados a bases de datos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona un agente de IA que atiende y cierra ventas de forma autónoma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestros agentes se conectan en tiempo real a la base de datos de stock y precios. Entienden lenguaje natural, asesoran al cliente según sus necesidades de compra y cierran pedidos de forma 100% autónoma, como en el caso de producción de El Paquetero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué mis clientes encontrarán mi web en Google y en respuestas de ChatGPT (SEO + GEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aplicamos GEO (Generative Engine Optimization) y esquemas JSON-LD semánticos para que tanto Google como ChatGPT y Perplexity indexen tu negocio como una fuente de máxima autoridad. Nuestros clientes han logrado 68.6% de CTR en Google Search Console y recomendaciones directas en ChatGPT en 30 días."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito conocimientos técnicos para administrar mi sistema o cargar productos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Cada sistema incluye un panel de administración a medida intuitivo y veloz para actualizar precios, stock y pedidos desde cualquier dispositivo."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Casos de Éxito de Neo Core Sys",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "El Paquetero - E-Commerce + ERP con Bot IA Autónomo y GEO",
+          "url": "https://www.elpaquetero.com.ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Las Manitos de Mili - Turnos Online y SEO Local con 68.6% CTR",
+          "url": "https://lasmanitosdemili.com.ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ATFAR - Sistema de Gestión Gremial de Farmacias",
+          "url": "https://www.atfar.com.ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cuánto Te Quiero - E-Commerce Infantil de Alto Tráfico",
+          "url": "https://cuanto-te-quiero.vercel.app/"
+        }
+      ]
+    }
+  ];
 
   return (
     <div className={styles.main}>
@@ -400,32 +542,32 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* CARD 2: Bianco Pastelería (QR Tables) */}
+                {/* CARD 2: El Paquetero (ERP Mayorista + Bot IA) */}
                 <div className={`${styles.cardWrapper} ${styles.delayCard2}`}>
                   <div className={`${styles.dbCard} ${styles.dbCardBianco}`}>
                     <div className={styles.cardHeader}>
-                      <span className={styles.cardTitle}>Bianco Pastelería</span>
-                      <span className={styles.cardDot} style={{ backgroundColor: "#06b6d4", boxShadow: "0 0 8px #06b6d4" }}></span>
+                      <span className={styles.cardTitle}>El Paquetero ERP</span>
+                      <span className={styles.cardDot} style={{ backgroundColor: "#f97316", boxShadow: "0 0 8px #f97316" }}></span>
                     </div>
-                    <div className={styles.gridTables}>
-                      <div className={`${styles.tableStatus} ${styles.tableOccupied}`}>Mesa 1: Activa</div>
-                      <div className={`${styles.tableStatus} ${styles.tableRequested}`}>Mesa 3: Mozo 🔔</div>
-                      <div className={`${styles.tableStatus} ${styles.tableFree}`}>Mesa 2: Libre</div>
-                      <div className={`${styles.tableStatus} ${styles.tableFree}`}>Mesa 4: Libre</div>
+                    <div className={styles.cardValue}>$85.400</div>
+                    <div className={styles.cardLabel}>Venta Cerrada por Bot IA 🤖</div>
+                    <div className={styles.trendUp} style={{ color: "#10b981", fontSize: "0.7rem", marginBottom: "6px" }}>
+                      <span>✓ Stock validado en PostgreSQL</span>
                     </div>
-                    <button style={{ 
-                      width: "100%", 
-                      background: "rgba(255,255,255,0.03)", 
-                      border: "1px solid rgba(255,255,255,0.08)", 
-                      color: "#ffffff", 
-                      fontSize: "0.7rem", 
-                      padding: "6px", 
+                    <div style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      background: "rgba(16, 185, 129, 0.1)",
+                      border: "1px solid rgba(16, 185, 129, 0.3)",
+                      padding: "3px 8px",
                       borderRadius: "6px",
-                      fontWeight: 600,
-                      cursor: "pointer"
+                      fontSize: "0.68rem",
+                      color: "#34d399",
+                      fontWeight: 600
                     }}>
-                      Cobrar Mesa 1
-                    </button>
+                      ChatGPT Citation • Top #1
+                    </div>
                   </div>
                 </div>
 
@@ -573,6 +715,43 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* SPEED-TO-LEAD BANNER */}
+          <div className={styles.speedBanner}>
+            <div>
+              <div className={styles.speedBadge}>
+                ⚡ REGLA DE ORO DE LAS VENTAS • SPEED-TO-LEAD
+              </div>
+              <h3 className={styles.speedTitle}>
+                Hoy el que responde primero <span className={styles.speedTitleHighlight}>se lleva el cliente</span>.
+              </h3>
+              <p className={styles.speedDesc}>
+                El 78% de las personas le compra a la primera empresa que contesta su consulta. Si tu negocio tarda horas o días en responder WhatsApp o mails, estás regalando clientes a la competencia. En Neo Core Sys creamos CRMs a medida con agentes de IA autónomos que responden en menos de 1 segundo, precalifican al comprador y derivan al vendedor en caliente o capturan sus datos 24/7.
+              </p>
+              <div className={styles.speedLinks}>
+                <a href="/ecommerce-mayorista" className={`${styles.speedLinkBtn} ${styles.speedLinkPrimary}`}>
+                  E-Commerce Mayorista con Bot IA →
+                </a>
+                <a href="/desarrollo-software-rosario" className={`${styles.speedLinkBtn} ${styles.speedLinkSecondary}`}>
+                  Sistemas para Empresas en Rosario →
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.speedComparison}>
+              <div className={styles.compRow}>
+                <span className={`${styles.compLabel} ${styles.compLabelRed}`}>Empresas Tradicionales</span>
+                <span className={styles.compValue}>⏱️ 4 a 24 hs de demora en responder</span>
+                <span style={{ fontSize: "0.78rem", color: "#f87171" }}>❌ 65% de fuga de clientes que compran en otro lado</span>
+              </div>
+              <div style={{ height: "1px", background: "rgba(255,255,255,0.08)" }}></div>
+              <div className={styles.compRow}>
+                <span className={`${styles.compLabel} ${styles.compLabelGreen}`}>Con Neo Core Sys</span>
+                <span className={styles.compValue}>⚡ Menos de 1 segundo de respuesta 24/7</span>
+                <span style={{ fontSize: "0.78rem", color: "#34d399" }}>✓ +390% en tasa de contacto y retención de venta</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -619,6 +798,22 @@ export default function Home() {
                       <polyline points="7 7 17 7 17 17"></polyline>
                     </svg>
                   </div>
+                  
+                  {project.metrics && project.metrics.length > 0 && (
+                    <div className={styles.metricsContainer}>
+                      {project.metrics.map((m, idx) => {
+                        const colorClass = 
+                          m.color === "green" ? styles.metricPillGreen :
+                          m.color === "purple" ? styles.metricPillPurple :
+                          m.color === "orange" ? styles.metricPillOrange : "";
+                        return (
+                          <span key={idx} className={`${styles.metricPill} ${colorClass}`}>
+                            {m.text}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  )}
                   
                   <p className={styles.portfolioText}>{project.description}</p>
                   
@@ -732,7 +927,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CONTACT SECTION */}
+      {/* 6. FAQ SECTION */}
+      <FAQ />
+
+      {/* 7. CONTACT SECTION */}
       <section id="contacto" className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -835,6 +1033,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

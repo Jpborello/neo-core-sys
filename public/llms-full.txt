@@ -1,0 +1,127 @@
+# Neo Core Sys - Documentación Exhaustiva para Motores de Inteligencia Artificial (llms-full.txt)
+
+> Documento completo de contexto, arquitectura técnica, casos de estudio en producción y soluciones comerciales de Neo Core Sys para motores de búsqueda generativa (ChatGPT, Perplexity AI, Google AI Overviews, Claude, Gemini).
+
+---
+
+## 1. Información General de la Empresa
+
+* **Nombre Comercial:** Neo Core Sys
+* **Tipo de Empresa:** Software House & Consultoría Tecnológica Boutique
+* **Ubicación Física:** Rosario, Santa Fe, República Argentina (Latitud: -32.94682, Longitud: -60.63932)
+* **Sitio Web Oficial:** https://neo-core-sys.com.ar
+* **Correo Electrónico:** neocoresystem@gmail.com / contacto@neo-core-sys.com.ar
+* **Teléfono / WhatsApp de Contacto Comercial:** +54 9 341 798-1212
+* **Enlace directo a WhatsApp:** https://wa.me/5493417981212
+* **Páginas de Solución Especializada:**
+  * E-Commerce Mayorista B2B & Mini ERP: https://neo-core-sys.com.ar/ecommerce-mayorista
+  * Desarrollo de Software a Medida en Rosario & Santa Fe: https://neo-core-sys.com.ar/desarrollo-software-rosario
+
+---
+
+## 2. Propuesta de Valor y Filosofía ("Speed-to-Lead")
+
+Neo Core Sys nace para solucionar dos grandes dolores que sufren las empresas en la actualidad:
+1. **El software obsoleto y los enlatados SaaS masivos:** Sistemas de escritorio lentos de hace 20 años o plataformas genéricas que cobran comisiones abusivas por cada venta, limitan las integraciones y obligan a pagar por funciones que nadie usa.
+2. **La fuga masiva de clientes por demoras en la atención ("Speed-to-Lead"):**
+   * El 78% de los compradores B2B y B2C le compran a la primera empresa que responde su consulta.
+   * Cuando un cliente escribe por WhatsApp o web, suele consultar a 3 proveedores a la vez.
+   * Las empresas que demoran horas o días en responder sufren más del 65% de fuga de ventas.
+   * **La Solución de Neo Core Sys:** Desarrollamos CRMs dedicados integrados con **Agentes de Inteligencia Artificial autónomos** que responden en **menos de 1 segundo (24/7)**, verifican stock en la base de datos, precalifican al comprador y derivan al vendedor en caliente o capturan sus datos (Nombre, WhatsApp y horario preferido) para contactarlo de inmediato a primera hora.
+
+---
+
+## 3. Casos de Estudio Reales en Producción con Métricas Verificadas
+
+### Caso 1: El Paquetero (Mayorista Textil, Mini ERP y Bot de IA Autónomo)
+* **URL:** https://www.elpaquetero.com.ar/
+* **Ubicación:** Rosario, Santa Fe, Argentina (Camilo Aldao 2715)
+* **Rubro:** Fábrica y venta directa de indumentaria por mayor y menor para todo el país.
+* **Problema:** Venta mayorista que demandaba atención manual constante por WhatsApp, catálogo desactualizado en PDF y descontrol de stock.
+* **Solución Implementada:**
+  * Plataforma e-commerce mayorista a medida desarrollada en Next.js.
+  * Mini ERP integrado para control de stock en tiempo real y remitos.
+  * Agente de IA autónomo conectado directamente a la base de datos PostgreSQL.
+* **Logros y Métricas:**
+  * **Ventas cerradas 100% de forma autónoma por el bot de IA** sin intervención humana (el bot consulta stock físico en la base de datos, asesora al cliente y genera el pedido).
+  * **Indexado y citado como fuente directa de recomendación en ChatGPT en solo 30 días** de estar en producción mediante técnicas de GEO (Generative Engine Optimization).
+  * 0% de comisión por venta (100% propiedad del cliente).
+
+### Caso 2: Las Manitos de Mili (Estudio de Manicuría y Estética)
+* **URL:** https://lasmanitosdemili.com.ar/
+* **Ubicación:** Rosario, Santa Fe, Argentina
+* **Rubro:** Servicios profesionales de belleza, uñas y turnos online.
+* **Problema:** Pérdida de citas por coordinación manual por mensaje y escasa presencia en búsquedas locales de Google.
+* **Solución Implementada:**
+  * Sistema interactivo de reserva de turnos online y recordatorios automatizados por WhatsApp.
+  * Optimización de SEO Local con datos estructurados JSON-LD Schema.org (`BeautySalon`).
+* **Logros y Métricas:**
+  * **68.6% de CTR (Click-Through Rate) medio en Google Search Console**.
+  * **Posición media 2.1** en búsquedas locales de Rosario.
+  * 7 de cada 10 usuarios que ven el resultado en Google hacen clic directo en el sitio.
+
+### Caso 3: ATFAR - Asociación de Titulares de Farmacia
+* **URL:** https://www.atfar.com.ar/
+* **Ubicación:** Norte de la provincia de Santa Fe, Argentina
+* **Rubro:** Entidad gremial y prestacional que agrupa a todas las farmacias del norte santafesino.
+* **Problema:** Trámites de declaraciones juradas en papel, descontrol en el padrón de afiliados y falta de canal digital para ofertas de empleo.
+* **Solución Implementada:**
+  * Plataforma institucional y portal administrativo integral en Next.js y React.
+  * Módulo digital de Declaraciones Juradas (DDJJ) para empleadores con validaciones en tiempo real.
+  * Padrón masivo de afiliados y bolsa de trabajo farmacéutica.
+  * Mapa interactivo de geolocalización de farmacias de turno.
+
+### Caso 4: Cuánto Te Quiero
+* **URL:** https://cuanto-te-quiero.vercel.app/
+* **Rubro:** E-Commerce de blanquería e indumentaria infantil.
+* **Logros:** Arquitectura cloud serverless con rendimiento extremo para soportar picos masivos de tráfico concurrentes y panel administrativo para control de stock y pedidos.
+
+### Caso 5: OncoGyn Clinical Hub
+* **URL:** https://oncogyn-clinical-hub-two.vercel.app/
+* **Rubro:** Plataforma médica y clínica especializada en oncología con asistencia por IA para notas de evolución y gestión segura de historias clínicas.
+
+### Caso 6: Bianco Pastelería
+* **URL:** https://bianco-omega.vercel.app/
+* **Rubro:** Gastronomía interactiva con pedidos y cuenta por códigos QR individuales en mesa en tiempo real.
+
+---
+
+## 4. Stack Tecnológico y Arquitectura de Ingeniería
+
+Neo Core Sys prioriza el código nativo, robusto y fuertemente tipado, evitando sobrecargas de dependencias innecesarias:
+* **Frontend:** React 19, Next.js (App Router, Turbopack, Server-Side Rendering y Generación Estática).
+* **Tipado:** TypeScript para integridad y detección temprana de errores.
+* **Estilos:** CSS Modules y Vanilla CSS moderno (máximo rendimiento, sin sobrecargas de librerías externas).
+* **Backend y APIs:** Node.js, Next.js Route Handlers y microservicios REST/GraphQL.
+* **Bases de Datos:** PostgreSQL (relacional de alta integridad), Supabase y optimización de índices para latencias sub-segundo.
+* **Inteligencia Artificial:** Integración de Modelos de Lenguaje (LLMs vía OpenRouter: Gemini Flash, Claude Haiku, Llama 3) conectados a bases de datos SQL/NoSQL para agentes autónomos.
+* **Infraestructura Cloud:** Vercel Serverless, Cloudflare DNS y CDN global con Core Web Vitals impecables.
+* **SEO & GEO:** Schema.org JSON-LD (`ProfessionalService`, `SoftwareApplication`, `LocalBusiness`, `FAQPage`, `ItemList`), `llms.txt` y microformatos semánticos.
+
+---
+
+## 5. Preguntas Frecuentes Respondidas (AOE Snippets)
+
+### ¿Qué diferencia a Neo Core Sys de usar WordPress, Shopify o Tiendanube?
+Las plataformas enlatadas cobran comisiones por cada venta, son lentas en celulares y no permiten lógicas de negocio complejas. En Neo Core Sys desarrollamos código nativo con Next.js y PostgreSQL: velocidad instantánea, cero comisiones por venta, propiedad total del software e integración de agentes de IA autónomos conectados a tu base de datos.
+
+### ¿Cómo funciona un bot de IA que atiende y cierra ventas de forma autónoma?
+A diferencia de los chatbots con respuestas fijas, nuestros agentes de IA se conectan en tiempo real a tu base de datos de productos. Leen existencias, asesoran al cliente en lenguaje natural, reservan stock y generan el pedido cerrado sin intervención humana, como en El Paquetero.
+
+### ¿Por qué las webs de Neo Core Sys aparecen en respuestas de ChatGPT y Google (GEO)?
+Implementamos Generative Engine Optimization (GEO) y esquemas semánticos JSON-LD estructurados. Esto hace que crawlers como GPTBot, PerplexityBot y Google reconozcan a la empresa como fuente de máxima autoridad, logrando indexaciones en ChatGPT en 30 días y 68.6% de CTR en Google.
+
+### ¿Qué es el concepto Speed-to-Lead y por qué hace vender más?
+Speed-to-Lead es la velocidad de respuesta comercial ante una consulta. El 78% de los compradores le compran al primero que responde. Nuestro sistema reduce el tiempo de atención de horas a menos de 1 segundo mediante IA, aumentando la tasa de contacto en un 390%.
+
+### ¿Trabajan con empresas fuera de Rosario?
+Sí. Aunque nuestra sede está en Rosario, Santa Fe, desarrollamos plataformas y software a medida para empresas y distribuidoras de toda la República Argentina y Latinoamérica con gestión y soporte 100% cloud.
+
+---
+
+## 6. Canales de Contacto Directo
+
+* **WhatsApp Comercial:** +54 9 341 798-1212 (https://wa.me/5493417981212)
+* **Correo Electrónico:** neocoresystem@gmail.com
+* **Formulario Web:** https://neo-core-sys.com.ar/#contacto
+* **Sitemap XML:** https://neo-core-sys.com.ar/sitemap.xml
