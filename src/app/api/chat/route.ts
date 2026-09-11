@@ -46,39 +46,43 @@ export async function POST(request: Request) {
       );
     }
 
-    // Detección automática de datos de contacto (Speed-to-Lead en Chatbot)
+    // Detección y notificación en tiempo real a Telegram (Speed-to-Lead)
     const lastUserMessage = messages[messages.length - 1]?.content || "";
     const phoneMatch = lastUserMessage.match(/(?:\+?\d{1,4}[ -]?)?(?:\(?\d{2,4}\)?[ -]?)?\d{3,4}[ -]?\d{3,4}/);
     const emailMatch = lastUserMessage.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
 
-    // Solo notificar si hay un número telefónico de al menos 7 dígitos o un email
     const cleanDigits = phoneMatch ? phoneMatch[0].replace(/\D/g, "") : "";
-    if (cleanDigits.length >= 7 || emailMatch) {
-      const extractedPhone = cleanDigits.length >= 7 ? phoneMatch![0].trim() : null;
-      const cleanPhone = extractedPhone ? extractedPhone.replace(/[^0-9+]/g, "") : null;
-      const waLink = cleanPhone && cleanPhone.length >= 8 ? `https://wa.me/${cleanPhone.replace("+", "")}` : null;
+    const hasContact = cleanDigits.length >= 7 || Boolean(emailMatch);
+    const extractedPhone = cleanDigits.length >= 7 ? phoneMatch![0].trim() : null;
+    const cleanPhone = extractedPhone ? extractedPhone.replace(/[^0-9+]/g, "") : null;
+    const waLink = cleanPhone && cleanPhone.length >= 8 ? `https://wa.me/${cleanPhone.replace("+", "")}` : null;
 
-      const tgChatLead = `
-🤖 <b>¡NUEVO LEAD EN EL CHATBOT IA!</b>
+    if (lastUserMessage.trim().length > 0) {
+      const headerTitle = hasContact
+        ? "🔥 <b>¡LEAD CON CONTACTO EN CHATBOT IA!</b>"
+        : "💬 <b>NUEVO MENSAJE EN EL CHATBOT IA</b>";
 
-💬 <b>Mensaje del visitante:</b>
+      const tgChatMsg = `
+${headerTitle}
+
+👤 <b>El visitante dice:</b>
 <i>"${lastUserMessage.replace(/</g, "&lt;").replace(/>/g, "&gt;")}"</i>
-
-${extractedPhone ? `📱 <b>Teléfono detectado:</b> ${extractedPhone}` : ""}
-${emailMatch ? `📧 <b>Email detectado:</b> ${emailMatch[0]}` : ""}
+${extractedPhone ? `\n📱 <b>Teléfono detectado:</b> ${extractedPhone}` : ""}
+${emailMatch ? `\n📧 <b>Email detectado:</b> ${emailMatch[0]}` : ""}
 ${waLink ? `\n📲 <a href="${waLink}">Contactar por WhatsApp directamente</a>` : ""}
       `.trim();
 
-      sendTelegramNotification(tgChatLead).catch((err) =>
+      sendTelegramNotification(tgChatMsg).catch((err) =>
         console.error("Error enviando alerta de chat a Telegram:", err)
       );
     }
 
     const apiKey = process.env.OPENROUTER_API_KEY;
 
-    // Fallback inteligente si no está configurada la API Key en el entorno
+    // Fallback si no está configurada la API Key en el entorno
     if (!apiKey) {
-      const lastUserMsg = messages[messages.length - 1]?.content?.toLowerCase() || "";
+      console.error("CRITICAL: OPENROUTER_API_KEY is not defined in environment variables!");
+      const lastUserMsg = lastUserMessage.toLowerCase();
       let fallbackText = "¡Hola! Soy el asistente virtual de Neo Core Sys. Nos especializamos en desarrollo de plataformas a medida (Next.js), automatización con IA y e-commerce de alto rendimiento.";
 
       if (lastUserMsg.includes("paquetero") || lastUserMsg.includes("bot") || lastUserMsg.includes("venta")) {
