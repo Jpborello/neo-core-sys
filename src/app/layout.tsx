@@ -1,35 +1,90 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
+import JsonLd from "@/components/JsonLd";
+import { SITE, absoluteUrl } from "@/lib/site";
 import "./globals.css";
 
+// Fuentes autoalojadas (sin pedidos a Google) y precargadas por next/font.
+const sans = localFont({
+  src: "./fonts/Inter-latin.woff2",
+  variable: "--font-sans-loaded",
+  weight: "100 900",
+  display: "swap",
+});
+
+const serif = localFont({
+  src: [
+    { path: "./fonts/Fraunces-latin.woff2", style: "normal", weight: "100 900" },
+    { path: "./fonts/Fraunces-latin-italic.woff2", style: "italic", weight: "100 900" },
+  ],
+  variable: "--font-serif-loaded",
+  display: "swap",
+});
+
+const mono = localFont({
+  src: "./fonts/JetBrainsMono-latin.woff2",
+  variable: "--font-mono-loaded",
+  weight: "100 800",
+  display: "swap",
+});
+
+const DESCRIPTION =
+  "Software house en Rosario. Desarrollamos software a medida, e-commerce mayorista, plataformas web y agentes de IA que atienden y cierran ventas 24/7. Código propio, sin comisiones por venta.";
+
 export const metadata: Metadata = {
-  title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
-  description: "Somos una Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce y soluciones de inteligencia artificial para empresas.",
-  keywords: "desarrollo de software a medida, fabricacion de software, software house argentina, plataformas web, desarrollo Next.js, integracion de inteligencia artificial, e-commerce b2b b2c, saas premium, consultoria it, neo core sys, rosario",
-  authors: [{ name: "Neo Core Sys" }],
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: "Neo Core Sys | Software a Medida, E-commerce e IA en Rosario",
+    template: "%s | Neo Core Sys",
+  },
+  description: DESCRIPTION,
+  applicationName: SITE.name,
+  keywords: [
+    "desarrollo de software a medida",
+    "software house rosario",
+    "fabricación de software argentina",
+    "ecommerce mayorista",
+    "plataformas web",
+    "desarrollo Next.js",
+    "agentes de inteligencia artificial",
+    "chatbot IA para ventas",
+    "saas",
+    "mini erp",
+    "neo core sys",
+  ],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "technology",
+  formatDetection: { email: false, address: false, telephone: false },
   alternates: {
-    canonical: "https://neo-core-sys.com.ar",
+    canonical: "/",
+    languages: { "es-AR": "/" },
   },
   openGraph: {
-    title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
-    description: "Software House premium especializada en desarrollo de software a medida, plataformas web, SaaS e inteligencia artificial.",
-    url: "https://neo-core-sys.com.ar",
-    siteName: "Neo Core Sys",
+    title: "Neo Core Sys | Software a Medida, E-commerce e IA en Rosario",
+    description: DESCRIPTION,
+    url: "/",
+    siteName: SITE.name,
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://neo-core-sys.com.ar/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Neo Core Sys - Premium Software Engineering",
+        alt: "Neo Core Sys — software a medida, e-commerce e IA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neo Core Sys | Desarrollo de Software a Medida y Plataformas Web",
-    description: "Desarrollo de software premium, SaaS, plataformas e-commerce y soluciones empresariales con inteligencia artificial.",
-    images: ["https://neo-core-sys.com.ar/og-image.png"],
+    title: "Neo Core Sys | Software a Medida, E-commerce e IA en Rosario",
+    description: DESCRIPTION,
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -44,76 +99,122 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#f3efe6",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
+
+/**
+ * Grafo de entidades del sitio (una sola fuente de verdad). Las páginas
+ * referencian estas entidades por @id en lugar de redefinirlas.
+ */
+const siteGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "Organization"],
+      "@id": absoluteUrl("/#organization"),
+      name: SITE.name,
+      legalName: SITE.name,
+      url: SITE.url,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/og-image.png"),
+        width: 1200,
+        height: 630,
+      },
+      image: absoluteUrl("/og-image.png"),
+      description:
+        "Software house de Rosario especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce mayorista y agentes de inteligencia artificial aplicada.",
+      email: SITE.email,
+      telephone: SITE.phone,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: SITE.locality,
+        addressRegion: SITE.region,
+        addressCountry: SITE.country,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: SITE.geo.latitude,
+        longitude: SITE.geo.longitude,
+      },
+      areaServed: [
+        { "@type": "Country", name: "Argentina" },
+        { "@type": "AdministrativeArea", name: "Latinoamérica" },
+      ],
+      knowsLanguage: ["es", "en"],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        telephone: SITE.phone,
+        email: SITE.email,
+        availableLanguage: ["Spanish", "English"],
+      },
+      founder: {
+        "@type": "Person",
+        name: SITE.founder.name,
+        jobTitle: SITE.founder.jobTitle,
+        sameAs: SITE.founder.github,
+      },
+      sameAs: [...SITE.sameAs, SITE.whatsapp],
+      knowsAbout: [
+        "Desarrollo de software a medida",
+        "Next.js y React",
+        "Agentes de inteligencia artificial",
+        "E-commerce mayorista B2B",
+        "Speed-to-Lead y CRM",
+        "Generative Engine Optimization (GEO)",
+        "Answer Engine Optimization (AEO)",
+        "SEO técnico y local",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Servicios tecnológicos",
+        itemListElement: [
+          "Desarrollo de software a medida y SaaS",
+          "E-commerce de alto rendimiento y mini ERP",
+          "Agentes de inteligencia artificial y chatbots autónomos",
+          "Optimización SEO, GEO (Generative Engine Optimization) y AEO",
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": absoluteUrl("/#website"),
+      url: SITE.url,
+      name: SITE.name,
+      inLanguage: "es-AR",
+      publisher: { "@id": absoluteUrl("/#organization") },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Neo Core Sys",
-    legalName: "Neo Core Sys",
-    url: "https://neo-core-sys.com.ar",
-    logo: "https://neo-core-sys.com.ar/og-image.png",
-    description: "Software House premium especializada en desarrollo de software a medida, plataformas web escalables, SaaS, e-commerce mayorista y soluciones de inteligencia artificial aplicada.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Rosario",
-      addressRegion: "Santa Fe",
-      addressCountry: "AR",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      telephone: "+54-9-341-798-1212",
-      email: "contacto@neo-core-sys.com.ar",
-      availableLanguage: ["Spanish", "English"],
-    },
-    sameAs: [
-      "https://www.linkedin.com/company/neo-core-sys",
-      "https://github.com/Jpborello",
-    ],
-    founder: {
-      "@type": "Person",
-      name: "Juan Pablo Borello",
-      jobTitle: "Lead Software Architect & Founder",
-      sameAs: "https://github.com/Jpborello",
-    },
-    knowsAbout: [
-      "Custom Software Development",
-      "Next.js Architecture",
-      "Artificial Intelligence Agents",
-      "Wholesale E-Commerce Systems",
-      "Speed-to-Lead CRM Integration",
-      "Generative Engine Optimization (GEO)",
-      "Answer Engine Optimization (AEO)",
-      "Autonomous Sales Bots",
-    ],
-  };
-
   return (
-    <html lang="es">
+    <html lang="es-AR" className={`${sans.variable} ${serif.variable} ${mono.variable}`}>
       <head>
-        <link
-          rel="alternate"
-          type="text/plain"
-          href="https://neo-core-sys.com.ar/llms.txt"
-          title="LLMs.txt"
-        />
-        <link
-          rel="alternate"
-          type="text/plain"
-          href="https://neo-core-sys.com.ar/llms-full.txt"
-          title="LLMs-full.txt"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs-full.txt" />
       </head>
       <body>
-        {children}
+        <a href="#contenido" className="skip-link">
+          Saltar al contenido
+        </a>
+        <JsonLd data={siteGraph} />
+        <Header />
+        <main id="contenido">{children}</main>
+        <Footer />
+        <ChatWidget />
       </body>
     </html>
   );

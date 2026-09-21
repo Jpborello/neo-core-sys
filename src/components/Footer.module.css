@@ -1,157 +1,114 @@
 .footer {
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-  padding: 80px 0 40px 0;
   position: relative;
-  overflow: hidden;
-  z-index: 10;
+  padding: clamp(56px, 8vw, 96px) 0 32px;
+  background: var(--ink);
+  color: #efe9dc;
 }
 
-.footerGrid {
+.grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr;
-  gap: 40px;
-  margin-bottom: 60px;
-}
-
-.brandCol {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 48px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-title);
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #ffffff 30%, var(--text-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #f3efe6;
 }
 
-.logoDot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
-  box-shadow: 0 0 10px var(--accent-cyan);
+.logo i {
+  font-style: normal;
+  color: var(--ac-on-dark);
 }
 
-.description {
-  color: var(--text-secondary);
+.about {
+  max-width: 340px;
   font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 360px;
+  line-height: 1.7;
+  color: #b9b1a1;
 }
 
-.linksCol {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.col {
+  font-style: normal;
 }
 
 .colTitle {
-  font-family: var(--font-title);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ac-on-dark);
 }
 
-.linksList {
+.list {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-size: 0.95rem;
+  color: #d9d2c2;
 }
 
-.link {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  transition: var(--transition-smooth);
-  width: fit-content;
+.list a {
+  transition: color var(--transition);
+  overflow-wrap: anywhere;
 }
 
-.link:hover {
-  color: var(--text-primary);
-  transform: translateX(4px);
+.list a:hover {
+  color: var(--ac-on-dark);
 }
 
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.plain {
+  color: #d9d2c2;
 }
 
-.contactItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.contactIcon {
-  color: var(--accent-cyan);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-.bottomBar {
-  padding-top: 40px;
-  border-top: 1px solid var(--border-color);
+.bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(243, 239, 230, 0.16);
+  font-size: 0.82rem;
+  color: #a79f8f;
 }
 
-.copyright {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
-.signature {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ac-on-dark);
 }
 
-.signatureHighlight {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-}
-
-@media (max-width: 992px) {
-  .footerGrid {
+@media (max-width: 900px) {
+  .grid {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 40px 32px;
   }
-  
-  .brandCol {
-    grid-column: span 2;
+
+  .brand {
+    grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 576px) {
-  .footerGrid {
+@media (max-width: 520px) {
+  .grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .brandCol {
-    grid-column: span 1;
-  }
-  
-  .bottomBar {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

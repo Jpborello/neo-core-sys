@@ -1,0 +1,147 @@
+/* Estilos compartidos por las landings de intención (e-commerce mayorista y software en Rosario). */
+
+.hero {
+  padding: calc(var(--header-h) + clamp(40px, 7vw, 84px)) 0 clamp(56px, 8vw, 96px);
+}
+
+.heroInner {
+  max-width: 1080px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: clamp(2.5rem, 6.6vw, 5.6rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.lead {
+  max-width: 660px;
+  margin-bottom: 36px;
+  font-size: 1.14rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 22px;
+}
+
+.section {
+  position: relative;
+  padding: clamp(72px, 10vw, 120px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 30px 28px 34px;
+  border-radius: 22px;
+  background: var(--card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 44px -32px rgba(22, 19, 15, 0.45);
+}
+
+.cardTag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ac-text);
+}
+
+.cardPain .cardTag {
+  color: var(--red);
+}
+
+.cardTitle {
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.cardText {
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* Banner de cierre (bloque inverso) */
+.cta {
+  padding: clamp(36px, 6vw, 72px);
+  border-radius: 32px;
+  background: var(--ink);
+  color: #efe9dc;
+}
+
+.ctaTitle {
+  max-width: 760px;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  line-height: 1.02;
+  color: #f7f2e6;
+  text-wrap: balance;
+}
+
+.ctaTitle em {
+  color: var(--ac-on-dark);
+}
+
+.ctaText {
+  max-width: 620px;
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbc3b1;
+}
+
+.cta :global(.btn--solid) {
+  border-color: #f3efe6;
+  background: #f3efe6;
+  color: var(--ink);
+}
+
+.cta :global(.btn--solid:hover) {
+  border-color: var(--ac-on-dark);
+  background: var(--ac-on-dark);
+  color: var(--ink);
+}
+
+.cta :global(.btn--line) {
+  border-color: rgba(243, 239, 230, 0.5);
+  color: #f3efe6;
+}
+
+.cta :global(.btn--line:hover) {
+  border-color: #f3efe6;
+  background: #f3efe6;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .cta {
+    border-radius: 24px;
+  }
+
+  .actions :global(.btn) {
+    width: 100%;
+  }
+}

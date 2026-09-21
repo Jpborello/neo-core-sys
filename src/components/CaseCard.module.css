@@ -1,0 +1,229 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 26px;
+  border-radius: 24px;
+  background: var(--card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 50px -34px rgba(22, 19, 15, 0.45);
+}
+
+.card:focus-within {
+  outline: 2px solid var(--ac-text);
+  outline-offset: 3px;
+}
+
+/* Vista previa ilustrativa en marco de navegador */
+.frame {
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 20px 50px -22px rgba(22, 19, 15, 0.35);
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 12px;
+  background: var(--card-2);
+}
+
+.chrome i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bdb5a2;
+}
+
+.chrome span {
+  margin-left: 10px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--mut);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-content: start;
+  height: 150px;
+  padding: 16px;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.shot b {
+  grid-column: 1 / -1;
+  width: 50%;
+  height: 16px;
+  border-radius: 4px;
+  background: var(--bar);
+}
+
+.shot s {
+  height: 60px;
+  border-radius: 6px;
+  background: var(--block);
+}
+
+/* Tarjeta destacada: vista previa a la izquierda, contenido a la derecha */
+.featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-rows: repeat(5, auto);
+  column-gap: clamp(28px, 4vw, 56px);
+  align-content: center;
+  padding: 26px;
+}
+
+.featured > * {
+  grid-column: 2;
+}
+
+.featured .frame {
+  display: flex;
+  grid-column: 1;
+  grid-row: 1 / -1;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.featured .shot {
+  flex: 1;
+  height: auto;
+  min-height: 340px;
+  grid-template-rows: 16px 1fr 1fr;
+}
+
+.featured .shot s {
+  height: auto;
+}
+
+.featured .kind {
+  align-self: end;
+  margin-top: 8px;
+}
+
+.kind {
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ac-text);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: clamp(1.7rem, 2.6vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.featured .title {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+}
+
+/* Enlace extendido: toda la tarjeta es clickeable */
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
+.arrow {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover .arrow {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.text {
+  margin-bottom: 20px;
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.readouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: auto;
+  margin-bottom: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.readouts strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.readouts span {
+  display: block;
+  min-height: 2.9em;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--mut);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 1000px) {
+  .featured {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 22px 26px;
+  }
+
+  .featured .frame {
+    margin-bottom: 24px;
+  }
+
+  .featured .shot {
+    min-height: 240px;
+  }
+}

@@ -22,6 +22,8 @@ Casos de Éxito y Logros Comprobables de Neo Core Sys:
 2. Las Manitos de Mili: Sistema de turnos online y posicionamiento local que alcanzó 68.6% de CTR en Google Search Console y posición media 2.1 en búsquedas locales de Rosario.
 3. ATFAR (https://www.atfar.com.ar/): Plataforma institucional que administra a todas las farmacias del norte de Santa Fe, con declaraciones juradas digitales (DDJJ) y padrón masivo.
 4. Cuánto Te Quiero (https://cuanto-te-quiero.vercel.app/): Tienda e-commerce infantil de alta concurrencia y velocidad instantánea.
+5. Dulce Valentín (https://dulcevalentin.com.ar/): E-commerce mayorista de indumentaria, calzado, lencería y bebés para revendedoras y comercios de todo el país, con catálogo por categorías, carrito, pedidos con seguimiento y Club Mayorista.
+6. Rey de Reyes (https://reydreyes.ar/): Tienda online de una importadora directa de indumentaria en Rosario, con carrito, rastreo de pedidos y niveles de cliente (Bronce, Plata, Oro y Platinum) con descuentos escalonados.
 
 Servicios:
 - Software a medida, SaaS y paneles de gestión con Next.js, React, TypeScript y PostgreSQL.

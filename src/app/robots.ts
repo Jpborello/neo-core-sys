@@ -1,4 +1,22 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { SITE, absoluteUrl } from "@/lib/site";
+
+// Crawlers de buscadores de IA que queremos que puedan leer y citar el sitio.
+const AI_CRAWLERS = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "ClaudeBot",
+  "Claude-User",
+  "Claude-SearchBot",
+  "anthropic-ai",
+  "Google-Extended",
+  "Applebot-Extended",
+  "cohere-ai",
+  "Bytespider",
+];
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,21 +24,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
-        userAgent: [
-          "GPTBot",
-          "ChatGPT-User",
-          "PerplexityBot",
-          "ClaudeBot",
-          "anthropic-ai",
-          "Google-Extended",
-          "Applebot-Extended",
-          "cohere-ai",
-        ],
-        allow: "/",
+        userAgent: AI_CRAWLERS,
+        allow: ["/", "/llms.txt", "/llms-full.txt"],
+        disallow: ["/api/"],
       },
     ],
-    sitemap: "https://neo-core-sys.com.ar/sitemap.xml",
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: SITE.url,
   };
 }

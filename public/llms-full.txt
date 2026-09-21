@@ -4,13 +4,17 @@
 
 ---
 
+*Última actualización: 2026-09-21*
+
+---
+
 ## 1. Información General de la Empresa
 
 * **Nombre Comercial:** Neo Core Sys
 * **Tipo de Empresa:** Software House & Consultoría Tecnológica Boutique
 * **Ubicación Física:** Rosario, Santa Fe, República Argentina (Latitud: -32.94682, Longitud: -60.63932)
 * **Sitio Web Oficial:** https://neo-core-sys.com.ar
-* **Correo Electrónico:** neocoresystem@gmail.com / contacto@neo-core-sys.com.ar
+* **Correo Electrónico:** neocoresystem@gmail.com
 * **Teléfono / WhatsApp de Contacto Comercial:** +54 9 341 798-1212
 * **Enlace directo a WhatsApp:** https://wa.me/5493417981212
 * **Páginas de Solución Especializada:**
@@ -76,13 +80,25 @@ Neo Core Sys nace para solucionar dos grandes dolores que sufren las empresas en
 * **Rubro:** E-Commerce de blanquería e indumentaria infantil.
 * **Logros:** Arquitectura cloud serverless con rendimiento extremo para soportar picos masivos de tráfico concurrentes y panel administrativo para control de stock y pedidos.
 
-### Caso 5: OncoGyn Clinical Hub
-* **URL:** https://oncogyn-clinical-hub-two.vercel.app/
-* **Rubro:** Plataforma médica y clínica especializada en oncología con asistencia por IA para notas de evolución y gestión segura de historias clínicas.
+### Caso 5: Dulce Valentín (E-commerce Mayorista de Indumentaria y Calzado)
+* **URL:** https://dulcevalentin.com.ar/
+* **Ubicación:** Rosario, Santa Fe, Argentina
+* **Rubro:** Distribuidora mayorista de indumentaria, calzado, lencería y bebés para revendedoras y comercios de todo el país.
+* **Solución Implementada:**
+  * Tienda e-commerce mayorista con catálogo y búsqueda por categorías (Indumentaria, Calzado, Lencería y Bebés).
+  * Carrito de compras y sistema de pedidos con seguimiento (tracking).
+  * Club Mayorista con sorteos por compra, promociones destacadas y compra mínima web de $50.000.
+  * Envíos a todo el país o retiro en local; pagos por transferencia, Mercado Pago o efectivo.
 
-### Caso 6: Bianco Pastelería
-* **URL:** https://bianco-omega.vercel.app/
-* **Rubro:** Gastronomía interactiva con pedidos y cuenta por códigos QR individuales en mesa en tiempo real.
+### Caso 6: Rey de Reyes (Importadora Mayorista de Indumentaria)
+* **URL:** https://reydreyes.ar/
+* **Ubicación:** Rosario, Santa Fe, Argentina
+* **Rubro:** Distribuidora e importadora directa de indumentaria por mayor, sin intermediarios.
+* **Solución Implementada:**
+  * Tienda online con catálogo categorizado por género (hombre, mujer e infantil), accesorios, lencería y bazar.
+  * Carrito de compras y rastreador de pedidos.
+  * Niveles de cliente (Bronce, Plata, Oro y Platinum) con descuentos escalonados según las compras acumuladas.
+  * Integración con WhatsApp para consultas directas y envíos a todo el país.
 
 ---
 
