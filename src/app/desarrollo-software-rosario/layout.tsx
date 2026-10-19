@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Desarrollo de Software a Medida en Rosario y Santa Fe",
+  title: "Empresa de Desarrollo de Software en Rosario",
   description: "Software House boutique en Rosario. Desarrollamos software a medida, sistemas de gestión cloud, modernización de sistemas obsoletos y CRM con bot de IA para empresas de Rosario y la región.",
   keywords: "desarrollo de software rosario, software a medida rosario, sistemas para empresas rosario, fabricacion de software santa fe, software house rosario argentina, programadores rosario, crm rosario",
   alternates: {
     canonical: "/desarrollo-software-rosario",
   },
   openGraph: {
-    title: "Desarrollo de Software a Medida en Rosario y Santa Fe",
+    title: "Desarrollo de Software en Rosario | Empresa de Software a Medida",
     description: "Sistemas web y software empresarial a medida en Rosario. Modernizamos tu operativa con código nativo, velocidad extrema y soporte local.",
     url: "https://neo-core-sys.com.ar/desarrollo-software-rosario",
     siteName: "Neo Core Sys",

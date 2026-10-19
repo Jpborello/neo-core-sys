@@ -4,7 +4,7 @@
 
 ---
 
-*Última actualización: 2026-09-21*
+*Última actualización: 2026-10-18*
 
 ---
 
@@ -20,6 +20,8 @@
 * **Páginas de Solución Especializada:**
   * E-Commerce Mayorista B2B & Mini ERP: https://neo-core-sys.com.ar/ecommerce-mayorista
   * Desarrollo de Software a Medida en Rosario & Santa Fe: https://neo-core-sys.com.ar/desarrollo-software-rosario
+  * Empresa de Software en Santa Fe (toda la provincia): https://neo-core-sys.com.ar/empresa-de-software-santa-fe
+  * Desarrollo de Aplicaciones Web y Apps Móviles en Rosario: https://neo-core-sys.com.ar/desarrollo-aplicaciones-rosario
 
 ---
 

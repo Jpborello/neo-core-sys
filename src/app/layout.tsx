@@ -142,6 +142,9 @@ const siteGraph = {
         longitude: SITE.geo.longitude,
       },
       areaServed: [
+        { "@type": "City", name: "Rosario" },
+        { "@type": "City", name: "Santa Fe" },
+        { "@type": "AdministrativeArea", name: "Provincia de Santa Fe" },
         { "@type": "Country", name: "Argentina" },
         { "@type": "AdministrativeArea", name: "Latinoamérica" },
       ],
@@ -175,6 +178,7 @@ const siteGraph = {
         name: "Servicios tecnológicos",
         itemListElement: [
           "Desarrollo de software a medida y SaaS",
+          "Desarrollo de aplicaciones web y apps móviles",
           "E-commerce de alto rendimiento y mini ERP",
           "Agentes de inteligencia artificial y chatbots autónomos",
           "Optimización SEO, GEO (Generative Engine Optimization) y AEO",

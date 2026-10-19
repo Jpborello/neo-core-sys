@@ -77,6 +77,44 @@ export const ROSARIO_FAQS: FaqItem[] = [
   },
 ];
 
+export const SANTA_FE_FAQS: FaqItem[] = [
+  {
+    q: "¿Qué hace una empresa de software en Santa Fe como Neo Core Sys?",
+    a: "Diseñamos, programamos y mantenemos **software a medida para empresas de la provincia de Santa Fe**: sistemas de gestión en la nube, portales institucionales, e-commerce mayorista, CRM con agentes de IA y migración de sistemas viejos o planillas de Excel. Somos una software house con base en **Rosario** que trabaja con clientes de toda la provincia.",
+  },
+  {
+    q: "¿Trabajan con empresas de Santa Fe capital, Rafaela, Reconquista o Venado Tuerto?",
+    a: "Sí. Trabajamos de forma **100% remota con toda la provincia de Santa Fe** (reuniones online, demos semanales y soporte por WhatsApp) y nos reunimos de forma presencial en Rosario cuando hace falta. Un ejemplo es **ATFAR**, la asociación que nuclea a las farmacias del norte de Santa Fe.",
+  },
+  {
+    q: "¿Cuánto cuesta desarrollar un software a medida en Santa Fe?",
+    a: "Depende del alcance: cantidad de módulos, usuarios, integraciones (AFIP, WhatsApp, pasarelas de pago) y migración de datos. Después de una primera reunión sin cargo enviamos un **presupuesto cerrado por etapas**, para que sepas exactamente qué se entrega en cada una y cuánto cuesta antes de empezar.",
+  },
+  {
+    q: "¿El software queda a nombre de mi empresa?",
+    a: "Sí. Entregamos el **código fuente y la base de datos a nombre del cliente**. No hay comisiones por venta ni licencias por usuario: el sistema es un activo de tu empresa y lo podés seguir evolucionando con nosotros o con otro equipo.",
+  },
+];
+
+export const APPS_FAQS: FaqItem[] = [
+  {
+    q: "¿Qué tipo de aplicaciones desarrollan en Rosario?",
+    a: "Desarrollamos **aplicaciones web** (sistemas de gestión, portales de clientes, turnos online, paneles administrativos), **apps móviles para Android e iOS** y **sitios web profesionales** optimizados para Google. Cada proyecto se programa a medida con Next.js, React, Flutter y PostgreSQL.",
+  },
+  {
+    q: "¿Me conviene una aplicación web o una app móvil?",
+    a: "En la mayoría de los casos conviene empezar por una **aplicación web responsive**: funciona en cualquier celular y computadora, no depende de las tiendas y se publica más rápido. Una **app nativa** tiene sentido cuando necesitás notificaciones push, uso sin conexión, o uso intensivo de cámara o GPS. En la primera reunión te recomendamos la opción que realmente necesitás.",
+  },
+  {
+    q: "¿Cuánto tarda el desarrollo de una aplicación?",
+    a: "Un sitio web profesional o catálogo suele estar listo en **2 a 3 semanas**; una aplicación web a medida lleva entre **4 y 8 semanas**; una app móvil publicada en Google Play y App Store requiere más tiempo por las pruebas en dispositivos y la revisión de las tiendas. Cada semana tenés una demo funcional.",
+  },
+  {
+    q: "¿También se encargan del diseño de la app y del posicionamiento en Google?",
+    a: "Sí. Hacemos el **diseño UI/UX** de cada pantalla y dejamos la aplicación lista para buscadores: SEO técnico, datos estructurados y optimización para que Google y asistentes de IA como ChatGPT puedan encontrarla y recomendarla. **Las Manitos de Mili** alcanzó 68.6% de CTR en Google con este enfoque.",
+  },
+];
+
 /** Quita el marcado **negrita** para usarlo como texto plano (JSON-LD, meta). */
 export const stripMarkup = (text: string) => text.replace(/\*\*/g, "");
 

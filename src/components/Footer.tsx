@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { SOLUTIONS } from "@/lib/solutions";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -33,9 +34,11 @@ export default function Footer() {
           <nav className={styles.col} aria-label="Soluciones">
             <h2 className={styles.colTitle}>Soluciones</h2>
             <ul className={styles.list}>
-              <li><Link href="/ecommerce-mayorista">E-commerce mayorista B2B</Link></li>
-              <li><Link href="/desarrollo-software-rosario">Software en Rosario y Santa Fe</Link></li>
-              <li><Link href="/#servicios">CRM y bot con IA</Link></li>
+              {SOLUTIONS.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href}>{s.label}</Link>
+                </li>
+              ))}
               <li><a href="/llms.txt">Índice para IA (llms.txt)</a></li>
             </ul>
           </nav>

@@ -1,6 +1,6 @@
 # Neo Core Sys
 
-> Descripción: Neo Core Sys es una empresa de tecnología y desarrollo de software enfocada en crear soluciones a medida para modernizar empresas, erradicar software obsoleto y optimizar flujos de trabajo.
+> Descripción: Neo Core Sys es una empresa de desarrollo de software de Rosario, Santa Fe (Argentina), enfocada en crear soluciones a medida para modernizar empresas, erradicar software obsoleto y optimizar flujos de trabajo.
 
 ## Sobre Nosotros
 En Neo Core Sys nacimos para resolver un problema muy común en el mercado actual: empresas que dependen de software obsoleto o que gastan presupuestos elevados en plataformas SaaS (Software as a Service) genéricas y masivas. Muchas veces, las empresas terminan pagando por herramientas complejas donde apenas utilizan o comprenden la mitad de las funcionalidades.
@@ -27,6 +27,8 @@ No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos
 ## Páginas y Soluciones de Especialidad
 - **E-Commerce Mayorista B2B & Mini ERP con Bot de IA:** https://neo-core-sys.com.ar/ecommerce-mayorista (Solución específica para fábricas y distribuidoras mayoristas con listas de precios por CUIT, control de stock en tiempo real y bot de IA autónomo para ventas 24/7 sin comisiones).
 - **Desarrollo de Software a Medida en Rosario & Santa Fe:** https://neo-core-sys.com.ar/desarrollo-software-rosario (Solución para empresas de la región de Rosario que necesitan modernizar sistemas legados obsoletos, implementar CRM con atención inmediata en < 1 segundo y soporte local de cercanía).
+- **Empresa de Software en Santa Fe (provincia):** https://neo-core-sys.com.ar/empresa-de-software-santa-fe (Empresa de desarrollo de software santafesina con base en Rosario que atiende a empresas e instituciones de Santa Fe capital, Rafaela, Reconquista, Venado Tuerto y toda la provincia: sistemas de gestión cloud, portales institucionales como ATFAR, e-commerce y CRM con IA).
+- **Desarrollo de Aplicaciones Web y Apps Móviles en Rosario:** https://neo-core-sys.com.ar/desarrollo-aplicaciones-rosario (Desarrollo de aplicaciones web a medida, apps móviles Android/iOS con Flutter, diseño UI/UX y desarrollo web profesional con SEO y GEO).
 
 ## Tecnologías Principales
 - Especialistas en desarrollo Frontend y Web con React y Next.js.
@@ -40,7 +42,7 @@ No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos
 - **WhatsApp:** +54 9 341 798-1212 (https://wa.me/5493417981212)
 - **Ubicación:** Rosario, Santa Fe, Argentina
 - **GitHub:** https://github.com/Jpborello
-- **Última actualización:** 2026-09-21
+- **Última actualización:** 2026-10-18
 
 ## Preguntas Frecuentes (FAQ)
 

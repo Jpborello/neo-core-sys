@@ -23,7 +23,7 @@ export const SITE = {
     "https://github.com/Jpborello",
   ],
   /** Fecha de última actualización de contenido (ISO). Se usa en sitemap y JSON-LD. */
-  lastUpdated: "2026-09-21",
+  lastUpdated: "2026-10-18",
 } as const;
 
 export const absoluteUrl = (path = "/") =>
