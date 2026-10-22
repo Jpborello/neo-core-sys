@@ -34,7 +34,6 @@
 .section {
   position: relative;
   padding: clamp(72px, 10vw, 120px) 0;
-  border-top: 1px solid var(--line);
 }
 
 .grid {
@@ -242,5 +241,30 @@
 @media (max-width: 760px) {
   .cases {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Filete editorial: se dibuja de izquierda a derecha al entrar en pantalla.
+   Sin soporte de animaciones por scroll queda como una línea fija. */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: var(--line);
+  transform-origin: left center;
+}
+
+@supports (animation-timeline: view()) {
+  .section::before {
+    animation: rule-draw linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
   }
 }

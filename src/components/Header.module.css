@@ -37,6 +37,14 @@
 .dot {
   font-style: normal;
   color: var(--ac);
+  /* Firma de marca: el punto titila como un cursor de terminal y queda fijo. */
+  animation: cursor-blink 0.9s steps(1, end) 0.4s 3;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .nav {
