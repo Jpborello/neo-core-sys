@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
     host: "atfar.com.ar",
     kind: "Gestión sindical",
     summary:
-      "Portal institucional y administrativo de las farmacias del norte de Santa Fe. Declaraciones juradas mensuales para empleadores, padrón masivo de afiliados, bolsa de empleo y mapa de geolocalización.",
+      "Sitio institucional y portal administrativo de la Asociación de Trabajadores de Farmacia de Rosario. Declaraciones juradas mensuales y pago de aportes para farmacias empleadoras, escalas salariales, padrón de afiliados, bolsa de empleo y mapa de farmacias.",
     readouts: [
       { value: "DDJJ", label: "declaraciones online" },
       { value: "Padrón", label: "masivo de afiliados" },

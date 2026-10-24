@@ -50,9 +50,9 @@ export const REGION_CASES = {
     cta: "Ver dulcevalentin.com.ar ↗",
   },
   atfar: {
-    pill: "Santa Fe · institucional y DDJJ",
+    pill: "Rosario · sindicato y DDJJ",
     name: "ATFAR",
-    text: "Plataforma de la asociación que nuclea a las farmacias del norte de Santa Fe. Integra declaraciones juradas mensuales (DDJJ) para empleadores, padrón de afiliados, almanaque de pagos y bolsa de trabajo.",
+    text: "Plataforma de la Asociación de Trabajadores de Farmacia de Rosario. Las farmacias empleadoras presentan sus declaraciones juradas mensuales (DDJJ) y pagan aportes online; incluye escalas salariales, padrón de afiliados, almanaque de pagos y bolsa de trabajo.",
     url: "https://www.atfar.com.ar/",
     cta: "Ver atfar.com.ar ↗",
   },

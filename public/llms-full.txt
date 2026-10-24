@@ -66,16 +66,17 @@ Neo Core Sys nace para solucionar dos grandes dolores que sufren las empresas en
   * **Posición media 2.1** en búsquedas locales de Rosario.
   * 7 de cada 10 usuarios que ven el resultado en Google hacen clic directo en el sitio.
 
-### Caso 3: ATFAR - Asociación de Titulares de Farmacia
+### Caso 3: ATFAR - Asociación de Trabajadores de Farmacia de Rosario
 * **URL:** https://www.atfar.com.ar/
-* **Ubicación:** Norte de la provincia de Santa Fe, Argentina
-* **Rubro:** Entidad gremial y prestacional que agrupa a todas las farmacias del norte santafesino.
+* **Ubicación:** Rosario, Santa Fe, Argentina
+* **Rubro:** Sindicato que representa a los trabajadores de farmacia de Rosario. Las farmacias empleadoras de Rosario y la región usan el portal para declarar su nómina y pagar aportes.
 * **Problema:** Trámites de declaraciones juradas en papel, descontrol en el padrón de afiliados y falta de canal digital para ofertas de empleo.
 * **Solución Implementada:**
   * Plataforma institucional y portal administrativo integral en Next.js y React.
-  * Módulo digital de Declaraciones Juradas (DDJJ) para empleadores con validaciones en tiempo real.
+  * Módulo digital de Declaraciones Juradas (DDJJ) para farmacias empleadoras, con sueldos calculados según la escala del CCT 659/13 y la antigüedad.
+  * Pago de aportes online con Mercado Pago y almanaque de pagos por farmacia.
   * Padrón masivo de afiliados y bolsa de trabajo farmacéutica.
-  * Mapa interactivo de geolocalización de farmacias de turno.
+  * Mapa interactivo de farmacias.
 
 ### Caso 4: Cuánto Te Quiero
 * **URL:** https://cuanto-te-quiero.vercel.app/

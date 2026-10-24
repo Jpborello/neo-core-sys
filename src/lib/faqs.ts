@@ -35,7 +35,7 @@ export const HOME_FAQS: FaqItem[] = [
   },
   {
     q: "¿Qué proyectos desarrolló Neo Core Sys?",
-    a: "Entre los casos en producción están **Dulce Valentín** y **Rey de Reyes** (e-commerce mayorista de indumentaria), **El Paquetero** (e-commerce + ERP + agente de IA), **Las Manitos de Mili** (turnos online y SEO local), **ATFAR** (gestión gremial de farmacias) y **Cuánto Te Quiero** (e-commerce infantil de alto tráfico).",
+    a: "Entre los casos en producción están **Dulce Valentín** y **Rey de Reyes** (e-commerce mayorista de indumentaria), **El Paquetero** (e-commerce + ERP + agente de IA), **Las Manitos de Mili** (turnos online y SEO local), **ATFAR** (portal del sindicato de trabajadores de farmacia de Rosario) y **Cuánto Te Quiero** (e-commerce infantil de alto tráfico).",
   },
 ];
 
@@ -84,7 +84,7 @@ export const SANTA_FE_FAQS: FaqItem[] = [
   },
   {
     q: "¿Trabajan con empresas de Santa Fe capital, Rafaela, Reconquista o Venado Tuerto?",
-    a: "Sí. Trabajamos de forma **100% remota con toda la provincia de Santa Fe** (reuniones online, demos semanales y soporte por WhatsApp) y nos reunimos de forma presencial en Rosario cuando hace falta. Un ejemplo es **ATFAR**, la asociación que nuclea a las farmacias del norte de Santa Fe.",
+    a: "Sí. Trabajamos de forma **100% remota con toda la provincia de Santa Fe** (reuniones online, demos semanales y soporte por WhatsApp) y nos reunimos de forma presencial en Rosario cuando hace falta. Un ejemplo es **ATFAR**, la Asociación de Trabajadores de Farmacia de Rosario, cuyo portal usan farmacias empleadoras de Rosario y la región.",
   },
   {
     q: "¿Cuánto cuesta desarrollar un software a medida en Santa Fe?",

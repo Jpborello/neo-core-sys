@@ -5,7 +5,7 @@ import { REGION_CASES } from "@/lib/solutions";
 
 const TITLE = "Empresa de Software en Santa Fe";
 const DESCRIPTION =
-  "Empresa de desarrollo de software para toda la provincia de Santa Fe: sistemas de gestión a medida, portales institucionales, e-commerce y CRM con IA. Base en Rosario, clientes en Santa Fe capital, Rafaela y el norte santafesino.";
+  "Empresa de desarrollo de software para toda la provincia de Santa Fe: sistemas de gestión a medida, portales institucionales, e-commerce y CRM con IA. Base en Rosario y trabajo remoto con empresas de toda la provincia.";
 
 export const metadata: Metadata = {
   title: TITLE,

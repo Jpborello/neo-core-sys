@@ -20,7 +20,7 @@ REGLAS DE FORMATO ESTRICTAS:
 Casos de Éxito y Logros Comprobables de Neo Core Sys:
 1. El Paquetero (https://www.elpaquetero.com.ar/): E-commerce mayorista con mini ERP y CRM a medida. Cuenta con un agente de IA conectado directo a la base de datos PostgreSQL que consulta stock en tiempo real y ya cerró ventas completas sin intervención humana. Además, en solo 30 días en producción fue indexado y recomendado por ChatGPT (GEO).
 2. Las Manitos de Mili: Sistema de turnos online y posicionamiento local que alcanzó 68.6% de CTR en Google Search Console y posición media 2.1 en búsquedas locales de Rosario.
-3. ATFAR (https://www.atfar.com.ar/): Plataforma institucional que administra a todas las farmacias del norte de Santa Fe, con declaraciones juradas digitales (DDJJ) y padrón masivo.
+3. ATFAR (https://www.atfar.com.ar/): Sitio y portal de la Asociación de Trabajadores de Farmacia de Rosario (sindicato): las farmacias empleadoras presentan declaraciones juradas digitales (DDJJ) y pagan aportes online; incluye padrón de afiliados y bolsa de empleo.
 4. Cuánto Te Quiero (https://cuanto-te-quiero.vercel.app/): Tienda e-commerce infantil de alta concurrencia y velocidad instantánea.
 5. Dulce Valentín (https://dulcevalentin.com.ar/): E-commerce mayorista de indumentaria, calzado, lencería y bebés para revendedoras y comercios de todo el país, con catálogo por categorías, carrito, pedidos con seguimiento y Club Mayorista.
 6. Rey de Reyes (https://reydreyes.ar/): Tienda online de una importadora directa de indumentaria en Rosario, con carrito, rastreo de pedidos y niveles de cliente (Bronce, Plata, Oro y Platinum) con descuentos escalonados.
@@ -94,7 +94,7 @@ ${waLink ? `\n📲 <a href="${waLink}">Contactar por WhatsApp directamente</a>` 
       } else if (lastUserMsg.includes("precio") || lastUserMsg.includes("presupuesto") || lastUserMsg.includes("cuanto") || lastUserMsg.includes("costo")) {
         fallbackText = "Cada proyecto se presupuesta a medida según sus requerimientos (desde catálogos ágiles hasta sistemas ERP complejos). Si querés una estimación rápida sin cargo, podés escribirnos directo por WhatsApp al +54 9 341 798-1212.";
       } else if (lastUserMsg.includes("atfar") || lastUserMsg.includes("sindicato") || lastUserMsg.includes("farmacia")) {
-        fallbackText = "Para ATFAR desarrollamos el sistema integral que nuclea a todas las farmacias del norte de Santa Fe, gestionando declaraciones juradas mensuales (DDJJ), padrón masivo y bolsa de empleo digital.";
+        fallbackText = "Para ATFAR, la Asociación de Trabajadores de Farmacia de Rosario, desarrollamos el sitio institucional y el portal donde las farmacias empleadoras presentan sus declaraciones juradas mensuales (DDJJ) y pagan aportes, además del padrón de afiliados y la bolsa de empleo digital.";
       }
 
       return NextResponse.json({
