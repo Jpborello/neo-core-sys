@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "E-Commerce Mayorista B2B y Mini ERP con Bot de IA",
     description: "Plataformas mayoristas de alta velocidad con Mini ERP integrado y bot inteligente conectado a tu base de datos para vender 24/7.",
-    url: "https://neo-core-sys.com.ar/ecommerce-mayorista",
+    url: "/ecommerce-mayorista",
     siteName: "Neo Core Sys",
     locale: "es_AR",
     type: "website",

@@ -310,9 +310,28 @@ export default function Home() {
                 Filosofía <em>Neo Core Sys</em>
               </h2>
               <p className={styles.aboutText}>
-                Somos una fábrica de software con base en Rosario, Santa Fe. Construimos
-                infraestructura digital de calidad excepcional con código moderno y tecnologías de
-                alto rendimiento.
+                Neo Core Sys es una empresa de desarrollo de software con base en Rosario, Santa Fe.
+                Construimos infraestructura digital de calidad excepcional con código moderno y
+                tecnologías de alto rendimiento.
+              </p>
+              <p className={styles.aboutText}>
+                Hacemos{" "}
+                <Link href="/desarrollo-software-rosario" className="link-u">
+                  desarrollo de software a medida en Rosario
+                </Link>
+                , trabajamos como{" "}
+                <Link href="/empresa-de-software-santa-fe" className="link-u">
+                  empresa de software para toda la provincia de Santa Fe
+                </Link>
+                , desarrollamos{" "}
+                <Link href="/desarrollo-aplicaciones-rosario" className="link-u">
+                  aplicaciones web y apps móviles
+                </Link>{" "}
+                y plataformas de{" "}
+                <Link href="/ecommerce-mayorista" className="link-u">
+                  e-commerce mayorista B2B
+                </Link>
+                .
               </p>
               <p className={styles.aboutText}>
                 Creemos que el éxito de un producto digital está en la optimización de sus recursos,

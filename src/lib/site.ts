@@ -4,7 +4,7 @@
  */
 export const SITE = {
   name: "Neo Core Sys",
-  url: "https://neo-core-sys.com.ar",
+  url: "https://www.neo-core-sys.com.ar",
   email: "neocoresystem@gmail.com",
   phone: "+5493417981212",
   phoneDisplay: "+54 9 341 798-1212",

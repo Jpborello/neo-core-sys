@@ -25,10 +25,10 @@ No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos
 - **Cuánto Te Quiero (https://cuanto-te-quiero.vercel.app/):** E-commerce de alto rendimiento y tráfico concurrente para blanquería e indumentaria infantil con checkout y panel de administración optimizados.
 
 ## Páginas y Soluciones de Especialidad
-- **E-Commerce Mayorista B2B & Mini ERP con Bot de IA:** https://neo-core-sys.com.ar/ecommerce-mayorista (Solución específica para fábricas y distribuidoras mayoristas con listas de precios por CUIT, control de stock en tiempo real y bot de IA autónomo para ventas 24/7 sin comisiones).
-- **Desarrollo de Software a Medida en Rosario & Santa Fe:** https://neo-core-sys.com.ar/desarrollo-software-rosario (Solución para empresas de la región de Rosario que necesitan modernizar sistemas legados obsoletos, implementar CRM con atención inmediata en < 1 segundo y soporte local de cercanía).
-- **Empresa de Software en Santa Fe (provincia):** https://neo-core-sys.com.ar/empresa-de-software-santa-fe (Empresa de desarrollo de software santafesina con base en Rosario que atiende a empresas e instituciones de Santa Fe capital, Rafaela, Reconquista, Venado Tuerto y toda la provincia: sistemas de gestión cloud, portales institucionales como ATFAR, e-commerce y CRM con IA).
-- **Desarrollo de Aplicaciones Web y Apps Móviles en Rosario:** https://neo-core-sys.com.ar/desarrollo-aplicaciones-rosario (Desarrollo de aplicaciones web a medida, apps móviles Android/iOS con Flutter, diseño UI/UX y desarrollo web profesional con SEO y GEO).
+- **E-Commerce Mayorista B2B & Mini ERP con Bot de IA:** https://www.neo-core-sys.com.ar/ecommerce-mayorista (Solución específica para fábricas y distribuidoras mayoristas con listas de precios por CUIT, control de stock en tiempo real y bot de IA autónomo para ventas 24/7 sin comisiones).
+- **Desarrollo de Software a Medida en Rosario & Santa Fe:** https://www.neo-core-sys.com.ar/desarrollo-software-rosario (Solución para empresas de la región de Rosario que necesitan modernizar sistemas legados obsoletos, implementar CRM con atención inmediata en < 1 segundo y soporte local de cercanía).
+- **Empresa de Software en Santa Fe (provincia):** https://www.neo-core-sys.com.ar/empresa-de-software-santa-fe (Empresa de desarrollo de software santafesina con base en Rosario que atiende a empresas e instituciones de Santa Fe capital, Rafaela, Reconquista, Venado Tuerto y toda la provincia: sistemas de gestión cloud, portales institucionales como ATFAR, e-commerce y CRM con IA).
+- **Desarrollo de Aplicaciones Web y Apps Móviles en Rosario:** https://www.neo-core-sys.com.ar/desarrollo-aplicaciones-rosario (Desarrollo de aplicaciones web a medida, apps móviles Android/iOS con Flutter, diseño UI/UX y desarrollo web profesional con SEO y GEO).
 
 ## Tecnologías Principales
 - Especialistas en desarrollo Frontend y Web con React y Next.js.
@@ -37,7 +37,7 @@ No vendemos soluciones "enlatadas". Escuchamos el problema de raíz y diseñamos
 - Optimización SEO tradicional y GEO (Generative Engine Optimization) para visibilidad en Google, ChatGPT y Perplexity.
 
 ## Contacto
-- **Sitio Web:** https://neo-core-sys.com.ar
+- **Sitio Web:** https://www.neo-core-sys.com.ar
 - **Email de Contacto:** neocoresystem@gmail.com
 - **WhatsApp:** +54 9 341 798-1212 (https://wa.me/5493417981212)
 - **Ubicación:** Rosario, Santa Fe, Argentina

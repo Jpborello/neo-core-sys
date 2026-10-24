@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Desarrollo de Software en Rosario | Empresa de Software a Medida",
     description: "Sistemas web y software empresarial a medida en Rosario. Modernizamos tu operativa con código nativo, velocidad extrema y soporte local.",
-    url: "https://neo-core-sys.com.ar/desarrollo-software-rosario",
+    url: "/desarrollo-software-rosario",
     siteName: "Neo Core Sys",
     locale: "es_AR",
     type: "website",
